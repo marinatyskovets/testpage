@@ -809,7 +809,7 @@ a:hover,
   margin-top: -12px;
 }
 .c-btn--social-google::before {
-  background-image: url("../img/png-sprite/96dpi/sprite.png?v=uusrpwg");
+  background-image: url("../img/png-sprite/96dpi/sprite.png?v=umrs5vq");
   background-position: -28px 0px;
   width: 24px;
   height: 24px;
@@ -817,7 +817,7 @@ a:hover,
   background-repeat: no-repeat;
 }
 .c-btn--social-fb::before {
-  background-image: url("../img/png-sprite/96dpi/sprite.png?v=uusrpwg");
+  background-image: url("../img/png-sprite/96dpi/sprite.png?v=umrs5vq");
   background-position: 0px 0px;
   width: 24px;
   height: 24px;
@@ -825,7 +825,7 @@ a:hover,
   background-repeat: no-repeat;
 }
 .c-btn--social-linkedin::before {
-  background-image: url("../img/png-sprite/96dpi/sprite.png?v=uusrpwg");
+  background-image: url("../img/png-sprite/96dpi/sprite.png?v=umrs5vq");
   background-position: 0px -28px;
   width: 24px;
   height: 24px;
@@ -833,7 +833,7 @@ a:hover,
   background-repeat: no-repeat;
 }
 .c-btn--social-vk::before {
-  background-image: url("../img/png-sprite/96dpi/sprite.png?v=uusrpwg");
+  background-image: url("../img/png-sprite/96dpi/sprite.png?v=umrs5vq");
   background-position: -28px -28px;
   width: 24px;
   height: 24px;
@@ -8267,6 +8267,7 @@ b, strong {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
+  word-break: break-all;
 }
 .c-gradient-column-table tr td {
   text-align: center;
@@ -12612,6 +12613,40 @@ b, strong {
   text-decoration: underline;
 }
 
+.c-promotion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 1.5;
+}
+.c-promotion__img, .c-promotion__content {
+  margin-left: 50px;
+}
+.c-promotion__img:first-child, .c-promotion__content:first-child {
+  margin-left: 0;
+}
+.c-promotion__content {
+  width: 63%;
+}
+.c-promotion__title, .c-promotion__form, .c-promotion__sub {
+  margin-bottom: 15px;
+}
+.c-promotion__title:last-child, .c-promotion__form:last-child, .c-promotion__sub:last-child {
+  margin-bottom: 0;
+}
+.c-promotion__btn {
+  padding-top: 14px;
+  padding-bottom: 15px;
+  min-width: 108px;
+}
+
 .c-result-detail {
   position: absolute;
   top: 0;
@@ -12658,40 +12693,6 @@ b, strong {
 }
 .c-result-detail--highlight:before {
   background-color: #f15c27;
-}
-
-.c-promotion {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  padding-left: 50px;
-  padding-right: 50px;
-  line-height: 1.5;
-}
-.c-promotion__img, .c-promotion__content {
-  margin-left: 50px;
-}
-.c-promotion__img:first-child, .c-promotion__content:first-child {
-  margin-left: 0;
-}
-.c-promotion__content {
-  width: 63%;
-}
-.c-promotion__title, .c-promotion__form, .c-promotion__sub {
-  margin-bottom: 15px;
-}
-.c-promotion__title:last-child, .c-promotion__form:last-child, .c-promotion__sub:last-child {
-  margin-bottom: 0;
-}
-.c-promotion__btn {
-  padding-top: 14px;
-  padding-bottom: 15px;
-  min-width: 108px;
 }
 
 .c-result-head {
@@ -13134,64 +13135,6 @@ b, strong {
   background-color: #ec5b73;
 }
 
-.c-tabs__nav {
-  margin: 0 -20px;
-  padding: 0 20px;
-  font-size: 0;
-  list-style: none;
-  border-bottom: 1px solid #ddd;
-}
-.c-tabs__item {
-  display: inline-block;
-  position: relative;
-  margin-right: 20px;
-  padding-bottom: 10px;
-  line-height: 1;
-  font-size: 14px;
-  color: #757575;
-}
-.c-tabs__item:last-child {
-  margin-right: 0;
-}
-.c-tabs__item.active {
-  color: #222222;
-}
-.c-tabs__item.active:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background-color: #ec5b73;
-}
-.c-tabs__link {
-  border: none;
-  background: #ffffff;
-  outline: none;
-}
-.c-tabs__badge {
-  display: inline-block;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  padding: 0 3px;
-  min-width: 20px;
-  color: #ffffff;
-  background-color: #85699b;
-  font-size: 14px;
-  border-radius: 15px;
-}
-.c-tabs__content {
-  padding: 15px 0 0;
-}
-.c-tabs__section {
-  display: none;
-}
-.c-tabs__section.active {
-  display: block;
-}
-
 .c-switch {
   display: inline-block;
   font-size: 0;
@@ -13263,6 +13206,64 @@ b, strong {
 .c-switch--md .c-switch__btn .c-switch__toggle:after {
   width: 20px;
   height: 20px;
+}
+
+.c-tabs__nav {
+  margin: 0 -20px;
+  padding: 0 20px;
+  font-size: 0;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+}
+.c-tabs__item {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  line-height: 1;
+  font-size: 14px;
+  color: #757575;
+}
+.c-tabs__item:last-child {
+  margin-right: 0;
+}
+.c-tabs__item.active {
+  color: #222222;
+}
+.c-tabs__item.active:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #ec5b73;
+}
+.c-tabs__link {
+  border: none;
+  background: #ffffff;
+  outline: none;
+}
+.c-tabs__badge {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0 3px;
+  min-width: 20px;
+  color: #ffffff;
+  background-color: #85699b;
+  font-size: 14px;
+  border-radius: 15px;
+}
+.c-tabs__content {
+  padding: 15px 0 0;
+}
+.c-tabs__section {
+  display: none;
+}
+.c-tabs__section.active {
+  display: block;
 }
 
 .c-tabs-link {
@@ -13436,6 +13437,63 @@ b, strong {
   border-radius: 0;
 }
 
+.c-toggle-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-toggle-control__btn {
+  position: relative;
+  cursor: pointer;
+}
+.c-toggle-control__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.c-toggle-control__input:checked ~ .c-toggle-control__circle {
+  background-color: #28a745;
+}
+.c-toggle-control__input:checked ~ .c-toggle-control__circle:after {
+  left: 15px;
+}
+.c-toggle-control__circle {
+  position: absolute;
+  top: -7px;
+  height: 13px;
+  width: 26px;
+  border-radius: 6px;
+  background-color: #999999;
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
+}
+.c-toggle-control__circle:after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-transition: left 0.15s ease-in;
+  transition: left 0.15s ease-in;
+}
+.c-toggle-control__text {
+  font-size: 13px;
+  margin-left: 34px;
+}
+.c-toggle-control--box {
+  margin: 0 -20px;
+  padding: 0 20px 15px;
+  border-bottom: 1px solid #dedede;
+}
+
 .c-toggle-input {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -13575,63 +13633,6 @@ b, strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c-toggle-control {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.c-toggle-control__btn {
-  position: relative;
-  cursor: pointer;
-}
-.c-toggle-control__input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.c-toggle-control__input:checked ~ .c-toggle-control__circle {
-  background-color: #28a745;
-}
-.c-toggle-control__input:checked ~ .c-toggle-control__circle:after {
-  left: 15px;
-}
-.c-toggle-control__circle {
-  position: absolute;
-  top: -7px;
-  height: 13px;
-  width: 26px;
-  border-radius: 6px;
-  background-color: #999999;
-  -webkit-transition: background-color 0.15s ease-in;
-  transition: background-color 0.15s ease-in;
-}
-.c-toggle-control__circle:after {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 3px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #ffffff;
-  -webkit-transition: left 0.15s ease-in;
-  transition: left 0.15s ease-in;
-}
-.c-toggle-control__text {
-  font-size: 13px;
-  margin-left: 34px;
-}
-.c-toggle-control--box {
-  margin: 0 -20px;
-  padding: 0 20px 15px;
-  border-bottom: 1px solid #dedede;
 }
 
 .c-result {
