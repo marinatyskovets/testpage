@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Talentin</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik:wght@400;500&display=block" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <!-- ------------------------------ MAIN TEMPLATE -------------------------------->
+        <div class="w-page">
+            <div class="w-page__top">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin header-->
+                <header class="c-header" id="header">
+                    <div class="w-centered">
+                        <div class="c-box-round c-box-round--primary c-box-round--round-sm">
+                            <div class="c-header__top">
+                                <div class="grid grid--nowrap grid--between grid--middle">
+                                    <div class="grid__unit">
+                                        <div class="grid grid--nowrap grid--middle grid--gap-md">
+                                            <div class="grid__unit">
+                                                <a class="c-logo c-logo--sm" href="#"></a>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <div class="tabs-link"><a class="tabs-link__item is-active" href="#">Соискателю</a><a class="tabs-link__item" href="#">Работадателю</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__unit">
+                                        <div class="grid grid--nowrap grid--middle grid--gap-xxs">
+                                            <div class="grid__unit">
+                                                <a class="gui-btn-nav is-active" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--light u-mr-7" viewBox="0 0 24 24">
+                                                        <!-- ico name: text-box-outline-->
+                                                        <path fill="currentColor" d="M5,3C3.89,3 3,3.89 3,5V19C3,20.11 3.89,21 5,21H19C20.11,21 21,20.11 21,19V5C21,3.89 20.11,3 19,3H5M5,5H19V19H5V5M7,7V9H17V7H7M7,11V13H17V11H7M7,15V17H14V15H7Z"></path>
+                                                    </svg>Вакансии</a>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <a class="gui-btn-nav" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--light u-mr-8" viewBox="0 0 24 24">
+                                                        <!-- ico name: reply-invert-->
+                                                        <path fill="currentColor" d="M15.222,9.444V5L23,12.778l-7.778,7.778V16C9.667,16,5.778,17.778,3,21.667,4.111,16.111,7.444,10.556,15.222,9.444Z"></path>
+                                                    </svg>Отклики<span class="gui-badge u-ml-10">3</span>
+                                                </a>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <a class="gui-btn-nav" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--light u-mr-8" viewBox="0 0 24 24">
+                                                        <!-- ico name: bookmark-outline-->
+                                                        <path fill="currentColor" d="M17,18L12,15.82L7,18V5H17M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path>
+                                                    </svg>Закладки</a>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <a class="gui-btn-nav gui-btn-nav--point" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--xl c-ico-svg--light u-mr-7" viewBox="0 0 24 24">
+                                                        <!-- ico name: clipboard-account-outline-->
+                                                        <path fill="currentColor" d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H9.18C9.6,1.84 10.7,1 12,1C13.3,1 14.4,1.84 14.82,3H19M12,3A1,1 0 0,0 11,4A1,1 0 0,0 12,5A1,1 0 0,0 13,4A1,1 0 0,0 12,3M7,7V5H5V19H19V5H17V7H7M12,9A2,2 0 0,1 14,11A2,2 0 0,1 12,13A2,2 0 0,1 10,11A2,2 0 0,1 12,9M8,17V16C8,14.9 9.79,14 12,14C14.21,14 16,14.9 16,16V17H8Z"></path>
+                                                    </svg>Резюме</a>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <a class="gui-btn-nav" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--light u-mr-6" viewBox="0 0 24 24">
+                                                        <!-- ico name: account-outline-->
+                                                        <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z"></path>
+                                                    </svg>Кабинет</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- end header-->
+            </div>
+            <div class="w-page__content">
+                <!-- ---------------  Main part page ----------------->
+                <div class="w-centered w-centered--sm">
+                    <div class="w-gap-5xl c-card c-card--overflow-hidden">
+                        <div class="c-card__section c-card__section--md">
+                            <div class="w-gap-md">
+                                <a class="gui-link gui-link--back" href="#">
+                                    <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--inherit" viewBox="0 0 24 24">
+                                        <!-- ico name: chevron-left-->
+                                        <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                    </svg>Back to results</a>
+                            </div>
+                            <!-- begin payload-->
+                            <div class="c-payload w-gap-xl">
+                                <img src="static/img/content/banner-long.png" alt="" />
+                            </div>
+                            <!-- end result-payload-->
+                            <div class="gui-btn-label gui-btn-label--secondary w-gap-lg">
+                                <svg class="c-ico-svg c-ico-svg--md c-ico-svg--dark u-mr-7 u-mt-1-neg u-mb-1-neg" viewBox="0 0 24 24">
+                                    <!-- ico name: eye-->
+                                    <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"></path>
+                                </svg><span class="u-text-normal">Вы уже просматривали эту вакансию</span>
+                            </div>
+                            <div class="w-gap-lg">
+                                <div class="grid grid--nowrap grid--between grid--gap-md w-gap-lg">
+                                    <div class="grid__unit">
+                                        <h1 class="c-h1">UX/UI дизайнер, продуктовый дизайнер</h1><a class="gui-link u-text-primary u-mr-20" href="#">Toyvo Production<span class="c-ico-custom c-ico-custom--check-success-sm u-ml-2"></span></a>
+                                        <div class="gui-status-label">Сейчас онлайн</div>
+                                    </div>
+                                    <div class="grid__unit u-text-0">
+                                        <img src="static/img/content/partner-logo.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="w-gap-lg c-help-box">
+                                    <div class="grid grid--nowrap grid--middle grid--between">
+                                        <div class="grid__unit">
+                                            <div class="w-gap-xs"><span class="u-mr-20">
+                          <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--inherit u-mr-7 u-mt-2-neg" viewBox="0 0 24 24"><!-- ico name: circle-multiple-outline-->
+                            <path fill="currentColor" d="M15,4A8,8 0 0,1 23,12A8,8 0 0,1 15,20A8,8 0 0,1 7,12A8,8 0 0,1 15,4M15,18A6,6 0 0,0 21,12A6,6 0 0,0 15,6A6,6 0 0,0 9,12A6,6 0 0,0 15,18M3,12C3,14.61 4.67,16.83 7,17.65V19.74C3.55,18.85 1,15.73 1,12C1,8.27 3.55,5.15 7,4.26V6.35C4.67,7.17 3,9.39 3,12Z"></path>
+                          </svg>От 40 000 грн</span><span class="u-mr-20">
+                          <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--inherit u-mr-7 u-mt-2-neg" viewBox="0 0 24 24"><!-- ico name: map-marker-outline-->
+                            <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                          </svg>Чернигов</span><span class="u-mr-20">
+                          <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--inherit u-mr-7 u-mt-2-neg" viewBox="0 0 24 24"><!-- ico name: subway-variant-->
+                            <path fill="currentColor" d="M18,11H13V6H18M16.5,17A1.5,1.5 0 0,1 15,15.5A1.5,1.5 0 0,1 16.5,14A1.5,1.5 0 0,1 18,15.5A1.5,1.5 0 0,1 16.5,17M11,11H6V6H11M7.5,17A1.5,1.5 0 0,1 6,15.5A1.5,1.5 0 0,1 7.5,14A1.5,1.5 0 0,1 9,15.5A1.5,1.5 0 0,1 7.5,17M12,2C7.58,2 4,2.5 4,6V15.5A3.5,3.5 0 0,0 7.5,19L6,20.5V21H18V20.5L16.5,19A3.5,3.5 0 0,0 20,15.5V6C20,2.5 16.42,2 12,2Z"></path>
+                          </svg><span class="u-mr-5">
+                            <span class="gui-color-point gui-color-point--sm u-mt-2-neg u-mr-5" style="background-color: #2095F2"></span>Оболонь</span><span class="u-mr-5">
+                            <span class="gui-color-point gui-color-point--sm u-mt-2-neg u-mr-5" style="background-color: #FF0000"></span>Арсенальная</span>
+                                                </span>
+                                            </div>
+                                            <div class="w-gap-xs">
+                                                <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--inherit u-mr-7 u-mt-2-neg" viewBox="0 0 24 24">
+                                                    <!-- ico name: briefcase-outline-->
+                                                    <path fill="currentColor" d="M20,6C20.58,6 21.05,6.2 21.42,6.59C21.8,7 22,7.45 22,8V19C22,19.55 21.8,20 21.42,20.41C21.05,20.8 20.58,21 20,21H4C3.42,21 2.95,20.8 2.58,20.41C2.2,20 2,19.55 2,19V8C2,7.45 2.2,7 2.58,6.59C2.95,6.2 3.42,6 4,6H8V4C8,3.42 8.2,2.95 8.58,2.58C8.95,2.2 9.42,2 10,2H14C14.58,2 15.05,2.2 15.42,2.58C15.8,2.95 16,3.42 16,4V6H20M4,8V19H20V8H4M14,6V4H10V6H14Z"></path>
+                                                </svg>Опыт до 1 года, Временная работа, Частичная занятость, Удаленная работа
+                                            </div>
+                                        </div>
+                                        <div class="grid__unit">
+                                            <button class="gui-btn gui-btn--info gui-btn--sm" type="submit">Apply on the patner’s website</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-gap-lg c-help-box c-help-box--highlight">
+                                    <div class="grid grid--nowrap">
+                                        <div class="grid__unit">
+                                            <svg class="c-ico-svg c-ico-svg--md c-ico-svg--danger u-mt-3-neg u-ml-2-neg" viewBox="0 0 24 24">
+                                                <!-- ico name: information-->
+                                                <path fill="currentColor" d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="grid__unit-fill">This job offer is not available in your country</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-collapse">
+                            <button class="gui-link c-collapse__toggle" data-toggle="collapse" data-target="#description">Show job description
+                                <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit" viewBox="0 0 24 24">
+                                    <!-- ico name: chevron-down-->
+                                    <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
+                                </svg>
+                            </button>
+                            <div class="collapse" id="description">
+                                <div class="c-collapse__inner">
+                                    <div class="c-card__section c-card__section--md">
+                                        <!-- begin payload-->
+                                        <div class="c-payload w-gap-xl">
+                                            <img src="static/img/content/banner-long.png" alt="" />
+                                        </div>
+                                        <!-- end result-payload-->
+                                        <div class="u-text-md w-gap-xl">
+                                            <p><strong>MK Legal Service</strong>
+                                                <strong>—  </strong>юридическая компания, которая с 2011 года в составе опытных экспертов в разных сферах права обеспечивает стабильное развитие и рост бизнеса клиентов.
+                                            </p>
+                                            <p><strong>Наши ключевые клиенты:</strong> «GigaGroup», рестораны «Черноморка», сеть ресторанов Дмитрия Борисова «Gastrofamily», ООО «Mirta» и т.д.</p>
+                                            <p><strong>Наши достижения:</strong>
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    Признаны в рейтинге
+                                                    <strong>«50 ведущих юридических фирм Украины»</strong>
+                                                    от издания Юридическая практика;
+                                                </li>
+                                                <li>
+                                                    Признаны в IT праве и ТМТ в рейтинге
+                                                    <strong>«Лидеры рынка. Рейтинг юридических компаний 2020»</strong>
+                                                    от издания Юридическая газета;
+                                                </li>
+                                                <li>
+                                                    Признаны в престижном рейтинговом исследовании The Ukrainian Law Firms —
+                                                    <strong>среди лучших юридических компаний в сфере ИТ/ТМТ.</strong>
+                                                </li>
+                                            </ul>
+                                            <p>
+                                                Но это точно не наш максимум, именно поэтому мы ищем
+                                                <strong>PROJECT — МЕНЕДЖЕРА.</strong>
+                                            </p>
+                                            <p><strong>Почему мы?</strong>
+                                            </p>
+                                            <ol>
+                                                <li><strong>На время ИС (2 месяца) финансовая подушка — 25 000 грн + KPI 5 000 грн;</strong>
+                                                </li>
+                                                <li><strong>После ИС — гарантированная ставка от 20 000 до 30 000 грн</strong>, все зависит от Твоих навыков;</li>
+                                                <li>
+                                                    Также у Тебя будет
+                                                    <strong>бонусная система в размере 5 000 — 10 000 грн</strong>, которую мы вместе разработаем и внедрим;
+                                                </li>
+                                                <li>
+                                                    Систематически перевыполняя план поставленных задач,
+                                                    <strong>Твой доход дополнительно может увеличиваться на 5 000 — 7 000 грн;</strong>
+                                                </li>
+                                                <li><strong>Комфортный офис</strong>
+                                                    (ул. Васильковская 37);
+                                                </li>
+                                                <li>
+                                                    График работы:
+                                                    <strong>Пн-Птн с 09:00 до 20:00</strong>
+                                                    , но мы всегда остаемся на связи;
+                                                </li>
+                                                <li><strong>Официальное оформление,</strong>
+                                                    оплачиваемый отпуск и больничные;
+                                                </li>
+                                                <li>Работа в амбициозной, постоянно развивающейся команде (11 человек), Ты будешь единственным project-менеджером;</li>
+                                                <li>
+                                                    У нас
+                                                    <strong>возможен карьерный рост</strong>
+                                                    . Если Ты стабильно показываешь выдающиеся результаты, то сможешь занять позицию операционного директора;
+                                                </li>
+                                                <li>У нас есть реальный кейс сотрудника, который в октябре 2020 года пришел на должность помощник адвоката, а уже в июле 2021 года занял позицию адвоката со своей юридической практикой;</li>
+                                                <li>В нашей компании Ты сможешь реализовать свои идеи, мы доверяем Твоему экспертному мнению.</li>
+                                            </ol>
+                                        </div>
+                                        <!-- begin payload-->
+                                        <div class="c-payload w-gap-xl">
+                                            <img src="static/img/content/banner-long.png" alt="" />
+                                        </div>
+                                        <!-- end result-payload-->
+                                        <div class="w-gap-lg u-text-md u-text-help">Размещено: 6 дней назад</div>
+                                        <div class="u-ml-20-neg u-mr-20-neg u-mb-20-neg">
+                                            <div class="grid grid--nowrap grid--between">
+                                                <div class="grid__unit">
+                                                    <div class="grid grid--nowrap grid--gap-lg">
+                                                        <div class="grid__unit">
+                                                            <button class="gui-link gui-link--service" type="button">
+                                                                <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--inherit u-mr-10" viewBox="0 0 24 24">
+                                                                    <!-- ico name: bookmark-outline-->
+                                                                    <path fill="currentColor" d="M17,18L12,15.82L7,18V5H17M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path>
+                                                                </svg>В закладки
+                                                            </button>
+                                                        </div>
+                                                        <div class="grid__unit">
+                                                            <button class="gui-link gui-link--service" type="button">
+                                                                <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: bookmark-->
+                                                                    <path fill="currentColor" d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="grid__unit">
+                                                            <button class="gui-link gui-link--service" type="button">
+                                                                <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--inherit u-mr-10" viewBox="0 0 24 24">
+                                                                    <!-- ico name: share-variant-outline-->
+                                                                    <path fill="currentColor" d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z"></path>
+                                                                </svg>Поделиться
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="grid__unit">
+                                                    <button class="gui-link gui-link--service" type="button">
+                                                        <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--inherit u-mr-10" viewBox="0 0 24 24">
+                                                            <!-- ico name: alert-octagon-outline-->
+                                                            <path fill="currentColor" d="M8.27,3L3,8.27V15.73L8.27,21H15.73C17.5,19.24 21,15.73 21,15.73V8.27L15.73,3M9.1,5H14.9L19,9.1V14.9L14.9,19H9.1L5,14.9V9.1M11,15H13V17H11V15M11,7H13V13H11V7"></path>
+                                                        </svg>Пожаловаться
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="c-card__section c-card__section--md">
+                                        <button class="gui-btn gui-btn--info gui-btn--sm" type="submit">Apply on the patner’s website</button>
+                                    </div>
+                                    <div class="c-card__section c-card__section--md">
+                                        <!-- begin payload-->
+                                        <div class="c-payload w-gap-xl">
+                                            <img src="static/img/content/banner-long.png" alt="" />
+                                        </div>
+                                        <!-- end result-payload-->
+                                    </div>
+                                    <div class="c-card__section c-card__section--md u-text-md">
+                                        <div class="c-h3 u-text-bold w-gap-sm">Контактная информация</div>
+                                        <div class="w-gap-sm"><span class="u-mr-10">Вениамин</span>
+                                            <div class="gui-status-label">Онлайн</div>
+                                        </div>
+                                        <div class="w-gap-sm"><span class="u-mr-20">+38 098 XXX XX XX, +38 072 XXX XX XX</span><a href="#">Показать номер</a>
+                                        </div>
+                                    </div>
+                                    <div class="c-card__section c-card__section--md u-text-md">
+                                        <div class="c-h3 w-gap-sm"><span class="u-text-bold">Задайте вопрос работодателю</span> (он получит его с откликом на вакансию)</div>
+                                        <div class="u-mb-10-neg"><a class="gui-link u-mr-20 u-mb-10 u-inline-block" href="#">Куда отправить резюме?</a><a class="gui-link u-mr-20 u-mb-10 u-inline-block" href="#">Вакансия открыта?</a><a class="gui-link u-mr-20 u-mb-10 u-inline-block"
+                                            href="#">Какие условия?</a><a class="gui-link u-mr-20 u-mb-10 u-inline-block" href="#">Ищете других сотрудников?</a><a class="gui-link u-mr-20 u-mb-10 u-inline-block" href="#">Подработка возможна?</a>
+                                        </div>
+                                    </div>
+                                    <div class="c-sticky-section c-sticky-section--simple js-sticky-bottom">
+                                        <div class="c-sticky-section__inner u-text-right"><a class="gui-btn gui-btn--info gui-btn--sm" href="#">Apply now</a>
+                                        </div>
+                                    </div>
+                                    <div class="c-sticky-section js-sticky-bottom">
+                                        <div class="c-sticky-section__inner">
+                                            <div class="c-h3 u-text-bold w-gap-sm">What email should the hiring manager reach you at?</div>
+                                            <div class="grid grid--nowrap grid--gap-sm w-gap-sm">
+                                                <div class="grid__unit-fill">
+                                                    <div class="gui-form-group">
+                                                        <div class="gui-form-group__input-group">
+                                                            <input class="gui-text-field gui-text-field--default" type="email" placeholder="Enter your email address">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="grid__unit">
+                                                    <button class="gui-btn gui-btn--info gui-btn--sm" type="submit">Apply now</button>
+                                                    <button class="gui-btn gui-btn--info gui-btn--sm is-disabled" type="submit">Apply now</button>
+                                                </div>
+                                            </div>
+                                            <div class="u-text-xs u-text-service">By clicking the button above, I agree to the Talentin <a href="#">Terms of Use</a> and acknowledge I have read the <a href="#">Privacy Policy</a>, and agree to receive email job alerts.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-gap-5xl">
+                        <div class="c-h2 u-text-bold w-gap-lg">Рекомендуемые вакансии</div>
+                        <!-- begin preview-item-->
+                        <div class="c-preview-item w-gap-lg">
+                            <div class="w-gap-md">
+                                <div class="grid grid--nowrap grid--between w-gap-sm">
+                                    <div class="grid__unit">
+                                        <div class="w-gap-md">
+                                            <a class="gui-btn-label gui-btn-label--secondary" href="#">
+                                                <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--dark u-mr-5 u-mt-3-neg u-mb-1-neg" viewBox="0 0 24 24">
+                                                    <!-- ico name: reply-invert-->
+                                                    <path fill="currentColor" d="M15.222,9.444V5L23,12.778l-7.778,7.778V16C9.667,16,5.778,17.778,3,21.667,4.111,16.111,7.444,10.556,15.222,9.444Z"></path>
+                                                </svg><span class="u-text-normal">Вы откликнулись 30.11.21, 15:23</span>
+                                            </a>
+                                        </div>
+                                        <div class="w-gap-md">
+                                            <h2 class="c-preview-item__title"><a class="gui-link u-text-double-line" href="#">Графический дизайнер</a></h2>
+                                        </div>
+                                    </div>
+                                    <div class="grid__unit u-nowrap">
+                                        <div class="gui-label-highlight">Премиум</div>
+                                        <div class="gui-label-info">New</div>
+                                        <label class="c-btn-switch">
+                                            <input type="checkbox" />
+                                            <svg class="c-ico c-ico--xl c-ico--accent" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path>
+                                            </svg>
+                                        </label>
+                                        <div class="gui-drop-down c-preview-item__drop-down">
+                                            <button class="gui-link" type="button" data-toggle="dropdown">
+                                                <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--accent" viewBox="0 0 24 24">
+                                                    <!-- ico name: dots-vertical-->
+                                                    <path fill="currentColor" d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown">
+                                                <a class="gui-drop-down__link" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--accent" viewBox="0 0 24 24">
+                                                        <!-- ico name: bookmark-outline-->
+                                                        <path fill="currentColor" d="M17,18L12,15.82L7,18V5H17M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path>
+                                                    </svg>Добавить в закладки</a>
+                                                <a class="gui-drop-down__link" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--accent" viewBox="0 0 24 24">
+                                                        <!-- ico name: bookmark-->
+                                                        <path fill="currentColor" d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path>
+                                                    </svg>Убрать из закладок</a>
+                                                <a class="gui-drop-down__link" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--accent" viewBox="0 0 24 24">
+                                                        <!-- ico name: cancel-->
+                                                        <path fill="currentColor" d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z"></path>
+                                                    </svg>Не интересует</a>
+                                                <a class="gui-drop-down__link" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--accent" viewBox="0 0 24 24">
+                                                        <!-- ico name: alert-octagon-outline-->
+                                                        <path fill="currentColor" d="M8.27,3L3,8.27V15.73L8.27,21H15.73C17.5,19.24 21,15.73 21,15.73V8.27L15.73,3M9.1,5H14.9L19,9.1V14.9L14.9,19H9.1L5,14.9V9.1M11,15H13V17H11V15M11,7H13V13H11V7"></path>
+                                                    </svg>Пожаловаться</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="u-text-md u-text-bold w-gap-sm">40 000 грн</div>
+                                <div class="c-preview-item__description w-gap-sm">Работа дизайнером: В связи с сезонным увеличением объемов работы - объявляется дополнительный набор помощников в…</div>
+                                <div class="w-gap-md"><span class="gui-message-label u-mr-10 u-mt-5">Опыт до 1 года</span><span class="gui-message-label u-mr-10 u-mt-5">Сменный график</span><span class="gui-message-label u-mr-10 u-mt-5">Подработка</span><span class="gui-message-label u-mr-10 u-mt-5">Полный рабочий день</span>
+                                    <span
+                                    class="gui-message-label u-mr-10 u-mt-5">Удаленная работа</span>
+                                </div>
+                            </div>
+                            <div class="w-gap-md">
+                                <div class="grid grid--nowrap grid--between">
+                                    <div class="grid__unit">
+                                        <div class="grid grid--nowrap grid--top w-gap-xs">
+                                            <div class="grid__unit"><span class="c-ico-custom c-ico-custom--city-secondary-sm"></span>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <div class="u-text-secondary"><a class="gui-link gui-link--secondary" href="#">Toyvo Production<span class="c-ico-custom c-ico-custom--check-success-sm u-ml-2"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid--nowrap grid--top w-gap-xs">
+                                            <div class="grid__unit"><span class="c-ico-custom c-ico-custom--marker-secondary-md u-mt-2-neg u-ml-1-neg"></span>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <div class="u-text-secondary">Николаев</div>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid--middle u-ml-25 w-gap-xs">
+                                            <div class="grid__unit"><span class="u-text-help u-text-sm">
+                          <span class="gui-color-point u-mt-2-neg u-mr-5" style="background-color: #2095F2"></span>Оболонь</span>
+                                            </div>
+                                            <div class="grid__unit"><span class="u-text-help u-text-sm">
+                          <span class="gui-color-point u-mt-2-neg u-mr-5" style="background-color: #FF0000"></span>Арсенальная</span>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid--nowrap grid--middle w-gap-xs">
+                                            <div class="grid__unit"><span class="c-ico-custom c-ico-custom--clock-secondary-sm u-mt-2-neg"></span>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <div class="u-text-secondary">7 часов назад</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__unit">
+                                        <div class="c-preview-item__img">
+                                            <img src="static/img/content/partner-logo-2.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-gap-md">
+                                <div class="grid grid--nowrap grid--middle">
+                                    <div class="grid__unit">
+                                        <button class="gui-btn--info gui-btn gui-btn--mw152 gui-btn--sm" type="button">Откликнуться</button>
+                                    </div>
+                                    <div class="grid__unit">
+                                        <button class="gui-btn--help gui-btn gui-btn--mw152 gui-btn--sm" type="button">Позвонить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end preview-item-->
+                        <!-- begin preview-item-->
+                        <div class="c-preview-item w-gap-lg">
+                            <div class="w-gap-md">
+                                <div class="grid grid--nowrap grid--between w-gap-sm">
+                                    <div class="grid__unit">
+                                        <div class="w-gap-md">
+                                            <a class="gui-btn-label gui-btn-label--secondary" href="#">
+                                                <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--dark u-mr-5 u-mt-3-neg u-mb-1-neg" viewBox="0 0 24 24">
+                                                    <!-- ico name: reply-invert-->
+                                                    <path fill="currentColor" d="M15.222,9.444V5L23,12.778l-7.778,7.778V16C9.667,16,5.778,17.778,3,21.667,4.111,16.111,7.444,10.556,15.222,9.444Z"></path>
+                                                </svg><span class="u-text-normal">Вы откликнулись 30.11.21, 15:23</span>
+                                            </a>
+                                        </div>
+                                        <div class="w-gap-md">
+                                            <h2 class="c-preview-item__title"><a class="gui-link u-text-double-line" href="#">Графический дизайнер</a></h2>
+                                        </div>
+                                    </div>
+                                    <div class="grid__unit u-nowrap">
+                                        <div class="gui-label-highlight">Премиум</div>
+                                        <div class="gui-label-info">New</div>
+                                        <label class="c-btn-switch">
+                                            <input type="checkbox" />
+                                            <svg class="c-ico c-ico--xl c-ico--accent" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path>
+                                            </svg>
+                                        </label>
+                                        <div class="gui-drop-down c-preview-item__drop-down">
+                                            <button class="gui-link" type="button" data-toggle="dropdown">
+                                                <svg class="c-ico-svg c-ico-svg--xxl c-ico-svg--accent" viewBox="0 0 24 24">
+                                                    <!-- ico name: dots-vertical-->
+                                                    <path fill="currentColor" d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown">
+                                                <a class="gui-drop-down__link" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--accent" viewBox="0 0 24 24">
+                                                        <!-- ico name: bookmark-outline-->
+                                                        <path fill="currentColor" d="M17,18L12,15.82L7,18V5H17M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path>
+                                                    </svg>Добавить в закладки</a>
+                                                <a class="gui-drop-down__link" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--accent" viewBox="0 0 24 24">
+                                                        <!-- ico name: bookmark-->
+                                                        <path fill="currentColor" d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"></path>
+                                                    </svg>Убрать из закладок</a>
+                                                <a class="gui-drop-down__link" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--accent" viewBox="0 0 24 24">
+                                                        <!-- ico name: cancel-->
+                                                        <path fill="currentColor" d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z"></path>
+                                                    </svg>Не интересует</a>
+                                                <a class="gui-drop-down__link" href="#">
+                                                    <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--accent" viewBox="0 0 24 24">
+                                                        <!-- ico name: alert-octagon-outline-->
+                                                        <path fill="currentColor" d="M8.27,3L3,8.27V15.73L8.27,21H15.73C17.5,19.24 21,15.73 21,15.73V8.27L15.73,3M9.1,5H14.9L19,9.1V14.9L14.9,19H9.1L5,14.9V9.1M11,15H13V17H11V15M11,7H13V13H11V7"></path>
+                                                    </svg>Пожаловаться</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="u-text-md u-text-bold w-gap-sm">40 000 грн</div>
+                                <div class="c-preview-item__description w-gap-sm">Работа дизайнером: В связи с сезонным увеличением объемов работы - объявляется дополнительный набор помощников в…</div>
+                                <div class="w-gap-md"><span class="gui-message-label u-mr-10 u-mt-5">Опыт до 1 года</span><span class="gui-message-label u-mr-10 u-mt-5">Сменный график</span><span class="gui-message-label u-mr-10 u-mt-5">Подработка</span><span class="gui-message-label u-mr-10 u-mt-5">Полный рабочий день</span>
+                                    <span
+                                    class="gui-message-label u-mr-10 u-mt-5">Удаленная работа</span>
+                                </div>
+                            </div>
+                            <div class="w-gap-md">
+                                <div class="grid grid--nowrap grid--between">
+                                    <div class="grid__unit">
+                                        <div class="grid grid--nowrap grid--top w-gap-xs">
+                                            <div class="grid__unit"><span class="c-ico-custom c-ico-custom--city-secondary-sm"></span>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <div class="u-text-secondary"><a class="gui-link gui-link--secondary" href="#">Toyvo Production<span class="c-ico-custom c-ico-custom--check-success-sm u-ml-2"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid--nowrap grid--top w-gap-xs">
+                                            <div class="grid__unit"><span class="c-ico-custom c-ico-custom--marker-secondary-md u-mt-2-neg u-ml-1-neg"></span>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <div class="u-text-secondary">Николаев</div>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid--middle u-ml-25 w-gap-xs">
+                                            <div class="grid__unit"><span class="u-text-help u-text-sm">
+                          <span class="gui-color-point u-mt-2-neg u-mr-5" style="background-color: #2095F2"></span>Оболонь</span>
+                                            </div>
+                                            <div class="grid__unit"><span class="u-text-help u-text-sm">
+                          <span class="gui-color-point u-mt-2-neg u-mr-5" style="background-color: #FF0000"></span>Арсенальная</span>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid--nowrap grid--middle w-gap-xs">
+                                            <div class="grid__unit"><span class="c-ico-custom c-ico-custom--clock-secondary-sm u-mt-2-neg"></span>
+                                            </div>
+                                            <div class="grid__unit">
+                                                <div class="u-text-secondary">7 часов назад</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__unit">
+                                        <div class="c-preview-item__img">
+                                            <img src="static/img/content/partner-logo-2.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-gap-md">
+                                <div class="grid grid--nowrap grid--middle">
+                                    <div class="grid__unit">
+                                        <button class="gui-btn--info gui-btn gui-btn--mw152 gui-btn--sm" type="button">Откликнуться</button>
+                                    </div>
+                                    <div class="grid__unit">
+                                        <button class="gui-btn--help gui-btn gui-btn--mw152 gui-btn--sm" type="button">Позвонить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end preview-item-->
+                    </div>
+                </div>
+            </div>
+            <div class="w-page__bottom">
+                <div class="w-centered">
+                    <!-- ---------------  Bottom part page ----------------->
+                    <!-- begin footer-->
+                    <footer class="c-footer">
+                        <div class="c-footer__content">
+                            <div class="grid grid--nowrap">
+                                <div class="grid__unit-3">
+                                    <div class="w-gap-md">
+                                        <a class="c-logo c-logo--xs" href="#"></a>
+                                    </div>
+                                    <div class="w-gap-md">
+                                        <div class="c-footer__copyright">© Copyright 2021, Talentin LLC</div>
+                                    </div>
+                                </div>
+                                <div class="grid__unit-9">
+                                    <div class="grid grid--nowrap grid--gap-lg">
+                                        <div class="grid__unit-4">
+                                            <div class="u-text-upper u-text-bold u-text-light w-gap-xs">Информация</div>
+                                            <div class="w-gap-xs">
+                                                <ul class="c-list-item">
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">О Нас</a>
+                                                    </li>
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">Контакты</a>
+                                                    </li>
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">Условия предоставления услуг</a>
+                                                    </li>
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">Политика конфиденциальности</a>
+                                                    </li>
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">talentin в других странах</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="grid__unit-4">
+                                            <div class="u-text-upper u-text-bold u-text-light w-gap-xs">Соискателю</div>
+                                            <div class="w-gap-xs">
+                                                <ul class="c-list-item">
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">Найти работу</a>
+                                                    </li>
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">Разместить резюме</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="grid__unit-4">
+                                            <div class="u-text-upper u-text-bold u-text-light w-gap-xs">Работодателю</div>
+                                            <div class="w-gap-xs">
+                                                <ul class="c-list-item">
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">Добавить вакансию</a>
+                                                    </li>
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">Поиск резюме</a>
+                                                    </li>
+                                                    <li class="c-list-item__item"><a class="c-list-item__link" href="#">Наши услуги</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- end footer-->
+                </div>
+            </div>
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.6.0.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.min.js"></script>
+        <script src="static/js/separate-js/jquery.autocomplete.js"></script>
+        <script src="static/js/separate-js/owl.carousel.min.js"></script>
+        <script src="static/js/separate-js/toggleFocusInput.js"></script>
+        <script src="static/js/separate-js/datepicker.min.js"></script>
+        <script src="static/js/separate-js/affix.js"></script>
+        <script src="static/js/separate-js/sticky.js"></script>
+        <script src="static/js/separate-js/countInput.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+        <script>
+            // $('.js-sticky-bottom').each(function () {
+              //    var $this = $(this);
+              //
+              //     stickyElement.register({
+              //         element: $this,
+              //         position: 'bottom',
+              //     });
+              // });
+              
+              stickyElement.register({
+                  container: '.js-sticky-bottom',
+                  type: 'bottom',
+                  stickyClass: 'sticky-bottom',
+                  offset: 0,
+              });
+        </script>
+    </body>
+
+</html>
