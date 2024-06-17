@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Effective Cover Letter</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=block" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
+        <div class="w-page w-page--fill">
+            <div class="w-page__top">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin header-->
+                <header class="c-header">
+                    <div class="w-centered">
+                        <div class="c-header__top">
+                            <div class="c-header__cell">
+                                <!-- begin logo-->
+                                <a class="c-logo" href="#"></a>
+                                <!-- end logo-->
+                            </div>
+                            <div class="c-header__cell">
+                                <!-- begin progress-bar-->
+                                <div class="c-progress-bar c-progress-bar--step-horizontal c-progress-bar--completed-check">
+                                    <div class="c-progress-bar__step is-completed">
+                                        <div class="c-progress-bar__arrow">1</div>
+                                        <div class="c-progress-bar__text">Build Letter</div>
+                                    </div>
+                                    <div class="c-progress-bar__step is-active">
+                                        <div class="c-progress-bar__arrow">2</div>
+                                        <div class="c-progress-bar__text">Choose Access</div>
+                                    </div>
+                                    <div class="c-progress-bar__step">
+                                        <div class="c-progress-bar__arrow">3</div>
+                                        <div class="c-progress-bar__text">Payment Details</div>
+                                    </div>
+                                    <div class="c-progress-bar__step">
+                                        <div class="c-progress-bar__arrow">4</div>
+                                        <div class="c-progress-bar__text">Finished!</div>
+                                    </div>
+                                </div>
+                                <!-- end progress-bar-->
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- end header-->
+            </div>
+            <div class="w-page__content">
+                <!-- ---------------  Main part page ----------------->
+                <main class="w-container w-centered">
+                    <div class="c-row c-row--nowrap c-row--row-gap-lg c-row--justify-between c-row--align-center w-gap-xl">
+                        <div class="c-h1">Enter Payment Information</div>
+                        <!-- begin content-tooltip-->
+                        <div class="c-content-tooltip">
+                            <svg class="c-ico c-ico--2xl c-ico--highlight" viewBox="0 0 24 24">
+                                <!-- ico name: lock-->
+                                <path fill="currentColor" d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"></path>
+                            </svg>
+                            <div class="c-content-tooltip__container">
+                                <div class="c-content-tooltip__title">Secure Server</div>
+                                <div class="c-content-tooltip__text">Tell me more
+                                    <div class="c-tooltip c-tooltip--arrow-top-center">
+                                        We safeguard your payment information with SSL (Secure Sockets Layer) when sent over the Internet. SSL encrypts personal information, including your name and payment information, so that it cannot be read in transit by a third party. We also store your
+                                        payment information in an encrypted format.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end content-tooltip-->
+                    </div>
+                    <div class="w-gap-xl grid grid--nowrap">
+                        <div class="grid__col-8">
+                            <!-- begin rounded-box-->
+                            <div class="c-rounded-box c-rounded-box--md c-rounded-box--secondary w-gap-lg">
+                                <div class="c-h3 w-gap-md">Card Information</div>
+                                <!-- begin payment-form-->
+                                <!-- https://docs.stripe.com/payments/save-during-payment-->
+                                <form class="c-payment-form w-gap-sm" id="payment-form">
+                                    <div class="c-payment-form__element" id="payment-element">
+                                        <!-- Elements will create form elements here-->
+                                    </div>
+                                    <div class="c-payment-form__message" id="error-message">Display error message to your customers here</div>
+                                    <div class="c-row">
+                                        <button class="c-btn" type="button" id="submit">Get Your Cover Letter
+                                        </button>
+                                    </div>
+                                </form>
+                                <!-- end payment-form-->
+                                <!-- begin content-tooltip-->
+                                <div class="c-content-tooltip w-gap-sm">
+                                    <svg class="c-ico c-ico--xl c-ico--highlight" viewBox="0 0 24 24">
+                                        <!-- ico name: lock-->
+                                        <path fill="currentColor" d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"></path>
+                                    </svg>
+                                    <div class="c-content-tooltip__container">
+                                        <div class="c-content-tooltip__title">Secure Checkout</div>
+                                    </div>
+                                </div>
+                                <!-- end content-tooltip-->
+                            </div>
+                            <!-- end rounded-box-->
+                            <div class="w-gap-lg c-column-gap-sm">
+                                <div class="c-h4">How Would I Cancel?</div>
+                                <div class="u-text-sm">You have the flexibility to cancel anytime via email or online. Please note that depending on your location, additional charges may apply for foreign exchange, imposed by your bank or card issuer.</div>
+                            </div>
+                        </div>
+                        <div class="grid__col-4">
+                            <!-- begin rounded-box-->
+                            <div class="c-rounded-box c-rounded-box--secondary c-rounded-box--none-padding w-gap-lg">
+                                <div class="c-rounded-box__top">
+                                    <div class="c-h3 w-gap-lg">Review Your Order</div>
+                                    <div class="w-gap-md"><strong>Item:</strong> EffectiveCoverLetter 14 day Full Access</div>
+                                    <div class="w-gap-md">
+                                        <!-- begin decorated-list-->
+                                        <ul class="c-decorated-list c-decorated-list--sm c-decorated-list--align-center">
+                                            <li class="c-decorated-list__item">
+                                                <svg class="c-ico c-ico--3xl c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: download-->
+                                                    <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"></path>
+                                                </svg>
+                                                <div class="c-decorated-list__text">Unlimited download, print, and email</div>
+                                            </li>
+                                            <li class="c-decorated-list__item">
+                                                <svg class="c-ico c-ico--3xl c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: file-arrow-left-right-outline-->
+                                                    <path fill="currentColor" d="M13.09 20C13.21 20.72 13.46 21.39 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H14L20 8V13.09C19.67 13.04 19.34 13 19 13C18.66 13 18.33 13.04 18 13.09V9H13V4H6V20H13.09M23 17L20 14.5V16H16V18H20V19.5L23 17M18 18.5L15 21L18 23.5V22H22V20H18V18.5Z"></path>
+                                                </svg>
+                                                <div class="c-decorated-list__text">Multiple cover letter templates</div>
+                                            </li>
+                                            <li class="c-decorated-list__item">
+                                                <svg class="c-ico c-ico--3xl c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: file-star-four-points-outline-->
+                                                    <path fill="currentColor" d="M12 11L10.74 13.75L8 15L10.74 16.26L12 19L13.25 16.26L16 15L13.25 13.75L12 11M6 2H14L20 8V20C20 21.1 19.1 22 18 22H6C4.9 22 4 21.1 4 20V4C4 2.9 4.9 2 6 2M6 4V20H18V9H13V4H6Z"></path>
+                                                </svg>
+                                                <div class="c-decorated-list__text">Cover Letter Builder</div>
+                                            </li>
+                                        </ul>
+                                        <!-- end decorated-list-->
+                                    </div>
+                                </div>
+                                <div class="c-rounded-box__bottom">
+                                    <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between"><strong>Total Due Today:</strong><strong>2,95 €</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end rounded-box-->
+                            <div class="w-gap-lg c-column-gap-sm">
+                                <div class="c-h4">Our Guarantee</div>
+                                <div class="u-text-sm">EffectiveCoverLetter gives you the professional guidance to create winning resumes and cover letters. If you would like to cancel anytime during your 14-day trial, contact us for a refund.</div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div class="w-page__bottom">
+                <!-- ---------------  Bottom part page ----------------->
+                <!-- begin footer-->
+                <footer class="c-footer">
+                    <div class="w-centered">
+                        <div class="c-row c-row--nowrap c-row--justify-between c-row--align-center c-row--row-gap-sm"><a class="c-link" href="#">Terms &amp; Conditions</a><a class="c-link" href="#">Privacy Policy</a><a class="c-link" href="#">Acccessibility</a><a class="c-link" href="#">Contact Us</a><span class="c-footer__copyright">© 2024, effectivecoverletter.com - All rights reserved</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end footer-->
+            </div>
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
+        <script src="static/js/separate-js/jquery.autocomplete.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/separate-js/swiper-bundle.min.js"></script>
+        <script src="static/js/separate-js/lazysizes.min.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+        <script>
+            var paymentAppearance = {
+                  variables: {
+                      colorTextPlaceholder: '#5E718C',
+                      colorDanger: '#FF0000',
+                      fontFamily: 'Manrope, sans-serif',
+                      fontSizeSm: '16px',
+                      borderRadius: '0',
+                      gridColumnSpacing: '32px',
+                      gridRowSpacing: '32px'
+                  },
+                  rules: {
+                      '.Input': {
+                          borderColor: '#9FB9DC'
+                      },
+                      '.Input:hover': {
+                          borderColor: '#0B0DE6'
+                      },
+                      '.Input:focus, .Input--invalid': {
+                          boxShadow: 'none'
+                      },
+                      '.Input:focus, .Input:focus:hover': {
+                          outline: 'none',
+                          borderColor: '#000000'
+                      },
+                      '.Input--invalid, .Input--invalid:hover': {
+                          borderColor: '#FF0000',
+                      },
+                      '.Error': {
+                          fontSize: '10px'
+                      },
+                      '.Label': {
+                          marginBottom: '16px',
+                          fontWeight: '700'
+                      }
+                  }
+              }
+        </script>
+    </body>
+
+</html>
