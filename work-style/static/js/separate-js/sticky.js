@@ -36,26 +36,37 @@ var stickyElement = (function ($) {
 
                 if (type === 'top') {
                     if (currentPosition > $container.offset().top - offset) {
-                        $content.addClass(stickyClass).css({top: offset});
+                        $container.addClass(stickyClass).css({top: offset});
                     } else {
-                        $content.removeClass(stickyClass).css({top: 'initial'});
+                        $container.removeClass(stickyClass).css({top: 'initial'});
                     }
                 } else if (type === 'bottom') {
                     if (currentPosition + $(window).outerHeight() < $container.offset().top + height + offset) {
-                        $content.addClass(stickyClass).css({bottom: offset});
+                        $container.addClass(stickyClass).css({bottom: offset});
                     } else {
-                        $content.removeClass(stickyClass).css({bottom: 'initial'});
+                        $container.removeClass(stickyClass).css({bottom: 'initial'});
                     }
                 }
 
                 if (upClass) {
                     if (direction === 'down') {
-                        $content.removeClass(upClass);
+                        $container.removeClass(upClass);
                     } else {
-                        $content.addClass(upClass)
+                        $container.addClass(upClass)
                     }
                 }
             });
+        });
+
+        $(window).on('resize', function () {
+            $.each(elements, function (idx, item) {
+                var $container = item.container,
+                    $content = $container.children().first();
+
+                $content.css('width', $container.outerWidth(true));
+            });
+
+            $(window).trigger('scroll');
         });
     };
 
