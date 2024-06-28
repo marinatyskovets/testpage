@@ -21,8 +21,6 @@ $(document).ready(function () {
             }
         });
     }
-
-    toggleVisibilityOnScroll.initialize();
 });
 
 
@@ -69,30 +67,6 @@ var dropdownManager = (function ($) {
         $(document).on('click', function (event) {
             if (container.hasClass(stateClass) && !container.is(event.target) && container.has(event.target).length === 0) {
                 container.removeClass(stateClass);
-            }
-        });
-    };
-
-    return {
-        initialize: initialize
-    };
-})(jQuery);
-
-
-var toggleVisibilityOnScroll = (function ($) {
-    var defaults = {
-        container: '.js-toggle-visibility',
-        hiddenClass: 'u-hidden'
-    };
-
-    var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {}),
-            container = $(settings.container),
-            hiddenClass = settings.hiddenClass;
-
-        $(window).on('scroll', function() {
-            if ($(this).scrollTop() > 0) {
-                container.removeClass(hiddenClass);
             }
         });
     };
