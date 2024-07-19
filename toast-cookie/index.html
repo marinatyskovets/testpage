@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Effective Cover Letter</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=contain">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=block" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body style="padding: 20px; background: #F5F5F5">
+        <div class="c-row c-row--gap-xs">
+            <button class="c-btn c-btn--xs" type="button" id="saved">saved-successfully
+            </button>
+            <button class="c-btn c-btn--xs" type="button" id="error">something-went-wrong
+            </button>
+            <button class="c-btn c-btn--xs" type="button" id="wrong-file-format">wrong-file-format
+            </button>
+        </div>
+        <hr style="margin: 8px 0;">
+        <div class="c-row c-row--gap-xs">
+            <button class="c-btn c-btn--xs" type="button" data-bs-toggle="modal" data-bs-target="#cookie">cookie
+            </button>
+        </div>
+        <!-- begin toast-->
+        <div class="c-toast" id="toast-saved" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+            <div class="c-toast__content">
+                <div class="c-row c-row--align-center c-row--row-gap-xs">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: check-circle-->
+                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                    </svg>Saved Successfully
+                </div>
+            </div>
+        </div>
+        <!-- end toast-->
+        <!-- begin toast-->
+        <div class="c-toast c-toast--danger" id="toast-error" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+            <div class="c-toast__content">
+                <div class="c-row c-row--align-center c-row--row-gap-xs">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: alert-octagon-->
+                        <path fill="currentColor" d="M13 13H11V7H13M11 15H13V17H11M15.73 3H8.27L3 8.27V15.73L8.27 21H15.73L21 15.73V8.27L15.73 3Z"></path>
+                    </svg>Something Went Wrong
+                </div>
+            </div>
+        </div>
+        <!-- end toast-->
+        <!-- begin toast-->
+        <div class="c-toast c-toast--danger" id="toast-wrong-file-format" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+            <div class="c-toast__content">
+                <div class="c-row c-row--align-center c-row--row-gap-xs">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: check-circle-->
+                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                    </svg>Wrong file format
+                </div>
+            </div>
+        </div>
+        <!-- end toast-->
+        <!-- begin modal-bottom-->
+        <div class="c-modal-bottom modal" id="cookie">
+            <div class="c-modal-bottom__dialog modal-dialog">
+                <div class="c-modal-bottom__content">
+                    <div class="c-h4 w-gap-xs">You control your data</div>
+                    <div class="w-gap-xs u-text-sm">
+                        We and our partners use cookies to provide you with our services, and depending on your choices, gather analytic information and tailor your experience on the site. You can manage your cookie preferences by clicking on “Cookie Settings” or you can accept
+                        all cookies by clicking “Accept All”. If you would like to have more details about the use of cookies please visit our <a href="#" class="c-link c-link--underline">Cookie Policy</a>.
+                    </div>
+                    <div class="c-row c-row--nowrap c-row--align-center c-row--justify-between c-row--gap-sm w-gap-xs"><a class="c-link c-link--underline u-text-bold" href="#">Cookie Settings</a>
+                        <button class="c-btn" type="button">Accept All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-bottom-->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                  $('#cookie').modal('show');
+              
+                  var toastList = {
+                      'saved': 'toast-saved',
+                      'error': 'toast-error',
+                      'wrong-file-format': 'toast-wrong-file-format'
+                  };
+              
+                  $.each(toastList, function (btnId, toastId) {
+                      var toastTrigger = $('#' + btnId);
+                      var toastLiveExample = $('#' + toastId);
+              
+                      if (toastTrigger.length > 0) {
+                          var toastBootstrap = new bootstrap.Toast(toastLiveExample[0]);
+              
+                          toastTrigger.on('click', () => {
+                              toastBootstrap.show();
+                          });
+                      }
+                  });
+              });
+        </script>
+    </body>
+
+</html>
