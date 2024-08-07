@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Jobeka</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <!-- ------------------------------ SERVICE TEMPLATE -------------------------------->
+        <div class="w-page">
+            <div class="w-page__top w-vertical-gap-xs">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin main-top-panel-->
+                <div class="c-main-top-panel">
+                    <div class="grid grid--between grid--middle grid--nowrap grid--gap-md">
+                        <div class="grid__col">
+                            <div class="grid grid--gap-md">
+                                <div class="grid__col"><a href="#">Найти работу</a>
+                                </div>
+                                <div class="grid__col"><a href="#">Работодатели / Разместить вакансию</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col">
+                            <div class="grid grid--gap-md">
+                                <div class="grid__col"><a href="#"><i class="material-icons c-ico c-ico--xs c-ico--inherit u-mr-3 u-mt-2-neg" data-ico="assignment"></i>Разместить резюме</a>
+                                </div>
+                                <div class="grid__col"><a href="#">Войти</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end main-top-panel-->
+                <!-- begin header-->
+                <header class="c-header">
+                    <div class="c-header__content">
+                        <div class="c-header__top">
+                            <div class="w-centered">
+                                <div class="grid grid--gap-sm grid--between grid--middle grid--nowrap">
+                                    <div class="grid__col">
+                                        <button class="c-ico-button u-ml-10-neg u-mr-8 js-drawer-toggler" type="button"><i class="material-icons c-ico c-ico--md c-ico--accent" data-ico="menu"></i>
+                                        </button>
+                                        <a class="gui-illustration gui-illustration--logo" href="#"></a>
+                                    </div>
+                                    <div class="grid__col-stretch">
+                                        <div class="grid grid--end grid--middle grid--nowrap">
+                                            <div class="grid__col-stretch">
+                                                <div class="grid">
+                                                    <div class="grid__col-stretch">
+                                                        <div class="gui-form-group">
+                                                            <input class="gui-text-field gui-text-field--sm" type="text" placeholder="Я ищу...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid__col-stretch">
+                                                        <div class="gui-form-group">
+                                                            <input class="gui-text-field gui-text-field--sm" type="text" placeholder="Где...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid__col-3">
+                                                        <button class="gui-btn gui-btn--primary gui-btn--sm u-text-bold" type="button">Найти работу</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="grid__col"><a class="gui-btn gui-btn--secondary gui-btn--sm" href="#">Войти</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- end header-->
+            </div>
+            <div class="w-page__content">
+                <div class="w-centered w-page__content-inner">
+                    <!-- ---------------  Main part page ----------------->
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#countries">Countries</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#quick-response">Quick response</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#modal-flash">Flash Modal</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#hide-vacancy">Скрыть вакансию</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#step-1">Step 1</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#step-2">Step 2</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#step-3">Step 3</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#looking-job">Are you looking for a job?</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#job-subscription">Job subscription</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#many-vacancies">Many vacancies</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#verification-email">Verification email</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#job-added-subscription">Job added subscription</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#vacancy-page-register">vacancy-page-register</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#vacancy-subscribe">Vacancy subscribe</button>
+                    </div>
+                    <div class="w-vertical-gap-sm">
+                        <button class="gui-btn gui-btn--primary gui-btn--sm" type="button" data-toggle="modal" data-target="#vacancy">Vacancy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-page__bottom">
+                <!-- ---------------  Bottom part page ----------------->
+                <!-- begin footer-->
+                <footer class="c-footer c-footer--default">
+                    <div class="w-centered">
+                        <div class="c-footer__content">
+                            <div class="grid grid--gap-md">
+                                <div class="grid__col">© 2016 jobeka.com</div>
+                                <div class="grid__col"><a class="u-mr-15" href="#">Все вакансии</a><a class="u-mr-15" href="#">Ссылка</a>
+                                    <button class="gui-link u-mr-15" type="button">Украина<i class="material-icons c-ico c-ico--xs c-ico--inherit" data-ico="expand_more"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end footer-->
+            </div>
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- begin drawer-->
+        <div class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+            <div class="c-drawer__dialog">
+                <div class="c-drawer__header">Меню сайта
+                    <button class="c-ico-button c-drawer__close js-drawer-toggler" type="button"><i class="material-icons c-ico c-ico--md c-ico--accent" data-ico="close"></i>
+                    </button>
+                </div>
+                <div class="c-drawer__content">
+                    <div class="c-side-service-section">
+                        <div class="u-mt-15 u-mb-15 u-ml-25 u-mr-25">
+                            <div class="grid grid--nowrap">
+                                <div class="grid__col"><i class="material-icons c-ico c-ico--sm c-ico--accent-secondary" data-ico="error"></i>
+                                </div>
+                                <div class="grid__col">
+                                    <div class="w-vertical-gap-xs">
+                                        <div class="c-h3 u-text-bold u-text-accent-secondary">Email не подтвержден</div>
+                                    </div>
+                                    <div class="w-vertical-gap-xs">
+                                        <div class="grid grid--nowrap grid--gap-xxs">
+                                            <div class="grid__col">username@gmail.com</div>
+                                            <div class="grid__col">
+                                                <button class="c-ico-button u-mt-9-neg" type="button"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="edit"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-vertical-gap-xs">
+                                        <button class="gui-btn gui-btn--primary gui-btn--sm u-text-bold" type="button">Подтвердить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-side-service-section"><a class="c-icon-list-item" href="#"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="search"></i>Вакансии в городах</a><a class="c-icon-list-item" href="#"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="search"></i>Востребованные вакансии</a>
+                        <a
+                        class="c-icon-list-item" href="#"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="assignment_ind"></i>Все вакансии</a><a class="c-icon-list-item" href="#"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="assignment"></i>Резюме</a>
+                            <a
+                            class="c-icon-list-item" href="#"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="search"></i>Новый поиск</a><a class="c-icon-list-item" href="#"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="event_note"></i>События</a>
+                    </div>
+                    <div class="c-side-service-section"><a class="c-icon-list-item" href="#"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="star"></i>Избранные</a>
+                    </div>
+                    <div class="c-side-service-section"><a class="c-icon-list-item" href="#"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="person"></i>Войти</a><a class="c-icon-list-item" href="#"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="exit_to_app"></i>Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end drawer-->
+        <!-- begin modal-flash-->
+        <div class="c-modal-flash fade js-modal-flash" id="modal-flash">
+            <div class="c-modal-flash__dialog">
+                <button class="c-ico-button c-modal-flash__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-flash__content">
+                    <div class="w-centered w-centered--sm">
+                        <div class="w-vertical-gap-xs">
+                            <div class="c-h4 u-text-bold">Flash modal title<i class="material-icons c-ico c-ico--xs c-ico--danger u-ml-5 u-mt-2-neg" data-ico="info"></i>
+                            </div>
+                        </div>
+                        <div>Flash modal text text Flash modal title Flash modal title Flash modal title</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-flash-->
+        <!-- begin modal-flash-->
+        <div class="c-modal-flash fade js-modal-flash" id="hide-vacancy">
+            <div class="c-modal-flash__dialog">
+                <button class="c-ico-button c-modal-flash__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-flash__content">
+                    <div class="w-centered w-centered--sm">
+                        <div class="grid grid--nowrap">
+                            <div class="grid__col"><i class="material-icons c-ico c-ico--md c-ico--success u-mt-4-neg" data-ico="check_circle_outline"></i>
+                            </div>
+                            <div class="grid__col-stretch u-text-bold">
+                                <div>Эта вакансия больше не будет отображаться</div><a href="#">Отменить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-flash-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker" id="step-1" data-backdrop="static">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-card c-modal-card--dark c-modal-card--board u-text-center">
+                        <div class="w-vertical-gap-md"><span class="gui-illustration gui-illustration--logo"></span>
+                        </div>
+                        <div class="w-vertical-gap-md">
+                            <div class="c-h1-sm">Вы в поисках работы?</div>
+                        </div>
+                        <div class="w-vertical-gap-md">
+                            <div class="c-h2 u-text-secondary">Дизайнер, Московия</div>
+                        </div>
+                    </div>
+                    <div class="c-modal-card">
+                        <div class="grid grid--gap-xs grid--center">
+                            <div class="grid__col-3">
+                                <button class="gui-btn gui-btn--secondary gui-btn--lg gui-btn--block" type="button" data-dismiss="modal">Нет</button>
+                            </div>
+                            <div class="grid__col-5"><a class="gui-btn gui-btn--primary gui-btn--lg gui-btn--block" href="#">Да, ищу!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker" id="step-2">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-card c-modal-card--dark c-modal-card--board u-text-center">
+                        <div class="w-vertical-gap-md"><span class="gui-illustration gui-illustration--logo"></span>
+                        </div>
+                        <div class="w-vertical-gap-md">
+                            <div class="c-h1-sm">Хотите получать новые вакансии себе на почту?</div>
+                        </div>
+                    </div>
+                    <div class="c-modal-card">
+                        <div class="w-centered w-centered--xs">
+                            <div class="w-vertical-gap-lg">
+                                <div class="c-h4 u-text-bold u-text-center">Дизайнер, Московия</div>
+                            </div>
+                            <div class="w-vertical-gap-lg">
+                                <div class="w-vertical-gap-sm">
+                                    <div class="gui-form-group">
+                                        <input class="gui-text-field gui-text-field--sm" type="email" placeholder="Ваш email">
+                                        <div class="gui-field-msg">Validation msg</div>
+                                    </div>
+                                </div>
+                                <div class="w-vertical-gap-sm">
+                                    <div class="u-text-secondary u-text-center">или</div>
+                                </div>
+                                <div class="w-vertical-gap-md">
+                                    <div class="w-vertical-gap-sm"><a class="gui-btn gui-btn--label gui-btn--sm gui-btn--social-google gui-btn--block" href="#">Войти с помощью Google</a>
+                                    </div>
+                                    <div class="w-vertical-gap-sm"><a class="gui-btn gui-btn--label gui-btn--sm gui-btn--social-fb gui-btn--block" href="#">Войти с помощью Facebook</a>
+                                    </div>
+                                    <div class="w-vertical-gap-sm"><a class="gui-btn gui-btn--label gui-btn--sm gui-btn--social-linkedin gui-btn--block" href="#">Войти с помощью Linkedin</a>
+                                    </div>
+                                    <div class="w-vertical-gap-sm"><a class="gui-btn gui-btn--label gui-btn--sm gui-btn--social-vk gui-btn--block" href="#">Войти с помощью Vkontakte</a>
+                                    </div>
+                                </div>
+                                <div class="w-vertical-gap-md">
+                                    <button class="gui-btn gui-btn--primary gui-btn--sm gui-btn--block" type="button">Получать вакансии первым</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker" id="step-3">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-card c-modal-card--dark c-modal-card--board u-text-center w-vertical-gap-xl">
+                        <div class="w-vertical-gap-md"><span class="gui-illustration gui-illustration--logo"></span>
+                        </div>
+                        <div class="w-vertical-gap-md">
+                            <div class="c-h1-sm">Подтвердите вашу подписку</div>
+                        </div>
+                        <div class="w-vertical-gap-md">
+                            <div class="c-h3 u-text-center">Для этого кликните на ссылку в письме, которое мы только что отправили Вам на <b>test@gmail.com</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-vertical-gap-xl u-text-center"><a class="gui-btn gui-btn--primary gui-btn--sm" href="#">Перейти в Gmail</a>
+                    </div>
+                    <div class="w-vertical-gap-xl u-text-center u-text-xs">
+                        <div class="u-text-secondary">Если вы не получили письмо, проверьте, возможно оно попало в папку со СПАМом.</div>
+                        <div class="u-text-secondary">Добавьте электронный адрес jobsora в Ваш список контактов, чтобы избежать этого в будущем.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker" id="quick-response">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-card">
+                        <div class="w-vertical-gap-lg">
+                            <div class="c-h2">Резюме заполнено не достаточно</div>
+                        </div>
+                        <div class="w-vertical-gap-lg">К сожалению, пока что Вы не можете отправить свое резюме работодателю.</div>
+                        <div class="w-vertical-gap-lg">
+                            <div>Пожалуйста, укажите в резюме следующую информацию:</div>
+                            <ul>
+                                <li>Образование</li>
+                                <li>Опыт работы</li>
+                            </ul>
+                        </div>
+                        <div class="w-vertical-gap-lg"><a class="gui-btn gui-btn--primary gui-btn--sm" href="#">Заполнить резюме</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker c-modal-common--lg" id="countries">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-card">
+                        <div class="grid grid--nowrap">
+                            <div class="grid__col-4">
+                                <ul class="c-flag-list">
+                                    <li class="c-flag-list__item"><span class="gui-flag-small gui-flag-small--ua c-flag-list__flag"></span><a class="c-flag-list__link" href="#">Робота в Україні</a>
+                                    </li>
+                                    <li class="c-flag-list__item"><span class="gui-flag-small gui-flag-small--ua c-flag-list__flag"></span><a class="c-flag-list__link" href="#">Робота в Україні</a>
+                                    </li>
+                                    <li class="c-flag-list__item"><span class="gui-flag-small gui-flag-small--ua c-flag-list__flag"></span><a class="c-flag-list__link" href="#">Робота в Україні</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="grid__col-4">
+                                <ul class="c-flag-list">
+                                    <li class="c-flag-list__item"><span class="gui-flag-small gui-flag-small--pl c-flag-list__flag"></span><a class="c-flag-list__link" href="#">Praca w Polsce</a>
+                                    </li>
+                                    <li class="c-flag-list__item"><span class="gui-flag-small gui-flag-small--pl c-flag-list__flag"></span><a class="c-flag-list__link" href="#">Praca w Polsce</a>
+                                    </li>
+                                    <li class="c-flag-list__item"><span class="gui-flag-small gui-flag-small--pl c-flag-list__flag"></span><a class="c-flag-list__link" href="#">Praca w Polsce</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="grid__col-4">
+                                <ul class="c-flag-list">
+                                    <li class="c-flag-list__item"><span class="gui-flag-small gui-flag-small--us c-flag-list__flag"></span><a class="c-flag-list__link" href="#">Jobs USA</a>
+                                    </li>
+                                    <li class="c-flag-list__item"><span class="gui-flag-small gui-flag-small--us c-flag-list__flag"></span><a class="c-flag-list__link" href="#">Jobs USA</a>
+                                    </li>
+                                    <li class="c-flag-list__item"><span class="gui-flag-small gui-flag-small--us c-flag-list__flag"></span><a class="c-flag-list__link" href="#">Jobs USA</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker" id="looking-job">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-card c-modal-card--dark c-modal-card--5xl u-text-center">
+                        <div class="w-vertical-gap-5xl">
+                            <div class="w-vertical-gap-md"><span class="gui-illustration gui-illustration--logo"></span>
+                            </div>
+                            <div class="w-vertical-gap-xs">
+                                <div class="c-h1-sm u-text-bold">Ищете работу?</div>
+                            </div>
+                            <div class="w-vertical-gap-xs">
+                                <div class="c-h2 u-text-danger u-text-bold">Дизайнер, Московия</div>
+                            </div>
+                        </div>
+                        <div class="w-vertical-gap-5xl"><a class="gui-btn gui-btn--primary gui-btn--md gui-btn--strong gui-btn--mw260" href="#"><span class="u-text-lg">Да, ищу!</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker" id="job-subscription">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-card c-modal-card--dark c-modal-card--board u-text-center">
+                        <div class="w-vertical-gap-md"><span class="gui-illustration gui-illustration--logo"></span>
+                        </div>
+                        <div class="w-vertical-gap-md">
+                            <div class="c-h1-sm u-text-bold">Отправляем только актуальные вакансии!</div>
+                        </div>
+                    </div>
+                    <div class="c-modal-card">
+                        <div class="w-vertical-gap-5xl">
+                            <div class="w-centered w-centered--xs">
+                                <div class="w-vertical-gap-lg">
+                                    <div class="c-h4 u-text-bold u-text-danger">Все вакансии, Московия</div>
+                                </div>
+                                <div class="w-vertical-gap-lg">
+                                    <div class="w-vertical-gap-sm">
+                                        <div class="w-vertical-gap-sm"><a class="gui-btn gui-btn--label gui-btn--sm gui-btn--social-google gui-btn--block" href="#">Подписаться с помощью Google</a>
+                                        </div>
+                                        <div class="w-vertical-gap-sm"><a class="gui-btn gui-btn--label gui-btn--sm gui-btn--social-fb gui-btn--block" href="#">Подписаться с помощью Facebook</a>
+                                        </div>
+                                    </div>
+                                    <div class="w-vertical-gap-sm">
+                                        <div class="u-text-secondary u-text-center">или</div>
+                                    </div>
+                                    <div class="w-vertical-gap-md">
+                                        <div class="gui-form-group">
+                                            <input class="gui-text-field gui-text-field--sm" type="email" placeholder="Email">
+                                            <div class="gui-field-msg">Validation msg</div>
+                                        </div>
+                                    </div>
+                                    <div class="w-vertical-gap-md">
+                                        <button class="gui-btn gui-btn--primary gui-btn--sm gui-btn--block gui-btn--strong" type="button">Получить</button>
+                                    </div>
+                                </div>
+                                <div class="w-vertical-gap-lg">
+                                    <div class="u-text-xs u-text-bold">Продолжая использовать сайт, я соглашусь с <a href="#">правилами</a> и <a href="#">политикой конфиденциальности.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-vertical-gap-5xl">
+                            <div class="u-text-center u-text-secondary">Более <b>100 000</b> соискателей уже получают новые вакансии каждый день</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker" id="many-vacancies">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-card c-modal-card--dark c-modal-card--5xl u-text-center">
+                        <div class="w-vertical-gap-5xl">
+                            <div class="w-centered w-centered--xs">
+                                <div class="w-vertical-gap-md"><span class="gui-illustration gui-illustration--logo"></span>
+                                </div>
+                                <div class="w-vertical-gap-xs">
+                                    <div class="c-h1-sm u-text-bold">Слишком много вакансий?</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-vertical-gap-5xl"><a class="gui-btn gui-btn--primary gui-btn--md gui-btn--strong gui-btn--mw260" href="#"><span class="u-text-lg">Уточнить поиск</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-flash-->
+        <div class="c-modal-flash fade js-modal-flash" id="verification-email">
+            <div class="c-modal-flash__dialog">
+                <button class="c-ico-button c-modal-flash__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-flash__content">
+                    <div class="w-centered w-centered--sm">
+                        <div><i class="material-icons c-ico c-ico--xs c-ico--accent u-mr-8 u-mt-1-neg" data-ico="info"></i><b>Мы отправили вам письмо</b> для подтверждения вашего электронного адреса.
+                        </div>
+                        <div class="u-ml-8">Пожалуйста, перейдите по ссылке в нем, закончив с настройкой подписок ниже.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-flash-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker" id="job-added-subscription">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-message">
+                        <div class="grid grid--nowrap grid--gap-xs">
+                            <div class="grid__col"><i class="material-icons c-ico c-ico--xs c-ico--success u-mt-2-neg" data-ico="check_circle"></i>
+                            </div>
+                            <div class="grid__col-stretch">Подписка добавлена</div>
+                        </div>
+                    </div>
+                    <div class="c-modal-card c-modal-card--sm">
+                        <div class="w-centered w-centered--normal u-text-left">
+                            <div class="w-vertical-gap-lg">
+                                <div class="c-h2">Вы успешно подписались</div>
+                            </div>
+                            <div class="w-vertical-gap-lg">
+                                <div class="c-modal-content">
+                                    <ul class="c-modal-content__list">
+                                        <li class="c-modal-content__item">Все вакансии, Калуга
+                                            <button class="gui-link" type="button"><i class="material-icons c-ico c-ico--xs c-ico--accent u-mt-2-neg" data-ico="delete"></i>
+                                            </button>
+                                        </li>
+                                        <li class="c-modal-content__item">Все вакансии, Калуга
+                                            <button class="gui-link" type="button"><i class="material-icons c-ico c-ico--xs c-ico--accent u-mt-2-neg" data-ico="delete"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-vertical-gap-lg">
+                                <div class="c-help-section">
+                                    <div class="w-vertical-gap-md">
+                                        <div class="u-text-sm u-text-bold">Добавьте несколько запросов в вашу рассылку:</div>
+                                    </div>
+                                    <div class="w-vertical-gap-sm">
+                                        <div class="gui-form-group js-form-focus">
+                                            <input class="gui-text-field gui-text-field--medium js-field-focus" type="text" id="job-label">
+                                            <label class="gui-form-group__label gui-form-group__label--bottom" for="job-label"><span class="gui-form-group__label-text">Введите должность или компанию</span><span class="gui-form-group__label-text">Должность или компанию</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w-vertical-gap-sm">
+                                        <div class="gui-form-group js-form-focus">
+                                            <input class="gui-text-field gui-text-field--medium js-field-focus" type="text" id="region-label">
+                                            <label class="gui-form-group__label gui-form-group__label--bottom" for="region-label"><span class="gui-form-group__label-text">Укажите регион поиска</span><span class="gui-form-group__label-text">Регион поиска</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w-vertical-gap-sm">
+                                        <button class="gui-btn gui-btn--sm gui-btn--secondary" type="button">Добавить в рассылку</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-vertical-gap-lg"><a class="gui-link u-text-sm" href="#"><i class="material-icons c-ico c-ico--xs c-ico--accent u-mr-8 u-mt-4-neg" data-ico="settings"></i>Настройки рассылки</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker c-modal-common--xl" id="vacancy-page-register">
+            <div class="c-modal-common__dialog">
+                <div class="c-modal-common__content">
+                    <div class="c-modal-inner-space u-text-center">
+                        <div class="c-separate-section">
+                            <div class="c-h1-sm w-vertical-gap-md">Cleaner In Old Street | Full Time Or Part Time</div>
+                            <div class="u-text-18 u-mt-0">Cleanzy, <span class="u-text-secondary">City of London</span>
+                            </div>
+                        </div>
+                        <div class="c-separate-section">
+                            <div class="w-centered w-centered--sm w-vertical-gap-xl">
+                                <div class="w-vertical-gap-md">
+                                    <label class="u-text-18" for="input-email">What email should the hiring manager reach you at?</label>
+                                </div>
+                                <div class="w-vertical-gap-lg">
+                                    <input class="gui-text-field gui-text-field--md" id="input-email" type="email" placeholder="Enter your email address">
+                                </div>
+                                <button class="gui-btn gui-btn--secondary gui-btn--md" type="submit">Continue</button>
+                            </div>
+                            <div class="w-vertical-gap-xl u-text-xs">By clicking the button above, I agree to the Jobsora <a href="#">Terms of Use</a> and acknowledge I have read the <a href="#">Privacy Policy</a>, and agree to receive email job alerts.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker c-modal-common--compressed" id="vacancy-subscribe" data-backdrop="static">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-common-box c-common-box--md-broad">
+                        <div class="w-centered w-centered--xs-normal">
+                            <div class="w-vertical-gap-xl c-column-gap-sm">
+                                <div class="u-text-24 u-text-bold"><span class="u-text-accent">Driver</span> Posting Near You</div>
+                                <div class="u-text-md">Give us your email address, and we'll notify you about the top <strong>Driver</strong> job offers in your location.</div>
+                            </div>
+                            <form class="w-vertical-gap-xl c-column-gap-md">
+                                <input type="hidden">
+                                <div class="gui-form-group gui-form-group--checked has-success">
+                                    <div class="c-addon-field c-addon-field--wide">
+                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit c-addon-field__addon" viewBox="0 0 24 24">
+                                            <!-- ico name: magnify-->
+                                            <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path>
+                                        </svg>
+                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--success c-addon-field__status-control" viewBox="0 0 24 24">
+                                            <!-- ico name: check-circle-->
+                                            <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                                        </svg>
+                                        <input class="gui-text-field gui-text-field--md" type="text" value="Driver">
+                                    </div>
+                                    <div class="gui-field-msg__message"></div>
+                                </div>
+                                <div class="gui-form-group gui-form-group--checked has-success">
+                                    <div class="c-addon-field c-addon-field--wide">
+                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit c-addon-field__addon" viewBox="0 0 24 24">
+                                            <!-- ico name: map-marker-outline-->
+                                            <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                        </svg>
+                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--success c-addon-field__status-control" viewBox="0 0 24 24">
+                                            <!-- ico name: check-circle-->
+                                            <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                                        </svg>
+                                        <input class="gui-text-field gui-text-field--md" type="text" value="28901">
+                                    </div>
+                                    <div class="gui-field-msg__message"></div>
+                                </div>
+                                <div class="gui-form-group gui-form-group--checked has-error">
+                                    <div class="c-addon-field c-addon-field--wide">
+                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit c-addon-field__addon" viewBox="0 0 24 24">
+                                            <!-- ico name: email-outline-->
+                                            <path fill="currentColor" d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z"></path>
+                                        </svg>
+                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--success c-addon-field__status-control" viewBox="0 0 24 24">
+                                            <!-- ico name: check-circle-->
+                                            <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                                        </svg>
+                                        <input class="gui-text-field gui-text-field--md" type="text" placeholder="Email">
+                                    </div>
+                                    <div class="gui-field-msg">Email is required!</div>
+                                </div>
+                                <button class="gui-btn gui-btn--primary gui-btn--sm gui-btn--block" type="submit">Continue
+                                    <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit u-ml-5" viewBox="0 0 24 24">
+                                        <!-- ico name: arrow-right-->
+                                        <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="c-common-box c-common-box--secondary">
+                        <div class="c-column-gap-sm w-centered w-centered--xs-normal">
+                            <div class="u-text-bold u-text-md">
+                                <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit u-mt-5-neg u-mr-8" viewBox="0 0 24 24">
+                                    <!-- ico name: lock-->
+                                    <path fill="currentColor" d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"></path>
+                                </svg>Your information is protected and encrypted
+                            </div>
+                            <div class="u-text-secondary">
+                                By clicking Continue you agree to our <a href="#" class="gui-link gui-link--secondary gui-link--underline">Terms</a>,
+                                <a href="#" class="gui-link gui-link--secondary gui-link--underline">Cookies</a> and
+                                <a href="#" class="gui-link gui-link--secondary gui-link--underline">Privacy Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker c-modal-common--md-broad" id="vacancy" data-backdrop="static">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm c-ico--accent" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="w-centered w-centered--xs-normal">
+                        <div class="u-text-24 u-text-accent u-text-bold w-vertical-gap-lg">Driver Training Specialist (Driving Licence Required)</div>
+                        <div class="w-vertical-gap-lg c-column-gap-sm">
+                            <div class="c-row c-row--nowrap c-row--row-gap-xs">
+                                <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--inherit u-mt-1" viewBox="0 0 24 24">
+                                    <!-- ico name: company-outline-custom-->
+                                    <path fill="currentColor" d="M16.7,15h-2v2h2 M16.7,11h-2v2h2 M18.7,19h-5.5V9h5.5 M11.3,7h-2V5h2 M11.3,11h-2V9h2 M11.3,15h-2v-2h2   M11.3,19h-2v-2h2 M7.3,7h-2V5h2 M7.3,11h-2V9h2 M7.3,15h-2v-2h2 M7.3,19h-2v-2h2 M13.2,7V3h-10v18h17.5V7H13.2z"></path>
+                                </svg>
+                                <div class="u-text-secondary u-text-md">Company Name</div>
+                            </div>
+                            <div class="c-row c-row--nowrap c-row--row-gap-xs">
+                                <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--inherit u-mt-1" viewBox="0 0 24 24">
+                                    <!-- ico name: clock-outline-->
+                                    <path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"></path>
+                                </svg>
+                                <div class="u-text-secondary u-text-md">14 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="w-vertical-gap-xxl u-text-5-line u-text-md">
+                            You will be someone who will take staff “under their wing” allowing the clinic to prosper and thrive. The successful candidate will need to liaise effectively with our main hospita...
+                        </div>
+                        <button class="gui-btn gui-btn--primary gui-btn--md gui-btn--block" type="submit">View salary & More Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.min.js"></script>
+        <script src="static/js/separate-js/jquery.autocomplete.js"></script>
+        <script src="static/js/separate-js/toggleFocusInput.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+        <script>
+            console.log('modals.html')
+        </script>
+    </body>
+
+</html>
