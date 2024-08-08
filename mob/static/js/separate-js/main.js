@@ -1,25 +1,14 @@
 $(document).ready(function () {
-    $('.js-form-focus').toggleFocusInput();
+    $(document).on('show.bs.modal', '.js-modal-locker', function (event) {
+        locker.lock();
+    });
+    $(document).on('hidden.bs.modal', '.js-modal-locker', function (event) {
+        locker.unlock();
+    });
 
     toggle.initialize();
 
     drawer.initialize();
-
-    $(document).on('show.bs.modal', '.js-modal-locker', function () {
-        locker.lock();
-    });
-    $(document).on('hidden.bs.modal', '.js-modal-locker', function () {
-        locker.unlock();
-    });
-
-    $(document).on('show.bs.collapse', '.js-collapse-locker', function () {
-        $(this).addClass('is-open');
-        locker.lock();
-    });
-    $(document).on('hide.bs.collapse', '.js-collapse-locker', function () {
-        $(this).removeClass('is-open');
-        locker.unlock();
-    });
 
     // Example autocomplete
     var jobs = [
@@ -35,29 +24,28 @@ $(document).ready(function () {
         }
     });
 
-    collapseContentHeight.initialize();
-
-    floatingHeader.initialize({id: 'header'});
+    $('.js-form-focus').toggleFocusInput();
 
     $('.js-once-touch-field').on('focus', function () {
         $(this).parents('.js-once-touch-form').addClass('is-active');
     });
 
-    $('.js-field-dropdown').on('focus', function () {
-        $(this).parents('.js-field-dropdown-container').addClass('is-open');
-    });
+    (function ($) {
+        var $collapse = $('.js-toggle-collapse-parent');
 
-    $(document).on('click', function(e){
-        var parentInput  = $('.js-field-dropdown-container');
-
-        $(parentInput).each(function () {
-            var $self = $(this);
-
-            if(!$self.is(e.target) && $self.has(e.target).length === 0) {
-                $self.removeClass('is-open');
-            }
+        $collapse.on('show.bs.collapse', function () {
+            $(this).parent().addClass('is-open');
         });
-    });
+        $collapse.on('hide.bs.collapse', function () {
+            $(this).parent().removeClass('is-open');
+        });
+    })(jQuery);
+
+    collapseContentHeight.initialize();
+
+    if (document.getElementById('header')) {
+        floatingHeader.initialize({id: 'header'});
+    }
 
     // For dropdowns (Clicks inside do not close the dropdown)
     $(document).on(
@@ -68,6 +56,18 @@ $(document).ready(function () {
         }
     );
 
+    $('.js-scroll-tab-into-view').on('shown.bs.tab', function () {
+        var element = $($(this).data('target'))[0];
+        element.scrollIntoView({behavior: "smooth"});
+    });
+
+    $('.js-tab-has-tooltip').on('shown.bs.tab', function () {
+        var element = $($(this).data('target'))[0];
+        var id = $(element).attr('id');
+        var tab = $("[data-target='#" + id + "']").parent();
+        tab.find('.js-tab-tooltip').addClass('u-hidden');
+    });
+
     $('.js-toggle-btn').on('click', function () {
         var container = $('.js-toggle-container');
 
@@ -77,7 +77,108 @@ $(document).ready(function () {
             container.addClass('is-open');
         }
     });
+
+    $('.js-input-show-modal').on('change', function() {
+        if ($(this).is(':not(:checked')) {
+            $($(this).attr('data-target')).modal('show');
+        }
+    });
+
+    $('.js-change-input-group').on('change', function() {
+        var container = $(this).parents('.js-input-group');
+        var inputs = container.find('input[type=checkbox]');
+        inputs.prop('checked', $(this).prop('checked'));
+
+        if (container.find('input[type=checkbox]:checked.js-change-input').length === 0) {
+            container.find('.js-change-input').prop({
+                disabled: true
+            });
+        } else {
+            container.find('.js-change-input').prop({
+                disabled: false
+            });
+        }
+    });
+
+    $('.js-change-input').on('change', function() {
+        var checked = $(this).prop('checked');
+        var container = $(this).parents('.js-input-group');
+
+        if ($(this).is(':checked')) {
+            container.find('.js-change-input-group').prop({
+                indeterminate: true,
+                checked: container.find('.js-change-input-group').prop('checked', false)
+            });
+        } else {
+            if (container.find('input[type=checkbox]:checked.js-change-input').length === 0) {
+                container.find('input[type=checkbox]').prop({
+                    indeterminate: false,
+                    checked: checked
+                });
+                container.find('.js-change-input').prop({
+                    disabled: true
+                });
+            }
+        }
+    });
+
+    handleHorizontalScroll.init();
 });
+
+
+var handleHorizontalScroll = (function($) {
+    var defaults = {
+        container: '.js-scroll-container',
+        scroll: '.js-scroll',
+        button: '.js-scroll-control',
+        offset: 10,
+        scrollSpeed: 200,
+    };
+
+    function init(params) {
+        var settings = $.extend({}, defaults, params || {});
+        var $containers = $(settings.container);
+
+        $containers.each(function () {
+            var $container = $(this);
+            var $scroll = $container.find(settings.scroll);
+            var $button = $container.find(settings.button);
+            var scrollWidth = getScrollWidth();
+
+            checkVisibilityButton();
+
+            $(window).on('resize', function() {
+                scrollWidth = getScrollWidth();
+                checkVisibilityButton();
+            });
+
+            $scroll.on('scroll', function() {
+                checkVisibilityButton();
+            });
+
+            $button.on('click', function () {
+                $scroll.animate({scrollLeft: scrollWidth}, settings.scrollSpeed);
+            });
+
+            function getScrollWidth() {
+                return $scroll[0].scrollWidth;
+            }
+
+            function checkVisibilityButton() {
+                if ($scroll.scrollLeft() + $scroll.outerWidth(true) + settings.offset >= scrollWidth) {
+                    $button.hide();
+                } else {
+                    $button.show();
+                }
+            }
+        })
+    }
+
+    return {
+        init: init
+    };
+})(jQuery);
+
 
 var toggle = (function ($) {
     var defaults = {
@@ -109,6 +210,7 @@ var toggle = (function ($) {
         initialize: initialize
     };
 })(jQuery);
+
 
 var drawer = (function ($) {
     var settings = {
@@ -148,17 +250,13 @@ var locker = (function ($) {
     };
 
     var lock = function () {
-        var padding = window.innerWidth - document.documentElement.clientWidth;
-
         $(settings.element)
-            .addClass(settings.lockedClass)
-            .css('paddingRight', padding);
+            .addClass(settings.lockedClass);
     };
 
     var unlock = function () {
         $(settings.element)
-            .removeClass(settings.lockedClass)
-            .css('paddingRight', 0);
+            .removeClass(settings.lockedClass);
     };
 
     return {
@@ -191,7 +289,7 @@ var scrollToTop = (function ($) {
 
         var $appended = $button.appendTo('body').hide();
 
-        $(window).scroll(function () {
+        $(window).scroll(function(){
             if ($(this).scrollTop() > height) {
                 $appended.fadeIn();
             } else {
@@ -223,7 +321,7 @@ var collapseContentHeight = (function ($) {
                 var maxHeight = $container.data('max-height');
                 var $trigger = $('[data-toggle="collapse-content-height"]', $container);
 
-                $container.children().filter(':visible').each(function () {
+                $container.children().filter(':visible').each(function() {
                     totalHeight += $(this).outerHeight(true);
                 });
 

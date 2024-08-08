@@ -95,5 +95,3 @@ var stickyElement = (function ($) {
         register: register
     };
 })(jQuery);
-
-
