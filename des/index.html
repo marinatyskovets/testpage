@@ -4,107 +4,115 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>JI2</title>
+        <title>Talentin</title>
         <meta content="" name="description">
         <meta content="" name="keywords">
         <meta content="telephone=no" name="format-detection">
         <meta name="HandheldFriendly" content="true">
         <meta name="theme-color" content="#ffffff">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik:wght@400;500&display=block" rel="stylesheet">
         <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
     <body>
-        <div class="w-gap-md">
-            <button class="c-btn c-btn--strong" type="button" data-toggle="modal" data-target="#subscribe-vacancy">Vacancy subscribe</button>
-        </div>
-        <div class="w-gap-md">
-            <button class="c-btn c-btn--strong" type="button" data-toggle="modal" data-target="#vacancy">Vacancy</button>
+        <!-- ------------------------------ SECONDARY TEMPLATE -------------------------------->
+        <div class="w-page w-page--secondary">
+            <div class="w-page__content">
+                <!-- ---------------  Main part page ----------------->
+                <div class="w-centered">
+                    <div class="w-gap-md">
+                        <button class="gui-btn gui-btn--help gui-btn--xs" type="button" data-toggle="modal" data-target="#subscribe-vacancy">Vacancy subscribe</button>
+                    </div>
+                    <div class="w-gap-md">
+                        <button class="gui-btn gui-btn--help gui-btn--xs" type="button" data-toggle="modal" data-target="#vacancy">Vacancy</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- begin modal-common-->
-        <div class="c-modal-common fade js-modal-locker c-modal-common--radius-md c-modal-common--close-md" id="subscribe-vacancy">
+        <div class="c-modal-common fade js-modal-locker c-modal-common--space-free" id="subscribe-vacancy">
             <div class="c-modal-common__dialog">
-                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--xs" data-ico="close"></i>
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal">
+                    <svg class="c-ico c-ico--xl c-ico--accent" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"></path>
+                    </svg>
                 </button>
                 <div class="c-modal-common__content">
-                    <div class="c-main-box c-main-box--space-vert-lg c-main-box--border-free">
-                        <div class="w-centered w-centered--xxs">
-                            <div class="w-gap-lg c-column-gap-md">
-                                <div class="u-text-24 u-text-bold"><span class="u-text-info">Driver</span> Posting Near You</div>
-                                <div class="u-text-lg">
-                                    Give us your email address, and we'll notify you about the top <strong>Driver</strong>
-                                    job offers in your location.
-                                </div>
+                    <div class="c-common-container">
+                        <div class="w-gap-lg c-column-gap-md">
+                            <div class="u-text-24 u-text-bold"><span class="u-text-info">Driver</span> Posting Near You</div>
+                            <div class="u-text-md">
+                                Give us your email address, and we'll notify you about the top <strong>Driver</strong>
+                                job offers in your location.
                             </div>
-                            <form class="w-gap-lg c-column-gap-md">
-                                <input type="hidden">
-                                <div class="c-form-group c-form-group--checked has-success">
-                                    <div class="c-addon-field c-addon-field--wide">
-                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit c-addon-field__addon" viewBox="0 0 24 24">
-                                            <!-- ico name: magnify-->
-                                            <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path>
-                                        </svg>
-                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--success c-addon-field__status-control" viewBox="0 0 24 24">
-                                            <!-- ico name: check-circle-->
-                                            <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                        </svg>
-                                        <input class="c-text-field c-text-field--size-lg" type="text" value="Driver">
-                                    </div>
-                                    <div class="c-form-group__message"></div>
-                                </div>
-                                <div class="c-form-group c-form-group--checked has-success">
-                                    <div class="c-addon-field c-addon-field--wide">
-                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit c-addon-field__addon" viewBox="0 0 24 24">
-                                            <!-- ico name: map-marker-outline-->
-                                            <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
-                                        </svg>
-                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--success c-addon-field__status-control" viewBox="0 0 24 24">
-                                            <!-- ico name: check-circle-->
-                                            <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                        </svg>
-                                        <input class="c-text-field c-text-field--size-lg" type="text" value="28901">
-                                    </div>
-                                    <div class="c-form-group__message"></div>
-                                </div>
-                                <div class="c-form-group c-form-group--checked has-error">
-                                    <div class="c-addon-field c-addon-field--wide">
-                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit c-addon-field__addon" viewBox="0 0 24 24">
-                                            <!-- ico name: email-outline-->
-                                            <path fill="currentColor" d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z"></path>
-                                        </svg>
-                                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--success c-addon-field__status-control" viewBox="0 0 24 24">
-                                            <!-- ico name: check-circle-->
-                                            <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                        </svg>
-                                        <input class="c-text-field c-text-field--size-lg" type="text" placeholder="Email">
-                                    </div>
-                                    <div class="c-form-group__message">Email is required!</div>
-                                </div>
-                                <button class="c-btn c-btn--block c-btn--md u-text-bold" type="submit">Continue
-                                    <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit u-ml-10" viewBox="0 0 24 24">
-                                        <!-- ico name: arrow-right-->
-                                        <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-                                    </svg>
-                                </button>
-                            </form>
                         </div>
+                        <form class="w-gap-lg c-column-gap-md">
+                            <input type="hidden">
+                            <div class="gui-form-group gui-form-group--checked has-success">
+                                <div class="gui-form-group__input-group gui-form-group__input-group--wide">
+                                    <svg class="c-ico-svg c-ico-svg--xl c-ico-svg--inherit gui-form-group__ico" viewBox="0 0 24 24">
+                                        <!-- ico name: magnify-->
+                                        <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path>
+                                    </svg>
+                                    <svg class="c-ico-svg c-ico-svg--xl c-ico-svg--success gui-form-group__status-control" viewBox="0 0 24 24">
+                                        <!-- ico name: check-circle-->
+                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                                    </svg>
+                                    <input class="gui-text-field gui-text-field--size-md" type="text" value="Driver">
+                                </div>
+                                <div class="gui-form-group__message"></div>
+                            </div>
+                            <div class="gui-form-group gui-form-group--checked has-success">
+                                <div class="gui-form-group__input-group gui-form-group__input-group--wide">
+                                    <svg class="c-ico-svg c-ico-svg--xl c-ico-svg--inherit gui-form-group__ico" viewBox="0 0 24 24">
+                                        <!-- ico name: map-marker-outline-->
+                                        <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                    </svg>
+                                    <svg class="c-ico-svg c-ico-svg--xl c-ico-svg--success gui-form-group__status-control" viewBox="0 0 24 24">
+                                        <!-- ico name: check-circle-->
+                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                                    </svg>
+                                    <input class="gui-text-field gui-text-field--size-md" type="text" value="28901">
+                                </div>
+                                <div class="gui-form-group__message"></div>
+                            </div>
+                            <div class="gui-form-group gui-form-group--checked has-error">
+                                <div class="gui-form-group__input-group gui-form-group__input-group--wide">
+                                    <svg class="c-ico-svg c-ico-svg--xl c-ico-svg--inherit gui-form-group__ico" viewBox="0 0 24 24">
+                                        <!-- ico name: email-outline-->
+                                        <path fill="currentColor" d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z"></path>
+                                    </svg>
+                                    <svg class="c-ico-svg c-ico-svg--xl c-ico-svg--success gui-form-group__status-control" viewBox="0 0 24 24">
+                                        <!-- ico name: check-circle-->
+                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
+                                    </svg>
+                                    <input class="gui-text-field gui-text-field--size-md" type="text" placeholder="Email">
+                                </div>
+                                <div class="gui-form-group__message">Email is required!</div>
+                            </div>
+                            <button class="gui-btn gui-btn--info gui-btn--sm gui-btn--block u-text-main" type="submit">Continue
+                                <svg class="c-ico-svg c-ico-svg--xl c-ico-svg--inherit u-ml-10 u-mt-2-neg u-mb-2-neg" viewBox="0 0 24 24">
+                                    <!-- ico name: arrow-right-->
+                                    <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                                </svg>
+                            </button>
+                        </form>
                     </div>
-                    <div class="c-main-box c-main-box--dark c-main-box--space-vert-sm c-main-box--border-free">
-                        <div class="c-column-gap-sm w-centered w-centered--xxs">
+                    <div class="c-common-container c-common-container--secondary c-common-container--md-tiny">
+                        <div class="c-column-gap-xs u-text-md">
                             <div class="u-text-bold">
-                                <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit u-mt-5-neg u-mr-8" viewBox="0 0 24 24">
+                                <svg class="c-ico-svg c-ico-svg--xl c-ico-svg--inherit u-mt-7-neg u-mr-8" viewBox="0 0 24 24">
                                     <!-- ico name: lock-->
                                     <path fill="currentColor" d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"></path>
                                 </svg>Your information is protected and encrypted
                             </div>
-                            <div class="u-text-help u-text-main">
-                                By clicking Continue you agree to our <a href="#" class="c-link c-link-help c-link-underline">Terms</a>,
-                                <a href="#" class="c-link c-link-help c-link-underline">Cookies</a> and
-                                <a href="#" class="c-link c-link-help c-link-underline">Privacy Policy</a>
+                            <div class="u-text-help">
+                                By clicking Continue you agree to our <a href="#" class="gui-link gui-link--help gui-link--underline">Terms</a>,
+                                <a href="#" class="gui-link gui-link--help gui-link--underline">Cookies</a> and
+                                <a href="#" class="gui-link gui-link--help gui-link--underline">Privacy Policy</a>
                             </div>
                         </div>
                     </div>
@@ -113,35 +121,36 @@
         </div>
         <!-- end modal-common-->
         <!-- begin modal-common-->
-        <div class="c-modal-common fade js-modal-locker c-modal-common--radius-md c-modal-common--close-md" id="vacancy">
+        <div class="c-modal-common fade js-modal-locker c-modal-common--space-free" id="vacancy">
             <div class="c-modal-common__dialog">
-                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--xs" data-ico="close"></i>
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal">
+                    <svg class="c-ico c-ico--xl c-ico--accent" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"></path>
+                    </svg>
                 </button>
                 <div class="c-modal-common__content">
-                    <div class="c-main-box c-main-box--space-vert-lg c-main-box--border-free">
-                        <div class="w-centered w-centered--xxs">
-                            <div class="u-text-24 u-text-primary-theme u-text-bold w-gap-lg">Driver Training Specialist (Driving Licence Required)</div>
-                            <div class="w-gap-lg c-column-gap-sm">
-                                <div class="c-row c-row--nowrap c-row--row-gap-xs">
-                                    <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--primary u-mt-1" viewBox="0 0 24 24">
-                                        <!-- ico name: company-outline-custom-->
-                                        <path fill="currentColor" d="M16.7,15h-2v2h2 M16.7,11h-2v2h2 M18.7,19h-5.5V9h5.5 M11.3,7h-2V5h2 M11.3,11h-2V9h2 M11.3,15h-2v-2h2   M11.3,19h-2v-2h2 M7.3,7h-2V5h2 M7.3,11h-2V9h2 M7.3,15h-2v-2h2 M7.3,19h-2v-2h2 M13.2,7V3h-10v18h17.5V7H13.2z"></path>
-                                    </svg>
-                                    <div class="u-text-help">Company Name</div>
-                                </div>
-                                <div class="c-row c-row--nowrap c-row--row-gap-xs">
-                                    <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--primary u-mt-1" viewBox="0 0 24 24">
-                                        <!-- ico name: clock-outline-->
-                                        <path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"></path>
-                                    </svg>
-                                    <div class="u-text-help">14 hours ago</div>
-                                </div>
+                    <div class="c-common-container c-common-container--md-narrow">
+                        <div class="u-text-24 u-text-info u-text-bold w-gap-lg">Driver Training Specialist (Driving Licence Required)</div>
+                        <div class="w-gap-lg c-column-gap-sm">
+                            <div class="c-row c-row--nowrap c-row--row-gap-xs">
+                                <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--primary u-mt-1" viewBox="0 0 24 24">
+                                    <!-- ico name: company-outline-custom-->
+                                    <path fill="currentColor" d="M16.7,15h-2v2h2 M16.7,11h-2v2h2 M18.7,19h-5.5V9h5.5 M11.3,7h-2V5h2 M11.3,11h-2V9h2 M11.3,15h-2v-2h2   M11.3,19h-2v-2h2 M7.3,7h-2V5h2 M7.3,11h-2V9h2 M7.3,15h-2v-2h2 M7.3,19h-2v-2h2 M13.2,7V3h-10v18h17.5V7H13.2z"></path>
+                                </svg>
+                                <div class="u-text-help u-text-md">Company Name</div>
                             </div>
-                            <div class="w-gap-xl u-text-5-line">
-                                You will be someone who will take staff “under their wing” allowing the clinic to prosper and thrive. The successful candidate will need to liaise effectively with our main hospita...
+                            <div class="c-row c-row--nowrap c-row--row-gap-xs">
+                                <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--primary u-mt-1" viewBox="0 0 24 24">
+                                    <!-- ico name: clock-outline-->
+                                    <path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"></path>
+                                </svg>
+                                <div class="u-text-help u-text-md">14 hours ago</div>
                             </div>
-                            <button class="c-btn c-btn--block c-btn--md u-text-bold" type="submit">View salary & More Info</button>
                         </div>
+                        <div class="w-gap-2xl u-text-5-line u-text-md">
+                            You will be someone who will take staff “under their wing” allowing the clinic to prosper and thrive. The successful candidate will need to liaise effectively with our main hospita...
+                        </div>
+                        <button class="gui-btn gui-btn--info gui-btn--sm gui-btn--block u-text-main" type="submit">View salary & More Info</button>
                     </div>
                 </div>
             </div>
@@ -150,13 +159,15 @@
         <!-- Including js files-->
 
 
-        <script src="static/js/separate-js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/separate-js/jquery-3.6.0.min.js"></script>
         <script src="static/js/separate-js/bootstrap.min.js"></script>
         <script src="static/js/separate-js/jquery.autocomplete.js"></script>
+        <script src="static/js/separate-js/owl.carousel.min.js"></script>
         <script src="static/js/separate-js/toggleFocusInput.js"></script>
         <script src="static/js/separate-js/datepicker.min.js"></script>
-        <script src="static/js/separate-js/owl.carousel.min.js"></script>
-        <script src="static/js/separate-js/lazysizes.min.js"></script>
+        <script src="static/js/separate-js/affix.js"></script>
+        <script src="static/js/separate-js/sticky.js"></script>
+        <script src="static/js/separate-js/countInput.js"></script>
         <script src="static/js/separate-js/main.js"></script>
     </body>
 
