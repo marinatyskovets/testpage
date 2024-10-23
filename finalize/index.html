@@ -178,7 +178,7 @@
                                         </style>
                                         <style>
                                             @page {
-                                                  size: A4 /**[[pageFormat]]*/;
+                                                  size: letter /**[[pageFormat]]*/;
                                                   margin: 0;
                                               }
                                               
@@ -189,6 +189,7 @@
                                                   padding: 57px 24px 24px 48px;
                                                   position: relative;
                                                   z-index: 1;
+                                                  min-height: 100vh;
                                               }
                                               
                                               @media print {
@@ -493,7 +494,7 @@
                                         </style>
                                         <style>
                                             @page {
-                                                  size: A4 /**[[pageFormat]]*/;
+                                                  size: letter /**[[pageFormat]]*/;
                                                   margin: 0;
                                               }
                                               
@@ -806,7 +807,7 @@
                                         </style>
                                         <style>
                                             @page {
-                                                  size: A4 /**[[pageFormat]]*/;
+                                                  size: letter /**[[pageFormat]]*/;
                                                   margin: 0;
                                               }
                                               
@@ -1090,7 +1091,7 @@
                                         </style>
                                         <style>
                                             @page {
-                                                  size: A4 /**[[pageFormat]]*/;
+                                                  size: letter /**[[pageFormat]]*/;
                                                   margin: 0;
                                               }
                                               
@@ -1426,7 +1427,8 @@
                                         </style>
                                         <style>
                                             @page {
-                                                  size: A4 /**[[pageFormat]]*/;
+                                                  size: letter /**[[pageFormat]]*/
+                                              ;
                                                   margin: 0;
                                               }
                                               
@@ -1650,12 +1652,15 @@
                                               
                                               .c-resume-template.nexis .c-resume-template-section {
                                                   padding-bottom: 16px /**[[sectionMargin]]*/;
-                                                  border-top: 1px solid #116212 /**[[color]]*/;
                                                   padding-top: 16px;
                                               }
                                               
                                               .c-resume-template.nexis .c-resume-template-section:last-child {
                                                   padding-bottom: 0;
+                                              }
+                                              
+                                              .c-resume-template.nexis .c-resume-template-section:not(:only-child) {
+                                                  border-top: 1px solid #116212 /**[[color]]*/;
                                               }
                                               
                                               .c-resume-template.nexis .c-resume-template-info {
@@ -1695,7 +1700,7 @@
                                               }
                                         </style>
                                         <!-- begin resume-template-->
-                                        <div class="c-resume-template bright">
+                                        <div class="c-resume-template bright page-size">
                                             <div class="c-resume-template-head">
                                                 <div class="c-resume-template-monogram">ww</div>
                                                 <div class="c-resume-template-photo c-resume-template-photo--placeholder">
