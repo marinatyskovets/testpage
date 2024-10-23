@@ -23,14 +23,208 @@
         <div class="c-vertical-scrollbar c-vertical-scrollbar--full-height" style="padding-bottom: 190px;">
             <div class="c-vertical-scrollbar__inner">
                 <div class="c-row c-row--gap-sm">
-                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-empty">build-resume-finalize-empty
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-add-sections">build-resume-finalize-add-sections
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-spell-check">build-resume-finalize-spell-check
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-spell-check-done">build-resume-finalize-spell-check-done
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-rename-section">build-resume-finalize-rename-section
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-delete-section">build-resume-finalize-delete-section
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-confirm">build-resume-finalize-confirm
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-leave-confirm">build-resume-finalize-leave-confirm
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-name-resume">build-resume-finalize-name-resume
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-delete-resume">build-resume-finalize-delete-resume
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-download">build-resume-finalize-download
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-download-email">build-resume-finalize-download-email
+                    </button>
+                    <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#finalize-delete-photo">build-resume-finalize-delete-photo
                     </button>
                 </div>
             </div>
         </div>
         <!-- end vertical-scrollbar-->
         <!-- begin modal-common-->
-        <div class="c-modal-common modal fade js-modal-locker" id="finalize-empty">
+        <div class="c-modal-common modal fade js-modal-locker c-modal-common--lg" id="finalize-add-sections">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-h3 w-gap-lg">Add Sections To Your Resume</div>
+                    <div class="w-gap-lg">
+                        <div class="c-separate-section c-separate-section--md">
+                            <div class="c-row c-row--nowrap row--align-top c-row--row-gap-xl c-row--by-2">
+                                <div class="form-group form-group--toggle">
+                                    <!-- begin form-toggle-->
+                                    <input type="hidden">
+                                    <div>
+                                        <label>
+                                            <input type="checkbox" name="sections"><span>Websites, Portfolios, Profiles</span>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="sections"><span>Certifications</span>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="sections"><span>Languages</span>
+                                        </label>
+                                    </div>
+                                    <!-- end form-toggle-->
+                                    <div class="help-block"></div>
+                                </div>
+                                <div class="form-group form-group--toggle">
+                                    <!-- begin form-toggle-->
+                                    <input type="hidden">
+                                    <div>
+                                        <label>
+                                            <input type="checkbox" name="sections"><span>Accomplishments</span>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="sections"><span>Additional Information</span>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="sections"><span>Affiliations</span>
+                                        </label>
+                                    </div>
+                                    <!-- end form-toggle-->
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-separate-section">
+                            <div class="c-h4">Add your own</div>
+                            <div class="grid grid--nowrap grid--gap-sm">
+                                <div class="grid__col">
+                                    <div class="form-group form-group--toggle u-mt-17">
+                                        <!-- begin form-toggle-->
+                                        <input type="hidden">
+                                        <label>
+                                            <input type="checkbox"><span></span>
+                                        </label>
+                                        <!-- end form-toggle-->
+                                        <div class="help-block"></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col-7">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="ex. Hobbies">
+                                        <div class="help-block"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-row c-row--nowrap c-row--justify-between c-row--row-gap-lg w-gap-lg">
+                        <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Cancel
+                        </button>
+                        <button class="c-btn is-disabled" type="submit">
+                            <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                <!-- ico name: check-->
+                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                            </svg>Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker c-modal-common--2xl-tiny" id="finalize-spell-check">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-h3 w-gap-lg">Spell heck</div>
+                    <div class="w-gap-lg grid grid--nowrap">
+                        <div class="grid__col">
+                            <div class="c-h4 w-gap-xs">Not in Dictionary</div>
+                            <ul class="c-list-icon c-list-icon--scroll">
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">I <span class="c-list-icon__selected">wuild</span> like to express</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">To your team, I’m <span class="c-list-icon__selected">confidenssst</span> that I am</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Detail, effective communication <span class="c-list-icon__selected">skkksdlls</span> and problem-solving</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grid__col-common">
+                            <div class="c-h4 w-gap-xs">Suggestions</div>
+                            <!-- begin list-icon-->
+                            <ul class="c-list-icon c-list-icon--scroll">
+                                <li class="c-list-icon__item is-active"><a class="c-list-icon__link" href="#">Weild</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Would</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Wild</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Weald</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Wields</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Wieldy</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Wilds</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Wiled</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Wilds</a>
+                                </li>
+                                <li class="c-list-icon__item"><a class="c-list-icon__link" href="#">Wilds</a>
+                                </li>
+                            </ul>
+                            <!-- end list-icon-->
+                        </div>
+                        <div class="grid__col">
+                            <div class="c-separate-section c-separate-section--xs">
+                                <div class="c-column-gap-sm">
+                                    <button class="c-btn c-btn--secondary" type="button">Change
+                                    </button>
+                                    <button class="c-btn c-btn--link-secondary" type="button">Change All
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="c-separate-section c-separate-section--xs">
+                                <div class="c-column-gap-xs">
+                                    <button class="c-btn c-btn--ghost c-btn--xs c-btn--content-center" type="button">Ignore
+                                    </button>
+                                    <button class="c-btn c-btn--ghost c-btn--xs c-btn--content-center" type="button">Ignore All
+                                    </button>
+                                    <button class="c-btn c-btn--ghost c-btn--xs c-btn--content-center" type="button">Add to Dictionary
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-row c-row--nowrap c-row--justify-between c-row--row-gap-lg w-gap-lg">
+                        <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Cancel
+                        </button>
+                        <button class="c-btn" type="submit">
+                            <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                <!-- ico name: check-->
+                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                            </svg>Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="finalize-spell-check-done">
             <div class="c-modal-common__dialog modal-dialog">
                 <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
                     <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
@@ -40,16 +234,80 @@
                 </button>
                 <div class="c-modal-common__content">
                     <div class="w-gap-xl">
-                        <div class="c-h3 w-gap-sm">This section can’t be empty</div>
-                        <div class="w-gap-sm">Fill out this section or it will be deleted.</div>
+                        <div class="c-h3 w-gap-sm">Spell Check</div>
+                        <div class="w-gap-sm">Spell check complete. No errors found.</div>
                     </div>
+                    <div class="c-row c-row--row-gap-lg c-row--by-2 w-gap-xl">
+                        <button class="c-btn" type="submit">
+                            <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                <!-- ico name: check-->
+                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                            </svg>Ok
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="finalize-rename-section">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-h3 w-gap-lg">Rename Section</div>
+                    <form class="w-gap-lg">
+                        <input type="hidden">
+                        <div class="form-group form-group--compressed w-gap-xl">
+                            <label class="control-label" for="name-section">Section name</label>
+                            <input class="form-control" type="text" id="name-section" value="Professional Summary">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="w-gap-xl grid grid--nowrap">
+                            <div class="grid__col">
+                                <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Cancel
+                                </button>
+                            </div>
+                            <div class="grid__col-common">
+                                <button class="c-btn" type="submit">
+                                    <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                        <!-- ico name: check-->
+                                        <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                    </svg>Save
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="finalize-delete-section">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-h3 w-gap-xl">Are you sure you want to delete “Section” ?</div>
                     <div class="w-gap-xl grid grid--nowrap">
                         <div class="grid__col">
-                            <button class="c-btn c-btn--secondary" type="button">Discard Section
+                            <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">No
                             </button>
                         </div>
                         <div class="grid__col-common">
-                            <button class="c-btn" type="button">Edit
+                            <button class="c-btn" type="button">
+                                <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                    <!-- ico name: check-->
+                                    <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                </svg>Yes, delete
                             </button>
                         </div>
                     </div>
@@ -57,7 +315,314 @@
             </div>
         </div>
         <!-- end modal-common-->
-
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="finalize-confirm">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="w-gap-xl">
+                        <div class="c-h3 w-gap-sm">Please Confirm</div>
+                        <div class="w-gap-sm">Do you want to save your changes?</div>
+                    </div>
+                    <div class="w-gap-xl grid grid--nowrap">
+                        <div class="grid__col">
+                            <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Don’t Save
+                            </button>
+                        </div>
+                        <div class="grid__col-common">
+                            <button class="c-btn" type="submit">
+                                <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                    <!-- ico name: check-->
+                                    <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                </svg>Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="finalize-leave-confirm">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="w-gap-xl">
+                        <div class="c-h3 w-gap-sm">Do you want to leave for now?</div>
+                        <div class="w-gap-sm">We’ll save your progress so you can come back later</div>
+                    </div>
+                    <div class="w-gap-xl grid grid--nowrap">
+                        <div class="grid__col">
+                            <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Cancel
+                            </button>
+                        </div>
+                        <div class="grid__col-common">
+                            <button class="c-btn" type="button">Go To Dashboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="finalize-name-resume">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="w-gap-xl">
+                        <div class="c-h3 w-gap-sm">Save Resume As</div>
+                        <div class="w-gap-sm">Name the new document you are duplicating</div>
+                    </div>
+                    <form class="w-gap-xl">
+                        <input type="hidden">
+                        <div class="form-group form-group--compressed w-gap-xl">
+                            <label class="control-label" for="name-resume">Resume name</label>
+                            <input class="form-control" type="text" id="name-resume" value="Copy_of_Resume">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="w-gap-xl grid grid--nowrap">
+                            <div class="grid__col">
+                                <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Cancel
+                                </button>
+                            </div>
+                            <div class="grid__col-common">
+                                <button class="c-btn" type="submit">
+                                    <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                        <!-- ico name: check-->
+                                        <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                    </svg>Save
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="finalize-delete-resume">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="w-gap-xl">
+                        <div class="c-h3 w-gap-sm">Delete This Resume?</div>
+                        <div class="w-gap-sm">This can’t be undone</div>
+                    </div>
+                    <div class="w-gap-xl grid grid--nowrap">
+                        <div class="grid__col">
+                            <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">No
+                            </button>
+                        </div>
+                        <div class="grid__col-common">
+                            <button class="c-btn" type="button">
+                                <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                    <!-- ico name: check-->
+                                    <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                </svg>Yes, delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker c-modal-common--lg" id="finalize-download">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <form>
+                        <input type="hidden">
+                        <div class="w-gap-md grid grid--nowrap grid--gap-2xl">
+                            <div class="grid__col-8">
+                                <div class="c-h3 w-gap-lg">Download Resume As</div>
+                                <div class="form-group form-group--compressed w-gap-lg">
+                                    <label class="control-label" for="resume-name1">Resume name</label>
+                                    <input class="form-control" type="text" id="resume-name1" value="Resume_1">
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <div class="grid__col">
+                                <div class="u-mt-16">
+                                    <img class="c-image" src="static/img/general/download-document.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-gap-xl">
+                            <div class="c-h4 w-gap-md">Choose your format</div>
+                            <div class="grid grid--nowrap">
+                                <div class="grid__col-6">
+                                    <div class="form-group form-group--toggle">
+                                        <!-- begin form-toggle-->
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="format-resume"><span>Adobe PDF (.pdf)</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="format-resume"><span>Plain Text (.txt)</span>
+                                            </label>
+                                        </div>
+                                        <!-- end form-toggle-->
+                                        <div class="help-block"></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col-6">
+                                    <div class="form-group form-group--toggle">
+                                        <!-- begin form-toggle-->
+                                        <label>
+                                            <input type="radio" name="format-resume"><span>MS Word Document (.docx)</span>
+                                        </label>
+                                        <!-- end form-toggle-->
+                                        <div class="help-block"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-row c-row--nowrap c-row--justify-between c-row--row-gap-lg w-gap-xl">
+                            <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Cancel
+                            </button>
+                            <button class="c-btn" type="submit">Continue
+                                <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-right" viewBox="0 0 24 24">
+                                    <!-- ico name: arrow-right-->
+                                    <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker c-modal-common--lg" id="finalize-download-email">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <form>
+                        <input type="hidden">
+                        <div class="w-gap-md grid grid--nowrap grid--gap-2xl">
+                            <div class="grid__col-8">
+                                <div class="c-h3 w-gap-lg">Email Resume As</div>
+                                <div class="form-group form-group--compressed w-gap-lg">
+                                    <label class="control-label" for="resume-name2">Resume name</label>
+                                    <input class="form-control" type="text" id="resume-name2" value="Resume_1">
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <div class="grid__col">
+                                <div class="u-mt-16">
+                                    <img class="c-image" src="static/img/general/email-send.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-gap-xl">
+                            <div class="c-h4 w-gap-md">Choose your format</div>
+                            <div class="grid grid--nowrap">
+                                <div class="grid__col-6">
+                                    <div class="form-group form-group--toggle">
+                                        <!-- begin form-toggle-->
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="format-resume2"><span>Adobe PDF (.pdf)</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="format-resume2"><span>Plain Text (.txt)</span>
+                                            </label>
+                                        </div>
+                                        <!-- end form-toggle-->
+                                        <div class="help-block"></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col-6">
+                                    <div class="form-group form-group--toggle">
+                                        <!-- begin form-toggle-->
+                                        <label>
+                                            <input type="radio" name="format-resume2"><span>MS Word Document (.docx)</span>
+                                        </label>
+                                        <!-- end form-toggle-->
+                                        <div class="help-block"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-row c-row--nowrap c-row--justify-between c-row--row-gap-lg w-gap-xl">
+                            <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Cancel
+                            </button>
+                            <button class="c-btn" type="submit">Continue
+                                <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-right" viewBox="0 0 24 24">
+                                    <!-- ico name: arrow-right-->
+                                    <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="finalize-delete-photo">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="w-gap-xl">
+                        <div class="c-h3 w-gap-sm">Are you sure you want to delete this photo?</div>
+                        <div class="w-gap-sm">This action cannot be undone.</div>
+                    </div>
+                    <div class="w-gap-xl grid grid--nowrap">
+                        <div class="grid__col">
+                            <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Cancel
+                            </button>
+                        </div>
+                        <div class="grid__col-common">
+                            <button class="c-btn" type="button">
+                                <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                    <!-- ico name: check-->
+                                    <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                </svg>Yes, delete it
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
         <!-- Including js files-->
 
 
