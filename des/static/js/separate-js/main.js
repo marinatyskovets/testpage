@@ -57,6 +57,37 @@ var locker = (function ($) {
     };
 })(jQuery);
 
+var toggle = (function ($) {
+    var defaults = {
+        itemSelector: '[data-toggle-item]',
+        handlerSelector: '[data-toggle="item"]',
+        hiddenClass: 'u-hidden',
+        stateHandler: 'is-hidden'
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {});
+
+        $(document).on('click', settings.handlerSelector, function () {
+            var dataTarget = $(this).data('target'),
+                handler = $(settings.handlerSelector + '[data-target="' + dataTarget + '"]'),
+                toggleItem = $('[data-toggle-item="' + dataTarget + '"]');
+
+            // Item is toggled
+            toggleItem.toggleClass(settings.hiddenClass);
+
+            // Handler is toggled
+            handler.toggleClass(settings.stateHandler);
+
+            return false;
+        });
+    };
+
+    return {
+        initialize: initialize
+    };
+})(jQuery);
+
 var dropdownManager = (function ($) {
     var defaults = {
         container: '.js-dropdown-container',
@@ -99,6 +130,49 @@ var dropdownManager = (function ($) {
 
         $(document).on('click', function (event) {
             if (container.hasClass(stateClass) && !container.is(event.target) && container.has(event.target).length === 0) {
+                container.removeClass(stateClass);
+            }
+        });
+    };
+
+    return {
+        initialize: initialize
+    };
+})(jQuery);
+
+
+var tooltipVisibilityManager = (function ($) {
+    var defaults = {
+        container: '.js-tooltip',
+        opener: '.js-tooltip-toggle',
+        closer: '.js-tooltip-close',
+        stateClass: 'is-open'
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {}),
+            container = $(settings.container),
+            stateClass = settings.stateClass;
+
+        $(settings.opener).on('click', function (e) {
+            e.stopPropagation();
+            $(e.currentTarget).closest(settings.container).toggleClass(stateClass);
+        });
+
+        $(settings.closer).on('click', function (e) {
+            e.stopPropagation();
+
+            var tooltip = $(this).closest(settings.container);
+
+            if (tooltip.hasClass(stateClass)) {
+                tooltip.removeClass(stateClass);
+            }
+        });
+
+        $(document).on('click', function (e) {
+            var target = $(e.target);
+
+            if (container.hasClass(stateClass) && !container.is(target) && container.has(target).length === 0) {
                 container.removeClass(stateClass);
             }
         });
@@ -196,4 +270,34 @@ var scrollSpy = (function ($) {
     };
 
 })(jQuery);
+
+var updateCounter = (function () {
+    var defaults = {
+        container: '.js-counter',
+        min: 0,
+        max: 1000000,
+        interval: 3000,
+        step: 2
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {});
+        var container = $(settings.container);
+        var counter = container.children().first();
+        var currentValue = parseFloat(counter.text()) || settings.min;
+
+        setInterval(function () {
+            var change = (Math.random() < 0.9 ? 1 : -1) * Math.random() * (Math.random() < 0.9 ? settings.step : 2);
+
+            currentValue += change;
+            currentValue = Math.max(settings.min, Math.min(settings.max, currentValue));
+            counter.text(currentValue.toFixed(0));
+        }, settings.interval);
+    };
+
+    return {
+        initialize: initialize
+    };
+})();
+
 
