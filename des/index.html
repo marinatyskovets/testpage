@@ -20,7 +20,7 @@
 
     <body>
         <!-- ------------------------------ TEMPLATE BASE -------------------------------->
-        <div class="w-page w-page--fill">
+        <div class="w-page">
             <div class="w-page__top">
                 <!-- ---------------  Top part page ----------------->
                 <!-- begin header-->
@@ -29,50 +29,30 @@
                         <div class="c-header__top">
                             <div class="c-header__cell">
                                 <!-- begin logo-->
-                                <a class="c-logo c-logo--resume" href="#"></a>
+                                <a class="c-logo" href="#"></a>
                                 <!-- end logo-->
                             </div>
                             <div class="c-header__cell">
-                                <!-- begin dropdown-->
-                                <div class="c-dropdown c-dropdown--bottom-left">
-                                    <button class="c-btn c-btn--toggle c-btn--link-secondary c-btn--xs" type="button" data-bs-toggle="dropdown" data-bs-display="static">Resumes
-                                    </button>
-                                    <div class="dropdown-menu c-dropdown__menu"><a class="c-dropdown__link" href="#">Resumes Builder</a><a class="c-dropdown__link" href="#">Resumes Templates</a><a class="c-dropdown__link" href="#">Resumes Examples</a><a class="c-dropdown__link" href="#">How to Make a Resumes</a>
-                                        <a
-                                        class="c-dropdown__link" href="#">Resumes Formats</a>
+                                <!-- begin progress-bar-->
+                                <div class="c-progress-bar c-progress-bar--step-horizontal">
+                                    <div class="c-progress-bar__step is-completed">
+                                        <div class="c-progress-bar__arrow">1</div>
+                                        <div class="c-progress-bar__text">Build Letter</div>
+                                    </div>
+                                    <div class="c-progress-bar__step is-active">
+                                        <div class="c-progress-bar__arrow">2</div>
+                                        <div class="c-progress-bar__text">Choose Access</div>
+                                    </div>
+                                    <div class="c-progress-bar__step">
+                                        <div class="c-progress-bar__arrow">3</div>
+                                        <div class="c-progress-bar__text">Payment Details</div>
+                                    </div>
+                                    <div class="c-progress-bar__step">
+                                        <div class="c-progress-bar__arrow">4</div>
+                                        <div class="c-progress-bar__text">Finished!</div>
                                     </div>
                                 </div>
-                                <!-- end dropdown-->
-                                <!-- begin dropdown-->
-                                <div class="c-dropdown c-dropdown--bottom-left">
-                                    <button class="c-btn c-btn--toggle c-btn--link-secondary c-btn--xs" type="button" data-bs-toggle="dropdown" data-bs-display="static">Cover Letters
-                                    </button>
-                                    <div class="dropdown-menu c-dropdown__menu"><a class="c-dropdown__link" href="#">Cover Letter Builder</a><a class="c-dropdown__link" href="#">Cover Letter Templates</a><a class="c-dropdown__link" href="#">Cover Letter Examples</a><a class="c-dropdown__link" href="#">How to Make a Cover Letter</a>
-                                        <a
-                                        class="c-dropdown__link" href="#">Cover Letter Formats</a>
-                                    </div>
-                                </div>
-                                <!-- end dropdown-->
-                                <button class="c-btn c-btn--link c-btn--xs" type="button">
-                                    <svg class="c-ico c-ico--xl c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
-                                        <!-- ico name: chat-->
-                                        <path fill="currentColor" d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z"></path>
-                                    </svg>Support
-                                </button>
-                                <button class="c-btn c-btn--link c-btn--xs" type="button">Member Account
-                                </button>
-                                <!-- begin dropdown-->
-                                <div class="c-dropdown">
-                                    <button class="c-btn c-btn--toggle c-btn--link-secondary c-btn--xs" type="button" data-bs-toggle="dropdown" data-bs-display="static">
-                                        <svg class="c-ico c-ico--xl c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
-                                            <!-- ico name: account-circle-->
-                                            <path fill="currentColor" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path>
-                                        </svg>User Name
-                                    </button>
-                                    <div class="dropdown-menu c-dropdown__menu"><a class="c-dropdown__link" href="#">My Settings</a><a class="c-dropdown__link" href="#">Sign Out</a>
-                                    </div>
-                                </div>
-                                <!-- end dropdown-->
+                                <!-- end progress-bar-->
                             </div>
                         </div>
                     </div>
@@ -81,1177 +61,151 @@
             </div>
             <div class="w-page__content">
                 <!-- ---------------  Main part page ----------------->
-                <main>
-                    <!-- begin section-->
-                    <section class="c-section c-section--secondary c-section--sm">
-                        <div class="w-centered">
-                            <div class="w-gap-xl grid grid--nowrap grid--between">
-                                <div class="grid__col-6">
-                                    <h1 class="c-h1-lg w-gap-xl">Create effective resume, with ease</h1>
-                                    <div class="w-gap-xl u-text-lg">
-                                        Build a winning resume using our high-quality templates and easy-to-use builder. Boost your chances with powerful tools and expert-designed content.
+                <main class="w-container">
+                    <div class="w-gap-3xl w-centered">
+                        <div class="c-h1 u-text-center w-gap-xl">Let’s unlock your future career!</div>
+                        <!-- begin plans-->
+                        <div class="c-plans w-gap-md">
+                            <div class="c-plans__box">
+                                <div class="c-plans__head">
+                                    <div class="form-group form-group--toggle-checkbox-view c-plans__select">
+                                        <!-- begin form-toggle-->
+                                        <label>
+                                            <input type="radio" name="plan" checked="checked" /><span></span>
+                                        </label>
+                                        <!-- end form-toggle-->
+                                        <div class="help-block"></div>
                                     </div>
-                                    <div class="c-row c-row--nowrap c-row--row-gap-xl w-gap-2xl">
-                                        <button class="c-btn c-btn--info" type="button">Create Your Resume
-                                        </button>
-                                        <!-- begin star-rating-container-->
-                                        <div class="c-star-rating-container">
-                                            <div class="c-row c-row--nowrap c-row--align-center c-row--row-gap-xs"><span class="c-star-rating-container__title">Excellent</span>
-                                                <!-- begin star-rating-->
-                                                <div class="c-star-rating" data-rating="4.5"><span></span><span></span><span></span><span></span><span></span>
-                                                </div>
-                                                <!-- end star-rating-->
-                                            </div>
-                                            <div class="c-star-rating-container__subtext">based on 12,375 user reviews</div>
-                                        </div>
-                                        <!-- end star-rating-container-->
-                                    </div>
-                                    <div class="c-row c-row--nowrap c-row--row-gap-xl w-gap-2xl">
-                                        <div class="c-row c-row--nowrap c-row--row-gap-sm w-gap-4xl">
-                                            <div class="c-separator-line c-separator-line--xl"></div>
-                                            <div class="c-column-gap-xxs">
-                                                <div class="c-label c-label--help c-label--lg">37% higher</div>
-                                                <div class="u-text-help">chance of getting a job</div>
-                                            </div>
-                                        </div>
-                                        <div class="c-row c-row--nowrap c-row--row-gap-sm w-gap-4xl">
-                                            <div class="c-separator-line c-separator-line--xl"></div>
-                                            <div class="c-column-gap-xxs">
-                                                <div class="c-label c-label--highlight c-label--lg">44% higher</div>
-                                                <div class="u-text-help">response rate from recruiters</div>
-                                            </div>
-                                        </div>
+                                    <div class="c-plans__title">14-Day Full Access</div>
+                                    <div class="c-plans__value">2<sup class="c-plans__value-sub">,95</sup><sup class="c-plans__value-symbol">$</sup>
                                     </div>
                                 </div>
-                                <div class="grid__col">
-                                    <!-- begin banner-card-->
-                                    <div class="c-banner-card c-banner-card--sm c-banner-card--img-position">
-                                        <img class="c-image lazyload c-banner-card__image-main" data-src="static/img/general/banner-templates-4.png" alt="" width="436" height="543" />
-                                        <img class="c-image lazyload c-banner-card__image-colors" data-src="static/img/general/colors-panel.svg" alt="" />
-                                        <img class="c-image lazyload c-banner-card__image-panel" data-src="static/img/general/formatting-panel.svg" alt="" />
-                                        <a class="c-banner-card__label" href="#">
-                                            <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                <!-- ico name: lightning-bolt-circle-->
-                                                <path fill="currentColor" d="M11.5,20L16.36,10.27H13V4L8,13.73H11.5V20M12,2C14.75,2 17.1,3 19.05,4.95C21,6.9 22,9.25 22,12C22,14.75 21,17.1 19.05,19.05C17.1,21 14.75,22 12,22C9.25,22 6.9,21 4.95,19.05C3,17.1 2,14.75 2,12C2,9.25 3,6.9 4.95,4.95C6.9,3 9.25,2 12,2Z"></path>
-                                            </svg><span>Get the job<sup class="c-top-index c-top-index--light">1</sup> 2x faster!</span>
-                                        </a>
-                                        <div class="c-banner-card__tag">ATS Perfect
-                                            <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
-                                                <!-- ico name: check-decagram-->
-                                                <path fill="currentColor" d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"></path>
-                                            </svg>
+                                <div class="c-plans__content">
+                                    <div class="c-row c-row--nowrap c-row--justify-center w-gap-md">
+                                        <!-- begin count-down-->
+                                        <div class="c-count-down">
+                                            <img class="c-image c-count-down__img" src="static/img/general/limited-offer.svg" alt="" width="120" height="71" />
+                                            <div class="c-count-down__timer js-countdown">00:00:00</div>
                                         </div>
-                                        <div class="c-banner-card__note">
-                                            <img class="c-image lazyload" data-src="static/img/general/ai-logo.svg" alt="" />
-                                            <div class="c-banner-card__note-text">AI-powered content</div>
-                                        </div>
+                                        <!-- end count-down-->
                                     </div>
-                                    <!-- end banner-card-->
+                                    <!-- begin list-->
+                                    <ul class="c-list c-list--gap-md">
+                                        <li>All subscription features for 14 days</li>
+                                        <li>Automatically renews after 14 days at 22,95$, billed every 4 weeks</li>
+                                        <li>Cancel anytime, your progress will be saved</li>
+                                    </ul>
+                                    <!-- end list-->
                                 </div>
                             </div>
-                            <!-- begin outline-box-->
-                            <div class="c-outline-box c-outline-box--sm c-outline-box--secondary w-gap-xl">
-                                <div class="grid grid--nowrap grid--middle grid--gap-2xl">
-                                    <div class="grid__col"><strong>Our customers have been hired at:</strong><sup class="c-top-index">2</sup>
-                                    </div>
-                                    <div class="grid__col">
-                                        <div class="c-row c-row--nowrap c-row--align-center c-row--row-gap-5xl">
-                                            <img class="c-image lazyload" data-src="static/img/general/doordash-logo.svg" alt="" />
-                                            <img class="c-image lazyload" data-src="static/img/general/amazon-logo.svg" alt="" />
-                                            <img class="c-image lazyload" data-src="static/img/general/chase-logo.svg" alt="" />
-                                            <img class="c-image lazyload" data-src="static/img/general/pinterest-logo.svg" alt="" />
-                                            <img class="c-image lazyload" data-src="static/img/general/nike-logo.svg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end outline-box-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--md-wide">
-                        <h2 class="c-h2 u-text-center w-gap-lg">Job Seekers trust Effective Resume</h2>
-                        <div class="w-gap-lg c-swiper c-swiper--sm swiper js-swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <!-- begin review-->
-                                    <div class="c-review">
-                                        <div class="c-row c-row--row-gap-sm c-row--align-center w-gap-sm">
-                                            <!-- begin star-rating-->
-                                            <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                            </div>
-                                            <!-- end star-rating-->
-                                            <div class="c-review__tag">
-                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: check-circle-->
-                                                    <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                </svg>Verified
-                                            </div>
-                                        </div>
-                                        <div class="c-h5">Good one.</div>
-                                        <div class="c-review__text">If you don’t know how to build your own cover letter from scratch, don’t worry—the website walks you through the process step by step...</div>
-                                        <div class="c-review__data"><strong>Tom Ek</strong>, 3 days ago
-                                        </div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin review-->
-                                    <div class="c-review">
-                                        <div class="c-row c-row--row-gap-sm c-row--align-center w-gap-sm">
-                                            <!-- begin star-rating-->
-                                            <div class="c-star-rating" data-rating="4.5"><span></span><span></span><span></span><span></span><span></span>
-                                            </div>
-                                            <!-- end star-rating-->
-                                        </div>
-                                        <div class="c-h5">Good one.</div>
-                                        <div class="c-review__text">If you don’t know how to build your own cover letter from scratch, don’t worry—the website walks you through the process step by step...</div>
-                                        <div class="c-review__data"><strong>Tom Ek</strong>, 3 days ago
-                                        </div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin review-->
-                                    <div class="c-review">
-                                        <div class="c-row c-row--row-gap-sm c-row--align-center w-gap-sm">
-                                            <!-- begin star-rating-->
-                                            <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                            </div>
-                                            <!-- end star-rating-->
-                                            <div class="c-review__tag">
-                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: check-circle-->
-                                                    <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                </svg>Verified
-                                            </div>
-                                        </div>
-                                        <div class="c-h5">Good one.</div>
-                                        <div class="c-review__text">If you don’t know how to build your own cover letter from scratch, don’t worry—the website walks you through the process step by step...</div>
-                                        <div class="c-review__data"><strong>Tom Ek</strong>, 3 days ago
-                                        </div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin review-->
-                                    <div class="c-review">
-                                        <div class="c-row c-row--row-gap-sm c-row--align-center w-gap-sm">
-                                            <!-- begin star-rating-->
-                                            <div class="c-star-rating" data-rating="4.5"><span></span><span></span><span></span><span></span><span></span>
-                                            </div>
-                                            <!-- end star-rating-->
-                                        </div>
-                                        <div class="c-h5">Good one.</div>
-                                        <div class="c-review__text">If you don’t know how to build your own cover letter from scratch, don’t worry—the website walks you through the process step by step...</div>
-                                        <div class="c-review__data"><strong>Tom Ek</strong>, 3 days ago
-                                        </div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin review-->
-                                    <div class="c-review">
-                                        <div class="c-row c-row--row-gap-sm c-row--align-center w-gap-sm">
-                                            <!-- begin star-rating-->
-                                            <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                            </div>
-                                            <!-- end star-rating-->
-                                            <div class="c-review__tag">
-                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: check-circle-->
-                                                    <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                </svg>Verified
-                                            </div>
-                                        </div>
-                                        <div class="c-h5">Good one.</div>
-                                        <div class="c-review__text">If you don’t know how to build your own cover letter from scratch, don’t worry—the website walks you through the process step by step...</div>
-                                        <div class="c-review__data"><strong>Tom Ek</strong>, 3 days ago
-                                        </div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin review-->
-                                    <div class="c-review">
-                                        <div class="c-row c-row--row-gap-sm c-row--align-center w-gap-sm">
-                                            <!-- begin star-rating-->
-                                            <div class="c-star-rating" data-rating="4.5"><span></span><span></span><span></span><span></span><span></span>
-                                            </div>
-                                            <!-- end star-rating-->
-                                        </div>
-                                        <div class="c-h5">Good one.</div>
-                                        <div class="c-review__text">If you don’t know how to build your own cover letter from scratch, don’t worry—the website walks you through the process step by step...</div>
-                                        <div class="c-review__data"><strong>Tom Ek</strong>, 3 days ago
-                                        </div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin review-->
-                                    <div class="c-review">
-                                        <div class="c-row c-row--row-gap-sm c-row--align-center w-gap-sm">
-                                            <!-- begin star-rating-->
-                                            <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                            </div>
-                                            <!-- end star-rating-->
-                                            <div class="c-review__tag">
-                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: check-circle-->
-                                                    <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                </svg>Verified
-                                            </div>
-                                        </div>
-                                        <div class="c-h5">Good one.</div>
-                                        <div class="c-review__text">If you don’t know how to build your own cover letter from scratch, don’t worry—the website walks you through the process step by step...</div>
-                                        <div class="c-review__data"><strong>Tom Ek</strong>, 3 days ago
-                                        </div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin review-->
-                                    <div class="c-review">
-                                        <div class="c-row c-row--row-gap-sm c-row--align-center w-gap-sm">
-                                            <!-- begin star-rating-->
-                                            <div class="c-star-rating" data-rating="4.5"><span></span><span></span><span></span><span></span><span></span>
-                                            </div>
-                                            <!-- end star-rating-->
-                                        </div>
-                                        <div class="c-h5">Good one.</div>
-                                        <div class="c-review__text">If you don’t know how to build your own cover letter from scratch, don’t worry—the website walks you through the process step by step...</div>
-                                        <div class="c-review__data"><strong>Tom Ek</strong>, 3 days ago
-                                        </div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
-                        <div class="w-gap-lg u-text-xs u-text-center">Rated 4.4 / 5 based on 225 reviews. Showing our 4 & 5 star reviews.</div>
-                        <div class="w-gap-2xl w-centered w-centered--sm">
-                            <!-- begin rounded-box-->
-                            <div class="c-rounded-box c-rounded-box--sm c-rounded-box--secondary c-rounded-box--radius-md c-rounded-box--border-success">
-                                <div class="grid grid--nowrap grid--middle grid--gap-md grid--center">
-                                    <div class="grid__col">
-                                        <!-- begin counter-->
-                                        <div class="c-counter js-counter">
-                                            <div class="c-counter__value">972</div>
-                                        </div>
-                                        <!-- end counter-->
-                                    </div>
-                                    <div class="grid__col-5">
-                                        <div class="c-h4">People are creating a Resume right now<sup class="c-top-index">3</sup> with our builder
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end rounded-box-->
-                        </div>
-                        <div class="c-row c-row--justify-center w-gap-lg">
-                            <button class="c-btn" type="button">Create Your Resume
-                            </button>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--secondary c-section-md--narrow">
-                        <div class="w-centered">
-                            <h2 class="c-h2 u-text-center w-gap-xl">Why you should choose our Resume Builder</h2>
-                            <div class="w-gap-6xl w-centered w-centered--sm">
-                                <div class="c-row c-row--justify-between c-row--column-gap-3xl c-row--row-gap-5xl">
-                                    <!-- begin step-content-->
-                                    <div class="c-step-content c-step-content--column-reverse c-step-content--xs c-step-content--align-start">
-                                        <div class="c-step-content__container">
-                                            <div class="c-step-content__content">
-                                                <div class="c-h3-md">1. Click-to-add content</div>
-                                                <div class="c-step-content__text">Save time by using pre-written content created by professional resume writers. Get expert tips and lots of ideas to show your skills and experience.</div>
-                                            </div>
-                                        </div>
-                                        <div class="c-step-content__img">
-                                            <img class="c-image lazyload c-image--mh125" data-src="static/img/general/paragraphs-2.png" alt="" />
-                                        </div>
-                                    </div>
-                                    <!-- end step-content-->
-                                    <!-- begin step-content-->
-                                    <div class="c-step-content c-step-content--column-reverse c-step-content--xs c-step-content--align-start">
-                                        <div class="c-step-content__container">
-                                            <div class="c-step-content__content">
-                                                <div class="c-h3-md">2. ATS-Friendly</div>
-                                                <div class="c-step-content__text">Our templates are designed to work with ATS and are very easy to change. They’re made for both desktop and mobile devices.</div>
-                                            </div>
-                                        </div>
-                                        <div class="c-step-content__img">
-                                            <img class="c-image lazyload c-image--mh125" data-src="static/img/general/robot-in-love.svg" alt="" />
-                                        </div>
-                                    </div>
-                                    <!-- end step-content-->
-                                    <!-- begin step-content-->
-                                    <div class="c-step-content c-step-content--column-reverse c-step-content--xs c-step-content--align-start">
-                                        <div class="c-step-content__container">
-                                            <div class="c-step-content__content">
-                                                <div class="c-h3-md">3. Resume checker</div>
-                                                <div class="c-step-content__text">Use our ATS resume checker to find out how good your resume is. It scans for 30+ problems and gives instant advice to make it better.</div>
-                                            </div>
-                                        </div>
-                                        <div class="c-step-content__img">
-                                            <img class="c-image lazyload c-image--mh133" data-src="static/img/general/checker.svg" alt="" />
-                                        </div>
-                                    </div>
-                                    <!-- end step-content-->
-                                    <!-- begin step-content-->
-                                    <div class="c-step-content c-step-content--column-reverse c-step-content--xs c-step-content--align-start">
-                                        <div class="c-step-content__container">
-                                            <div class="c-step-content__content">
-                                                <div class="c-h3-md">4. Templates come in every style</div>
-                                                <div class="c-step-content__text">We’ve created templates for different industries to match your professional needs, whether for a formal office or a creative studio.</div>
-                                            </div>
-                                        </div>
-                                        <div class="c-step-content__img">
-                                            <img class="c-image lazyload c-image--mh125" data-src="static/img/general/document-hands.svg" alt="" />
-                                        </div>
-                                    </div>
-                                    <!-- end step-content-->
-                                    <!-- begin step-content-->
-                                    <div class="c-step-content c-step-content--column-reverse c-step-content--xs c-step-content--align-start">
-                                        <div class="c-step-content__container">
-                                            <div class="c-step-content__content">
-                                                <div class="c-h3-md">5. Cover letter generator</div>
-                                                <div class="c-step-content__text">Build a complete job application by adding a polished cover letter to your resume. Our cover letter builder gives you tailored text written by experts.</div>
-                                            </div>
-                                        </div>
-                                        <div class="c-step-content__img">
-                                            <img class="c-image lazyload c-image--mh145" data-src="static/img/general/templates-style.svg" alt="" />
-                                        </div>
-                                    </div>
-                                    <!-- end step-content-->
-                                    <!-- begin step-content-->
-                                    <div class="c-step-content c-step-content--column-reverse c-step-content--xs c-step-content--align-start">
-                                        <div class="c-step-content__container">
-                                            <div class="c-step-content__content">
-                                                <div class="c-h3-md">6. Unlimited downloads</div>
-                                                <div class="c-step-content__text">Get your resume on your desktop or mobile device in the format you need. With our online builder, you can view and edit all your resumes quickly.</div>
-                                            </div>
-                                        </div>
-                                        <div class="c-step-content__img">
-                                            <img class="c-image lazyload c-image--mh174" data-src="static/img/general/file-format.svg" alt="" />
-                                        </div>
-                                    </div>
-                                    <!-- end step-content-->
-                                </div>
-                            </div>
-                            <div class="c-row c-row--justify-center w-gap-lg">
-                                <button class="c-btn" type="button">Build My Resume Now
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--success c-section--xs">
-                        <h2 class="c-h2 u-text-center w-gap-lg">Pick from our 50+ resume template designs</h2>
-                        <div class="w-gap-lg w-centered w-centered--xs">
-                            <p class="u-text-lg u-text-center">
-                                Professionally designed resume templates ensure your document is both attractive and easy to read. Choose a style and edit it with ease using our builder!
-                            </p>
-                        </div>
-                        <div class="w-gap-lg c-swiper c-swiper--sm swiper js-swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-striking.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
+                            <div class="c-plans__box c-plans__box--highlight">
+                                <div class="c-plans__title">Subscription Features</div>
+                                <div class="w-gap-lg">
+                                    <!-- begin decorated-list-->
+                                    <ul class="c-decorated-list">
+                                        <li class="c-decorated-list__item">
+                                            <div class="c-ico-back c-ico-back--info">
+                                                <svg class="c-ico c-ico--2xl c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: download-->
+                                                    <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"></path>
                                                 </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-exceptional.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
+                                            </div>
+                                            <div class="c-decorated-list__text"><strong>Unlimited Edits and Downloads</strong>
+                                                <br/>in PDF or TXT formats</div>
+                                        </li>
+                                        <li class="c-decorated-list__item">
+                                            <div class="c-ico-back c-ico-back--success">
+                                                <svg class="c-ico c-ico--2xl c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: file-document-check-->
+                                                    <path fill="currentColor" d="M23.5 17L18.5 22L15 18.5L16.5 17L18.5 19L22 15.5L23.5 17M6 2C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H13.81C13.28 21.09 13 20.05 13 19C13 18.67 13.03 18.33 13.08 18H6V16H13.81C14.27 15.2 14.91 14.5 15.68 14H6V12H18V13.08C18.33 13.03 18.67 13 19 13C19.34 13 19.67 13.03 20 13.08V8L14 2M13 3.5L18.5 9H13Z"></path>
                                                 </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-bright.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
+                                            </div>
+                                            <div class="c-decorated-list__text"><strong>Unlimited Resume and Cover Letter</strong>
+                                                Variations
+                                            </div>
+                                        </li>
+                                        <li class="c-decorated-list__item">
+                                            <div class="c-ico-back c-ico-back--marker">
+                                                <svg class="c-ico c-ico--2xl c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: creation-->
+                                                    <path fill="currentColor" d="M19,1L17.74,3.75L15,5L17.74,6.26L19,9L20.25,6.26L23,5L20.25,3.75M9,4L6.5,9.5L1,12L6.5,14.5L9,20L11.5,14.5L17,12L11.5,9.5M19,15L17.74,17.74L15,19L17.74,20.25L19,23L20.25,20.25L23,19L20.25,17.74"></path>
                                                 </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-fashionable.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
+                                            </div>
+                                            <div class="c-decorated-list__text">Customized Cover Letters for Any
+                                                <br/><strong>Specific Job</strong>
+                                            </div>
+                                        </li>
+                                        <li class="c-decorated-list__item">
+                                            <div class="c-ico-back c-ico-back--warning">
+                                                <svg class="c-ico c-ico--2xl c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: license-->
+                                                    <path fill="currentColor" d="M9 10A3.04 3.04 0 0 1 12 7A3.04 3.04 0 0 1 15 10A3.04 3.04 0 0 1 12 13A3.04 3.04 0 0 1 9 10M12 19L16 20V16.92A7.54 7.54 0 0 1 12 18A7.54 7.54 0 0 1 8 16.92V20M12 4A5.78 5.78 0 0 0 7.76 5.74A5.78 5.78 0 0 0 6 10A5.78 5.78 0 0 0 7.76 14.23A5.78 5.78 0 0 0 12 16A5.78 5.78 0 0 0 16.24 14.23A5.78 5.78 0 0 0 18 10A5.78 5.78 0 0 0 16.24 5.74A5.78 5.78 0 0 0 12 4M20 10A8.04 8.04 0 0 1 19.43 12.8A7.84 7.84 0 0 1 18 15.28V23L12 21L6 23V15.28A7.9 7.9 0 0 1 4 10A7.68 7.68 0 0 1 6.33 4.36A7.73 7.73 0 0 1 12 2A7.73 7.73 0 0 1 17.67 4.36A7.68 7.68 0 0 1 20 10Z"></path>
                                                 </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
+                                            </div>
+                                            <div class="c-decorated-list__text"><strong>14-Day Money-Back Guarantee</strong>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- end decorated-list-->
                                 </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-star.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-sleek.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-modern.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-airy.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-retro.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-expert.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-light.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-pure.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-luxurious.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-heart.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
-                                </div>
-                                <div class="swiper-slide">
-                                    <!-- begin image-container-->
-                                    <div class="c-image-container">
-                                        <div class="c-image-container__img">
-                                            <img class="c-image lazyload" data-src="static/img/general/resume-template-charming.png" alt="" />
-                                            <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                            </button>
-                                            <button class="c-option-btn c-option-btn--circle c-image-container__zoom" type="button" data-bs-toggle="modal" data-bs-target="#index-letter-preview">
-                                                <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: magnify-plus-->
-                                                    <path fill="currentColor" d="M9,2A7,7 0 0,1 16,9C16,10.57 15.5,12 14.61,13.19L15.41,14H16L22,20L20,22L14,16V15.41L13.19,14.61C12,15.5 10.57,16 9,16A7,7 0 0,1 2,9A7,7 0 0,1 9,2M8,5V8H5V10H8V13H10V10H13V8H10V5H8Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <!-- end image-container-->
+                                <div class="c-row c-row--justify-center w-gap-lg">
+                                    <button class="c-btn" type="button">Continue
+                                        <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-right" viewBox="0 0 24 24">
+                                            <!-- ico name: arrow-right-->
+                                            <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
-                        <div class="w-gap-md w-centered w-centered--xs">
-                            <p class="u-text-lg u-text-center">
-                                We carefully test our resume templates to make sure they work with Applicant Tracking Systems (ATS) and catch a recruiter's eye.
-                            </p>
-                        </div>
-                        <div class="c-row c-row--justify-center w-gap-lg">
-                            <button class="c-btn c-btn--secondary-light" type="button">View All Templates
-                            </button>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--md-wide">
-                        <div class="w-centered w-centered--sm-wide">
-                            <h2 class="c-h2 u-text-center w-gap-lg">44% Higher Recruiter Response Rate</h2>
-                            <div class="w-gap-xl w-centered w-centered--xs">
-                                <p class="u-text-lg u-text-center">
-                                    Our advanced builder helps job seekers craft tailored resumes that capture the attention of recruiters and hiring managers, increasing interview call-back rates and improving job prospects.
-                                </p>
-                            </div>
-                            <div class="c-row c-row--nowrap c-row--justify-between w-gap-4xl">
-                                <!-- begin image-section-->
-                                <div class="c-image-section">
-                                    <div class="c-image-section__img">
-                                        <img class="c-image lazyload" data-src="static/img/general/add-click-hand.svg" alt="" />
+                            <div class="c-plans__box">
+                                <div class="c-plans__head">
+                                    <div class="form-group form-group--toggle-checkbox-view c-plans__select">
+                                        <!-- begin form-toggle-->
+                                        <label>
+                                            <input type="radio" name="plan" /><span></span>
+                                        </label>
+                                        <!-- end form-toggle-->
+                                        <div class="help-block"></div>
                                     </div>
-                                    <div class="c-image-section__title">Click to add job-specific content written by professional resume analysts.</div>
-                                </div>
-                                <!-- end image-section-->
-                                <!-- begin image-section-->
-                                <div class="c-image-section">
-                                    <div class="c-image-section__img">
-                                        <img class="c-image lazyload" data-src="static/img/general/fields.svg" alt="" />
-                                    </div>
-                                    <div class="c-image-section__title">Easily tailor your resume to target a specific job title or industry</div>
-                                </div>
-                                <!-- end image-section-->
-                                <!-- begin image-section-->
-                                <div class="c-image-section">
-                                    <div class="c-image-section__img">
-                                        <img class="c-image lazyload" data-src="static/img/general/customize.svg" alt="" />
-                                    </div>
-                                    <div class="c-image-section__title">Customize the design and format of your resume to match your professional style</div>
-                                </div>
-                                <!-- end image-section-->
-                            </div>
-                            <div class="c-row c-row--justify-center w-gap-lg">
-                                <button class="c-btn" type="button">Create Your Resume
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--secondary">
-                        <div class="w-centered">
-                            <h2 class="c-h2 u-text-center w-gap-3xl">Benefits of Our Resume Builder</h2>
-                            <div class="c-row c-row--row-gap-2xl c-row--column-gap-4xl w-gap-3xl">
-                                <!-- begin large-value-->
-                                <div class="c-large-value">
-                                    <div class="c-large-value__container">
-                                        <div class="c-large-value__value">1
-                                        </div>
-                                        <div class="c-large-value__title">click</div>
-                                        <div class="c-large-value__text">Formatting documents in 1 click</div>
+                                    <div class="c-plans__title">Annual Access</div>
+                                    <div class="c-plans__value">71<sup class="c-plans__value-sub">,40</sup><sup class="c-plans__value-symbol">$</sup>
                                     </div>
                                 </div>
-                                <!-- end large-value-->
-                                <!-- begin large-value-->
-                                <div class="c-large-value">
-                                    <div class="c-large-value__container">
-                                        <div class="c-large-value__value">50+
-                                        </div>
-                                        <div class="c-large-value__title">designs</div>
-                                        <div class="c-large-value__text">More than 50 design options to suit any taste</div>
-                                    </div>
-                                </div>
-                                <!-- end large-value-->
-                                <!-- begin large-value-->
-                                <div class="c-large-value">
-                                    <div class="c-large-value__container">
-                                        <div class="c-large-value__value">900+
-                                        </div>
-                                        <div class="c-large-value__title">professions</div>
-                                        <div class="c-large-value__text">Customized content for over 900 professions from 24 industries</div>
-                                    </div>
-                                </div>
-                                <!-- end large-value-->
-                                <!-- begin large-value-->
-                                <div class="c-large-value">
-                                    <div class="c-large-value__container">
-                                        <div class="c-large-value__value">15
-                                        </div>
-                                        <div class="c-large-value__title">minutes</div>
-                                        <div class="c-large-value__text">Preparing a resume in about 15 minutes</div>
-                                    </div>
-                                </div>
-                                <!-- end large-value-->
-                                <!-- begin large-value-->
-                                <div class="c-large-value">
-                                    <div class="c-large-value__container">
-                                        <div class="c-large-value__value">2
-                                        </div>
-                                        <div class="c-large-value__title">month</div>
-                                        <div class="c-large-value__text">Reducing job search time by 2 months on average</div>
-                                    </div>
-                                </div>
-                                <!-- end large-value-->
-                                <!-- begin large-value-->
-                                <div class="c-large-value">
-                                    <div class="c-large-value__container">
-                                        <div class="c-large-value__value">89.5<span>%</span>
-                                        </div>
-                                        <div class="c-large-value__title">positive feedbacks</div>
-                                        <div class="c-large-value__text">89.5% positive feedback from users</div>
-                                    </div>
-                                </div>
-                                <!-- end large-value-->
-                                <!-- begin large-value-->
-                                <div class="c-large-value">
-                                    <div class="c-large-value__container">
-                                        <div class="c-large-value__value">77.5<span>%</span>
-                                        </div>
-                                        <div class="c-large-value__title">job applications</div>
-                                        <div class="c-large-value__text">77.5 % of job applications leading to interview invitations</div>
-                                    </div>
-                                </div>
-                                <!-- end large-value-->
-                                <!-- begin large-value-->
-                                <div class="c-large-value">
-                                    <div class="c-large-value__container">
-                                        <div class="c-large-value__value">100<span>%</span>
-                                        </div>
-                                        <div class="c-large-value__title">worth trying</div>
-                                        <div class="c-large-value__text">We guarantee an improvement in the job search process</div>
-                                    </div>
-                                </div>
-                                <!-- end large-value-->
-                            </div>
-                            <div class="c-row c-row--justify-center w-gap-lg">
-                                <button class="c-btn" type="button">Create Your Effective Resume
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--success c-section--xs">
-                        <div class="w-centered">
-                            <div class="grid grid--nowrap grid--middle grid--gap-6xl">
-                                <div class="grid__col">
-                                    <img class="c-image lazyload c-image--mh503" data-src="static/img/general/resume-templates.png" alt="" />
-                                </div>
-                                <div class="grid__col-8">
-                                    <h2 class="c-h2 w-gap-md">Professional examples to help you<br>build your resume</h2>
-                                    <div class="c-h3 u-text-normal w-gap-md">
-                                        Explore over 350 free resume examples for various industries and job titles. Utilize these samples to craft an impactful resume.
-                                    </div>
-                                    <div class="c-h3 u-text-normal w-gap-md">Most popular:</div>
-                                    <div class="c-row c-row--gap-md w-gap-lg"><a class="c-option-btn c-option-btn--rounded c-option-btn--arrow-right" href="#">Teacher Resume</a><a class="c-option-btn c-option-btn--rounded c-option-btn--arrow-right" href="#">Doctor Resume</a><a class="c-option-btn c-option-btn--rounded c-option-btn--arrow-right"
-                                        href="#">Manager Resume</a><a class="c-option-btn c-option-btn--rounded c-option-btn--arrow-right" href="#">Driver Resume</a><a class="c-option-btn c-option-btn--rounded c-option-btn--arrow-right" href="#">Sales Resume</a>
-                                        <a
-                                        class="c-option-btn c-option-btn--rounded c-option-btn--arrow-right" href="#">Actor Resume</a><a class="c-option-btn c-option-btn--rounded c-option-btn--arrow-right" href="#">Sertified Nursing Assistant Resume</a><a class="c-option-btn c-option-btn--rounded c-option-btn--arrow-right" href="#">Registered Nurse Resume</a>
-                                    </div>
-                                    <div class="c-row w-gap-lg">
-                                        <button class="c-btn" type="button">Explore All Exmples
-                                        </button>
-                                    </div>
+                                <div class="c-plans__content">
+                                    <!-- begin list-->
+                                    <ul class="c-list c-list--gap-md">
+                                        <li>Pay $71,40 up-front to enjoy a whole year of subscription with 76% discount</li>
+                                        <li>Automatically renews each year</li>
+                                        <li>Cancel anytime, your progress will be saved</li>
+                                    </ul>
+                                    <!-- end list-->
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-gap-2xl w-centered w-centered--xs">
-                            <h2 class="c-h2 u-text-center">Press about Resume Builder</h2>
-                        </div>
-                        <div class="w-gap-extra w-centered w-centered--sm">
-                            <div class="c-row c-row--nowrap c-row--row-gap-lg w-gap-xl">
-                                <!-- begin quote-container-->
-                                <div class="c-quote-container">
-                                    <svg class="c-ico c-ico--sm c-ico--inherit c-quote-container__ico" viewBox="0 0 24 24">
-                                        <!-- ico name: format-quote-close-->
-                                        <path fill="currentColor" d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"></path>
-                                    </svg>
-                                    <div class="c-quote-container__text">Crafting your own resume can seem overwhelming, but the website simplifies the process with an easy-to-follow, step-by-step guide.
+                        <!-- end plans-->
+                        <div class="w-gap-md u-text-sm u-text-help u-text-center">Cancel anytime via email</div>
+                    </div>
+                    <div class="w-gap-3xl c-section c-section--xxs">
+                        <div class="w-centered w-centered--xs">
+                            <div class="c-h2 u-text-center w-gap-xl">What People Are Saying</div>
+                            <div class="c-row c-row--nowrap c-row--row-gap-lg c-row--align-center w-gap-xl">
+                                <img class="c-image c-image--wh104" src="static/img/general/ava-7.png" alt="" />
+                                <div class="c-column-gap-sm">
+                                    <div class="u-text-18">
+                                        This has been an incredible find and incredibly easy to use! Thank you for the fantastic ideas — so professional yet effortlessly accessible.
                                     </div>
-                                </div>
-                                <!-- end quote-container-->
-                                <!-- begin quote-container-->
-                                <div class="c-quote-container">
-                                    <svg class="c-ico c-ico--sm c-ico--inherit c-quote-container__ico" viewBox="0 0 24 24">
-                                        <!-- ico name: format-quote-close-->
-                                        <path fill="currentColor" d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"></path>
-                                    </svg>
-                                    <div class="c-quote-container__text">Outstanding assistance! The templates were exactly what I needed to get hired fast. A must-try for anyone chasing a career!
-                                    </div>
-                                </div>
-                                <!-- end quote-container-->
-                            </div>
-                        </div>
-                        <div class="w-gap-extra w-centered">
-                            <h3 class="c-h2 u-text-center w-gap-xl">Resume Builder Users</h3>
-                            <div class="c-row c-row--row-gap-lg c-row--odd-column-gap-xl w-gap-lg">
-                                <div class="c-column-gap-lg">
-                                    <!-- begin review-card-->
-                                    <div class="c-review-card">
-                                        <div class="c-row c-row--nowrap c-row--row-gap-md c-row--align-center w-gap-md">
-                                            <div class="c-review-card__avatar">
-                                                <img class="c-image lazyload" data-src="static/img/general/ava-9.png" alt="" />
-                                            </div>
-                                            <div class="c-review-card__data">
-                                                <div class="c-h3">Oliver J.</div>
-                                                <!-- begin stars-->
-                                                <div class="c-stars"><span></span><span></span><span></span><span></span><span></span>
-                                                </div>
-                                                <!-- end stars-->
-                                            </div>
-                                        </div>
-                                        <div class="c-review-card__text">Highly satisfied! The service and templates exceeded my expectations, helping me land a remarkable role quickly. A fantastic resource for job hunters</div>
-                                    </div>
-                                    <!-- end review-->
-                                    <!-- begin review-card-->
-                                    <div class="c-review-card">
-                                        <div class="c-row c-row--nowrap c-row--row-gap-md c-row--align-center w-gap-md">
-                                            <div class="c-review-card__avatar">
-                                                <img class="c-image lazyload" data-src="static/img/general/ava-12.png" alt="" />
-                                            </div>
-                                            <div class="c-review-card__data">
-                                                <div class="c-h3">Sofia M.</div>
-                                                <!-- begin stars-->
-                                                <div class="c-stars"><span></span><span></span><span></span><span></span><span></span>
-                                                </div>
-                                                <!-- end stars-->
-                                            </div>
-                                        </div>
-                                        <div class="c-review-card__text">It’s so user-friendly that I didn’t need much time to learn it</div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                                <div class="c-column-gap-lg">
-                                    <!-- begin review-card-->
-                                    <div class="c-review-card">
-                                        <div class="c-row c-row--nowrap c-row--row-gap-md c-row--align-center w-gap-md">
-                                            <div class="c-review-card__avatar">
-                                                <img class="c-image lazyload" data-src="static/img/general/ava-10.png" alt="" />
-                                            </div>
-                                            <div class="c-review-card__data">
-                                                <div class="c-h3">Emma R.</div>
-                                                <!-- begin stars-->
-                                                <div class="c-stars"><span></span><span></span><span></span><span></span><span></span>
-                                                </div>
-                                                <!-- end stars-->
-                                            </div>
-                                        </div>
-                                        <div class="c-review-card__text">The resume builder helped me quickly adjust my resume for each job. It's super helpful for anyone looking for work.</div>
-                                    </div>
-                                    <!-- end review-->
-                                    <!-- begin review-card-->
-                                    <div class="c-review-card">
-                                        <div class="c-row c-row--nowrap c-row--row-gap-md c-row--align-center w-gap-md">
-                                            <div class="c-review-card__avatar">
-                                                <img class="c-image lazyload" data-src="static/img/general/ava-13.png" alt="" />
-                                            </div>
-                                            <div class="c-review-card__data">
-                                                <div class="c-h3">Kian G.</div>
-                                                <!-- begin stars-->
-                                                <div class="c-stars"><span></span><span></span><span></span><span></span><span></span>
-                                                </div>
-                                                <!-- end stars-->
-                                            </div>
-                                        </div>
-                                        <div class="c-review-card__text">This tool made me stand out, catching the attention of recruiters with my polished resumes, and I received positive feedback throughout my job search.</div>
-                                    </div>
-                                    <!-- end review-->
-                                </div>
-                                <div class="c-column-gap-lg">
-                                    <!-- begin review-card-->
-                                    <div class="c-review-card">
-                                        <div class="c-row c-row--nowrap c-row--row-gap-md c-row--align-center w-gap-md">
-                                            <div class="c-review-card__avatar">
-                                                <img class="c-image lazyload" data-src="static/img/general/ava-11.png" alt="" />
-                                            </div>
-                                            <div class="c-review-card__data">
-                                                <div class="c-h3">Alexander U.</div>
-                                                <!-- begin stars-->
-                                                <div class="c-stars"><span></span><span></span><span></span><span></span><span></span>
-                                                </div>
-                                                <!-- end stars-->
-                                            </div>
-                                        </div>
-                                        <div class="c-review-card__text">There’s a great variety of templates on the resume builder, making it easy for anyone to find their style.</div>
-                                    </div>
-                                    <!-- end review-->
-                                    <!-- begin review-card-->
-                                    <div class="c-review-card">
-                                        <div class="c-row c-row--nowrap c-row--row-gap-md c-row--align-center w-gap-md">
-                                            <div class="c-review-card__avatar">
-                                                <img class="c-image lazyload" data-src="static/img/general/ava-14.png" alt="" />
-                                            </div>
-                                            <div class="c-review-card__data">
-                                                <div class="c-h3">Isabella S.</div>
-                                                <!-- begin stars-->
-                                                <div class="c-stars"><span></span><span></span><span></span><span></span><span></span>
-                                                </div>
-                                                <!-- end stars-->
-                                            </div>
-                                        </div>
-                                        <div class="c-review-card__text">With very little experience, I was able to put together a great-looking resume fast</div>
-                                    </div>
-                                    <!-- end review-->
+                                    <div class="u-text-bold">– Joseph Clark</div>
                                 </div>
                             </div>
-                            <h3 class="c-h3 u-text-normal u-text-center w-gap-lg">Start your own journey</h3>
-                            <div class="c-row c-row--justify-center w-gap-lg">
-                                <button class="c-btn" type="button">Create Your Resume
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--secondary">
-                        <div class="w-centered">
-                            <div class="grid grid--nowrap grid--between">
-                                <div class="grid__col-3">
-                                    <h2 class="c-h1 w-gap-3xl">Have more questions?</h2>
-                                    <img class="c-image lazyload" data-src="static/img/general/question-hand.svg" alt="" />
-                                </div>
-                                <div class="grid__col-8">
-                                    <div class="u-mt-27-neg">
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faq-0" aria-expanded="true">What Exactly Is a Resume?</button>
-                                            <div class="c-title-collapse__dialog collapse show" id="faq-0">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        A resume is a professional document used to apply for jobs, highlighting your education, work experience, skills, and accomplishments.
-                                                    </p>
-                                                    <p>
-                                                        Customizing your resume for each job significantly boosts your chances of securing interviews and job offers by showcasing how your qualifications align with the employer's needs.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true">How to Create a Winning Resume?</button>
-                                            <div class="c-title-collapse__dialog collapse show" id="faq-1">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        Easily design a standout resume with our Resume Builder. Select a template, answer simple prompts, and download your resume in PDF, Word, or TXT format.
-                                                    </p>
-                                                    <p>Follow these key tips while creating your resume:</p>
-                                                    <!-- begin list-->
-                                                    <ul class="c-list">
-                                                        <li>Choose the format that best highlights your skills, use strong action verbs to describe achievements, and incorporate job description keywords for ATS optimization.</li>
-                                                        <li>Check your resume with our free ATS checker and make sure it's concise and visually engaging to capture the hiring manager’s attention.</li>
-                                                    </ul>
-                                                    <!-- end list-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="true">What Is a Resume Template and Why Use One?</button>
-                                            <div class="c-title-collapse__dialog collapse show" id="faq-2">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        A resume template is a professionally designed framework that helps structure your professional information in an organized and polished way. It ensures a consistent format for a clean, professional look.
-                                                    </p>
-                                                    <p>
-                                                        With our builder, you can access a range of customizable templates tailored for key sections like contact details, summaries, work history, education, and skills.
-                                                    </p>
-                                                    <p>
-                                                        Our templates are also ATS-friendly, featuring clear fonts, structured headings, and straightforward layouts to improve compatibility with hiring tools.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3">What Does a Standard Resume Look Like?</button>
-                                            <div class="c-title-collapse__dialog collapse" id="faq-3">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        Resumes come in various designs, formats, and layouts, but they generally share common sections.
-                                                    </p>
-                                                    <p>
-                                                        These include a header with your contact details, a resume summary showcasing your key strengths, work experience, a list of relevant skills, and educational background.
-                                                    </p>
-                                                    <p>Most resumes include your name, email, location, and links to professional profiles.</p>
-                                                    <p>
-                                                        The work experience section should feature job titles, company names, dates, and key achievements.
-                                                    </p>
-                                                    <p>The skills section should match the job description to demonstrate your fit for the role.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4">What’s the Ideal Length for a Resume?</button>
-                                            <div class="c-title-collapse__dialog collapse" id="faq-4">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        A one-page resume is generally preferred, especially if you’re early in your career. A resume should rarely exceed two pages, even with a few years of experience.
-                                                    </p>
-                                                    <p>
-                                                        Experts suggest focusing on the last 10 years of work to highlight the most relevant skills and achievements, keeping the content concise.
-                                                    </p>
-                                                    <p>
-                                                        If you have extensive experience, a two-page resume can demonstrate your career growth effectively.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5">How to Create a Resume Using Our Builder?</button>
-                                            <div class="c-title-collapse__dialog collapse" id="faq-5">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>Building a resume with our tool is simple and fast! Just follow the easy steps below:</p>
-                                                    <!-- begin list-->
-                                                    <ul class="c-list">
-                                                        <li>Start by clicking &quot;Create your resume&quot; to begin.</li>
-                                                        <li>Choose your experience level, and our builder will suggest templates that highlight your skills and strengths.</li>
-                                                        <li>Pick a template now or wait until later — you can change it anytime, and your info will update automatically.</li>
-                                                        <li>Enter your contact info, work history, and education.</li>
-                                                        <li>Add specific skills, job descriptions, and a resume summary. You can also include certifications and languages.</li>
-                                                        <li>Download your finished resume in your preferred format, or save it to return later for a fresh review.</li>
-                                                    </ul>
-                                                    <!-- end list-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6">Should I Attach a Cover Letter With My Resume?</button>
-                                            <div class="c-title-collapse__dialog collapse" id="faq-6">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        A cover letter is highly recommended as it complements your resume by highlighting your interest in the job and demonstrating your qualifications.
-                                                    </p>
-                                                    <p>
-                                                        Our Cover Letter Generator provides a selection of professional templates that match your resume style. Build a letter with our easy-to-follow guide or instantly create a custom letter using your uploaded resume.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-7">Are Your Templates Optimized for ATS Compatibility?</button>
-                                            <div class="c-title-collapse__dialog collapse" id="faq-7">
-                                                <div class="c-title-collapse__inner">
-                                                    Our resume, CV, and cover letter templates are expertly designed with the latest formatting and design trends. Each one features a clean structure, clear headings, and top resume fonts, ensuring ATS can easily scan and read your resume.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-8">What Makes a Great Resume Builder?</button>
-                                            <div class="c-title-collapse__dialog collapse" id="faq-8">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        When selecting a resume builder, it’s important to evaluate what features it offers. Start by listing your essential needs, such as:
-                                                    </p>
-                                                    <!-- begin list-->
-                                                    <ul class="c-list">
-                                                        <li>Does it provide expert tips and recommendations?</li>
-                                                        <li>Is it user-friendly and easy to navigate?</li>
-                                                        <li>Does it save time during the resume creation process?</li>
-                                                        <li>Is the document customizable?</li>
-                                                        <li>Does it include a built-in spell checker?</li>
-                                                        <li>Are there additional services available?</li>
-                                                    </ul>
-                                                    <!-- end list-->
-                                                    <p>
-                                                        With our Resume Builder, you’ll not only create a standout resume and cover letter but also receive expert guidance throughout your job search journey with our helpful tips and guides.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                    </div>
+                            <div class="c-row c-row--nowrap c-row--row-gap-lg c-row--align-center w-gap-xl">
+                                <img class="c-image c-image--wh104" src="static/img/general/ava-8.png" alt="" />
+                                <div class="c-column-gap-sm">
+                                    <div class="u-text-18">I absolutely love this website! It's incredibly helpful and a joy to use.</div>
+                                    <div class="u-text-bold">– Monica Zoel</div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered">
-                            <!-- begin rounded-box-->
-                            <div class="c-rounded-box c-rounded-box--xl c-rounded-box--info c-rounded-box--radius-md">
-                                <div class="grid grid--nowrap grid--middle grid--gap-none">
-                                    <div class="grid__col-5">
-                                        <img class="c-image lazyload" data-src="static/img/general/ready.svg" alt="" />
-                                    </div>
-                                    <div class="grid__col-6">
-                                        <h2 class="c-h1-lg u-text-light w-gap-xl">Ready for your dream job?</h2>
-                                        <div class="c-row w-gap-xl">
-                                            <button class="c-btn" type="button">Create Your Resume Now
-                                                <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-right" viewBox="0 0 24 24">
-                                                    <!-- ico name: arrow-right-->
-                                                    <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end rounded-box-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--no-padding">
-                        <div class="w-centered">
-                            <div class="u-text-help u-text-10">
-                                1 - Approximate value based on feedback from our users. 2 - The names and logos of the companies referred to in this page are all trademarks of their respective holders. Unless specifically stated otherwise, such references are not intended to imply any
-                                affiliation or association with EffectiveCoverLetter. 3 - Approximate number of users based on statistics.
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
+                    </div>
                 </main>
             </div>
             <div class="w-page__bottom">
@@ -1267,31 +221,6 @@
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
-        <!-- begin modal-splash-->
-        <div class="c-modal-splash modal fade js-modal-locker" id="index-letter-preview">
-            <div class="c-modal-splash__dialog modal-dialog">
-                <button class="c-icon-button c-icon-button--highlight c-icon-button--circle-md c-modal-splash__close" type="button" data-bs-dismiss="modal">
-                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
-                        <!-- ico name: close-->
-                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                    </svg>
-                </button>
-                <div class="c-modal-splash__content">
-                    <div class="c-row c-row--justify-center w-gap-md">
-                        <button class="c-btn" type="button">Use This Template
-                            <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-right" viewBox="0 0 24 24">
-                                <!-- ico name: arrow-right-->
-                                <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="w-gap-md">
-                        <img class="c-image lazyload c-image--full c-image--round" data-src="static/img/general/resume-template-sleek.png" alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end modal-splash-->
         <!-- Including js files-->
 
 
@@ -1299,28 +228,11 @@
         <script src="static/js/separate-js/jquery.autocomplete.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/swiper-bundle.min.js"></script>
-        <script src="static/js/separate-js/lazysizes.min.js"></script>
         <script src="static/js/separate-js/toggleFocusInput.js"></script>
         <script src="static/js/separate-js/main.js"></script>
         <script>
             $(document).ready(function () {
-                  updateCounter.initialize()
-              
-                  new Swiper('.js-swiper-container', {
-                      slidesPerView: 'auto',
-                      slidesOffsetBefore: -286,
-                      loop: true,
-                      spaceBetween: 32,
-                      navigation: {
-                          nextEl: '.swiper-button-next',
-                          prevEl: '.swiper-button-prev'
-                      },
-                      simulateTouch: false,
-                      keyboard: {
-                          onlyInViewport: true,
-                      },
-                      speed: 800,
-                  });
+                  countDownTimer.initialize();
               });
         </script>
     </body>

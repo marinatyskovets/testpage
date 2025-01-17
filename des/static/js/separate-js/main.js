@@ -301,3 +301,77 @@ var updateCounter = (function () {
 })();
 
 
+var lazyLoader = (function () {
+    var defaults = {
+        rootMargin: '300px 0px',
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {});
+
+        if ('loading' in HTMLImageElement.prototype) {
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            var script = document.createElement('script');
+            script.src = '/static/js/separate-js/lozad.min.js';
+            script.onload = () => lozad('.lozad', {rootMargin: settings.rootMargin}).observe();
+
+            document.body.appendChild(script);
+        }
+    };
+
+    return {
+        initialize: initialize
+    };
+})();
+
+
+var countDownTimer = (function () {
+    var defaults = {
+        timer: '.js-countdown',
+        deadline: 'Jan 17, 2025 18:00:00',
+        updateInterval: 1000
+    };
+
+    var timer = function (hours, minutes, seconds) {
+        if (hours === '00') {
+            return `<span>${minutes}</span><span>:</span><span>${seconds}</span>`;
+        }
+        return `<span>${hours}</span><span>:</span><span>${minutes}</span><span>:</span><span>${seconds}</span>`;
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {}),
+            element = $(settings.timer),
+            elementDataDeadline = settings.deadline,
+            deadlineTime = new Date(elementDataDeadline).getTime();
+
+        var intervalId = setInterval(function () {
+            let now = new Date().getTime();
+            let t = deadlineTime - now;
+
+            let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            if (hours.toString().length < 2) hours = '0' + hours;
+            let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            if (minutes.toString().length < 2) minutes = '0' + minutes;
+            let seconds = Math.floor((t % (1000 * 60)) / 1000);
+            if (seconds.toString().length < 2) seconds = '0' + seconds;
+
+            element.html(timer(hours, minutes, seconds));
+
+            if (t < 0) {
+                clearInterval(x);
+
+                element.html(timer('00', '00', '00'));
+            }
+        }, settings.updateInterval);
+    };
+
+    return {
+        initialize: initialize
+    };
+})();
+
+
