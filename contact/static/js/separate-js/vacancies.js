@@ -33,7 +33,7 @@ const vacancies = [
     isHighlighted: false,
     isAd: false,
     title: {text: 'Frontend Developer 3', link: 'https://uk.jobsora.com/jobs'},
-    employer: {title: 'OpenAI', link: 'https://openai.com/', logo: '/static/img/content/openAI-logo.jpg'},
+    employer: {title: 'OpenAI', link: 'https://openai.com/', logo: 'static/img/content/company-logo.jpg'},
     location: {title: 'Manchester'},
     salary: '$40k - $60k',
     action: 'View',
