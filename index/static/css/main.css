@@ -1411,7 +1411,7 @@ a.c-btn:not(:disabled):hover, .form-group a.sc-text:not(:disabled):hover, a.c-bt
   border-color: #0035BD;
 }
 .form-group--toggle label:not(.control-label) input[type=checkbox] + span:not([class])::after {
-  background-image: url("../img/svg-sprite/sprite.svg?v=ukkimod");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uldl4to");
   background-position: -4px -4px;
   width: 18px;
   height: 14px;
@@ -2260,20 +2260,6 @@ button.c-link:disabled:hover, .c-content-collapse button.sc-toggle:disabled:hove
   margin-bottom: 0;
 }
 
-.c-logo {
-  display: inline-block;
-  font-size: 0;
-}
-.c-logo img {
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 768px) {
-  .c-logo img {
-    max-height: 24px;
-  }
-}
-
 .c-main-title {
   max-width: 904px;
   margin-bottom: 64px;
@@ -2292,6 +2278,20 @@ button.c-link:disabled:hover, .c-content-collapse button.sc-toggle:disabled:hove
   .c-main-title .c-emoji {
     width: auto;
     font-size: 24px;
+  }
+}
+
+.c-logo {
+  display: inline-block;
+  font-size: 0;
+}
+.c-logo img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .c-logo img {
+    max-height: 24px;
   }
 }
 
