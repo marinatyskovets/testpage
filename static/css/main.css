@@ -2099,7 +2099,7 @@ a:hover, a:focus-visible,
 .c-swiper-coverflow .swiper-button-next::after,
 .c-swiper-coverflow .swiper-button-prev::after {
   content: "";
-  background-image: url("../img/svg-sprite/sprite.svg?v=ut3d7o8");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uoj9dn8");
   background-position: -4px -4px;
   width: 16px;
   height: 16px;
@@ -2290,7 +2290,7 @@ a:hover, a:focus-visible,
 }
 .c-star-rating span::before {
   content: "";
-  background-image: url("../img/svg-sprite/sprite.svg?v=ut3d7o8");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uoj9dn8");
   background-position: -4px -24px;
   width: 14px;
   height: 13px;
@@ -2560,6 +2560,9 @@ a:hover, a:focus-visible,
 .c-section--md-low {
   padding: 120px 0 0;
 }
+.c-section--overflow-hidden {
+  overflow: hidden;
+}
 
 .c-separator-line {
   display: block;
@@ -2824,8 +2827,6 @@ a:hover, a:focus-visible,
   outline: none;
   border: none;
   cursor: pointer;
-  -webkit-animation: textColorAnimation 3s infinite linear;
-          animation: textColorAnimation 3s infinite linear;
 }
 .c-dynamic-container__btn .c-ico {
   -webkit-animation: icoAnimation 2s infinite linear;
