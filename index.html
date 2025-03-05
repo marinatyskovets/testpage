@@ -448,42 +448,27 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="c-section__item">
-                                <div class="grid grid--center">
-                                    <div class="grid__col-6">
-                                        <p>Make your resume stand out following our professional tips. Create a custom cover letter as a next step to complete your perfect application kit.</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </section>
                     <!-- end section-->
                     <!-- begin section-->
                     <section class="c-section--secondary c-section--md-low c-section">
-                        <div class="c-section__inner w-gap-md">
-                            <div class="w-gap-7xl u-text-center">
-                                <div class="grid grid--center">
-                                    <div class="grid__col-6">
-                                        <div class="c-column-gap-md">
-                                            <img class="c-image" src="static/img/general/landing-1/trophy-stars.svg" alt="" width="150" height="88" />
-                                            <h3 class="c-h1 u-mt-0">Sleek And Powerful</h3>
-                                            <p class="u-mt-0">These resume templates are here for a reason – they work! Each one has been tested and proven with hiring managers.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-gap-7xl u-text-center">
-                                <div class="grid grid--center">
-                                    <div class="grid__col-4">
-                                        <div class="c-column-gap-sm">
-                                            <h4 class="c-h3 u-mt-0">Toronto</h4>
-                                            <p class="u-mt-0">Combines simple design with a focus on clarity and ease of reading.</p>
-                                        </div>
+                        <div class="c-section__inner w-gap-7xl">
+                            <div class="grid grid--center">
+                                <div class="grid__col-6">
+                                    <div class="c-column-gap-md u-text-center">
+                                        <img class="c-image" src="static/img/general/landing-1/trophy-stars.svg" alt="" width="209" height="88" />
+                                        <h3 class="c-h1 u-mt-0">Sleek And Powerful</h3>
+                                        <p class="u-mt-0">These resume templates are here for a reason – they work! Each one has been tested and proven with hiring managers.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-gap-md swiper c-swiper-coverflow js-swiper-coverflow">
+                        <div class="w-gap-7xl c-swiper-coverflow swiper js-swiper-coverflow">
+                            <div class="c-swiper-coverflow__head">
+                                <div class="c-swiper-coverflow__title">Toronto</div>
+                                <div class="c-swiper-coverflow__text">Combines simple design with a focus on clarity and ease of reading.</div>
+                            </div>
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img class="c-image" src="static/img/general/landing-1/resume-template-executive.png" alt="" width="444" height="628" />
@@ -586,11 +571,11 @@
                                 </div>
                                 <div class="c-dynamic-container__swiper">
                                     <button class="c-dynamic-container__btn js-toggle-visibility" type="button">
-                                        <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                        <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
                                             <!-- ico name: chevron-left-->
                                             <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
                                         </svg>
-                                        <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                        <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
                                             <!-- ico name: chevron-left-->
                                             <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
                                         </svg>
@@ -791,17 +776,29 @@
                       slidesPerView: 'auto',
                       coverflowEffect: {
                           rotate: 0,
-                          stretch: 80,
-                          depth: 50,
+                          stretch: 0,
+                          depth: 200,
                           modifier: 1,
-                          slideShadows: false
+                          slideShadows: false,
+                          scale: 0.98
                       },
                       simulateTouch: false,
                       navigation: {
                           nextEl: '.swiper-button-next',
                           prevEl: '.swiper-button-prev',
+                      },
+                      on: {
+                          setTranslate: function (swiper) {
+                              swiper.slides.forEach((slide) => {
+                                  let progress = Math.abs(slide.progress);
+                                  let translateY = progress * 70;
+              
+                                  slide.style.transform += ` translateY(${translateY}px)`;
+                              });
+                          }
                       }
                   });
+              
               
                   new Swiper('.js-swiper', {
                       slidesPerView: 'auto',
