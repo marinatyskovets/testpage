@@ -998,7 +998,7 @@ a.c-btn:not(:disabled):hover, .form-group a.sc-text:not(:disabled):hover, a.c-bt
   margin-left: 8px;
 }
 .c-btn .sc-ico-right + .sc-content, .form-group .sc-text .sc-ico-right + .sc-content {
-  margin-right: -6px;
+  margin-right: -4px;
 }
 .c-btn .sc-content, .form-group .sc-text .sc-content {
   font-size: 10px;
@@ -1517,7 +1517,7 @@ a.c-btn:not(:disabled):hover, .form-group a.sc-text:not(:disabled):hover, a.c-bt
   border-color: #0035BD;
 }
 .form-group--toggle label:not(.control-label) input[type=checkbox] + span:not([class])::after {
-  background-image: url("../img/svg-sprite/sprite.svg?v=upaw9ei");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ujao1n5");
   background-position: -4px -4px;
   width: 18px;
   height: 14px;
