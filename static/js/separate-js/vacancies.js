@@ -195,5 +195,15 @@ const vacancies = [
       "location":"Greenock",
       "company":"Inverclyde Council",
       "salary":"\u00a350,001 \u2013 \u00a360,000"
-    }
+    },
+  {
+    "url":"https:\/\/uk.jobsora.com\/job-36537522493?utm_source=job_db_space&utm_medium=niche&utm_campaign=inverclydejobs",
+    "actuality":"3 hours ago",
+    "title":"Senior Social Worker - test",
+    "descriptions":["You will have significant experience as a practitioner in all aspects of voluntary and statutory community children\u2019s social work, with a clear track record of working successfully in partnership with children and young people and their families as well as other partners to achieve positive outcomes."],
+    "tags":[{"type":"remote","value":"Hybrid"}],
+    "location":"Greenock",
+    "company":"Inverclyde Council",
+    "salary":"\u00a350,001 \u2013 \u00a360,000"
+  }
 ];
