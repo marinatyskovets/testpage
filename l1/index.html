@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=block" rel="stylesheet">
-        <link href="static/css/best-resume.min.css" rel="stylesheet" type="text/css">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
@@ -24,25 +24,33 @@
             <div class="w-page__top">
                 <!-- ---------------  Top part page ----------------->
                 <!-- begin header-->
-                <header class="c-header js-sticky">
-                    <div class="c-header__content">
-                        <div class="c-header__inner">
-                            <div class="c-header__top">
-                                <div class="c-header__cell">
-                                    <!-- begin logo-->
-                                    <a class="c-logo" href="#">
-                                        <img src="static/img/best-resume/general/best-resume-logo.svg" alt="Site logo" width="295" height="24">
-                                    </a>
-                                    <!-- end logo-->
+                <header class="c-header">
+                    <div class="w-centered">
+                        <div class="c-header__top">
+                            <div class="c-header__cell">
+                                <!-- begin logo-->
+                                <a class="c-logo" href="#">
+                                    <img src="static/img/general/effectiveresume-logo.svg" alt="Site logo" width="199" height="18">
+                                </a>
+                                <!-- end logo-->
+                            </div>
+                            <div class="c-header__cell">
+                                <!-- begin navbar-->
+                                <div class="c-navbar"><a class="c-navbar__item" href="#">Dashboard</a><a class="c-navbar__item is-active has-dot" href="#">Jobs</a><a class="c-navbar__item" href="#">Cover Letters</a><a class="c-navbar__item" href="#">Resumes</a>
                                 </div>
-                                <div class="c-header__cell"><a class="c-btn c-btn--ghost c-btn--xs-narrow c-btn--fs-sm" href="#">Resume Builder</a><a class="c-btn c-btn--ghost c-btn--xs-narrow c-btn--fs-sm" href="#">Cover Letter Builder</a><a class="c-btn c-btn--ghost c-btn--xs-narrow c-btn--fs-sm"
-                                    href="#faq-section">FAQ</a>
-                                    <a class="c-btn c-btn--ghost c-btn--xs-narrow c-btn--fs-sm" href="#">
-                                        <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
-                                            <!-- ico name: account-->
-                                            <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>
-                                        </svg>My Account</a><a class="c-btn c-btn--secondary c-header__btn" href="#">Build my resume</a>
+                                <!-- end navbar-->
+                                <!-- begin dropdown-->
+                                <div class="c-dropdown">
+                                    <button class="c-btn c-btn--toggle c-btn--link-secondary c-btn--xs" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+                                        <svg class="c-ico c-ico--xl c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                            <!-- ico name: account-circle-->
+                                            <path fill="currentColor" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path>
+                                        </svg>User Name
+                                    </button>
+                                    <div class="dropdown-menu c-dropdown__menu"><a class="c-dropdown__link" href="#">My Settings</a><a class="c-dropdown__link" href="#">Sign Out</a>
+                                    </div>
                                 </div>
+                                <!-- end dropdown-->
                             </div>
                         </div>
                     </div>
@@ -50,993 +58,1058 @@
                 <!-- end header-->
             </div>
             <div class="w-page__content">
-                <main>
-                    <!-- ---------------  Main part page ----------------->
-                    <!-- begin section-->
-                    <section class="c-section c-section--md-slim">
+                <!-- ---------------  Main part page ----------------->
+                <main class="w-main">
+                    <div class="w-main__content">
+                        <!-- ---------------  Main content part page ----------------->
                         <div class="w-centered">
-                            <!-- begin banner-box-->
-                            <div class="c-banner-box w-gap-xl">
-                                <div class="c-banner-box__content c-column-gap-lg">
-                                    <h1 class="c-banner-box__title">The Best Online <br> Resume Builder</h1>
-                                    <p>Easily create a resume for any job using our best-in-class resume builder platform.</p>
-                                    <div class="c-row c-row--row-gap-md">
-                                        <button class="c-btn" type="button">Create My Resume Now
-                                        </button>
-                                        <button class="c-btn c-btn--secondary" type="button" data-bs-toggle="modal" data-bs-target="#cv-import">Import Your Resume
-                                        </button>
+                            <div class="w-gap-xl c-column-gap-sm">
+                                <div class="grid grid--nowrap">
+                                    <div class="grid__col-5">
+                                        <label class="control-label" for="query">What job are you looking for?</label>
                                     </div>
-                                    <!-- begin stats-panel-->
-                                    <div class="c-stats-panel">
-                                        <div class="c-stats-panel__item">
-                                            <div class="c-row c-row--nowrap c-row--align-center c-row--row-gap-xs">
-                                                <svg class="c-ico c-ico--2xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: arrow-up-->
-                                                    <path fill="currentColor" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z"></path>
-                                                </svg><span class="c-stats-panel__value">38%</span>
-                                            </div>
-                                            <p class="c-stats-panel__text">more interviews</p>
+                                    <div class="grid__col-5">
+                                        <div class="c-row c-row--gap-lg">
+                                            <label class="control-label" for="location">Where?</label>
+                                            <!-- begin switch-->
+                                            <label class="c-switch c-switch--sm"><span class="c-switch__text">Remote</span><span class="c-switch__btn">
+                            <input class="c-switch__input" type="checkbox" checked="checked"/><span class="c-switch__toggle"></span></span>
+                                            </label>
+                                            <!-- end switch-->
                                         </div>
-                                        <div class="c-stats-panel__item">
-                                            <div class="c-row c-row--nowrap c-row--align-center c-row--row-gap-xs">
-                                                <svg class="c-ico c-ico--2xl c-ico--inherit" viewBox="0 0 24 24">
-                                                    <!-- ico name: arrow-up-->
-                                                    <path fill="currentColor" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z"></path>
-                                                </svg><span class="c-stats-panel__value">23%</span>
-                                            </div>
-                                            <p class="c-stats-panel__text">more likely to get a job offer</p>
-                                        </div>
-                                    </div>
-                                    <!-- end stats-panel-->
-                                    <div class="c-column-gap-md">
-                                        <h3 class="c-h5">Our customers have been hired at:</h3>
-                                        <!-- begin carousel-->
-                                        <div class="c-carousel js-carousel">
-                                            <div class="c-carousel__group js-carousel-group">
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/doordash-logo.svg" alt="" width="130" height="16" loading="lazy" />
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/amazon-logo.svg" alt="" width="76" height="23" loading="lazy" />
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/chase-logo.svg" alt="" width="84" height="16" loading="lazy" />
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/pinterest-logo.svg" alt="" width="84" height="22" loading="lazy" />
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/nike-logo.svg" alt="" width="43" height="16" loading="lazy" />
-                                            </div>
-                                        </div>
-                                        <!-- end carousel-->
                                     </div>
                                 </div>
-                                <div class="c-banner-box__aside">
-                                    <div class="c-banner-box__img"></div>
-                                </div>
-                            </div>
-                            <!-- end banner-box-->
-                            <div class="w-gap-xl">
-                                <p>
-                                    Our online resume builder offers a quick and easy way to create your professional resume from 25+ design templates. Whether you’re starting from scratch or refining an existing resume, our platform serves as a powerful resume generator and provides expert
-                                    resume help at every step.
-                                </p>
-                                <p>
-                                    Create a resume using our AI resume builder feature, plus take advantage of expert suggestions, a built-in resume editor, and customizable modern and professional resume templates. Free users have access to our easy-to-use resume creator and TXT file
-                                    downloads.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--secondary c-section--sm">
-                        <div class="w-centered w-centered--xs w-gap-3xl">
-                            <h3 class="c-h2 u-text-center">Pick one of many world-class templates and build your resume in minutes</h3>
-                        </div>
-                        <div class="w-centered w-gap-3xl">
-                            <!-- begin swiper-->
-                            <div class="swiper c-swiper-skip-indicator js-swiper-skip-indicator w-gap-4xl">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <!-- begin image-container-->
-                                        <div class="c-image-container">
-                                            <div class="c-image-container__img">
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-fearless.png" alt="" width="280" height="396" loading="lazy" />
-                                                <button class="c-btn c-image-container__btn" type="button">Use This Template
+                                <div class="grid grid--nowrap grid--middle">
+                                    <div class="grid__col-5">
+                                        <div class="form-group">
+                                            <div class="form-group__field">
+                                                <svg class="c-ico c-ico--md c-ico--inherit form-group__field-ico" viewBox="0 0 24 24">
+                                                    <!-- ico name: magnify-->
+                                                    <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path>
+                                                </svg>
+                                                <button class="c-icon-button form-group__field-btn" type="button">
+                                                    <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                        <!-- ico name: close-circle-->
+                                                        <path fill="currentColor" d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"></path>
+                                                    </svg>
                                                 </button>
+                                                <input class="form-control" type="text" placeholder="Placeholder" id="query" value="HGV Driver" />
                                             </div>
-                                        </div>
-                                        <!-- end image-container-->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- begin image-container-->
-                                        <div class="c-image-container">
-                                            <div class="c-image-container__img">
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-honored.png" alt="" width="280" height="396" loading="lazy" />
-                                                <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- end image-container-->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- begin image-container-->
-                                        <div class="c-image-container">
-                                            <div class="c-image-container__img">
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-executive.png" alt="" width="280" height="396" loading="lazy" />
-                                                <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- end image-container-->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- begin image-container-->
-                                        <div class="c-image-container">
-                                            <div class="c-image-container__img">
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-luxurious.png" alt="" width="280" height="396" loading="lazy" />
-                                                <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- end image-container-->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- begin image-container-->
-                                        <div class="c-image-container">
-                                            <div class="c-image-container__img">
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-heart.png" alt="" width="280" height="396" loading="lazy" />
-                                                <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- end image-container-->
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!-- begin image-container-->
-                                        <div class="c-image-container">
-                                            <div class="c-image-container__img">
-                                                <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-exceptional.png" alt="" width="280" height="396" loading="lazy" />
-                                                <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- end image-container-->
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-scrollbar"></div>
-                            </div>
-                            <!-- end swiper-->
-                            <div class="c-row c-row--justify-center w-gap-4xl">
-                                <button class="c-btn c-btn--secondary" type="button">See All Resume Templates
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--xs w-gap-3xl">
-                            <h3 class="c-h2 u-text-center">Get hired 36% faster with our feature-packed and easy-to-use resume builder app</h3>
-                            <p>BestResume.org is now part of Bold LLC. For more information visit our Terms of Use and Privacy Policy.</p>
-                        </div>
-                        <div class="w-centered w-gap-3xl">
-                            <!-- begin flex-group-->
-                            <div class="c-flex-group w-gap-4xl">
-                                <div class="c-flex-group__item">
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/star-half-full.svg" alt="" width="48" height="48" loading="lazy" />
-                                    <div class="c-flex-group__content">
-                                        <h3 class="c-flex-group__title">Powerful resume builder</h3>
-                                        <p class="c-flex-group__text">Use our potent creation tools and expert guidance to create the perfect resume for your next job application.</p>
-                                    </div>
-                                </div>
-                                <div class="c-flex-group__item">
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/file.svg" alt="" width="48" height="48" loading="lazy" />
-                                    <div class="c-flex-group__content">
-                                        <h3 class="c-flex-group__title">Professional templates</h3>
-                                        <p class="c-flex-group__text">Choose from 25+ applicant tracking systems (ATS)-friendly modern and professional templates.</p>
-                                    </div>
-                                </div>
-                                <div class="c-flex-group__item">
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/robot.svg" alt="" width="48" height="48" loading="lazy" />
-                                    <div class="c-flex-group__content">
-                                        <h3 class="c-flex-group__title">ATS-friendly templates</h3>
-                                        <p class="c-flex-group__text">Sail through applicant tracking systems with resume templates that appeal to both machines and humans.</p>
-                                    </div>
-                                </div>
-                                <div class="c-flex-group__item">
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/brush.svg" alt="" width="48" height="48" loading="lazy" />
-                                    <div class="c-flex-group__content">
-                                        <h3 class="c-flex-group__title">Customize fonts and colors</h3>
-                                        <p class="c-flex-group__text">Select custom fonts and colors on any resume template.</p>
-                                    </div>
-                                </div>
-                                <div class="c-flex-group__item">
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/gift.svg" alt="" width="48" height="48" loading="lazy" />
-                                    <div class="c-flex-group__content">
-                                        <h3 class="c-flex-group__title">Free resume examples</h3>
-                                        <p class="c-flex-group__text">Use our more than 500 resume examples and templates to see what a great resume looks like in your field.</p>
-                                    </div>
-                                </div>
-                                <div class="c-flex-group__item">
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/creation.svg" alt="" width="48" height="48" loading="lazy" />
-                                    <div class="c-flex-group__content">
-                                        <h3 class="c-flex-group__title">Expert tips and guidance</h3>
-                                        <p class="c-flex-group__text">Get help every step of the way as you build your resume with expert tips and suggested phrases.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end flex-group-->
-                            <div class="c-row c-row--justify-center w-gap-4xl">
-                                <button class="c-btn" type="button">See All Resume Templates
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--secondary">
-                        <div class="w-centered w-centered--sm">
-                            <!-- begin card-content-->
-                            <div class="c-card-content w-gap-extra">
-                                <img class="c-image lozad" data-src="static/img/best-resume/general/form-contact.png" alt="" width="502" height="293" loading="lazy" />
-                                <div class="c-card-content__details">
-                                    <h3 class="c-card-content__title">Powerful AI Resume Tool</h3>
-                                    <p class="c-card-content__text">Powerful AI Resume ToolFind the right words and automate your resume writing process with Resume Builder’s free AI resume writer. Just enter a job title or phrase, and our AI will provide suggestions that show employers
-                                        you’re the best fit.</p>
-                                    <div class="c-row">
-                                        <button class="c-btn" type="button">Try Out Our AI Resume Builder
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end card-content-->
-                            <!-- begin card-content-->
-                            <div class="c-card-content c-card-content--reverse w-gap-extra">
-                                <img class="c-image lozad" data-src="static/img/best-resume/general/template-tips.png" alt="" width="494" height="411" loading="lazy" />
-                                <div class="c-card-content__details">
-                                    <h3 class="c-card-content__title">Expert Tips and Suggestions</h3>
-                                    <p class="c-card-content__text">Use Suggested Phrases to get job-specific phrases from certified resume writers that help you plug in job descriptions, career summaries, and more.</p>
-                                    <div class="c-row">
-                                        <button class="c-btn" type="button">Get Expert Guidance
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end card-content-->
-                            <!-- begin card-content-->
-                            <div class="c-card-content w-gap-extra">
-                                <img class="c-image lozad" data-src="static/img/best-resume/general/template-edit.png" alt="" width="472" height="396" loading="lazy" />
-                                <div class="c-card-content__details">
-                                    <h3 class="c-card-content__title">Custom Resume Maker</h3>
-                                    <p class="c-card-content__text">You can change the font styles, colors, and layout of your resume to stand out from the competition.</p>
-                                    <div class="c-row">
-                                        <button class="c-btn" type="button">Customize My Resume Now
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end card-content-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered">
-                            <div class="c-section__item">
-                                <div class="w-gap-3xl w-centered w-centered--xxs">
-                                    <h3 class="c-h2 u-text-center">Get inspired by expertly crafted, free resume examples</h3>
-                                </div>
-                                <div class="w-gap-3xl w-centered w-centered--sm">
-                                    <div class="grid grid--nowrap grid--between">
-                                        <div class="grid__col">
-                                            <!-- begin nav-tabs-->
-                                            <div class="c-nav-tabs w-gap-md">
-                                                <ul class="c-nav-tabs__list" role="tablist">
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="active c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#executive">Executive</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#heart">Heart</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#luxurious">Luxurious</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#pure">Pure</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#prominent">Prominent</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#bright">Bright</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#exceptional">Exceptional</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#fashionable">Fashionable</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#airy">Airy</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#sleek">Sleek</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#star">Star</button>
-                                                    </li>
-                                                    <li class="c-nav-tabs__item">
-                                                        <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#striking">Striking</button>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- end nav-tabs-->
-                                            <div class="w-gap-md">
-                                                <button class="c-btn" type="button">All Resume Templates
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="grid__col">
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade show active" id="executive">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-executive.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="heart">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-heart.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="luxurious">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-luxurious.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="pure">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-pure.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="prominent">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-prominent.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="bright">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-bright.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="exceptional">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-exceptional.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="fashionable">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-fashionable.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="airy">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-airy.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="sleek">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-sleek.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="star">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-star.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
-                                            <!-- begin tab-content-->
-                                            <div class="c-tab-content fade" id="striking">
-                                                <!-- begin image-container-->
-                                                <div class="c-image-container c-image-container--no-hover-effect">
-                                                    <div class="c-image-container__img">
-                                                        <img class="c-image lozad" data-src="static/img/best-resume/general/resume-template-striking.png" alt="" width="592" height="837" loading="lazy" />
-                                                        <button class="c-btn c-image-container__btn" type="button">Use This Template
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end image-container-->
-                                            </div>
-                                            <!-- end tab-content-->
+                                            <div class="help-block"></div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="c-section__item">
-                                <div class="w-gap-3xl w-centered w-centered--xxs">
-                                    <h3 class="c-h2 u-text-center">What users say about Resume Builder</h3>
-                                </div>
-                                <div class="w-gap-3xl grid grid--nowrap grid--middle">
+                                    <div class="grid__col-5">
+                                        <div class="form-group">
+                                            <div class="form-group__field">
+                                                <svg class="c-ico c-ico--md c-ico--inherit form-group__field-ico" viewBox="0 0 24 24">
+                                                    <!-- ico name: map-marker-outline-->
+                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                </svg>
+                                                <input class="form-control" type="text" placeholder="Location" id="location" />
+                                            </div>
+                                            <div class="help-block"></div>
+                                        </div>
+                                    </div>
                                     <div class="grid__col-2">
-                                        <!-- begin rating-container-->
-                                        <div class="c-rating-container">
-                                            <div class="c-rating-container__title">Great</div>
-                                            <!-- begin star-rating-->
-                                            <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                            </div>
-                                            <!-- end star-rating-->
-                                            <div class="c-rating-container__text">Based on <b>1.120 reviews</b>
-                                            </div>
-                                        </div>
-                                        <!-- end rating-container-->
-                                    </div>
-                                    <div class="grid__col-10">
-                                        <div class="c-swiper-box">
-                                            <!-- begin swiper-->
-                                            <div class="swiper c-swiper js-swiper w-gap-2xl">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <!-- begin review-->
-                                                        <div class="c-review">
-                                                            <div class="c-row c-row--align-center c-row--row-gap-sm w-gap-sm">
-                                                                <!-- begin star-rating-->
-                                                                <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                                                </div>
-                                                                <!-- end star-rating-->
-                                                                <div class="c-review__tag">
-                                                                    <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                                        <!-- ico name: check-circle-->
-                                                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                                    </svg>Verified
-                                                                </div>
-                                                            </div>
-                                                            <div class="c-h5">It helped me to get my job!</div>
-                                                            <div class="c-review__text">Highly recommended for anyone looking for a modern, easy to use and ATS-friendly resume builder.</div>
-                                                            <div class="c-review__data"><strong>Lucy B</strong>, 3 days ago
-                                                            </div>
-                                                        </div>
-                                                        <!-- end review-->
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <!-- begin review-->
-                                                        <div class="c-review">
-                                                            <div class="c-row c-row--align-center c-row--row-gap-sm w-gap-sm">
-                                                                <!-- begin star-rating-->
-                                                                <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                                                </div>
-                                                                <!-- end star-rating-->
-                                                                <div class="c-review__tag">
-                                                                    <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                                        <!-- ico name: check-circle-->
-                                                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                                    </svg>Verified
-                                                                </div>
-                                                            </div>
-                                                            <div class="c-h5">Good one.</div>
-                                                            <div class="c-review__text">I’m a professional HR and I never seen so many well done resumes/cover letters! Kudos to builder-resume.com</div>
-                                                            <div class="c-review__data"><strong>VS</strong>, 4 days ago
-                                                            </div>
-                                                        </div>
-                                                        <!-- end review-->
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <!-- begin review-->
-                                                        <div class="c-review">
-                                                            <div class="c-row c-row--align-center c-row--row-gap-sm w-gap-sm">
-                                                                <!-- begin star-rating-->
-                                                                <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                                                </div>
-                                                                <!-- end star-rating-->
-                                                                <div class="c-review__tag">
-                                                                    <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                                        <!-- ico name: check-circle-->
-                                                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                                    </svg>Verified
-                                                                </div>
-                                                            </div>
-                                                            <div class="c-h5">So easy!</div>
-                                                            <div class="c-review__text">I’ve never had to make a resume before, but the templates are so easy to use that it made my resume writing a joy to do.</div>
-                                                            <div class="c-review__data"><strong>Stephen A</strong>, 7 days ago
-                                                            </div>
-                                                        </div>
-                                                        <!-- end review-->
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <!-- begin review-->
-                                                        <div class="c-review">
-                                                            <div class="c-row c-row--align-center c-row--row-gap-sm w-gap-sm">
-                                                                <!-- begin star-rating-->
-                                                                <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                                                </div>
-                                                                <!-- end star-rating-->
-                                                                <div class="c-review__tag">
-                                                                    <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                                        <!-- ico name: check-circle-->
-                                                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                                    </svg>Verified
-                                                                </div>
-                                                            </div>
-                                                            <div class="c-h5">It helped me to get my job!</div>
-                                                            <div class="c-review__text">Highly recommended for anyone looking for a modern, easy to use and ATS-friendly resume builder.</div>
-                                                            <div class="c-review__data"><strong>Lucy B</strong>, 3 days ago
-                                                            </div>
-                                                        </div>
-                                                        <!-- end review-->
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <!-- begin review-->
-                                                        <div class="c-review">
-                                                            <div class="c-row c-row--align-center c-row--row-gap-sm w-gap-sm">
-                                                                <!-- begin star-rating-->
-                                                                <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                                                </div>
-                                                                <!-- end star-rating-->
-                                                                <div class="c-review__tag">
-                                                                    <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                                        <!-- ico name: check-circle-->
-                                                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                                    </svg>Verified
-                                                                </div>
-                                                            </div>
-                                                            <div class="c-h5">Good one.</div>
-                                                            <div class="c-review__text">I’m a professional HR and I never seen so many well done resumes/cover letters! Kudos to builder-resume.com</div>
-                                                            <div class="c-review__data"><strong>VS</strong>, 4 days ago
-                                                            </div>
-                                                        </div>
-                                                        <!-- end review-->
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <!-- begin review-->
-                                                        <div class="c-review">
-                                                            <div class="c-row c-row--align-center c-row--row-gap-sm w-gap-sm">
-                                                                <!-- begin star-rating-->
-                                                                <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                                                </div>
-                                                                <!-- end star-rating-->
-                                                                <div class="c-review__tag">
-                                                                    <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                                        <!-- ico name: check-circle-->
-                                                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                                    </svg>Verified
-                                                                </div>
-                                                            </div>
-                                                            <div class="c-h5">So easy!</div>
-                                                            <div class="c-review__text">I’ve never had to make a resume before, but the templates are so easy to use that it made my resume writing a joy to do.</div>
-                                                            <div class="c-review__data"><strong>Stephen A</strong>, 7 days ago
-                                                            </div>
-                                                        </div>
-                                                        <!-- end review-->
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <!-- begin review-->
-                                                        <div class="c-review">
-                                                            <div class="c-row c-row--align-center c-row--row-gap-sm w-gap-sm">
-                                                                <!-- begin star-rating-->
-                                                                <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                                                </div>
-                                                                <!-- end star-rating-->
-                                                                <div class="c-review__tag">
-                                                                    <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                                        <!-- ico name: check-circle-->
-                                                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                                    </svg>Verified
-                                                                </div>
-                                                            </div>
-                                                            <div class="c-h5">It helped me to get my job!</div>
-                                                            <div class="c-review__text">Highly recommended for anyone looking for a modern, easy to use and ATS-friendly resume builder.</div>
-                                                            <div class="c-review__data"><strong>Lucy B</strong>, 3 days ago
-                                                            </div>
-                                                        </div>
-                                                        <!-- end review-->
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <!-- begin review-->
-                                                        <div class="c-review">
-                                                            <div class="c-row c-row--align-center c-row--row-gap-sm w-gap-sm">
-                                                                <!-- begin star-rating-->
-                                                                <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                                                </div>
-                                                                <!-- end star-rating-->
-                                                                <div class="c-review__tag">
-                                                                    <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                                        <!-- ico name: check-circle-->
-                                                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                                    </svg>Verified
-                                                                </div>
-                                                            </div>
-                                                            <div class="c-h5">Good one.</div>
-                                                            <div class="c-review__text">I’m a professional HR and I never seen so many well done resumes/cover letters! Kudos to builder-resume.com</div>
-                                                            <div class="c-review__data"><strong>VS</strong>, 4 days ago
-                                                            </div>
-                                                        </div>
-                                                        <!-- end review-->
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <!-- begin review-->
-                                                        <div class="c-review">
-                                                            <div class="c-row c-row--align-center c-row--row-gap-sm w-gap-sm">
-                                                                <!-- begin star-rating-->
-                                                                <div class="c-star-rating" data-rating="5"><span></span><span></span><span></span><span></span><span></span>
-                                                                </div>
-                                                                <!-- end star-rating-->
-                                                                <div class="c-review__tag">
-                                                                    <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                                                        <!-- ico name: check-circle-->
-                                                                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path>
-                                                                    </svg>Verified
-                                                                </div>
-                                                            </div>
-                                                            <div class="c-h5">So easy!</div>
-                                                            <div class="c-review__text">I’ve never had to make a resume before, but the templates are so easy to use that it made my resume writing a joy to do.</div>
-                                                            <div class="c-review__data"><strong>Stephen A</strong>, 7 days ago
-                                                            </div>
-                                                        </div>
-                                                        <!-- end review-->
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-button-next"></div>
-                                                <div class="swiper-button-prev"></div>
-                                            </div>
-                                            <!-- end swiper-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section c-section--highlight c-section--md-narrow">
-                        <div class="w-centered w-centered--sm">
-                            <div class="w-gap-extra grid grid--nowrap">
-                                <div class="grid__col-6">
-                                    <h3 class="c-h1 w-gap-lg">Let’s Land Your Dream Job Together</h3>
-                                    <div class="c-row w-gap-lg">
-                                        <button class="c-btn" type="button">Start Your Resume Now
+                                        <button class="c-btn" type="button">Find Jobs
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-gap-extra c-column-gap-md">
-                                <h3 class="c-h5">Our customers have been hired at:</h3>
-                                <div class="c-row c-row--nowrap c-row--align-center c-row--row-gap-3xl">
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/doordash-light-logo.svg" alt="" width="130" height="16" loading="lazy" />
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/amazon-light-logo.svg" alt="" width="76" height="23" loading="lazy" />
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/chase-light-logo.svg" alt="" width="84" height="16" loading="lazy" />
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/pinterest-light-logo.svg" alt="" width="84" height="22" loading="lazy" />
-                                    <img class="c-image lozad" data-src="static/img/best-resume/general/nike-light-logo.svg" alt="" width="43" height="16" loading="lazy" />
+                            <div class="w-gap-6xl">
+                                <!-- begin nav-tabs-->
+                                <div class="c-nav-tabs c-nav-tabs--custom w-gap-lg">
+                                    <ul class="c-nav-tabs__list" role="tablist">
+                                        <li class="c-nav-tabs__item">
+                                            <button class="active c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#tab-0"><span class="c-nav-tabs__info"><span class="c-nav-tabs__text">Recommended Jobs</span><span class="c-nav-tabs__value">(366)</span></span>
+                                            </button>
+                                        </li>
+                                        <li class="c-nav-tabs__item">
+                                            <button class="c-icon-button" type="button">
+                                                <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: close-circle-->
+                                                    <path fill="currentColor" d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#tab-1"><span class="c-nav-tabs__info"><span class="c-nav-tabs__text">HGV Driver</span><span class="c-nav-tabs__value">(27)</span></span><span class="c-nav-tabs__help-text">Manchester</span>
+                                            </button>
+                                        </li>
+                                        <li class="c-nav-tabs__item">
+                                            <button class="c-icon-button" type="button">
+                                                <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: close-circle-->
+                                                    <path fill="currentColor" d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#tab-2"><span class="c-nav-tabs__info"><span class="c-nav-tabs__text">All jobs</span><span class="c-nav-tabs__value">(500+)</span></span><span class="c-nav-tabs__help-text">Manchester</span>
+                                            </button>
+                                        </li>
+                                        <li class="c-nav-tabs__item">
+                                            <button class="c-icon-button" type="button">
+                                                <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: close-circle-->
+                                                    <path fill="currentColor" d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#tab-3"><span class="c-nav-tabs__info"><span class="c-nav-tabs__text">All jobs</span><span class="c-nav-tabs__value">(500+)</span></span><span class="c-nav-tabs__help-text">United Kingdom</span>
+                                            </button>
+                                        </li>
+                                        <li class="c-nav-tabs__item">
+                                            <button class="c-icon-button" type="button">
+                                                <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: close-circle-->
+                                                    <path fill="currentColor" d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#tab-4"><span class="c-nav-tabs__info"><span class="c-nav-tabs__text">Senior UI/UX Designer</span><span class="c-nav-tabs__value">(121)</span></span><span class="c-nav-tabs__help-text">Remote</span>
+                                            </button>
+                                        </li>
+                                        <li class="c-nav-tabs__item">
+                                            <button class="c-icon-button" type="button">
+                                                <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                    <!-- ico name: close-circle-->
+                                                    <path fill="currentColor" d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"></path>
+                                                </svg>
+                                            </button>
+                                            <button class="c-nav-tabs__link" type="button" data-bs-toggle="tab" data-bs-target="#tab-5"><span class="c-nav-tabs__info"><span class="c-nav-tabs__text">Senior UI/UX Service Designer</span><span class="c-nav-tabs__value">(3)</span></span><span class="c-nav-tabs__help-text">Manchester</span>
+                                            </button>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section" id="faq-section">
-                        <div class="w-centered">
-                            <div class="grid grid--nowrap grid--extra">
-                                <div class="grid__col-4">
-                                    <h3 class="c-h2">Frequently Asked Questions About BestResume</h3>
+                                <!-- end nav-tabs-->
+                                <!-- begin tab-content-->
+                                <div class="c-tab-content fade active show" id="tab-0">
+                                    <div class="w-gap-lg grid grid--nowrap">
+                                        <div class="grid__col-5">
+                                            <div class="w-gap-xs">Based on your resume:</div>
+                                            <div class="form-group form-group--xs w-gap-xs">
+                                                <!-- begin select-->
+                                                <select class="form-control">
+                                                    <option value="0">Juan Paul Belmondo Resume version13 modifica</option>
+                                                    <option value="1">Item</option>
+                                                    <option value="2">Item</option>
+                                                    <option value="3">Item</option>
+                                                    <option value="4">Item</option>
+                                                </select>
+                                                <!-- end select-->
+                                                <div class="help-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Jobs Recommendations Empty-->
+                                    <!-- begin common-box-->
+                                    <div class="c-common-box w-gap-lg">
+                                        <div class="w-centered w-centered--xxs u-text-center">
+                                            <div class="w-gap-lg">
+                                                <img class="c-image lozad" data-src="static/img/general/info.svg" alt="" width="161" height="150" loading="lazy" />
+                                            </div>
+                                            <h2 class="c-h3 w-gap-sm">No match has been found yet</h2>
+                                            <div class="w-gap-lg u-text-lg">We choose jobs for you based on your resume. Please update or create one for better matches.</div>
+                                            <div class="c-row c-row--nowrap c-row--justify-center c-row--row-gap-lg w-gap-lg">
+                                                <button class="c-btn c-btn--secondary" type="button">Go to search
+                                                </button>
+                                                <button class="c-btn" type="button">Go to resumes
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end common-box-->
+                                    <!---->
                                 </div>
-                                <div class="grid__col-8">
-                                    <div class="u-mt-30-neg">
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faq-0" aria-expanded="true">What Is a Resume?
-                                            </button>
-                                            <div class="c-title-collapse__dialog collapse show" id="faq-0" data-bs-parent="#faq">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        A resume is a professional document that you use to apply for jobs, showcasing your education, work experience, skills, and accomplishments.
-                                                    </p>
-                                                    <p>
-                                                        A well-organized resume highlights your strengths and achievements, increasing your chances of securing an interview. Customizing your resume for each job is essential, as it aligns your qualifications with the employer's needs.
-                                                    </p>
-                                                    <p>
-                                                        Optimizing your resume for Applicant Tracking Systems (ATS) ensures it passes through automated screening processes, making it more likely to reach the hiring manager. A well-designed resume is an essential tool in any job search.
-                                                    </p>
-                                                </div>
+                                <!-- end tab-content-->
+                                <!-- begin tab-content-->
+                                <div class="c-tab-content fade" id="tab-1">
+                                    <div class="w-gap-lg grid grid--nowrap">
+                                        <div class="grid__col-5">
+                                            <!-- begin subscribe-panel-->
+                                            <div class="c-subscribe-panel w-gap-md">
+                                                <!-- begin switch-->
+                                                <label class="c-switch c-switch--sm c-switch--between"><span class="c-switch__text">
+                              <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: bell-outline-->
+                                <path fill="currentColor" d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z"></path>
+                              </svg>New jobs alert</span><span class="c-switch__btn">
+                            <input class="c-switch__input" type="checkbox"/><span class="c-switch__toggle"></span></span>
+                                                </label>
+                                                <!-- end switch-->
+                                            </div>
+                                            <!-- end subscribe-panel-->
+                                            <div class="w-gap-md c-column-gap-sm">
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item is-active">
+                                                    <div class="c-job-item__logo" style="color: #000000; background: #BCEBFF;">H</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Counterbalance or Reach Truck Driver</h2>
+                                                        <div class="c-job-item__company">Highway Runner Trucking Ltd Highway</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__salary">$27,000</div>
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="75">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">75</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #ffffff; background: #AE7EBD;">R</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver</h2>
+                                                        <div class="c-job-item__company">Road Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="100">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">100</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #ffffff; background: #0026C7;">F</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver HGV Driver (A K Logistics Ltd)</h2>
+                                                        <div class="c-job-item__company">Freight Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__salary">$27,000</div>
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="25">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">25</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #000000; background: #F6C575;">H</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Counterbalance or Reach Truck Driver</h2>
+                                                        <div class="c-job-item__company">Highway Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="75">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">75</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #ffffff; background: #AE7EBD;">R</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver</h2>
+                                                        <div class="c-job-item__company">Road Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="75">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">75</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #000000; background: #ADEEA1;">F</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver HGV Driver (A K Logistics Ltd)</h2>
+                                                        <div class="c-job-item__company">Freight Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__salary">$27,000</div>
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="25">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">25</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #ffffff; background: #0026C7;">F</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver HGV Driver (A K Logistics Ltd)</h2>
+                                                        <div class="c-job-item__company">Freight Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__salary">$27,000</div>
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="75">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">75</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item is-active">
+                                                    <div class="c-job-item__logo" style="color: #000000; background: #BCEBFF;">H</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Counterbalance or Reach Truck Driver</h2>
+                                                        <div class="c-job-item__company">Highway Runner Trucking Ltd Highway</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__salary">$27,000</div>
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="75">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">75</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #ffffff; background: #AE7EBD;">R</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver</h2>
+                                                        <div class="c-job-item__company">Road Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="100">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">100</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #ffffff; background: #0026C7;">F</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver HGV Driver (A K Logistics Ltd)</h2>
+                                                        <div class="c-job-item__company">Freight Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__salary">$27,000</div>
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="25">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">25</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #000000; background: #F6C575;">H</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Counterbalance or Reach Truck Driver</h2>
+                                                        <div class="c-job-item__company">Highway Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="75">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">75</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #ffffff; background: #AE7EBD;">R</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver</h2>
+                                                        <div class="c-job-item__company">Road Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="75">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">75</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #000000; background: #ADEEA1;">F</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver HGV Driver (A K Logistics Ltd)</h2>
+                                                        <div class="c-job-item__company">Freight Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__salary">$27,000</div>
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="25">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">25</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
+                                                <!-- begin job-item-->
+                                                <article class="c-job-item">
+                                                    <div class="c-job-item__logo" style="color: #ffffff; background: #0026C7;">F</div>
+                                                    <div class="c-job-item__container">
+                                                        <h2 class="c-job-item__title">Experienced Tramper Driver HGV Driver (A K Logistics Ltd)</h2>
+                                                        <div class="c-job-item__company">Freight Runner Trucking Ltd</div>
+                                                        <div class="c-job-item__details">
+                                                            <div class="c-job-item__salary">$27,000</div>
+                                                            <div class="c-job-item__location">
+                                                                <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                    <!-- ico name: map-marker-outline-->
+                                                                    <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                </svg>Manchester
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-job-item__progress js-tooltip-container">
+                                                        <!-- begin circular-progress-->
+                                                        <div class="c-circular-progress js-circular-progress" data-value="75">
+                                                            <div class="c-circular-progress__figure">
+                                                                <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                    <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                </svg>
+                                                                <div class="c-circular-progress__value">75</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end circular-progress-->
+                                                        <div class="c-tooltip">
+                                                            <div class="c-row c-row--nowrap c-row--row-gap-xs c-row--justify-between w-gap-xs">
+                                                                <h4 class="c-h4">Job match</h4>
+                                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close js-tooltip-close" type="button">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: close-->
+                                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="w-gap-xs">
+                                                                <p>This indicator shows how closely the job aligns with your experience or interests.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- end job-item-->
                                             </div>
                                         </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true">How to Create a Winning Resume
-                                            </button>
-                                            <div class="c-title-collapse__dialog collapse show" id="faq-1" data-bs-parent="#faq">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        Create an eye-catching resume with ease using our Resume Builder. Simply pick a template, answer a few easy questions, and download your resume in PDF or TXT format.
-                                                    </p>
-                                                    <p>Here are some tips to make your resume stand out:</p>
-                                                    <!-- begin list-->
-                                                    <ul class="c-list">
-                                                        <li class="c-list__item">Choose the format that best highlights your skills.</li>
-                                                        <li class="c-list__item">Use strong action verbs to describe your achievements.</li>
-                                                        <li class="c-list__item">Add keywords from the job description to optimize for ATS.</li>
-                                                        <li class="c-list__item">Keep it concise, and make sure it’s visually engaging to grab the hiring manager’s attention.</li>
-                                                    </ul>
-                                                    <!-- end list-->
+                                        <div class="grid__col-7">
+                                            <!-- begin fix-section-->
+                                            <div class="c-fix-section js-fix-section">
+                                                <div class="c-fix-section__screen js-fix-section-screen">
+                                                    <!-- begin job-card-->
+                                                    <div class="c-job-card">
+                                                        <div class="c-job-card__header">
+                                                            <h2 class="c-job-card__title">Counterbalance or Reach Truck Driver</h2>
+                                                            <div class="c-job-card__details">
+                                                                <div class="c-job-card__salary">$27,000</div>
+                                                                <div class="c-job-card__location">
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                                        <!-- ico name: map-marker-outline-->
+                                                                        <path fill="currentColor" d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"></path>
+                                                                    </svg>Manchester
+                                                                </div>
+                                                            </div>
+                                                            <div class="c-row c-row--gap-md c-row--align-center">
+                                                                <button class="c-btn" type="button">Apply
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-right" viewBox="0 0 24 24">
+                                                                        <!-- ico name: arrow-top-right-->
+                                                                        <path fill="currentColor" d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                                <div class="c-separator-line c-separator-line--md"></div>
+                                                                <!-- begin circular-progress-->
+                                                                <div class="c-circular-progress c-circular-progress--lg js-circular-progress" data-value="45">
+                                                                    <div class="c-circular-progress__figure">
+                                                                        <svg class="c-circular-progress__circle" viewBox="0 0 120 120">
+                                                                            <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                            <circle r="56" cx="60" cy="60" stroke-width="8"></circle>
+                                                                        </svg>
+                                                                        <div class="c-circular-progress__value">45</div>
+                                                                    </div>
+                                                                    <div class="c-circular-progress__label">Job match</div>
+                                                                </div>
+                                                                <!-- end circular-progress-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="c-job-card__content">
+                                                            <div class="c-job-card__info">
+                                                                <div class="c-job-card__section">
+                                                                    <div class="c-job-card__section-title">Licences</div>
+                                                                    <div class="c-job-card__labels-group">
+                                                                        <div class="c-label c-label--secondary c-label--md">HGV Licence
+                                                                        </div>
+                                                                        <div class="c-label c-label--secondary c-label--md">Category CE Licence
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="c-job-card__section">
+                                                                    <div class="c-job-card__section-title">Skills</div>
+                                                                    <div class="c-job-card__labels-group">
+                                                                        <div class="c-label c-label--success-light c-label--md">
+                                                                            <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                                                <!-- ico name: check-->
+                                                                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                                                            </svg>Driving
+                                                                        </div>
+                                                                        <div class="c-label c-label--success-light c-label--md">
+                                                                            <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                                                <!-- ico name: check-->
+                                                                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                                                            </svg>Communication skills
+                                                                        </div>
+                                                                        <div class="c-label c-label--danger c-label--md">
+                                                                            <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                                                <!-- ico name: cancel-->
+                                                                                <path fill="currentColor" d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z"></path>
+                                                                            </svg>Customer service
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="c-job-card__section">
+                                                                    <div class="c-job-card__section-title">Languages</div>
+                                                                    <div class="c-job-card__labels-group">
+                                                                        <div class="c-label c-label--success-light c-label--md">
+                                                                            <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                                                <!-- ico name: check-->
+                                                                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                                                            </svg>English
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="c-job-card__section">
+                                                                    <div class="c-job-card__section-title">Job type</div>
+                                                                    <div class="c-job-card__labels-group">
+                                                                        <div class="c-label c-label--secondary c-label--md">Permanent
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- Jobs Search Listing Without Categories-->
+                                                                <div class="c-job-card__section">
+                                                                    <div class="c-job-card__section-title">Job insights</div>
+                                                                    <div class="c-job-card__labels-group">
+                                                                        <div class="c-label c-label--success-light c-label--md">
+                                                                            <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                                <!-- ico name: check-->
+                                                                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                                                            </svg>Driving
+                                                                        </div>
+                                                                        <div class="c-label c-label--success-light c-label--md">
+                                                                            <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                                <!-- ico name: check-->
+                                                                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                                                            </svg>Communication skills
+                                                                        </div>
+                                                                        <div class="c-label c-label--success-light c-label--md">
+                                                                            <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
+                                                                                <!-- ico name: check-->
+                                                                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                                                            </svg>English
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="c-job-card__labels-group">
+                                                                        <div class="c-label c-label--danger c-label--md">
+                                                                            <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
+                                                                                <!-- ico name: cancel-->
+                                                                                <path fill="currentColor" d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z"></path>
+                                                                            </svg>Customer service
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="c-job-card__labels-group">
+                                                                        <div class="c-label c-label--secondary c-label--md">HGV Licence
+                                                                        </div>
+                                                                        <div class="c-label c-label--secondary c-label--md">Category CE Licence
+                                                                        </div>
+                                                                        <div class="c-label c-label--secondary c-label--md">Permanent
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!---->
+                                                            </div>
+                                                            <div class="c-job-card__description">
+                                                                <p>
+                                                                    If you are looking for on going FLT role, temp to perm, in Swindon (Sn25) area, this role can be perfect for you.
+                                                                </p>
+                                                                <p>
+                                                                    Gap personnel Gloucester are recruiting for 1 C/B or Reach Forklift Drivers for an ongoing temp to perm assignment to one of the growing companies in Swindon, within Groundwell Industrial Estate. As a Counterbalance Forklift driver your time will be split
+                                                                    between both the yard and warehouse facilities – as a Reach truck driver your time will be split between high picking in the warehouse and palletising stock.
+                                                                </p>
+                                                                <p>
+                                                                    For those that are able to demonstrate a strong work ethic, and a commitment to the working hours there are permanent opportunities available, and you are welcome to apply after completing your 12 week probationary period.
+                                                                </p>
+                                                                <p><strong>Main Duties as a Counterbalance Forklift Driver / Reach Truck driver:</strong>
+                                                                </p>
+                                                                <ul>
+                                                                    <li>Loading / Unloading lorries</li>
+                                                                    <li>Stock replenishment into both yard and warehouse departments – when needed</li>
+                                                                    <li>Transport of products throughout the yard as per supervisor request</li>
+                                                                    <li>Working from pick &amp; loading sheets and collecting picked items</li>
+                                                                    <li>Palletising stock</li>
+                                                                    <li>High picks</li>
+                                                                    <li>Stock put away</li>
+                                                                    <li>Quality checks</li>
+                                                                    <li>Periodically involved in stock count</li>
+                                                                </ul>
+                                                                <p><strong>Choice Working Hours:</strong>
+                                                                </p>
+                                                                <ul>
+                                                                    <li>Monday to Friday, 8am – 4pm</li>
+                                                                </ul>
+                                                                <p><strong>Hourly Pay Rates:</strong>
+                                                                </p>
+                                                                <ul>
+                                                                    <li>Basic Rate - £12.50p/h</li>
+                                                                </ul>
+                                                                <p>
+                                                                    Successful candidates will have experience working in similar role, you will be asked to provide your Forklift certificate and experience is essential in this role. The ideal candidate will need to be able to use stock software to complete booking ins.
+                                                                </p>
+                                                                <p><strong></strong>Sound like the job for you? Click APPLY to upload your CV and one of our friendly team will be in contact. Don't have a CV? Call Aga directly on or the office on and the
+                                                                    team will help you with your registration.
+                                                                </p>
+                                                                <p>Gap personnel are acting as an employment business.</p>
+                                                            </div>
+                                                            <div class="c-row c-row--gap-md">
+                                                                <button class="c-btn" type="button">Apply
+                                                                    <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-right" viewBox="0 0 24 24">
+                                                                        <!-- ico name: arrow-top-right-->
+                                                                        <path fill="currentColor" d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end job-card-->
                                                 </div>
                                             </div>
+                                            <!-- end fix-section-->
                                         </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="true">What Is a Resume Template and Why Use One?
-                                            </button>
-                                            <div class="c-title-collapse__dialog collapse show" id="faq-2" data-bs-parent="#faq">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>
-                                                        A resume template is a professionally designed layout that helps you present your information in an organized, polished way. It ensures a clean, professional format that’s easy to read.
-                                                    </p>
-                                                    <p>
-                                                        With our builder, you can choose from a variety of customizable templates for key sections like contact details, summaries, work history, education, and skills.
-                                                    </p>
-                                                    <p>
-                                                        Our templates are also ATS-friendly, featuring clear fonts, structured headings, and simple layouts to make sure your resume is compatible with hiring software.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="true">What Does a Standard Resume Look Like?
-                                            </button>
-                                            <div class="c-title-collapse__dialog collapse show" id="faq-3" data-bs-parent="#faq">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>Resumes come in various designs, formats, and layouts, but they generally share common sections.</p>
-                                                    <p>
-                                                        These include a header with your contact details, a resume summary showcasing your key strengths, work experience, a list of relevant skills, and educational background.
-                                                    </p>
-                                                    <p>Most resumes include your name, email, location, and links to professional profiles.</p>
-                                                    <p>
-                                                        The work experience section should feature job titles, company names, dates, and key achievements.The skills section should match the job description to demonstrate your fit for the role.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4">What’s the Ideal Length for a Resume?
-                                            </button>
-                                            <div class="c-title-collapse__dialog collapse" id="faq-4" data-bs-parent="#faq">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>ITEM</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
-                                        <!-- begin title-collapse-->
-                                        <div class="c-title-collapse">
-                                            <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5">Are Your Templates Optimized for ATS Compatibility?
-                                            </button>
-                                            <div class="c-title-collapse__dialog collapse" id="faq-5" data-bs-parent="#faq">
-                                                <div class="c-title-collapse__inner">
-                                                    <p>ITEM</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end title-collapse-->
                                     </div>
                                 </div>
+                                <!-- end tab-content-->
+                                <!-- begin tab-content-->
+                                <div class="c-tab-content fade" id="tab-2">item-2
+                                </div>
+                                <!-- end tab-content-->
+                                <!-- begin tab-content-->
+                                <div class="c-tab-content fade" id="tab-3">item-3
+                                </div>
+                                <!-- end tab-content-->
+                                <!-- begin tab-content-->
+                                <div class="c-tab-content fade" id="tab-4">item-4
+                                </div>
+                                <!-- end tab-content-->
+                                <!-- begin tab-content-->
+                                <div class="c-tab-content fade" id="tab-5">item-5
+                                </div>
+                                <!-- end tab-content-->
                             </div>
                         </div>
-                    </section>
-                    <!-- end section-->
+                    </div>
                 </main>
             </div>
-            <div class="w-page__bottom">
+            <div class="w-page__bottom js-page-bottom">
                 <!-- ---------------  Bottom part page ----------------->
                 <!-- begin footer-->
                 <footer class="c-footer">
-                    <div class="c-footer__content">
-                        <div class="c-footer__links"><a class="c-link" href="#">Terms & Conditions</a><a class="c-link" href="#">Privacy Policy</a><a class="c-link" href="#">Contact Us</a>
+                    <div class="w-centered">
+                        <div class="c-row c-row--nowrap c-row--justify-between c-row--align-center c-row--row-gap-sm"><a class="c-link" href="#">Terms &amp; Conditions</a><a class="c-link" href="#">Privacy Policy</a><a class="c-link" href="#">Accessibility</a><a class="c-link" href="#">Contact Us</a><span class="c-footer__copyright">© 2024, effectivecoverletter.com - All rights reserved</span>
                         </div>
-                        <div class="c-footer__copyright">©2025, BestResume.org - All rights reserved</div>
                     </div>
                 </footer>
                 <!-- end footer-->
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
-        <!-- begin modal-common-->
-        <div class="c-modal-common modal fade js-modal-locker c-modal-common--xl" id="cv-import">
-            <div class="c-modal-common__dialog modal-dialog">
-                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" data-bs-dismiss="modal">
-                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
-                        <!-- ico name: close-->
-                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                    </svg>
-                </button>
-                <div class="c-modal-common__content">
-                    <div class="w-gap-xl u-text-center">
-                        <div class="c-h2 w-gap-sm">Upload your resume</div>
-                        <div>Simply review, revise, and refresh it with the latest details</div>
-                    </div>
-                    <div class="w-gap-xl">
-                        <div class="c-row c-row--justify-center w-gap-md">
-                            <div style="width: 570px;">
-                                <div class="c-upload-container c-upload-container--sm c-upload-container--secondary" role="presentation" tabindex="0">
-                                    <input accept="application/msword,.doc,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.docx,application/pdf,.pdf,text/html,.html,application/rtf,.rtf,text/plain,.txt" type="file" tabindex="-1" style="display: none;">
-                                    <div class="c-upload-container__title">
-                                        <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24">
-                                            <path fill="currentColor" d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M15,18V16H6V18H15M18,14V12H6V14H18Z"></path>
-                                        </svg>Drag and drop a file here
-                                    </div>
-                                    <div class="c-divider c-divider--horizontal">OR</div>
-                                    <div class="c-row c-row--justify-center">
-                                        <button class="c-btn" type="button">Browse
-                                        </button>
-                                    </div>
-                                    <div class="c-upload-container__file-name">
-                                        <svg class="c-ico c-ico--xl c-ico--success" viewBox="0 0 24 24">
-                                            <!-- ico name: plus-circle-->
-                                            <path fill="currentColor" d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
-                                        </svg>resume.docx
-                                    </div>
-                                    <div class="c-row c-row--justify-between c-row--align-center">
-                                        <button class="c-btn c-btn--secondary" type="button">
-                                            <svg class="c-ico c-ico--lg c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
-                                                <!-- ico name: cached-->
-                                                <path fill="currentColor" d="M19,8L15,12H18A6,6 0 0,1 12,18C11,18 10.03,17.75 9.2,17.3L7.74,18.76C8.97,19.54 10.43,20 12,20A8,8 0 0,0 20,12H23M6,12A6,6 0 0,1 12,6C13,6 13.97,6.25 14.8,6.7L16.26,5.24C15.03,4.46 13.57,4 12,4A8,8 0 0,0 4,12H1L5,16L9,12"></path>
-                                            </svg>Change
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-gap-md u-text-center">You can upload files in these formats: DOC, DOCX, PDF, HTML, RTF, TXT</div>
-                    </div>
-                    <div class="c-row c-row--justify-between c-row--align-center">
-                        <div>
-                            <div class="w-gap-xs">Want to start from scratch?</div><a class="u-text-bold" href="https://effectiveresume.com/cv/create/experience"><span style="display: inline-block; vertical-align: middle; margin-left: -2px; margin-right: 5px; margin-top: -7px;">
-                        <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: file-document-->
-                          <path fill="currentColor" d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M15,18V16H6V18H15M18,14V12H6V14H18Z"></path>
-                        </svg></span>Build new resume</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end modal-common-->
         <!-- Including js files-->
 
 
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
+        <script src="static/js/separate-js/jquery.autocomplete.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/swiper-bundle.min.js"></script>
-        <script src="static/js/separate-js/sticky.js"></script>
+        <script src="static/js/separate-js/toggleFocusInput.js"></script>
         <script src="static/js/separate-js/main.js"></script>
         <script>
             $(document).ready(function () {
-                  stickyElement.register({
-                      type: 'top',
-                      container: '.js-sticky',
-                      stickyClass: 'is-sticky'
-                  });
-              
-                  carouselManager.initialize();
-              
                   lazyLoader.initialize();
               
-                  new Swiper('.js-swiper-skip-indicator', {
-                      loop: true,
-                      speed: 800,
-                      setWrapperSize: true,
-                      slidesPerView: 'auto',
-                      simulateTouch: false,
-                      navigation: {
-                          nextEl: '.swiper-button-next',
-                          prevEl: '.swiper-button-prev'
-                      },
-                      scrollbar: {
-                          el: '.swiper-scrollbar',
-                          draggable: true
-                      },
-                      autoplay: {
-                          delay: 2500,
-                          disableOnInteraction: false,
-                      },
-                      keyboard: {
-                          onlyInViewport: true
-                      }
+                  tooltipVisibilityManager.initialize({
+                      container: '.js-tooltip-container',
+                      closer: '.js-tooltip-close',
+                      stateClass: 'is-open',
+                      enableHoverFocus: true
                   });
               
-                  new Swiper('.js-swiper', {
-                      speed: 800,
-                      slidesPerView: 'auto',
-                      simulateTouch: false,
-                      navigation: {
-                          nextEl: '.swiper-button-next',
-                          prevEl: '.swiper-button-prev'
-                      },
-                      keyboard: {
-                          onlyInViewport: true
-                      }
-                  });
+                  circularProgress.initialize();
+              
+                  fixSection.initialize();
               });
         </script>
     </body>
