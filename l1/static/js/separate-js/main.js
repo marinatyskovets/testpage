@@ -146,8 +146,7 @@ var tooltipVisibilityManager = (function ($) {
         container: '.js-tooltip',
         opener: '.js-tooltip-toggle',
         closer: '.js-tooltip-close',
-        stateClass: 'is-open',
-        enableHoverFocus: false
+        stateClass: 'is-open'
     };
 
     var initialize = function (params) {
@@ -155,31 +154,20 @@ var tooltipVisibilityManager = (function ($) {
             container = $(settings.container),
             stateClass = settings.stateClass;
 
-        if (settings.opener && $(settings.opener).length) {
-            $(settings.opener).on('click', function (e) {
-                e.stopPropagation();
-                $(e.currentTarget).closest(settings.container).toggleClass(stateClass);
-            });
-        }
+        $(settings.opener).on('click', function (e) {
+            e.stopPropagation();
+            $(e.currentTarget).closest(settings.container).toggleClass(stateClass);
+        });
 
-        if (settings.closer && $(settings.closer).length) {
-            $(settings.closer).on('click', function (e) {
-                e.stopPropagation();
+        $(settings.closer).on('click', function (e) {
+            e.stopPropagation();
 
-                var tooltip = $(this).closest(settings.container);
+            var tooltip = $(this).closest(settings.container);
 
-                if (tooltip.hasClass(stateClass)) {
-                    tooltip.removeClass(stateClass);
-                }
-            });
-        }
-
-        if (settings.enableHoverFocus) {
-            container
-                .on('mouseenter focusin', function () {
-                    $(this).addClass(stateClass);
-                })
-        }
+            if (tooltip.hasClass(stateClass)) {
+                tooltip.removeClass(stateClass);
+            }
+        });
 
         $(document).on('click', function (e) {
             var target = $(e.target);
@@ -194,6 +182,7 @@ var tooltipVisibilityManager = (function ($) {
         initialize: initialize
     };
 })(jQuery);
+
 
 
 var toggleFixedOnScroll = (function ($) {
@@ -446,6 +435,7 @@ var fixSection = (function ($) {
         fixedScreenSelector: '.js-fix-section-screen',
         bottomPageSelector: '.js-page-bottom',
         fixedClass: 'is-top-fixed',
+        visibleClass: 'is-visible',
         offsetBottomContainer: 48,
         tabSelector: '[data-bs-toggle="tab"]'
     };
@@ -454,61 +444,105 @@ var fixSection = (function ($) {
         var settings = $.extend({}, defaults, params),
             $fixedElement = $(settings.fixedSelector),
             $fixedScreenElement = $(settings.fixedScreenSelector),
-            $bottomPageElement = $(settings.bottomPageSelector),
-            offsetTop = $fixedElement.offset().top;
+            $bottomPageElement = $(settings.bottomPageSelector);
 
-        var getPaddingValues = function () {
-            var style = window.getComputedStyle($fixedElement[0]);
+        var bottomReached = false;
+
+        var isVisibleInViewport = function ($elem) {
+            if (!$elem.length) return false;
+            var rect = $elem[0].getBoundingClientRect();
+            return rect.bottom > 0 && rect.right > 0 &&
+                rect.top < window.innerHeight && rect.left < window.innerWidth;
+        };
+
+        var getPaddingValues = function ($elem) {
+            var style = window.getComputedStyle($elem[0]);
             return {
                 top: parseFloat(style.paddingTop) || 0,
                 bottom: parseFloat(style.paddingBottom) || 0
             };
         };
 
-        var getSectionScreenHeight = function () {
-            var bottomOffsetTop = $bottomPageElement.length ? $bottomPageElement.offset().top : 0,
+        var getSectionScreenHeight = function ($elem) {
+            var bottomTop = $bottomPageElement.length ? $bottomPageElement.offset().top : 0,
                 scrollBottom = $(window).scrollTop() + $(window).outerHeight(),
-                paddings = getPaddingValues(),
+                paddings = getPaddingValues($elem),
                 baseHeight = $(window).outerHeight() - paddings.top - paddings.bottom;
 
-            if (scrollBottom < bottomOffsetTop) return baseHeight;
+            if (scrollBottom < bottomTop) return baseHeight;
 
-            var bottomHeight = $bottomPageElement.outerHeight() || 0;
-            return baseHeight - bottomHeight - settings.offsetBottomContainer;
+            return baseHeight - ($bottomPageElement.outerHeight() || 0) - settings.offsetBottomContainer;
         };
 
-        var update = function () {
-            offsetTop = $fixedElement.offset().top;
-
+        var update = function ($elem, $fixedScreenElem) {
             var scrollTop = $(window).scrollTop(),
-                sectionHeight = getSectionScreenHeight();
+                offsetTop = $elem.offset().top,
+                height = getSectionScreenHeight($elem);
 
-            $fixedElement.toggleClass(settings.fixedClass, scrollTop > offsetTop);
+            $elem.toggleClass(settings.fixedClass, scrollTop > offsetTop)
+                .css('minHeight', height);
 
-            $fixedElement.css('minHeight', sectionHeight);
-            $fixedScreenElement.css({
-                width: $fixedElement.outerWidth(),
-                minHeight: sectionHeight
+            $fixedScreenElem.css({
+                width: $elem.outerWidth(),
+                minHeight: height
             });
         };
 
-        $(window).on('scroll resize', update);
+        var updateVisibility = function () {
+            $fixedElement.removeClass(settings.visibleClass);
 
-        if (settings.tabSelector) {
-            $(document).on('shown.bs.tab', settings.tabSelector, function () {
-                setTimeout(update, 50);
+            var scrollBottom = $(window).scrollTop() + $(window).outerHeight(),
+                bottomTop = $bottomPageElement.length ? $bottomPageElement.offset().top : Infinity,
+                newBottomReached = scrollBottom >= bottomTop;
+
+            $fixedElement.each(function (i) {
+                var $elem = $(this);
+                if (isVisibleInViewport($elem)) {
+                    $elem.addClass(settings.visibleClass);
+
+                    var $fixedScreenElem = $elem.find(settings.fixedScreenSelector);
+                    if (!$fixedScreenElem.length) $fixedScreenElem = $fixedScreenElement.eq(i);
+                    update($elem, $fixedScreenElem);
+                }
+            });
+
+            if (newBottomReached !== bottomReached) {
+                bottomReached = newBottomReached;
+                $fixedElement.each(function (i) {
+                    var $elem = $(this),
+                        $fixedScreenElem = $elem.find(settings.fixedScreenSelector);
+                    if (!$fixedScreenElem.length) $fixedScreenElem = $fixedScreenElement.eq(i);
+                    update($elem, $fixedScreenElem);
+                });
+            }
+        };
+
+        if ($(settings.tabSelector).length) {
+            $(settings.tabSelector).on('click', function () {
+                updateVisibility();
+
+                var targetTabId = $(this).attr('data-bs-target'),
+                    $targetTab = $(targetTabId);
+
+                if ($targetTab.hasClass('active')) {
+                    var $tabFixedElement = $targetTab.find(settings.fixedSelector),
+                        $tabFixedScreenElement = $targetTab.find(settings.fixedScreenSelector);
+
+                    $tabFixedElement.each(function (i) {
+                        $tabFixedScreenElement.eq(i).css('width', $(this).width());
+                    });
+                }
             });
         }
 
-        update();
+        $(window).on('scroll resize', updateVisibility);
+
+        updateVisibility();
     };
 
     return {
         initialize: initialize
     };
 })(jQuery);
-
-
-
 
 
