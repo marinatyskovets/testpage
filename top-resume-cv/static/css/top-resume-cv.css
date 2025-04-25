@@ -2165,7 +2165,6 @@ a:hover, a:focus-visible,
 }
 
 .c-section {
-  padding: 60px 0;
   background: #ffffff;
 }
 .c-section--accent {
@@ -2193,7 +2192,10 @@ a:hover, a:focus-visible,
   background: -webkit-radial-gradient(circle, rgba(153, 153, 255, 0.2) 0%, transparent 70%);
   background: radial-gradient(circle, rgba(153, 153, 255, 0.2) 0%, transparent 70%);
 }
-.c-section--long {
+.c-section--md, .c-section, .c-section--md-long {
+  padding: 60px 0;
+}
+.c-section--md-long {
   padding-top: 72px;
 }
 
