@@ -6,6 +6,130 @@
   <component name="ChangeListManager">
     <list default="true" id="5326f9c2-8cd3-45fd-9d06-f304ed19a9eb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/css/24hour-resume.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/css/24hour-resume.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/favicon/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/favicon/favicon-96x96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/favicon/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/favicon/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/favicon/site.webmanifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/favicon/web-app-manifest-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/favicon/web-app-manifest-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/24hour-resume-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/amazon-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/arrow-right-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/banner-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/chase-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/choose-template.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/counter-bg-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/counter-bg-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/design-formatting.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/doordash-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/file-edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/form-contact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/hands.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/nike-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/pinterest-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/resume-template-airy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/resume-template-executive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/resume-template-heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/resume-template-luxurious.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/resume-template-prominent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/resume-template-serene.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/resume-template-striking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/template-edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/img/24hour-resume/general/template-tips.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/js/separate-js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/js/separate-js/jquery-3.7.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/js/separate-js/lozad.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/js/separate-js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/js/separate-js/sticky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24hour-resume/static/js/separate-js/swiper-bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/css/fix-resume.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/css/fix-resume.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/amazon-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/arrow-right-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/bammer-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/banner-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/chase-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/choose-template.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/counter-bg-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/counter-bg-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/design-formatting.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/doordash-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/file-edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/fix-resume-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/form-contact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/hands.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/nike-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/pinterest-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/resume-template-airy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/resume-template-executive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/resume-template-heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/resume-template-luxurious.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/resume-template-prominent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/resume-template-serene.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/resume-template-striking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/template-edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/img/fix-resume/general/template-tips.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/js/separate-js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/js/separate-js/jquery-3.7.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/js/separate-js/lozad.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/js/separate-js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/js/separate-js/sticky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-resume/static/js/separate-js/swiper-bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/css/top-resume-cv.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/css/top-resume-cv.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/favicon/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/favicon/favicon-96x96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/favicon/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/favicon/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/favicon/site.webmanifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/favicon/web-app-manifest-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/favicon/web-app-manifest-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/amazon-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/arrow-right-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/banner-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/chase-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/choose-template.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/counter-bg-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/counter-bg-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/design-formatting.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/doordash-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/file-edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/form-contact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/hands.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/nike-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/pinterest-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/resume-template-airy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/resume-template-executive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/resume-template-heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/resume-template-luxurious.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/resume-template-prominent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/resume-template-serene.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/resume-template-striking.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/template-edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/template-tips.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/general/top-resume-cv-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/img/top-resume-cv/mail/top-resume-cv-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/js/separate-js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/js/separate-js/jquery-3.7.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/js/separate-js/lozad.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/js/separate-js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/js/separate-js/sticky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/top-resume-cv/static/js/separate-js/swiper-bundle.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,28 +139,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2wDYWjDW9eZCBqIL8U5eSHnFLFd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Work/для проектов/testpage",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Work/для проектов/testpage&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -52,7 +176,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745577644409</updated>
-      <workItem from="1745577645449" duration="1199000" />
+      <workItem from="1745577645449" duration="1243000" />
+      <workItem from="1747994749443" duration="951000" />
     </task>
     <servers />
   </component>
