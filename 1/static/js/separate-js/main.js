@@ -1,23 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     navManager.initialize();
 
-    document.addEventListener('click', event => {
-        if (event.target.classList.contains('js-collapse')) {
-            var targetElement = document.querySelector(`#${event.target.getAttribute('data-toggle')}`);
-            if (targetElement) {
-                const isExpanded = event.target.getAttribute('aria-expanded') === 'true';
-                event.target.setAttribute('aria-expanded', String(!isExpanded));
-                targetElement.classList.toggle('is-open');
-            }
-        }
-    });
-
+    // ------------------------- JS лише для демонстрації -------------------------
     document.querySelectorAll('.js-scroll-container').forEach(container => {
-        const content = container.querySelector('.js-scroll-content');
+        var content = container.querySelector('.js-scroll-content');
         if (!content) return;
         content.onscroll = () =>
             container.classList.toggle('is-scroll', content.scrollTop > 0);
     });
+    // --------------------------------------------------
 });
 
 var navManager = (function () {
@@ -50,6 +41,7 @@ var navManager = (function () {
     };
 })();
 
+
 var locker = (function () {
     const settings = {
         element: 'html',
@@ -78,6 +70,7 @@ var locker = (function () {
 })();
 
 
+// ------------------------- JS лише для демонстрації -------------------------
 var fixOnScroll = (function () {
     var defaults = {
         fixedSelector: '.js-fix',
@@ -128,7 +121,7 @@ var fixOnScroll = (function () {
 
             // Якщо елемент ще не прокручений у зону фіксації
             if (window.pageYOffset < elem.offsetTop) {
-                var availableHeight = window.innerHeight - elem.getBoundingClientRect().top - paddings.bottom;
+                var availableHeight = window.innerHeight - elem.getBoundingClientRect().top - paddings.bottom - paddings.top;
                 return availableHeight > 0 ? availableHeight : 0;
             }
 
@@ -146,11 +139,15 @@ var fixOnScroll = (function () {
             var offsetTop = elem.offsetTop;
             var height = getSectionScreenHeight(elem);
 
-            // Додаємо/видаляємо клас фіксації залежно від прокрутки
+            // Додаємо/видаляємо клас фіксації до fixedScreenElem (не до elem!)
             if (scrollTop > offsetTop) {
-                elem.classList.add(settings.fixedClass);
+                if (fixedScreenElem) {
+                    fixedScreenElem.classList.add(settings.fixedClass);
+                }
             } else {
-                elem.classList.remove(settings.fixedClass);
+                if (fixedScreenElem) {
+                    fixedScreenElem.classList.remove(settings.fixedClass);
+                }
             }
 
             // Задаємо мінімальну висоту блоку
@@ -163,19 +160,20 @@ var fixOnScroll = (function () {
             }
         };
 
+
         // Оновлення всіх фіксованих елементів при прокрутці або зміні розміру
         var updateVisibility = function () {
             // Перевірка медіазапроса
             if (!window.matchMedia('(min-width: 992px)').matches) {
                 fixedElements.forEach(function (elem, i) {
-                    elem.classList.remove(settings.fixedClass);
-                    elem.style.minHeight = '';
                     var fixedScreenElem = elem.querySelector(settings.fixedScreenSelector);
                     if (!fixedScreenElem) fixedScreenElem = fixedScreenElements[i];
                     if (fixedScreenElem) {
+                        fixedScreenElem.classList.remove(settings.fixedClass);
                         fixedScreenElem.style.minHeight = '';
                         fixedScreenElem.style.width = '';
                     }
+                    elem.style.minHeight = '';
                 });
                 return;
             }
@@ -214,6 +212,190 @@ var fixOnScroll = (function () {
 })();
 
 
+var modal = (function () {
+    var toggle = function (selector, show) {
+        document.querySelectorAll(selector).forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var target = show ? document.querySelector(btn.getAttribute('data-bs-target')) : btn.closest('.show');
 
+                if (target) {
+                    target.classList.toggle('show', show);
+                    target.style.display = show ? 'block' : 'none';
+                    if (show) {
+                        locker.lock();
+                    } else {
+                        locker.unlock();
+                    }
+                }
+            });
+        });
+    };
+
+    toggle('[data-bs-toggle="modal"]', true);
+    toggle('[data-bs-dismiss="modal"]', false);
+
+    return {};
+})();
+
+
+var dropdownManager = (function () {
+    function toggleDropdown(toggle, show, dropdownSelector) {
+        var dropdown = toggle.closest(dropdownSelector);
+        if (!dropdown) return;
+        var menu = dropdown.querySelector('.dropdown-menu');
+        toggle.classList.toggle('show', show);
+        if (menu) menu.classList.toggle('show', show);
+    }
+
+    function updateLocker() {
+        var isScreen = window.innerWidth < 1200;
+        var hasShow = !!document.querySelector('.js-modal-dropdown [data-bs-toggle="dropdown"].show');
+        if (hasShow) (isScreen ? locker.lock : locker.unlock)();
+    }
+
+    function initModalDropdown() {
+        document.querySelectorAll('.js-modal-dropdown [data-bs-toggle="dropdown"]').forEach(toggle => {
+            toggle.addEventListener('click', e => {
+                var isScreen = window.innerWidth < 1200;
+                var isShown = toggle.classList.contains('show');
+                e.preventDefault();
+                e.stopPropagation();
+
+                if (!isShown) {
+                    document.querySelectorAll('[data-bs-toggle="dropdown"].show').forEach(otherToggle => {
+                        if (otherToggle !== toggle) {
+                            var otherDropdown = otherToggle.closest('.js-modal-dropdown, .js-dropdown');
+                            if (!otherDropdown) return;
+                            var menu = otherDropdown.querySelector('.dropdown-menu');
+                            otherToggle.classList.remove('show');
+                            if (menu) menu.classList.remove('show');
+                        }
+                    });
+                }
+
+                toggleDropdown(toggle, !isShown, '.js-modal-dropdown');
+
+                if (isScreen) (isShown ? locker.unlock : locker.lock)();
+            });
+        });
+
+        document.querySelectorAll('.js-modal-dropdown .c-modal-dropdown__close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', () => {
+                var dropdown = closeBtn.closest('.js-modal-dropdown');
+                var toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+                toggleDropdown(toggle, false, '.js-modal-dropdown');
+                if (window.innerWidth < 1200) locker.unlock();
+            });
+        });
+
+        document.addEventListener('click', e => {
+            if (window.innerWidth < 1200) return;
+            if (!e.target.closest('.js-modal-dropdown') && !e.target.closest('.js-dropdown')) {
+                document.querySelectorAll('[data-bs-toggle="dropdown"].show').forEach(toggle => {
+                    var dropdown = toggle.closest('.js-modal-dropdown, .js-dropdown');
+                    if (!dropdown) return;
+                    var menu = dropdown.querySelector('.dropdown-menu');
+                    toggle.classList.remove('show');
+                    if (menu) menu.classList.remove('show');
+                });
+            }
+        });
+
+        window.addEventListener('resize', updateLocker);
+    }
+
+    function initDropdown() {
+        document.querySelectorAll('.js-dropdown [data-bs-toggle="dropdown"]').forEach(toggle => {
+            toggle.addEventListener('click', e => {
+                var dropdown = toggle.closest('.js-dropdown');
+                if (!dropdown) return;
+
+                var menu = dropdown.querySelector('.dropdown-menu');
+                var isShown = toggle.classList.contains('show');
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                if (!isShown) {
+                    document.querySelectorAll('[data-bs-toggle="dropdown"].show').forEach(otherToggle => {
+                        if (otherToggle !== toggle) {
+                            var otherDropdown = otherToggle.closest('.js-modal-dropdown, .js-dropdown');
+                            if (!otherDropdown) return;
+                            var otherMenu = otherDropdown.querySelector('.dropdown-menu');
+                            otherToggle.classList.remove('show');
+                            if (otherMenu) otherMenu.classList.remove('show');
+                        }
+                    });
+                }
+
+                toggle.classList.toggle('show', !isShown);
+                menu.classList.toggle('show', !isShown);
+            });
+        });
+
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.js-dropdown') && !e.target.closest('.js-modal-dropdown')) {
+                document.querySelectorAll('[data-bs-toggle="dropdown"].show').forEach(toggle => {
+                    var dropdown = toggle.closest('.js-modal-dropdown, .js-dropdown');
+                    if (!dropdown) return;
+                    var menu = dropdown.querySelector('.dropdown-menu');
+                    toggle.classList.remove('show');
+                    if (menu) menu.classList.remove('show');
+                });
+            }
+        });
+    }
+
+    initModalDropdown();
+    initDropdown();
+
+    return {};
+})();
+
+
+var collapse = (function () {
+    function toggleCollapse(toggle, target) {
+        var isShown = target.classList.contains('show');
+        target.classList.toggle('collapse', isShown);
+        target.classList.toggle('show', !isShown);
+        target.classList.add('collapsing');
+        toggle.classList.toggle('collapsed');
+        toggle.setAttribute('aria-expanded', String(!isShown));
+
+        setTimeout(() => {
+            target.classList.remove('collapsing');
+            target.classList.toggle('collapse', true);
+            if (!isShown) target.classList.add('show');
+        }, 50);
+    }
+
+    function handleClick(event) {
+        var toggle = event.target.closest('[data-bs-toggle="collapse"]');
+        if (!toggle) return;
+
+        var targetSelector = toggle.getAttribute('data-bs-target') || toggle.getAttribute('href');
+        var target = document.querySelector(targetSelector);
+        if (!target) return;
+
+        var parentSelector = toggle.getAttribute('data-bs-parent');
+        if (parentSelector) {
+            var parent = document.querySelector(parentSelector);
+            parent.querySelectorAll('.collapse.show').forEach(el => {
+                if (el !== target) {
+                    document.querySelectorAll(`[data-bs-target="#${el.id}"], [href="#${el.id}"]`)
+                        .forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+                    toggleCollapse(document.querySelector(`[data-bs-target="#${el.id}"], [href="#${el.id}"]`), el);
+                }
+            });
+        }
+
+        toggleCollapse(toggle, target);
+    }
+
+    document.addEventListener('click', handleClick);
+
+    return {};
+})();
+// --------------------------------------------------
 
 
