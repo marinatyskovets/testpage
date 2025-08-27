@@ -571,6 +571,10 @@ a:hover, a:focus,
 .gui-btn--round {
   border-radius: 10px;
 }
+.gui-btn .c-ico-custom.c-ico-custom--google-icon, .gui-btn .c-ico-custom.c-ico-custom--fb-icon {
+  margin-top: -2.5px;
+  margin-bottom: -2.5px;
+}
 
 .gui-btn-select {
   display: -webkit-inline-box;
@@ -3869,8 +3873,8 @@ b, strong {
 .c-slider.owl-carousel button.owl-next::before {
   content: "";
   display: block;
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7263px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7278px;
   width: 10px;
   height: 16px;
   background-repeat: no-repeat;
@@ -4272,7 +4276,7 @@ b, strong {
   right: -1px;
 }
 .c-box-round--card-account::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -2234px;
   width: 309px;
   height: 339px;
@@ -4280,7 +4284,7 @@ b, strong {
   bottom: 94px;
 }
 .c-box-round--material-search::after {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -4273px;
   width: 211px;
   height: 233px;
@@ -4288,7 +4292,7 @@ b, strong {
   top: 0;
 }
 .c-box-round--icons-login::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -1214px;
   width: 365px;
   height: 215px;
@@ -4297,7 +4301,7 @@ b, strong {
   right: -70px;
 }
 .c-box-round--icons-password::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -3140px;
   width: 308px;
   height: 304px;
@@ -4306,7 +4310,7 @@ b, strong {
   right: -43px;
 }
 .c-box-round--icons-register::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -1605px;
   width: 347px;
   height: 317px;
@@ -4315,7 +4319,7 @@ b, strong {
   right: -67px;
 }
 .c-box-round--icons-email::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -916px;
   width: 385px;
   height: 294px;
@@ -4324,7 +4328,7 @@ b, strong {
   right: -167px;
 }
 .c-box-round--icons-login-md::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -1926px;
   width: 347px;
   height: 304px;
@@ -4333,7 +4337,7 @@ b, strong {
   right: -67px;
 }
 .c-box-round--icons-register-sm::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -2577px;
   width: 325px;
   height: 310px;
@@ -7505,378 +7509,378 @@ b, strong {
   display: block;
 }
 .c-ico-custom--call-made-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7432px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7447px;
   width: 12px;
   height: 12px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--check-marked-success-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7418px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7433px;
   width: 14px;
   height: 10px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--check-success-sm::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7164px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7199px;
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--chevron-right-accent-md::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7526px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7541px;
   width: 7px;
   height: 10px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--city-secondary-sm::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7184px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7219px;
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--clock-secondary-sm::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7204px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7239px;
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--close-accent-md::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7040px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7096px;
   width: 18px;
   height: 18px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--copy-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7351px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7366px;
   width: 13px;
   height: 14px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--delete-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7496px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7511px;
   width: 10px;
   height: 12px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--edit-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7464px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7479px;
   width: 12px;
   height: 12px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--email-icon::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6830px;
   width: 26px;
   height: 21px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--eye-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7283px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7298px;
   width: 16px;
   height: 10px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--fb-icon::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7224px;
-  width: 16px;
-  height: 16px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -6969px;
+  width: 24px;
+  height: 24px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--google-icon::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7143px;
-  width: 16px;
-  height: 17px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -6997px;
+  width: 24px;
+  height: 24px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -4147px;
   width: 264px;
   height: 122px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-message::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -3952px;
   width: 273px;
   height: 191px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-user:before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -1433px;
   width: 356px;
   height: 168px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--marker-secondary-md::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7062px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7118px;
   width: 18px;
   height: 18px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--message-text::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -4907px;
   width: 206px;
   height: 192px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--pause-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7480px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7495px;
   width: 11px;
   height: 12px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--pause-accent-xxs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7512px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7527px;
   width: 9px;
   height: 10px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--play-arrow-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7387px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7402px;
   width: 11px;
   height: 14px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--settings-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7315px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7330px;
   width: 14px;
   height: 14px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--telegram-icon::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6855px;
   width: 26px;
   height: 26px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--today-help-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7333px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7348px;
   width: 13px;
   height: 14px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--trending-up-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7405px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7420px;
   width: 14px;
   height: 9px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--viber-icon::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6800px;
   width: 26px;
   height: 26px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--cancel-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7448px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7463px;
   width: 12px;
   height: 12px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--chat-outline-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7244px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7259px;
   width: 16px;
   height: 15px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--comment-outline-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7297px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7312px;
   width: 14px;
   height: 14px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--download-accent-xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7369px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7384px;
   width: 12px;
   height: 14px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--star::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6913px;
   width: 25px;
   height: 24px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--star-outline::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6885px;
   width: 25px;
   height: 24px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--graph-premium::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -308px;
   width: 720px;
   height: 300px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--graph-premium-plus::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -4px;
   width: 720px;
   height: 300px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--graph-standard::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -612px;
   width: 720px;
   height: 300px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-error::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -4732px;
   width: 213px;
   height: 171px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-bookmarks::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6319px;
   width: 152px;
   height: 133px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-responses::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -5443px;
   width: 191px;
   height: 191px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-status::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -5638px;
   width: 184px;
   height: 176px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--email-icon-sm::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7106px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7162px;
   width: 18px;
   height: 15px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-account::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -3694px;
   width: 287px;
   height: 254px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-chat::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -2891px;
   width: 321px;
   height: 245px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-direction::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -5271px;
   width: 193px;
   height: 168px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-media::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -3448px;
   width: 290px;
   height: 242px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--phone-icon::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7084px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7140px;
   width: 18px;
   height: 18px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--skype-icon::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7017px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7073px;
   width: 18px;
   height: 19px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-nulls-file::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6003px;
   width: 154px;
   height: 154px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-nulls-text::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6528px;
   width: 118px;
   height: 121px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-nulls-payments::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6653px;
   width: 115px;
   height: 115px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-nulls-history::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6161px;
   width: 154px;
   height: 154px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-chat-handling::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -5860px;
   width: 160px;
   height: 139px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--location::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -5103px;
   width: 200px;
   height: 164px;
   background-repeat: no-repeat;
 }
 .c-ico-custom--icons-resume::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -4510px;
   width: 228px;
   height: 218px;
@@ -7935,7 +7939,7 @@ b, strong {
   background: #4C72EF;
 }
 .c-input-item__input:checked ~ .c-input-item__ico-check::after {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6941px;
   width: 24px;
   height: 24px;
@@ -8204,8 +8208,8 @@ b, strong {
   position: absolute;
   top: 8px;
   left: 0;
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
-  background-position: -4px -7125px;
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
+  background-position: -4px -7181px;
   width: 18px;
   height: 14px;
   background-repeat: no-repeat;
@@ -8224,28 +8228,28 @@ b, strong {
   text-decoration: none;
 }
 .c-logo--xs::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6772px;
   width: 110px;
   height: 24px;
   background-repeat: no-repeat;
 }
 .c-logo--sm::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6492px;
   width: 150px;
   height: 32px;
   background-repeat: no-repeat;
 }
 .c-logo--md::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -5818px;
   width: 180px;
   height: 38px;
   background-repeat: no-repeat;
 }
 .c-logo--info-sm::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=uzrx2bq");
+  background-image: url("../img/svg-sprite/sprite.svg?v=ueualqa");
   background-position: -4px -6456px;
   width: 150px;
   height: 32px;
