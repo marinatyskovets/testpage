@@ -450,7 +450,7 @@ ul {
   list-style: none;
 }
 
-.c-toast, .c-menu-list__link::before, .c-modal-common {
+.c-menu-list__link::before, .c-modal-common {
   position: absolute;
 }
 
@@ -462,12 +462,6 @@ ul {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.c-toast {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .c-logo, .c-ico {
@@ -1765,7 +1759,15 @@ a:hover, a:focus-visible,
 .c-toast {
   position: fixed;
   top: 16px;
+  left: 16px;
+  right: 16px;
   z-index: 1050;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .c-toast:not(.show) {
   display: none;
@@ -1779,6 +1781,10 @@ a:hover, a:focus-visible,
   padding-right: 60px;
 }
 .c-toast__content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 100%;
   padding: 12px 24px;
   color: #ffffff;
   font-weight: 500;
