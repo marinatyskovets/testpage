@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Astro</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=block" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <!-- ------------------------------ TEMPLATE SERVICE -------------------------------->
+        <div class="w-page">
+            <!-- ---------------  Top part page ----------------->
+            <!-- begin header-->
+            <header class="c-header">
+                <!-- begin logo-->
+                <a class="c-logo" href="#">
+                    <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
+                </a>
+                <!-- end logo-->
+            </header>
+            <!-- end header-->
+            <!-- ---------------  Content part page ----------------->
+            <div class="w-page__content">
+                <main class="w-main">
+                    <div class="w-centered">
+                        <div class="w-gap-sm-md">
+                            <a class="c-icon-link u-ml-8-neg">
+                                <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
+                                    <!-- ico name: chevron-left-->
+                                    <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                </svg>Back
+                            </a>
+                        </div>
+                        <!-- begin title-->
+                        <div class="c-title">
+                            <h1 class="c-h1">What made you decide to unsubscribe?</h1>
+                        </div>
+                        <!-- end title-->
+                        <!-- begin rounded-box-->
+                        <div class="c-rounded-box">
+                            <!-- begin check-group-->
+                            <div class="check-group check-group--invert w-gap-sm">
+                                <label>
+                                    <input type="radio" name="option" /><span>I only wanted the initial report</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="option" /><span>I didn’t find the content useful for me</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="option" /><span>I would prefer to talk to a real astrologer</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="option" /><span>I don’t understand how to use the product</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="option" /><span>I prefer free alternatives</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="option" /><span>I don’t need daily/weekly guidance anymore</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="option" /><span>The price is too high</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="option" /><span>No reason, just cancel</span>
+                                </label>
+                            </div>
+                            <!-- end check-group-->
+                            <div class="row row--gap-sm">
+                                <button class="c-btn c-btn--flex-adaptive" type="button">Next
+                                </button>
+                            </div>
+                        </div>
+                        <!-- end rounded-box-->
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                  lazyLoader.initialize();
+              });
+        </script>
+    </body>
+
+</html>
