@@ -678,68 +678,6 @@ ul {
   }
 }
 
-.check-group {
-  display: inline-block;
-  font-size: 0;
-  background: #141C42;
-  border-radius: 8px;
-}
-.check-group label:hover input[type=radio]:not(:disabled) + span, .check-group label:focus-visible input[type=radio]:not(:disabled) + span {
-  background: #27317D;
-}
-.check-group label input[type=radio]:disabled + span {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-.check-group label input[type=radio]:disabled + span::before {
-  background: #C9C9C9;
-}
-.check-group label input[type=radio]:checked + span::after {
-  opacity: 1;
-}
-.check-group label input[type=radio] + span::before, .check-group label input[type=radio] + span::after {
-  border-radius: 50%;
-}
-.check-group label input[type=radio] + span::after {
-  left: 21px;
-  top: 19px;
-  width: 10px;
-  height: 10px;
-  background: #ffffff;
-}
-.check-group label span {
-  position: relative;
-  min-width: 52px;
-  min-height: 48px;
-  color: #ffffff;
-  font-size: 16px;
-  padding: 10px 16px 10px 52px;
-  border-radius: 8px;
-  background: #141C42;
-  cursor: pointer;
-}
-.check-group label span::before, .check-group label span::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-}
-.check-group label span::before {
-  top: 14px;
-  left: 16px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #ffffff;
-}
-.check-group label span::after {
-  opacity: 0;
-}
-.check-group label span:empty {
-  padding-right: 0;
-}
-.check-group--invert {
-  margin: -8px -16px;
-}
-
 button,
 .c-btn {
   cursor: pointer;
@@ -839,6 +777,72 @@ button,
   }
 }
 
+.check-group {
+  font-size: 0;
+  background: #141C42;
+  border-radius: 8px;
+}
+.check-group:has(label:only-child) {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.check-group label:hover input[type=radio]:not(:disabled) + span, .check-group label:focus-visible input[type=radio]:not(:disabled) + span {
+  background: #27317D;
+}
+.check-group label input[type=radio]:disabled + span {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.check-group label input[type=radio]:disabled + span::before {
+  background: #C9C9C9;
+}
+.check-group label input[type=radio]:checked + span::after {
+  opacity: 1;
+}
+.check-group label input[type=radio] + span::before, .check-group label input[type=radio] + span::after {
+  border-radius: 50%;
+}
+.check-group label input[type=radio] + span::after {
+  left: 21px;
+  top: 19px;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+}
+.check-group label span {
+  position: relative;
+  min-width: 52px;
+  min-height: 48px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 16px 10px 52px;
+  border-radius: 8px;
+  background: #141C42;
+  cursor: pointer;
+}
+.check-group label span::before, .check-group label span::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+.check-group label span::before {
+  top: 14px;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+}
+.check-group label span::after {
+  opacity: 0;
+}
+.check-group label span:empty {
+  padding-right: 0;
+}
+.check-group--invert {
+  margin: -8px -16px;
+}
+
 .control-label {
   display: block;
   font-size: 16px;
@@ -851,6 +855,25 @@ button,
   text-align: center;
   color: #8796BC;
   font-weight: 500;
+}
+
+.c-form-box {
+  padding: 32px 24px;
+  background: #0C0C28;
+  border: 1px solid #27317D;
+  border-radius: 24px;
+}
+.c-form-box__link {
+  font-size: 14px;
+  font-weight: 500;
+}
+@media (min-width: 992px) {
+  .c-form-box {
+    padding: 32px;
+  }
+  .c-form-box__link {
+    font-size: 16px;
+  }
 }
 
 .c-features__item {
@@ -871,25 +894,6 @@ button,
 }
 @media (min-width: 992px) {
   .c-features__item {
-    font-size: 16px;
-  }
-}
-
-.c-form-box {
-  padding: 32px 24px;
-  background: #0C0C28;
-  border: 1px solid #27317D;
-  border-radius: 24px;
-}
-.c-form-box__link {
-  font-size: 14px;
-  font-weight: 500;
-}
-@media (min-width: 992px) {
-  .c-form-box {
-    padding: 32px;
-  }
-  .c-form-box__link {
     font-size: 16px;
   }
 }
@@ -991,12 +995,6 @@ textarea.form-control {
   border-bottom: 1px solid #141C42;
 }
 
-.c-help-msg {
-  color: #C9C9C9;
-  font-size: 14px;
-  text-align: center;
-}
-
 .c-ico {
   color: inherit;
   -ms-flex-negative: 0;
@@ -1027,6 +1025,12 @@ textarea.form-control {
 }
 .c-ico--accent {
   color: #8796BC;
+}
+
+.c-help-msg {
+  color: #C9C9C9;
+  font-size: 14px;
+  text-align: center;
 }
 
 .c-icon-button {
@@ -1110,6 +1114,31 @@ textarea.form-control {
   }
 }
 
+.c-logo {
+  cursor: pointer;
+}
+.c-logo:hover, .c-logo:focus-visible, .c-logo:active {
+  text-decoration: none;
+}
+.c-logo:hover img, .c-logo:focus-visible img {
+  -webkit-filter: brightness(2);
+          filter: brightness(2);
+}
+.c-logo:active img {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+.c-logo img {
+  width: 91px;
+  height: 31px;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+}
+
 a,
 .c-link,
 .c-plan__link,
@@ -1142,31 +1171,6 @@ a:hover, a:focus-visible,
 }
 .c-link--underline, .c-info-box__link {
   text-decoration: underline;
-}
-
-.c-logo {
-  cursor: pointer;
-}
-.c-logo:hover, .c-logo:focus-visible, .c-logo:active {
-  text-decoration: none;
-}
-.c-logo:hover img, .c-logo:focus-visible img {
-  -webkit-filter: brightness(2);
-          filter: brightness(2);
-}
-.c-logo:active img {
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
-}
-.c-logo img {
-  width: 91px;
-  height: 31px;
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
-  -webkit-transition: -webkit-filter 0.3s ease;
-  transition: -webkit-filter 0.3s ease;
-  transition: filter 0.3s ease;
-  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
 }
 
 .c-menu-list {
@@ -1664,11 +1668,6 @@ a:hover, a:focus-visible,
           flex: 0 1 calc(50% - (32px / 2));
 }
 
-.c-text {
-  color: #C9C9C9;
-  margin-top: 0;
-}
-
 .c-subtitle {
   text-transform: uppercase;
   color: #8796BC;
@@ -1676,6 +1675,11 @@ a:hover, a:focus-visible,
 }
 
 .c-text-content {
+  color: #C9C9C9;
+  margin-top: 0;
+}
+
+.c-text {
   color: #C9C9C9;
   margin-top: 0;
 }
