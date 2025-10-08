@@ -19,173 +19,132 @@
     </head>
 
     <body>
-        <!-- ------------------------------ TEMPLATE SERVICE -------------------------------->
+        <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
         <div class="w-page">
             <!-- ---------------  Top part page ----------------->
             <!-- begin header-->
             <header class="c-header">
-                <!-- begin logo-->
-                <a class="c-logo" href="#">
-                    <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
-                </a>
-                <!-- end logo-->
+                <div class="c-header__inner">
+                    <button class="c-icon-button c-header__back" type="button" aria-label="Back">
+                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: chevron-left-->
+                            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                        </svg>
+                    </button>
+                    <!-- begin logo-->
+                    <a class="c-logo" href="#">
+                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48px">
+                    </a>
+                    <!-- end logo-->
+                    <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
+                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: menu-->
+                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                        </svg>
+                    </button>
+                </div>
             </header>
             <!-- end header-->
             <!-- ---------------  Content part page ----------------->
             <div class="w-page__content">
-                <main class="w-main">
-                    <div class="w-centered">
-                        <div class="w-gap-sm-md">
-                            <a class="c-icon-link u-ml-8-neg">
-                                <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
-                                    <!-- ico name: chevron-left-->
-                                    <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
-                                </svg>Your account
-                            </a>
-                        </div>
-                        <!-- begin title-->
-                        <div class="c-title">
-                            <h1 class="c-h1">FAQ</h1>
-                        </div>
-                        <!-- end title-->
-                        <div class="w-gap-lg-xl">
-                            <!-- begin title-collapse-->
-                            <div class="c-title-collapse-wrap">
-                                <!-- begin title-collapse-->
-                                <div class="c-title-collapse">
-                                    <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-0">What consultation can bring me?
-                                    </button>
-                                    <div class="c-title-collapse__dialog collapse" id="faq-0">
-                                        <div class="c-title-collapse__inner">
-                                            <!-- begin text-content-->
-                                            <p class="c-text-content">text
-                                            </p>
-                                            <!-- end text-content-->
+                <div class="w-main w-main--left">
+                    <section class="w-main__top-bar">
+                        <div class="w-centered">
+                            <!-- begin stepper-->
+                            <div class="c-stepper">
+                                <h3 class="c-stepper__title">Your details</h3>
+                                <div class="c-stepper__track">
+                                    <div class="c-stepper__step is-active">
+                                        <div class="c-stepper__line">
+                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
                                         </div>
+                                        <div class="c-stepper__dot"></div>
+                                    </div>
+                                    <div class="c-stepper__step">
+                                        <div class="c-stepper__line">
+                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="c-stepper__dot"></div>
+                                    </div>
+                                    <div class="c-stepper__step">
+                                        <div class="c-stepper__line">
+                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="c-stepper__dot"></div>
+                                    </div>
+                                    <div class="c-stepper__step">
+                                        <div class="c-stepper__dot"></div>
                                     </div>
                                 </div>
-                                <!-- end title-collapse-->
-                                <!-- begin title-collapse-->
-                                <div class="c-title-collapse">
-                                    <button class="c-title-collapse__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true">How platform can enhance my life on a daily basis?
-                                    </button>
-                                    <div class="c-title-collapse__dialog collapse show" id="faq-1">
-                                        <div class="c-title-collapse__inner">
-                                            <!-- begin text-content-->
-                                            <p class="c-text-content">Your friends and family are busy with their own lives, as well as you are worried about a most important decision that will affect your whole life and career, or you just want to know if it's a good day for
-                                                this or that activity, as well as you, want to get advice and daily guidelines for your love relationship or boost your energy level getting a guide on practices and rituals or struggling to find out if
-                                                your ex comes back - all your concerns are a top priority for us, and our mission is to help you improve the quality of your life every day. You can get the needed support and assistance on our platform
-                                                24 hours a day, 7 days a week, 365 days a year.
-                                            </p>
-                                            <!-- end text-content-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end title-collapse-->
-                                <!-- begin title-collapse-->
-                                <div class="c-title-collapse">
-                                    <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2">Should i pay for the additional services in the chat (Tarot, Runes, Rituals, etc.)?
-                                    </button>
-                                    <div class="c-title-collapse__dialog collapse" id="faq-2">
-                                        <div class="c-title-collapse__inner">
-                                            <!-- begin text-content-->
-                                            <p class="c-text-content">text
-                                            </p>
-                                            <!-- end text-content-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end title-collapse-->
-                                <!-- begin title-collapse-->
-                                <div class="c-title-collapse">
-                                    <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3">What consultation can bring me?
-                                    </button>
-                                    <div class="c-title-collapse__dialog collapse" id="faq-3">
-                                        <div class="c-title-collapse__inner">
-                                            <!-- begin text-content-->
-                                            <p class="c-text-content">text
-                                            </p>
-                                            <!-- end text-content-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end title-collapse-->
-                                <!-- begin title-collapse-->
-                                <div class="c-title-collapse">
-                                    <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4">How platform can enhance my life on a daily basis?
-                                    </button>
-                                    <div class="c-title-collapse__dialog collapse" id="faq-4">
-                                        <div class="c-title-collapse__inner">
-                                            <!-- begin text-content-->
-                                            <p class="c-text-content">text
-                                            </p>
-                                            <!-- end text-content-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end title-collapse-->
-                                <!-- begin title-collapse-->
-                                <div class="c-title-collapse">
-                                    <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5">What consultation can bring me?
-                                    </button>
-                                    <div class="c-title-collapse__dialog collapse" id="faq-5">
-                                        <div class="c-title-collapse__inner">
-                                            <!-- begin text-content-->
-                                            <p class="c-text-content">text
-                                            </p>
-                                            <!-- end text-content-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end title-collapse-->
-                                <!-- begin title-collapse-->
-                                <div class="c-title-collapse">
-                                    <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6">Should i pay for the additional services in the chat (Tarot, Runes, Rituals, etc.)?
-                                    </button>
-                                    <div class="c-title-collapse__dialog collapse" id="faq-6">
-                                        <div class="c-title-collapse__inner">
-                                            <!-- begin text-content-->
-                                            <p class="c-text-content">text
-                                            </p>
-                                            <!-- end text-content-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end title-collapse-->
-                                <!-- begin title-collapse-->
-                                <div class="c-title-collapse">
-                                    <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-7">How platform can enhance my life on a daily basis?
-                                    </button>
-                                    <div class="c-title-collapse__dialog collapse" id="faq-7">
-                                        <div class="c-title-collapse__inner">
-                                            <!-- begin text-content-->
-                                            <p class="c-text-content">text
-                                            </p>
-                                            <!-- end text-content-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end title-collapse-->
                             </div>
-                            <!-- end title-collapse-->
+                            <!-- end stepper-->
                         </div>
-                        <!-- begin info-box-->
-                        <div class="c-info-box">
-                            <svg class="c-ico c-info-box__ico" viewBox="0 0 24 24">
-                                <!-- ico name: chat-outline-->
-                                <path fill="currentColor" d="M12,3C6.5,3 2,6.58 2,11C2.05,13.15 3.06,15.17 4.75,16.5C4.75,17.1 4.33,18.67 2,21C4.37,20.89 6.64,20 8.47,18.5C9.61,18.83 10.81,19 12,19C17.5,19 22,15.42 22,11C22,6.58 17.5,3 12,3M12,17C7.58,17 4,14.31 4,11C4,7.69 7.58,5 12,5C16.42,5 20,7.69 20,11C20,14.31 16.42,17 12,17Z"></path>
-                            </svg>
-                            <p class="c-info-box__text">
-                                Any questions?
-                                <a class="c-info-box__link" href="#">Contact us</a>
-                            </p>
+                    </section>
+                    <main class="w-main__content">
+                        <div class="w-centered">
+                            <!-- begin title-->
+                            <h1 class="c-title w-gap-md">Do you know your time of birth?
+              </h1>
+                            <!-- end title-->
+                            <div class="w-column-gap-sm">
+                                <button class="c-option-btn" type="button">
+                                    <div class="c-emoji">😀</div>Yes
+                                </button>
+                                <button class="c-option-btn" type="button">
+                                    <div class="c-emoji">🤔</div>No
+                                </button>
+                            </div>
                         </div>
-                        <!-- end info-box-->
-                    </div>
-                </main>
+                    </main>
+                </div>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
+        <!-- begin drawer-->
+        <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+            <div class="c-drawer__dialog">
+                <div class="c-drawer__head">
+                    <div class="c-drawer__title">Menu</div>
+                    <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
+                        <svg class="c-ico c-ico--xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: close-->
+                            <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="c-drawer__menu">
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Privacy policy
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Terms & conditions
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Payment terms
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Subscription terms
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Money back policy
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">FAQ
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Contact us
+              </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end drawer-->
         <!-- Including js files-->
 
 

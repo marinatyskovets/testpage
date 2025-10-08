@@ -6,6 +6,8 @@ $(document).ready(function () {
     $(document).on('hidden.bs.modal', '.js-modal-locker', function () {
         locker.unlock();
     });
+
+    drawer.initialize();
 });
 
 var locker = (function ($) {
@@ -34,29 +36,34 @@ var locker = (function ($) {
     };
 })(jQuery);
 
-lazyLoader = (function () {
-    var defaults = {
-        rootMargin: '300px 0px',
+var drawer = (function ($) {
+    var settings = {
+        drawer: '.js-drawer',
+        toggler: '.js-drawer-toggler',
+        stateClass: 'is-open',
     };
 
-    var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {});
+    var initialize = function () {
+        var toggler = $(settings.toggler),
+            drawer = $(settings.drawer),
+            stateClass = settings.stateClass;
 
-        if ('loading' in HTMLImageElement.prototype) {
-            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                img.src = img.dataset.src;
-            });
-        } else {
-            var script = document.createElement('script');
-            script.src = '/static/js/separate-js/lozad.min.js';
-            script.onload = () => lozad('.lozad', {rootMargin: settings.rootMargin}).observe();
+        toggler.on('click', function () {
+            if (drawer.hasClass(stateClass)) {
+                drawer.removeClass(stateClass);
 
-            document.body.appendChild(script);
-        }
+                locker.unlock();
+            } else {
+                drawer.addClass(stateClass);
+
+                locker.lock();
+            }
+        });
     };
 
     return {
-        initialize: initialize
+        initialize: initialize,
     };
-})();
+})(jQuery);
+
 

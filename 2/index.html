@@ -19,90 +19,227 @@
     </head>
 
     <body>
-        <!-- ------------------------------ TEMPLATE SERVICE -------------------------------->
+        <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
         <div class="w-page">
             <!-- ---------------  Top part page ----------------->
             <!-- begin header-->
             <header class="c-header">
-                <!-- begin logo-->
-                <a class="c-logo" href="#">
-                    <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
-                </a>
-                <!-- end logo-->
+                <div class="c-header__inner">
+                    <button class="c-icon-button c-header__back" type="button" aria-label="Back">
+                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: chevron-left-->
+                            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                        </svg>
+                    </button>
+                    <!-- begin logo-->
+                    <a class="c-logo" href="#">
+                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48px">
+                    </a>
+                    <!-- end logo-->
+                    <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
+                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: menu-->
+                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                        </svg>
+                    </button>
+                </div>
             </header>
             <!-- end header-->
             <!-- ---------------  Content part page ----------------->
             <div class="w-page__content">
-                <main class="w-main">
-                    <div class="w-centered">
-                        <div class="w-gap-sm-md">
-                            <a class="c-icon-link u-ml-8-neg">
-                                <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
-                                    <!-- ico name: chevron-left-->
-                                    <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
-                                </svg>Your account
-                            </a>
+                <div class="w-main w-main--left">
+                    <section class="w-main__top-bar">
+                        <div class="w-centered">
+                            <!-- begin stepper-->
+                            <div class="c-stepper">
+                                <h3 class="c-stepper__title">Your details</h3>
+                                <div class="c-stepper__track">
+                                    <div class="c-stepper__step is-active">
+                                        <div class="c-stepper__line">
+                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
+                                        </div>
+                                        <div class="c-stepper__dot"></div>
+                                    </div>
+                                    <div class="c-stepper__step">
+                                        <div class="c-stepper__line">
+                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="c-stepper__dot"></div>
+                                    </div>
+                                    <div class="c-stepper__step">
+                                        <div class="c-stepper__line">
+                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="c-stepper__dot"></div>
+                                    </div>
+                                    <div class="c-stepper__step">
+                                        <div class="c-stepper__dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end stepper-->
                         </div>
-                        <!-- begin title-->
-                        <div class="c-title">
-                            <h1 class="c-h1">Contact Us</h1>
+                    </section>
+                    <main class="w-main__content">
+                        <div class="w-centered">
+                            <!-- begin title-->
+                            <h1 class="c-title w-gap-md">What’s your date of birth?
+              </h1>
+                            <!-- end title-->
+                            <div class="w-column-gap-sm w-gap-lg">
+                                <!-- begin form-control-->
+                                <input class="form-control" type="date" id="date-native"></input>
+                                <!-- end form-control-->
+                                <!-- begin form-group-->
+                                <div class="form-group js-form-select">
+                                    <div class="form-group__container">
+                                        <div class="form-group__placeholder">Month</div>
+                                        <!-- begin form-control-->
+                                        <select class="form-control" id="month" name="month">
+                                            <option value="Jan">Jan</option>
+                                            <option value="Feb">Feb</option>
+                                            <option value="Mar">Mar</option>
+                                            <option value="Apr">Apr</option>
+                                            <option value="May">May</option>
+                                            <option value="Jun">Jun</option>
+                                            <option value="Jul">Jul</option>
+                                            <option value="Aug">Aug</option>
+                                            <option value="Sep">Sep</option>
+                                            <option value="Oct">Oct</option>
+                                            <option value="Nov">Nov</option>
+                                            <option value="Dec">Dec</option>
+                                        </select>
+                                        <!-- end form-control-->
+                                    </div>
+                                </div>
+                                <!-- end form-group-->
+                                <!-- begin form-group-->
+                                <div class="form-group js-form-select">
+                                    <div class="form-group__container">
+                                        <div class="form-group__placeholder">Day</div>
+                                        <!-- begin form-control-->
+                                        <select class="form-control" id="day" name="day">
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                        <!-- end form-control-->
+                                    </div>
+                                </div>
+                                <!-- end form-group-->
+                                <!-- begin form-group-->
+                                <div class="form-group js-form-select">
+                                    <div class="form-group__container">
+                                        <div class="form-group__placeholder">Year</div>
+                                        <!-- begin form-control-->
+                                        <select class="form-control" id="year" name="year">
+                                            <option value="2025">2025</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2020">2020</option>
+                                        </select>
+                                        <!-- end form-control-->
+                                    </div>
+                                </div>
+                                <!-- end form-group-->
+                            </div>
+                            <button class="c-btn" type="button">Continue
+                            </button>
                         </div>
-                        <!-- end title-->
-                        <form class="w-column-gap-lg">
-                            <input type="hidden">
-                            <!-- begin form-group-->
-                            <div class="form-group">
-                                <!-- begin control-label-->
-                                <label class="control-label" for="name">Your Name *
-                                </label>
-                                <!-- end control-label-->
-                                <!-- begin form-control-->
-                                <input class="form-control" type="text" id="name"></input>
-                                <!-- end form-control-->
-                            </div>
-                            <!-- end form-group-->
-                            <!-- begin form-group-->
-                            <div class="form-group">
-                                <!-- begin control-label-->
-                                <label class="control-label" for="email">Your Email *
-                                </label>
-                                <!-- end control-label-->
-                                <!-- begin form-control-->
-                                <input class="form-control" type="email" id="email"></input>
-                                <!-- end form-control-->
-                            </div>
-                            <!-- end form-group-->
-                            <!-- begin form-group-->
-                            <div class="form-group">
-                                <!-- begin control-label-->
-                                <label class="control-label" for="message">Your Message *
-                                </label>
-                                <!-- end control-label-->
-                                <!-- begin form-control-->
-                                <textarea class="form-control" id="message" rows="9"></textarea>
-                                <!-- end form-control-->
-                            </div>
-                            <!-- end form-group-->
-                            <div class="row row--gap-sm">
-                                <button class="c-btn c-btn--flex-adaptive" type="submit">Send
-                                    <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
-                                        <!-- ico name: send-->
-                                        <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </main>
+                    </main>
+                </div>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
+        <!-- begin drawer-->
+        <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+            <div class="c-drawer__dialog">
+                <div class="c-drawer__head">
+                    <div class="c-drawer__title">Menu</div>
+                    <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
+                        <svg class="c-ico c-ico--xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: close-->
+                            <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="c-drawer__menu">
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Privacy policy
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Terms & conditions
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Payment terms
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Subscription terms
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Money back policy
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">FAQ
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Contact us
+              </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end drawer-->
         <!-- Including js files-->
 
 
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/main.js"></script>
+        <script>
+            //js-code лише для демонстрації:
+              $('select').on('change', function () {
+                  $(this).parents('.js-form-select').toggleClass('is-selected', !!$(this).val());
+              })
+              
+              $('#date-native').val(new Date().toISOString().split('T')[0]);
+        </script>
     </body>
 
 </html>

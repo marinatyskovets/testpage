@@ -19,97 +19,125 @@
     </head>
 
     <body>
-        <!-- ------------------------------ TEMPLATE SERVICE -------------------------------->
+        <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
         <div class="w-page">
             <!-- ---------------  Top part page ----------------->
             <!-- begin header-->
             <header class="c-header">
-                <!-- begin logo-->
-                <a class="c-logo" href="#">
-                    <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
-                </a>
-                <!-- end logo-->
+                <div class="c-header__inner">
+                    <button class="c-icon-button c-header__back" type="button" aria-label="Back">
+                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: chevron-left-->
+                            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                        </svg>
+                    </button>
+                    <!-- begin logo-->
+                    <a class="c-logo" href="#">
+                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48px">
+                    </a>
+                    <!-- end logo-->
+                    <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
+                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: menu-->
+                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                        </svg>
+                    </button>
+                </div>
             </header>
             <!-- end header-->
             <!-- ---------------  Content part page ----------------->
             <div class="w-page__content">
-                <main class="w-main">
-                    <div class="w-centered">
-                        <div class="w-gap-sm-md">
-                            <a class="c-icon-link u-ml-8-neg">
-                                <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
-                                    <!-- ico name: chevron-left-->
-                                    <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
-                                </svg>Back
-                            </a>
-                        </div>
-                        <!-- begin title-->
-                        <div class="c-title">
-                            <h1 class="c-h1">Your Account</h1>
-                        </div>
-                        <!-- end title-->
-                        <!-- begin account-settings-->
-                        <div class="c-account-settings">
-                            <div class="c-account-settings__section">
-                                <!-- begin subtitle-->
-                                <h2 class="c-subtitle">Customer Support
-                </h2>
-                                <!-- end subtitle-->
-                                <!-- begin menu-list-->
-                                <ul class="c-menu-list">
-                                    <li class="c-menu-list__item">
-                                        <a class="c-menu-list__link" href="#">
-                                            <svg class="c-ico" viewBox="0 0 24 24">
-                                                <!-- ico name: chat-outline-->
-                                                <path fill="currentColor" d="M12,3C6.5,3 2,6.58 2,11C2.05,13.15 3.06,15.17 4.75,16.5C4.75,17.1 4.33,18.67 2,21C4.37,20.89 6.64,20 8.47,18.5C9.61,18.83 10.81,19 12,19C17.5,19 22,15.42 22,11C22,6.58 17.5,3 12,3M12,17C7.58,17 4,14.31 4,11C4,7.69 7.58,5 12,5C16.42,5 20,7.69 20,11C20,14.31 16.42,17 12,17Z"></path>
-                                            </svg>Help</a>
-                                    </li>
-                                    <li class="c-menu-list__item">
-                                        <a class="c-menu-list__link" href="#">
-                                            <svg class="c-ico" viewBox="0 0 24 24">
-                                                <!-- ico name: help-circle-outline-->
-                                                <path fill="currentColor" d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z"></path>
-                                            </svg>FAQ</a>
-                                    </li>
-                                    <li class="c-menu-list__item">
-                                        <a class="c-menu-list__link" href="#">
-                                            <svg class="c-ico" viewBox="0 0 24 24">
-                                                <!-- ico name: cards-outline-->
-                                                <path fill="currentColor" d="M11.19,2.25C10.93,2.25 10.67,2.31 10.42,2.4L3.06,5.45C2.04,5.87 1.55,7.04 1.97,8.05L6.93,20C7.24,20.77 7.97,21.23 8.74,21.25C9,21.25 9.27,21.22 9.53,21.1L16.9,18.05C17.65,17.74 18.11,17 18.13,16.25C18.14,16 18.09,15.71 18,15.45L13,3.5C12.71,2.73 11.97,2.26 11.19,2.25M14.67,2.25L18.12,10.6V4.25A2,2 0 0,0 16.12,2.25M20.13,3.79V12.82L22.56,6.96C22.97,5.94 22.5,4.78 21.47,4.36M11.19,4.22L16.17,16.24L8.78,19.3L3.8,7.29"></path>
-                                            </svg>Plans</a>
-                                    </li>
-                                </ul>
-                                <!-- end menu-list-->
+                <div class="w-main">
+                    <main class="w-main__content">
+                        <div class="w-centered">
+                            <img class="c-image c-image--spin w-gap-md" src="static/img/general/constellations.png" alt="Constellations" width="120" height="120" />
+                            <!-- begin title-->
+                            <h1 class="c-title w-gap-md">Analyzing your connection...
+              </h1>
+                            <!-- end title-->
+                            <!-- begin progress-bar-->
+                            <div class="c-progress-bar w-gap-lg">
+                                <div class="c-progress-bar__item">
+                                    <div class="c-progress-bar__meta">
+                                        <p class="c-progress-bar__label">Your details</p>
+                                        <p class="c-progress-bar__value">12%</p>
+                                    </div>
+                                    <div class="c-progress-bar__track">
+                                        <div class="c-progress-bar__fill" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="c-progress-bar__item">
+                                    <div class="c-progress-bar__meta">
+                                        <p class="c-progress-bar__label">Your connection</p>
+                                        <p class="c-progress-bar__value">0%</p>
+                                    </div>
+                                    <div class="c-progress-bar__track">
+                                        <div class="c-progress-bar__fill" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="c-progress-bar__item">
+                                    <div class="c-progress-bar__meta">
+                                        <p class="c-progress-bar__label">Partner details</p>
+                                        <p class="c-progress-bar__value">0%</p>
+                                    </div>
+                                    <div class="c-progress-bar__track">
+                                        <div class="c-progress-bar__fill" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="c-account-settings__section">
-                                <!-- begin subtitle-->
-                                <h2 class="c-subtitle">Legal & Privacy
-                </h2>
-                                <!-- end subtitle-->
-                                <!-- begin menu-list-->
-                                <ul class="c-menu-list">
-                                    <li class="c-menu-list__item"><a class="c-menu-list__link" href="#">Privacy policy</a>
-                                    </li>
-                                    <li class="c-menu-list__item"><a class="c-menu-list__link" href="#">Terms of use</a>
-                                    </li>
-                                    <li class="c-menu-list__item"><a class="c-menu-list__link" href="#">Payment terms</a>
-                                    </li>
-                                    <li class="c-menu-list__item"><a class="c-menu-list__link" href="#">Subscription terms</a>
-                                    </li>
-                                </ul>
-                                <!-- end menu-list-->
-                            </div>
-                            <div class="c-account-settings__action">
-                                <a class="c-link">Sign Out
-                </a>
-                            </div>
+                            <!-- end progress-bars-->
+                            <p class="u-mt-0">Almost ready! We’re finalizing your personalized astrological reading of your relationship.</p>
                         </div>
-                        <!-- end account-settings-->
-                    </div>
-                </main>
+                    </main>
+                </div>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
+        <!-- begin drawer-->
+        <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+            <div class="c-drawer__dialog">
+                <div class="c-drawer__head">
+                    <div class="c-drawer__title">Menu</div>
+                    <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
+                        <svg class="c-ico c-ico--xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: close-->
+                            <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="c-drawer__menu">
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Privacy policy
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Terms & conditions
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Payment terms
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Subscription terms
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Money back policy
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">FAQ
+              </a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Contact us
+              </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end drawer-->
         <!-- Including js files-->
 
 
