@@ -26,14 +26,14 @@
             <header class="c-header">
                 <div class="c-header__inner">
                     <button class="c-icon-button c-header__back" type="button" aria-label="Back">
-                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                        <svg class="c-ico c-ico--3xl c-ico--accent" viewBox="0 0 24 24">
                             <!-- ico name: chevron-left-->
                             <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
                         </svg>
                     </button>
                     <!-- begin logo-->
                     <a class="c-logo" href="#">
-                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48px">
+                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48">
                     </a>
                     <!-- end logo-->
                     <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
@@ -47,49 +47,46 @@
             <!-- end header-->
             <!-- ---------------  Content part page ----------------->
             <div class="w-page__content">
-                <div class="w-main">
-                    <main class="w-main__content">
-                        <div class="w-centered">
-                            <img class="c-image c-image--spin w-gap-md" src="static/img/general/constellations.png" alt="Constellations" width="120" height="120" />
-                            <!-- begin title-->
-                            <h1 class="c-title w-gap-md">Analyzing your connection...
-              </h1>
-                            <!-- end title-->
-                            <!-- begin progress-bar-->
-                            <div class="c-progress-bar w-gap-lg">
-                                <div class="c-progress-bar__item">
-                                    <div class="c-progress-bar__meta">
-                                        <p class="c-progress-bar__label">Your details</p>
-                                        <p class="c-progress-bar__value">12%</p>
-                                    </div>
-                                    <div class="c-progress-bar__track">
-                                        <div class="c-progress-bar__fill" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                <main class="w-page__main">
+                    <div class="w-centered">
+                        <img class="c-image c-image--spin w-gap-md" src="static/img/general/constellations.png" alt="Constellations" width="120" height="120" />
+                        <!-- begin title-->
+                        <h1 class="c-title w-gap-md">Analyzing your connection...</h1>
+                        <!-- end title-->
+                        <!-- begin progress-bar-->
+                        <div class="c-progress-bar w-gap-lg">
+                            <div class="c-progress-bar__item">
+                                <div class="c-progress-bar__meta">
+                                    <p class="c-progress-bar__label">Your details</p>
+                                    <p class="c-progress-bar__value">12%</p>
                                 </div>
-                                <div class="c-progress-bar__item">
-                                    <div class="c-progress-bar__meta">
-                                        <p class="c-progress-bar__label">Your connection</p>
-                                        <p class="c-progress-bar__value">0%</p>
-                                    </div>
-                                    <div class="c-progress-bar__track">
-                                        <div class="c-progress-bar__fill" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="c-progress-bar__item">
-                                    <div class="c-progress-bar__meta">
-                                        <p class="c-progress-bar__label">Partner details</p>
-                                        <p class="c-progress-bar__value">0%</p>
-                                    </div>
-                                    <div class="c-progress-bar__track">
-                                        <div class="c-progress-bar__fill" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                <div class="c-progress-bar__track">
+                                    <div class="c-progress-bar__fill" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <!-- end progress-bars-->
-                            <p class="u-mt-0">Almost ready! We’re finalizing your personalized astrological reading of your relationship.</p>
+                            <div class="c-progress-bar__item">
+                                <div class="c-progress-bar__meta">
+                                    <p class="c-progress-bar__label">Your connection</p>
+                                    <p class="c-progress-bar__value">0%</p>
+                                </div>
+                                <div class="c-progress-bar__track">
+                                    <div class="c-progress-bar__fill" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="c-progress-bar__item">
+                                <div class="c-progress-bar__meta">
+                                    <p class="c-progress-bar__label">Partner details</p>
+                                    <p class="c-progress-bar__value">0%</p>
+                                </div>
+                                <div class="c-progress-bar__track">
+                                    <div class="c-progress-bar__fill" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
                         </div>
-                    </main>
-                </div>
+                        <!-- end progress-bars-->
+                        <p class="u-mt-0">Almost ready! We’re finalizing your personalized astrological reading of your relationship.</p>
+                    </div>
+                </main>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
@@ -107,32 +104,25 @@
                 </div>
                 <ul class="c-drawer__menu">
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Privacy policy
-              </a>
+                        <a class="c-drawer__link" href="#">Privacy policy</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Terms & conditions
-              </a>
+                        <a class="c-drawer__link" href="#">Terms & conditions</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Payment terms
-              </a>
+                        <a class="c-drawer__link" href="#">Payment terms</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Subscription terms
-              </a>
+                        <a class="c-drawer__link" href="#">Subscription terms</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Money back policy
-              </a>
+                        <a class="c-drawer__link" href="#">Money back policy</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">FAQ
-              </a>
+                        <a class="c-drawer__link" href="#">FAQ</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Contact us
-              </a>
+                        <a class="c-drawer__link" href="#">Contact us</a>
                     </li>
                 </ul>
             </div>

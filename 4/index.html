@@ -26,14 +26,14 @@
             <header class="c-header">
                 <div class="c-header__inner">
                     <button class="c-icon-button c-header__back" type="button" aria-label="Back">
-                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                        <svg class="c-ico c-ico--3xl c-ico--accent" viewBox="0 0 24 24">
                             <!-- ico name: chevron-left-->
                             <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
                         </svg>
                     </button>
                     <!-- begin logo-->
                     <a class="c-logo" href="#">
-                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48px">
+                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48">
                     </a>
                     <!-- end logo-->
                     <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
@@ -47,88 +47,89 @@
             <!-- end header-->
             <!-- ---------------  Content part page ----------------->
             <div class="w-page__content">
-                <div class="w-main w-main--left">
-                    <section class="w-main__top-bar">
-                        <div class="w-centered">
-                            <!-- begin stepper-->
-                            <div class="c-stepper">
-                                <h3 class="c-stepper__title">Your details</h3>
-                                <div class="c-stepper__track">
-                                    <div class="c-stepper__step is-active">
-                                        <div class="c-stepper__line">
-                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
-                                        </div>
-                                        <div class="c-stepper__dot"></div>
+                <section class="w-page__top-bar">
+                    <div class="w-centered">
+                        <!-- begin stepper-->
+                        <div class="c-stepper">
+                            <h3 class="c-stepper__title">Your details</h3>
+                            <div class="c-stepper__container">
+                                <div class="c-stepper__step is-active">
+                                    <div class="c-stepper__track">
+                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
                                     </div>
-                                    <div class="c-stepper__step">
-                                        <div class="c-stepper__line">
-                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <div class="c-stepper__dot"></div>
+                                    <div class="c-stepper__dot"></div>
+                                </div>
+                                <div class="c-stepper__step">
+                                    <div class="c-stepper__track">
+                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <div class="c-stepper__step">
-                                        <div class="c-stepper__line">
-                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <div class="c-stepper__dot"></div>
+                                    <div class="c-stepper__dot"></div>
+                                </div>
+                                <div class="c-stepper__step">
+                                    <div class="c-stepper__track">
+                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <div class="c-stepper__step">
-                                        <div class="c-stepper__dot"></div>
-                                    </div>
+                                    <div class="c-stepper__dot"></div>
+                                </div>
+                                <div class="c-stepper__step">
+                                    <div class="c-stepper__dot"></div>
                                 </div>
                             </div>
-                            <!-- end stepper-->
                         </div>
-                    </section>
-                    <main class="w-main__content">
-                        <div class="w-centered">
-                            <!-- begin title-->
-                            <h1 class="c-title w-gap-xs">What time were you born?
-              </h1>
-                            <!-- end title-->
-                            <p class="w-gap-md u-mt-0">Your birth date unlocks deeper insights. Using precise NASA data, we map the planets’ positions at the exact moment you were born to uncover what they reveal about your connection.</p>
+                        <!-- end stepper-->
+                    </div>
+                </section>
+                <main class="w-page__main w-page__main--left">
+                    <div class="w-centered">
+                        <!-- begin title-->
+                        <h1 class="c-title w-gap-xs">What time were you born?</h1>
+                        <!-- end title-->
+                        <p class="w-gap-md u-mt-0">Your birth date unlocks deeper insights. Using precise NASA data, we map the planets’ positions at the exact moment you were born to uncover what they reveal about your connection.</p>
+                        <!-- Mobile version-->
+                        <!-- begin form-control-->
+                        <input class="form-control w-gap-lg" type="time" id="time-native"></input>
+                        <!-- end form-control-->
+                        <!---->
+                        <!-- Desktop version-->
+                        <div class="row row--nowrap row--row-gap-sm w-gap-lg">
                             <!-- begin form-control-->
-                            <input class="form-control w-gap-lg" type="time" id="time-native"></input>
+                            <select class="form-control" id="hours" name="hours">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
                             <!-- end form-control-->
-                            <div class="row row--nowrap row--row-gap-sm w-gap-lg">
-                                <!-- begin form-control-->
-                                <select class="form-control" id="hours" name="hours">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                                <!-- end form-control-->
-                                <!-- begin form-control-->
-                                <select class="form-control" id="minutes" name="minutes">
-                                    <option value="00">00</option>
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                </select>
-                                <!-- end form-control-->
-                                <!-- begin form-control-->
-                                <select class="form-control" id="part" name="part">
-                                    <option value="AM">AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                                <!-- end form-control-->
-                            </div>
-                            <button class="c-btn" type="button">Continue
-                            </button>
+                            <!-- begin form-control-->
+                            <select class="form-control" id="minutes" name="minutes">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                            </select>
+                            <!-- end form-control-->
+                            <!-- begin form-control-->
+                            <select class="form-control" id="part" name="part">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                            <!-- end form-control-->
                         </div>
-                    </main>
-                </div>
+                        <!---->
+                        <button class="c-btn" type="button">Continue
+                        </button>
+                    </div>
+                </main>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
@@ -146,32 +147,25 @@
                 </div>
                 <ul class="c-drawer__menu">
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Privacy policy
-              </a>
+                        <a class="c-drawer__link" href="#">Privacy policy</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Terms & conditions
-              </a>
+                        <a class="c-drawer__link" href="#">Terms & conditions</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Payment terms
-              </a>
+                        <a class="c-drawer__link" href="#">Payment terms</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Subscription terms
-              </a>
+                        <a class="c-drawer__link" href="#">Subscription terms</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Money back policy
-              </a>
+                        <a class="c-drawer__link" href="#">Money back policy</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">FAQ
-              </a>
+                        <a class="c-drawer__link" href="#">FAQ</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Contact us
-              </a>
+                        <a class="c-drawer__link" href="#">Contact us</a>
                     </li>
                 </ul>
             </div>

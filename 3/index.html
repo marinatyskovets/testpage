@@ -26,14 +26,14 @@
             <header class="c-header">
                 <div class="c-header__inner">
                     <button class="c-icon-button c-header__back" type="button" aria-label="Back">
-                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                        <svg class="c-ico c-ico--3xl c-ico--accent" viewBox="0 0 24 24">
                             <!-- ico name: chevron-left-->
                             <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
                         </svg>
                     </button>
                     <!-- begin logo-->
                     <a class="c-logo" href="#">
-                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48px">
+                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48">
                     </a>
                     <!-- end logo-->
                     <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
@@ -47,56 +47,53 @@
             <!-- end header-->
             <!-- ---------------  Content part page ----------------->
             <div class="w-page__content">
-                <div class="w-main w-main--left">
-                    <section class="w-main__top-bar">
-                        <div class="w-centered">
-                            <!-- begin stepper-->
-                            <div class="c-stepper">
-                                <h3 class="c-stepper__title">Your details</h3>
-                                <div class="c-stepper__track">
-                                    <div class="c-stepper__step is-active">
-                                        <div class="c-stepper__line">
-                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
-                                        </div>
-                                        <div class="c-stepper__dot"></div>
+                <section class="w-page__top-bar">
+                    <div class="w-centered">
+                        <!-- begin stepper-->
+                        <div class="c-stepper">
+                            <h3 class="c-stepper__title">Your details</h3>
+                            <div class="c-stepper__container">
+                                <div class="c-stepper__step is-active">
+                                    <div class="c-stepper__track">
+                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
                                     </div>
-                                    <div class="c-stepper__step">
-                                        <div class="c-stepper__line">
-                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <div class="c-stepper__dot"></div>
+                                    <div class="c-stepper__dot"></div>
+                                </div>
+                                <div class="c-stepper__step">
+                                    <div class="c-stepper__track">
+                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <div class="c-stepper__step">
-                                        <div class="c-stepper__line">
-                                            <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <div class="c-stepper__dot"></div>
+                                    <div class="c-stepper__dot"></div>
+                                </div>
+                                <div class="c-stepper__step">
+                                    <div class="c-stepper__track">
+                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <div class="c-stepper__step">
-                                        <div class="c-stepper__dot"></div>
-                                    </div>
+                                    <div class="c-stepper__dot"></div>
+                                </div>
+                                <div class="c-stepper__step">
+                                    <div class="c-stepper__dot"></div>
                                 </div>
                             </div>
-                            <!-- end stepper-->
                         </div>
-                    </section>
-                    <main class="w-main__content">
-                        <div class="w-centered">
-                            <!-- begin title-->
-                            <h1 class="c-title w-gap-md">Do you know your time of birth?
-              </h1>
-                            <!-- end title-->
-                            <div class="w-column-gap-sm">
-                                <button class="c-option-btn" type="button">
-                                    <div class="c-emoji">😀</div>Yes
-                                </button>
-                                <button class="c-option-btn" type="button">
-                                    <div class="c-emoji">🤔</div>No
-                                </button>
-                            </div>
+                        <!-- end stepper-->
+                    </div>
+                </section>
+                <main class="w-page__main w-page__main--left">
+                    <div class="w-centered">
+                        <!-- begin title-->
+                        <h1 class="c-title w-gap-md">Do you know your time of birth?</h1>
+                        <!-- end title-->
+                        <div class="w-column-gap-sm">
+                            <button class="c-option-btn" type="button">
+                                <span class="c-emoji">😀</span>Yes
+                            </button>
+                            <button class="c-option-btn" type="button">
+                                <span class="c-emoji">🤔</span>No
+                            </button>
                         </div>
-                    </main>
-                </div>
+                    </div>
+                </main>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
@@ -114,32 +111,25 @@
                 </div>
                 <ul class="c-drawer__menu">
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Privacy policy
-              </a>
+                        <a class="c-drawer__link" href="#">Privacy policy</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Terms & conditions
-              </a>
+                        <a class="c-drawer__link" href="#">Terms & conditions</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Payment terms
-              </a>
+                        <a class="c-drawer__link" href="#">Payment terms</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Subscription terms
-              </a>
+                        <a class="c-drawer__link" href="#">Subscription terms</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Money back policy
-              </a>
+                        <a class="c-drawer__link" href="#">Money back policy</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">FAQ
-              </a>
+                        <a class="c-drawer__link" href="#">FAQ</a>
                     </li>
                     <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Contact us
-              </a>
+                        <a class="c-drawer__link" href="#">Contact us</a>
                     </li>
                 </ul>
             </div>
