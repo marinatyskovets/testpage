@@ -20,44 +20,42 @@
 
     <body>
         <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
-        <div class="w-page w-page--dark">
-            <!-- ---------------  Top part page ----------------->
-            <!-- begin header-->
-            <header class="c-header">
-                <div class="c-header__inner">
-                    <button class="c-icon-button c-header__back" type="button" aria-label="Back">
-                        <svg class="c-ico c-ico--3xl c-ico--accent" viewBox="0 0 24 24">
-                            <!-- ico name: chevron-left-->
-                            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
-                        </svg>
-                    </button>
-                    <!-- begin logo-->
-                    <a class="c-logo" href="#">
-                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48">
-                    </a>
-                    <!-- end logo-->
-                    <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
-                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
-                            <!-- ico name: menu-->
-                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
-                        </svg>
-                    </button>
+        <div class="w-root">
+            <div class="w-page">
+                <!-- ---------------  Content part page ----------------->
+                <div class="w-page__content">
+                    <!-- begin container-->
+                    <main class="c-container c-container--center">
+                        <div class="w-centered">
+                            <!-- begin title-->
+                            <h1 class="c-title c-title--md c-title--bold w-gap-md">Save 70% off!</h1>
+                            <!-- end title-->
+                            <img class="c-image w-gap-lg" src="static/img/general/confetti-stars.png" alt="" width="200" height="200" />
+                            <div class="row row--justify-center w-gap-xl">
+                                <!-- begin decorated-list-->
+                                <ul class="c-decorated-list">
+                                    <li class="c-decorated-list__item">
+                                        <div class="c-decorated-list__img">
+                                            <img class="c-image" src="static/img/general/fire-clock.png" alt="" width="48" height="48" />
+                                        </div><span class="c-decorated-list__text">70% off on your personalized reading</span>
+                                    </li>
+                                    <li class="c-decorated-list__item">
+                                        <div class="c-decorated-list__img">
+                                            <img class="c-image" src="static/img/general/gift-box.png" alt="" width="40" height="40" />
+                                        </div><span class="c-decorated-list__text">7-day trial</span>
+                                    </li>
+                                </ul>
+                                <!-- end decorated-list-->
+                            </div>
+                            <div class="w-gap-sm u-text-bold"><span class="u-text-info">$19</span>
+                                instead of $55
+                            </div>
+                            <button class="c-btn c-btn--marker" type="button">Get secret discount!
+                            </button>
+                        </div>
+                    </main>
+                    <!-- end container-->
                 </div>
-            </header>
-            <!-- end header-->
-            <!-- ---------------  Content part page ----------------->
-            <div class="w-page__content">
-                <main class="w-page__main">
-                    <div class="w-centered">
-                        <img class="c-image w-gap-lg" src="static/img/general/clock.png" alt="Clock" width="160" height="160" />
-                        <!-- begin title-->
-                        <h1 class="c-title w-gap-xs">It’s okay!</h1>
-                        <!-- end title-->
-                        <p class="w-gap-xl u-mt-0">You can still find plenty of insights. If you learn your time of birth later, you can add it in your settings.</p>
-                        <button class="c-btn" type="button">Next
-                        </button>
-                    </div>
-                </main>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->

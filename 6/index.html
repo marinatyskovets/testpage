@@ -20,104 +20,73 @@
 
     <body>
         <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
-        <div class="w-page">
-            <!-- ---------------  Top part page ----------------->
-            <!-- begin header-->
-            <header class="c-header">
-                <div class="c-header__inner">
-                    <button class="c-icon-button c-header__back" type="button" aria-label="Back">
-                        <svg class="c-ico c-ico--3xl c-ico--accent" viewBox="0 0 24 24">
-                            <!-- ico name: chevron-left-->
-                            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
-                        </svg>
-                    </button>
-                    <!-- begin logo-->
-                    <a class="c-logo" href="#">
-                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48">
-                    </a>
-                    <!-- end logo-->
-                    <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
-                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
-                            <!-- ico name: menu-->
-                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </header>
-            <!-- end header-->
-            <!-- ---------------  Content part page ----------------->
-            <div class="w-page__content">
-                <section class="w-page__top-bar">
-                    <div class="w-centered">
-                        <!-- begin stepper-->
-                        <div class="c-stepper">
-                            <h3 class="c-stepper__title">Your Connection</h3>
-                            <div class="c-stepper__container">
-                                <div class="c-stepper__step is-completed">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
-                                    </div>
-                                    <div class="c-stepper__dot"></div>
+        <div class="w-root">
+            <div class="w-page">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin header-->
+                <header class="c-header">
+                    <div class="c-header__inner">
+                        <!-- begin logo-->
+                        <a class="c-logo" href="#">
+                            <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
+                        </a>
+                        <!-- end logo-->
+                        <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
+                            <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                                <!-- ico name: menu-->
+                                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+                <!-- end header-->
+                <!-- ---------------  Content part page ----------------->
+                <div class="w-page__content">
+                    <!-- begin container-->
+                    <main class="c-container c-container--center">
+                        <div class="w-centered">
+                            <!-- begin title-->
+                            <h1 class="c-title w-gap-md">Choose a Trial Price</h1>
+                            <!-- end title-->
+                            <div class="w-gap-lg">
+                                <h2 class="c-h5">Your Satisfaction Matters To Us</h2>
+                                <p class="u-mt-0 u-text-sm">We’ve helped millions of people find clarity, and we want to help you, too.</p>
+                            </div>
+                            <div class="w-gap-lg">
+                                <h2 class="c-h5">Your Savings, Our Priority</h2>
+                                <p class="u-mt-0 u-text-sm">While the actual cost is $13,67*, we encourage you to select an amount you find comfortable for you.</p>
+                            </div>
+                            <!-- begin options-section-->
+                            <div class="c-options-section w-gap-lg">
+                                <div class="row row--gap-xs row--by-4">
+                                    <button class="c-option-btn c-options-section__btn" type="button">$1
+                                    </button>
+                                    <button class="c-option-btn c-options-section__btn" type="button">$5
+                                    </button>
+                                    <button class="c-option-btn c-options-section__btn" type="button">$9
+                                    </button>
+                                    <button class="c-option-btn is-active c-options-section__btn" type="button">$13,67
+                                    </button>
                                 </div>
-                                <div class="c-stepper__step is-active">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
-                                    </div>
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__dot"></div>
+                                <div class="c-options-section__note">
+                                    <p class="c-options-section__text">This option will help us support those who need to select the lowest trial prices!</p>
+                                    <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
+                                        <!-- ico name: arrow-up-right-->
+                                        <path fill="currentColor" d="M21.5 9.5L20.09 10.92L17 7.83V13.5C17 17.09 14.09 20 10.5 20H4V18H10.5C13 18 15 16 15 13.5V7.83L11.91 10.91L10.5 9.5L16 4L21.5 9.5Z"></path>
+                                    </svg>
                                 </div>
                             </div>
+                            <!-- end options-section-->
+                            <div class="w-gap-lg">
+                                <button class="c-btn" type="button">Continue
+                                </button>
+                                <button class="c-btn is-disabled" type="button">Continue
+                                </button>
+                            </div>
                         </div>
-                        <!-- end stepper-->
-                    </div>
-                </section>
-                <main class="w-page__main w-page__main--top-left">
-                    <div class="w-centered">
-                        <!-- begin title-->
-                        <h1 class="c-title w-gap-md">Which pair of animals best represents you and this person?</h1>
-                        <!-- end title-->
-                        <div class="row row--justify-between row--row-gap-xs row--column-gap-lg">
-                            <!-- begin preview-->
-                            <a class="c-preview" href="#">
-                                <img class="c-image c-preview__img" src="static/img/general/dolphins.png" alt="Dolphins" width="93" height="93" /><span class="c-preview__title">Two dolphins</span>
-                            </a>
-                            <!-- end preview-->
-                            <!-- begin preview-->
-                            <a class="c-preview" href="#">
-                                <img class="c-image c-preview__img" src="static/img/general/horses.png" alt="Horses" width="93" height="93" /><span class="c-preview__title">Two horses</span>
-                            </a>
-                            <!-- end preview-->
-                            <!-- begin preview-->
-                            <a class="c-preview" href="#">
-                                <img class="c-image c-preview__img" src="static/img/general/elephants.png" alt="Elephants" width="93" height="93" /><span class="c-preview__title">Two elephants</span>
-                            </a>
-                            <!-- end preview-->
-                            <!-- begin preview-->
-                            <a class="c-preview" href="#">
-                                <img class="c-image c-preview__img" src="static/img/general/hawks.png" alt="Hawks" width="93" height="93" /><span class="c-preview__title">Two hawks</span>
-                            </a>
-                            <!-- end preview-->
-                            <!-- begin preview-->
-                            <a class="c-preview" href="#">
-                                <img class="c-image c-preview__img" src="static/img/general/bears.png" alt="Bears" width="93" height="93" /><span class="c-preview__title">Two bears</span>
-                            </a>
-                            <!-- end preview-->
-                            <!-- begin preview-->
-                            <a class="c-preview" href="#">
-                                <img class="c-image c-preview__img" src="static/img/general/foxes.png" alt="Foxes" width="93" height="93" /><span class="c-preview__title">Two foxes</span>
-                            </a>
-                            <!-- end preview-->
-                        </div>
-                    </div>
-                </main>
+                    </main>
+                    <!-- end container-->
+                </div>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->

@@ -20,165 +20,71 @@
 
     <body>
         <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
-        <div class="w-page">
-            <!-- ---------------  Top part page ----------------->
-            <!-- begin header-->
-            <header class="c-header">
-                <div class="c-header__inner">
-                    <button class="c-icon-button c-header__back" type="button" aria-label="Back">
-                        <svg class="c-ico c-ico--3xl c-ico--accent" viewBox="0 0 24 24">
-                            <!-- ico name: chevron-left-->
-                            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
-                        </svg>
-                    </button>
-                    <!-- begin logo-->
-                    <a class="c-logo" href="#">
-                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48">
-                    </a>
-                    <!-- end logo-->
-                    <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
-                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
-                            <!-- ico name: menu-->
-                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </header>
-            <!-- end header-->
-            <!-- ---------------  Content part page ----------------->
-            <div class="w-page__content">
-                <section class="w-page__top-bar">
-                    <div class="w-centered">
-                        <!-- begin stepper-->
-                        <div class="c-stepper">
-                            <h3 class="c-stepper__title">Your details</h3>
-                            <div class="c-stepper__container">
-                                <div class="c-stepper__step is-active">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
-                                    </div>
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end stepper-->
-                    </div>
-                </section>
-                <main class="w-page__main w-page__main--left">
-                    <div class="w-centered">
-                        <!-- begin title-->
-                        <h1 class="c-title w-gap-md">What’s your date of birth?</h1>
-                        <!-- end title-->
-                        <div class="w-column-gap-sm w-gap-lg">
-                            <!-- Mobile version-->
-                            <!-- begin form-control-->
-                            <input class="form-control" type="date" id="date-native"></input>
-                            <!-- end form-control-->
-                            <!---->
-                            <!-- Desktop version-->
-                            <!-- begin form-group-->
-                            <div class="form-group js-form-select">
-                                <div class="form-group__container">
-                                    <div class="form-group__placeholder">Month</div>
-                                    <!-- begin form-control-->
-                                    <select class="form-control" id="month" name="month">
-                                        <option value="Jan">Jan</option>
-                                        <option value="Feb">Feb</option>
-                                        <option value="Mar">Mar</option>
-                                        <option value="Apr">Apr</option>
-                                        <option value="May">May</option>
-                                        <option value="Jun">Jun</option>
-                                        <option value="Jul">Jul</option>
-                                        <option value="Aug">Aug</option>
-                                        <option value="Sep">Sep</option>
-                                        <option value="Oct">Oct</option>
-                                        <option value="Nov">Nov</option>
-                                        <option value="Dec">Dec</option>
-                                    </select>
-                                    <!-- end form-control-->
-                                </div>
-                            </div>
-                            <!-- end form-group-->
-                            <!-- begin form-group-->
-                            <div class="form-group js-form-select">
-                                <div class="form-group__container">
-                                    <div class="form-group__placeholder">Day</div>
-                                    <!-- begin form-control-->
-                                    <select class="form-control" id="day" name="day">
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
-                                        <option value="25">25</option>
-                                        <option value="26">26</option>
-                                        <option value="27">27</option>
-                                        <option value="28">28</option>
-                                        <option value="29">29</option>
-                                        <option value="30">30</option>
-                                        <option value="31">31</option>
-                                    </select>
-                                    <!-- end form-control-->
-                                </div>
-                            </div>
-                            <!-- end form-group-->
-                            <!-- begin form-group-->
-                            <div class="form-group js-form-select">
-                                <div class="form-group__container">
-                                    <div class="form-group__placeholder">Year</div>
-                                    <!-- begin form-control-->
-                                    <select class="form-control" id="year" name="year">
-                                        <option value="2025">2025</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2020">2020</option>
-                                    </select>
-                                    <!-- end form-control-->
-                                </div>
-                            </div>
-                            <!-- end form-group-->
-                            <!---->
-                        </div>
-                        <button class="c-btn" type="button">Continue
+        <div class="w-root">
+            <div class="w-page w-page--dark">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin header-->
+                <header class="c-header">
+                    <div class="c-header__inner">
+                        <button class="c-icon-button c-header__back" type="button" aria-label="Back">
+                            <svg class="c-ico c-ico--3xl c-ico--accent" viewBox="0 0 24 24">
+                                <!-- ico name: chevron-left-->
+                                <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                            </svg>
+                        </button>
+                        <!-- begin logo-->
+                        <a class="c-logo" href="#">
+                            <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48">
+                        </a>
+                        <!-- end logo-->
+                        <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
+                            <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                                <!-- ico name: menu-->
+                                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                            </svg>
                         </button>
                     </div>
-                </main>
+                </header>
+                <!-- end header-->
+                <!-- ---------------  Content part page ----------------->
+                <div class="w-page__content">
+                    <!-- begin container-->
+                    <main class="c-container c-container--center">
+                        <div class="w-centered">
+                            <img class="c-image w-gap-sm" src="static/img/general/yeyhand.png" alt="Book" width="160" height="160" />
+                            <!-- begin title-->
+                            <h1 class="c-title w-gap-md">Your Love Reading is ready!</h1>
+                            <!-- end title-->
+                            <!-- begin adaptive-box-->
+                            <div class="c-adaptive-box">
+                                <div class="c-adaptive-box__small">
+                                    <!-- begin rounded-box-->
+                                    <div class="c-rounded-box w-gap-md">
+                                        <p class="w-gap-xs u-text-left">To get your reading, please follow the instructions:</p>
+                                        <!-- begin list-numbered-->
+                                        <ul class="c-list-numbered">
+                                            <li class="c-list-numbered__item">Download the Astro app</li>
+                                            <li class="c-list-numbered__item">You’ll be logged in automatically to enjoy your reading</li>
+                                        </ul>
+                                    </div>
+                                    <!-- end rounded-box-->
+                                    <button class="c-btn" type="button">Go to AppStore
+                                    </button>
+                                </div>
+                                <div class="c-adaptive-box__expanded">
+                                    <!-- begin rounded-box-->
+                                    <div class="c-rounded-box c-rounded-box--lg">
+                                        <p class="w-gap-xs">Scan QR code using your phone camera to get your reading:</p>
+                                        <img class="c-image" src="static/img/content/qr-code.png" alt="Book" width="320" height="320" />
+                                    </div>
+                                    <!-- end rounded-box-->
+                                </div>
+                            </div>
+                            <!-- end adaptive-box-->
+                        </div>
+                    </main>
+                    <!-- end container-->
+                </div>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
@@ -226,14 +132,6 @@
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/main.js"></script>
-        <script>
-            //js-code лише для демонстрації:
-              $('select').on('change', function () {
-                  $(this).parents('.js-form-select').toggleClass('is-selected', !!$(this).val());
-              })
-              
-              $('#date-native').val(new Date().toISOString().split('T')[0]);
-        </script>
     </body>
 
 </html>

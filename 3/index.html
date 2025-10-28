@@ -20,80 +20,81 @@
 
     <body>
         <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
-        <div class="w-page">
-            <!-- ---------------  Top part page ----------------->
-            <!-- begin header-->
-            <header class="c-header">
-                <div class="c-header__inner">
-                    <button class="c-icon-button c-header__back" type="button" aria-label="Back">
-                        <svg class="c-ico c-ico--3xl c-ico--accent" viewBox="0 0 24 24">
-                            <!-- ico name: chevron-left-->
-                            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
-                        </svg>
-                    </button>
-                    <!-- begin logo-->
-                    <a class="c-logo" href="#">
-                        <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48">
-                    </a>
-                    <!-- end logo-->
-                    <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
-                        <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
-                            <!-- ico name: menu-->
-                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </header>
-            <!-- end header-->
-            <!-- ---------------  Content part page ----------------->
-            <div class="w-page__content">
-                <section class="w-page__top-bar">
-                    <div class="w-centered">
-                        <!-- begin stepper-->
-                        <div class="c-stepper">
-                            <h3 class="c-stepper__title">Your details</h3>
-                            <div class="c-stepper__container">
-                                <div class="c-stepper__step is-active">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
+        <div class="w-root">
+            <div class="w-page">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin header-->
+                <header class="c-header">
+                    <div class="c-header__inner">
+                        <!-- begin logo-->
+                        <a class="c-logo" href="#">
+                            <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
+                        </a>
+                        <!-- end logo-->
+                        <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
+                            <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                                <!-- ico name: menu-->
+                                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+                <!-- end header-->
+                <!-- ---------------  Content part page ----------------->
+                <div class="w-page__content">
+                    <!-- begin container-->
+                    <main class="c-container c-container--center">
+                        <div class="w-centered">
+                            <img class="c-image w-gap-sm" src="static/img/general/party-popper.png" alt="" width="120" height="120" />
+                            <!-- begin title-->
+                            <h1 class="c-title c-title--md c-title--bold w-gap-md">You get a secret discount!</h1>
+                            <!-- end title-->
+                            <!-- begin offer-card-->
+                            <div class="c-offer-card w-gap-md">
+                                <h3 class="c-offer-card__title">You get a secret offer!</h3>
+                                <p class="c-offer-card__subtitle">No pressure. Cancel anytime.</p>
+                                <div class="c-offer-card__banner">
+                                    <div class="c-offer-card__banner-item">
+                                        <img class="c-image" src="static/img/general/gift-box.png" alt="" width="16" height="16" />
+                                        <p class="c-offer-card__text">Secret offer applied!</p>
                                     </div>
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="c-offer-card__price">
+                                        <div class="c-offer-card__value-old">−30%</div>
+                                        <div class="c-offer-card__value">−70%</div>
                                     </div>
-                                    <div class="c-stepper__dot"></div>
                                 </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="c-offer-card__section">
+                                    <div class="c-offer-card__item">
+                                        <p class="c-offer-card__text">Your cost per 1 month after trial:</p>
+                                        <div class="c-offer-card__price">
+                                            <div class="c-offer-card__value-old">$55</div>
+                                            <div class="c-offer-card__value">$19</div>
+                                        </div>
                                     </div>
-                                    <div class="c-stepper__dot"></div>
+                                    <div class="c-offer-card__item">
+                                        <p class="c-offer-card__text">You save $36</p>
+                                    </div>
                                 </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__dot"></div>
+                                <div class="c-offer-card__section">
+                                    <div class="c-offer-card__item">
+                                        <p class="c-offer-card__total">Total today:</p>
+                                        <div class="c-offer-card__value">$1</div>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- end offer-card-->
+                            <div class="w-gap-sm">
+                                <button class="c-btn c-btn--success" type="button">Start your 7-day trial
+                                </button>
+                            </div>
+                            <!-- begin help-msg-->
+                            <p class="c-help-msg">By continuing you agree that if you don't cancel prior to the end of the 7-days trial, you will automatically be charged $19 for the introductory period of 30 days thereafter the standard rate of $39 every 30 days until you
+                                cancel in settings. Learn more about cancellation and refund policy in Subscription terms.</p>
+                            <!-- end help-msg-->
                         </div>
-                        <!-- end stepper-->
-                    </div>
-                </section>
-                <main class="w-page__main w-page__main--left">
-                    <div class="w-centered">
-                        <!-- begin title-->
-                        <h1 class="c-title w-gap-md">Do you know your time of birth?</h1>
-                        <!-- end title-->
-                        <div class="w-column-gap-sm">
-                            <button class="c-option-btn" type="button">
-                                <span class="c-emoji">😀</span>Yes
-                            </button>
-                            <button class="c-option-btn" type="button">
-                                <span class="c-emoji">🤔</span>No
-                            </button>
-                        </div>
-                    </div>
-                </main>
+                    </main>
+                    <!-- end container-->
+                </div>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
