@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Astro</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=block" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body class="light">
+        <!-- ------------------------------ TEMPLATE START SCREEN -------------------------------->
+        <div class="w-page">
+            <!-- ---------------  Content part page ----------------->
+            <div class="w-page__start-screen bg-sunset">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin header-->
+                <header class="c-header">
+                    <div class="c-header__inner">
+                        <!-- begin logo-->
+                        <a class="c-logo" href="#">
+                            <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
+                        </a>
+                        <!-- end logo-->
+                        <button class="c-icon-button js-drawer-toggler c-header__toggle-nav" type="button" aria-label="Open">
+                            <svg class="c-ico c-ico--2xl" viewBox="0 0 24 24">
+                                <!-- ico name: menu-->
+                                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                            </svg>
+                        </button>
+                        <!-- begin drawer-->
+                        <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+                            <div class="c-drawer__dialog">
+                                <div class="c-drawer__head">
+                                    <div class="c-drawer__title">Menu</div>
+                                    <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
+                                        <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
+                                            <!-- ico name: close-->
+                                            <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <ul class="c-drawer__menu">
+                                    <li class="c-drawer__item"><a class="c-drawer__link" href="#">About</a>
+                                    </li>
+                                    <li class="c-drawer__item">
+                                        <button class="c-drawer__link js-toggle" type="button">Features</button>
+                                        <ul class="c-drawer__submenu">
+                                            <li class="c-drawer__item"><a class="c-drawer__link" href="#">Horoscope</a>
+                                            </li>
+                                            <li class="c-drawer__item"><a class="c-drawer__link" href="#">Compatibility Test</a>
+                                            </li>
+                                            <li class="c-drawer__item"><a class="c-drawer__link" href="#">Birth chart</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="c-drawer__item"><a class="c-drawer__link" href="#">FAQ</a>
+                                    </li>
+                                    <li class="c-drawer__item"><a class="c-drawer__link" href="#">Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="c-drawer__action">
+                                    <a class="c-drawer__link" href="#">
+                                        <svg class="c-ico c-ico--lg" viewBox="0 0 24 24">
+                                            <!-- ico name: account-circle-->
+                                            <path fill="currentColor" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path>
+                                        </svg>Sign In</a>
+                                    <!--button.c-drawer__link(type="button") Sign Out-->
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- end drawer-->
+                    </div>
+                </header>
+                <!-- end header-->
+                <div class="c-start-screen c-start-screen--sm">
+                    <div class="c-start-screen__content">
+                        <div class="w-centered w-centered--xl">
+                            <img class="c-image c-start-screen__logo" src="static/img/general/logo-icon-light.svg" alt="Astro" />
+                            <h1 class="c-start-screen__title">
+                Astro is a personal growth platform that helps people understand
+                 themselves and others better
+              </h1>
+                            <p class="c-start-screen__text">It’s like a daily guide that inspires reflection, balance, and deeper relationships.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-page__content">
+                <div class="c-common-box">
+                    <!-- begin section-->
+                    <section class="c-section c-section--md-narrow">
+                        <div class="w-centered w-centered--xl-slim">
+                            <!-- begin info-card-->
+                            <div class="c-info-card c-info-card--expanded">
+                                <div class="c-info-card__media">
+                                    <img class="c-image" src="static/img/general/bullseye-arrow.png" alt="Bullseye-arrow" />
+                                </div>
+                                <div class="c-info-card__content">
+                                    <div class="c-info-card__title">Our Mission</div>
+                                    <p class="c-info-card__text">Our mission is to create a space for emotional balance, helping people reconnect with their inner world.</p>
+                                    <p class="c-info-card__text">Through reflection and awareness, we aim to bring more clarity and harmony into everyday life.</p>
+                                </div>
+                            </div>
+                            <!-- end info-card-->
+                        </div>
+                    </section>
+                    <!-- end section-->
+                    <!-- begin section-->
+                    <section class="c-section c-section--md-narrow c-section--inner-gap">
+                        <div class="w-centered w-centered--md">
+                            <!-- begin info-card-->
+                            <div class="c-info-card">
+                                <div class="c-info-card__content">
+                                    <div class="c-info-card__title">Our journey</div>
+                                    <p class="c-info-card__text">Astro began in 2017 with a simple idea — that happiness, success, and harmony in relationships start with inner balance.</p>
+                                    <p class="c-info-card__text">We wanted to create something that would help people understand themselves better and reconnect with their inner world.</p>
+                                </div>
+                            </div>
+                            <!-- end info-card-->
+                        </div>
+                        <div class="w-centered w-centered--lg-slim">
+                            <!-- begin info-card-->
+                            <div class="c-info-card c-info-card--compressed">
+                                <div class="c-info-card__media">
+                                    <img class="c-image" src="static/img/general/inyan.png" alt="Inyan" />
+                                    <img class="c-image" src="static/img/general/hand.png" alt="Hand" />
+                                    <img class="c-image" src="static/img/general/sun-2.png" alt="Sun" />
+                                    <img class="c-image" src="static/img/general/book.png" alt="Book" />
+                                    <img class="c-image" src="static/img/general/creation-xs.png" alt="Creation" />
+                                    <img class="c-image" src="static/img/general/moon.png" alt="Moon" />
+                                    <img class="c-image" src="static/img/general/self-awareness-xs.png" alt="Self-awareness" />
+                                    <img class="c-image" src="static/img/general/constellations.png" alt="Constellations" />
+                                </div>
+                                <div class="c-info-card__content">
+                                    <p class="c-info-card__text">From the very beginning, Astro has combined elements of psychology and ancient self-reflection practices to make self-discovery more accessible.</p>
+                                    <p class="c-info-card__text">Astrology in Astro is used as a lens for self-discovery — a way to look within and understand your unique patterns.</p>
+                                </div>
+                            </div>
+                            <!-- end info-card-->
+                        </div>
+                        <div class="w-centered w-centered--md">
+                            <!-- begin info-card-->
+                            <div class="c-info-card">
+                                <div class="c-info-card__media">
+                                    <img class="c-image" src="static/img/general/party-popper.png" alt="Party-popper" />
+                                </div>
+                                <div class="c-info-card__content">
+                                    <p class="c-info-card__text">Our idea has resonated with many people around the world, and our team continues to grow with those who share the same mission — helping others live with more awareness, clarity, and balance every day.</p>
+                                </div>
+                            </div>
+                            <!-- end info-card-->
+                        </div>
+                        <div class="w-centered w-centered--md">
+                            <!-- begin info-card-->
+                            <div class="c-info-card c-info-card--slim">
+                                <div class="c-info-card__content">
+                                    <p class="c-info-card__text">Today, Astro is available on both the App Store and Google Play, as well as on this website.</p>
+                                    <p class="c-info-card__text">
+                                        <img class="c-image" src="/static/img/general/logo-icon-dark.svg" alt="Astro">Astro. Clarity begins within.</p>
+                                </div>
+                            </div>
+                            <!-- end info-card-->
+                        </div>
+                    </section>
+                    <!-- end section-->
+                    <!-- begin section-->
+                    <section class="c-section c-section--md-narrow">
+                        <div class="w-centered w-centered--xl-slim">
+                            <!-- begin big-download-->
+                            <div class="c-big-download">
+                                <img class="c-image c-big-download__logo" src="static/img/general/logo-box.png" alt="Astro" />
+                                <div class="c-big-download__content">
+                                    <h2 class="c-big-download__title">Start today</h2>
+                                    <p class="c-big-download__text">1M+ downloads on Google Play and a growing community on the App Store — Astro helps you reflect, grow, and find clarity.</p>
+                                    <!-- begin widget-->
+                                    <div class="c-widget">
+                                        <a class="c-widget__ios" href="#">
+                                            <img src="static/img/general/ios-widget.svg" alt="App Store" />
+                                        </a>
+                                        <a class="c-widget__android" href="#">
+                                            <img src="static/img/general/android-widget.png" alt="Google Play" />
+                                        </a>
+                                    </div>
+                                    <!-- end widget-->
+                                </div>
+                            </div>
+                            <!-- end big-download-->
+                        </div>
+                    </section>
+                    <!-- end section-->
+                </div>
+            </div>
+            <!-- ---------------  Bottom part page ----------------->
+            <!-- begin footer-->
+            <footer class="c-footer">
+                <div class="c-footer__section">
+                    <ul class="c-footer__list">
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Privacy policy</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Terms of use</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Payment terms</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Money Back Policy</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Pricing</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Consent settings</a>
+                        </li>
+                    </ul>
+                    <div class="c-footer__address">Talentin LTD, Sofia, 1463, Triaditsa district, 66 Vitosha Blvd., floor 4, Bulgaria</div>
+                    <div class="c-footer__text">All content is for entertainment and general informational purposes only. It does not constitute professional advice</div>
+                </div>
+                <div class="c-footer__section">
+                    <div class="c-footer__copyright">© appastro.co</div>
+                </div>
+            </footer>
+            <!-- end footer-->
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+    </body>
+
+</html>
