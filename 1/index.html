@@ -18,320 +18,665 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
-    <body class="light">
-        <!-- ------------------------------ TEMPLATE START SCREEN -------------------------------->
+    <body>
+        <!-- ------------------------------ CABINET DEFAULT -------------------------------->
         <div class="w-page">
-            <!-- ---------------  Content part page ----------------->
-            <div class="w-page__start-screen">
-                <!-- ---------------  Top part page ----------------->
-                <!-- begin header-->
-                <header class="c-header">
-                    <div class="c-header__inner">
-                        <!-- begin logo-->
-                        <a class="c-logo" href="#">
-                            <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
-                        </a>
-                        <!-- end logo-->
-                        <button class="c-icon-button js-drawer-toggler c-header__toggle-nav" type="button" aria-label="Open">
-                            <svg class="c-ico c-ico--2xl" viewBox="0 0 24 24">
-                                <!-- ico name: menu-->
-                                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
-                            </svg>
-                        </button>
-                        <!-- begin drawer-->
-                        <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
-                            <div class="c-drawer__dialog">
-                                <div class="c-drawer__head">
-                                    <div class="c-drawer__title">Menu</div>
-                                    <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
-                                        <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
-                                            <!-- ico name: close-->
-                                            <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <ul class="c-drawer__menu">
-                                    <li class="c-drawer__item"><a class="c-drawer__link" href="#">About</a>
-                                    </li>
-                                    <li class="c-drawer__item">
-                                        <button class="c-drawer__link js-toggle" type="button">Features</button>
-                                        <ul class="c-drawer__submenu">
-                                            <li class="c-drawer__item"><a class="c-drawer__link" href="#">Horoscope</a>
-                                            </li>
-                                            <li class="c-drawer__item"><a class="c-drawer__link" href="#">Compatibility Test</a>
-                                            </li>
-                                            <li class="c-drawer__item"><a class="c-drawer__link" href="#">Birth chart</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="c-drawer__item"><a class="c-drawer__link" href="#">FAQ</a>
-                                    </li>
-                                    <li class="c-drawer__item"><a class="c-drawer__link" href="#">Contact</a>
-                                    </li>
-                                </ul>
-                                <div class="c-drawer__action">
-                                    <a class="c-drawer__link" href="#">
-                                        <svg class="c-ico c-ico--lg" viewBox="0 0 24 24">
-                                            <!-- ico name: account-circle-->
-                                            <path fill="currentColor" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path>
-                                        </svg>Sign In</a>
-                                    <!--button.c-drawer__link(type="button") Sign Out-->
-                                </div>
-                            </div>
-                        </nav>
-                        <!-- end drawer-->
-                    </div>
-                </header>
-                <!-- end header-->
-                <div class="c-start-screen">
-                    <div class="c-start-screen__content">
-                        <div class="w-centered w-centered--xl">
-                            <img class="c-image c-start-screen__logo" src="static/img/general/logo-box.png" alt="Astro" />
-                            <h1 class="c-start-screen__title">Astro: Mind & Soul Insights</h1>
-                            <p class="c-start-screen__text">Astro is your daily guide to self-awareness and clarity. Discover insights about yourself, your emotions, and your relationships.</p>
-                            <div class="row row--justify-center w-gap-4xl">
-                                <button class="c-btn" type="button">Explore Your Relationship
-                                    <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
-                                        <!-- ico name: arrow-right-->
-                                        <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+            <!-- ---------------  Top part page ----------------->
+            <!-- begin header-->
+            <header class="c-header">
+                <div class="c-header__inner">
+                    <!-- begin logo-->
+                    <a class="c-logo" href="#">
+                        <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
+                    </a>
+                    <!-- end logo-->
+                    <button class="c-icon-button js-drawer-toggler c-header__toggle-nav" type="button" aria-label="Open">
+                        <svg class="c-ico c-ico--2xl" viewBox="0 0 24 24">
+                            <!-- ico name: menu-->
+                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                        </svg>
+                    </button>
+                    <!-- begin drawer-->
+                    <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+                        <div class="c-drawer__dialog">
+                            <div class="c-drawer__head">
+                                <div class="c-drawer__title">Menu</div>
+                                <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
+                                    <svg class="c-ico c-ico--3xl" viewBox="0 0 24 24">
+                                        <!-- ico name: close-->
+                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
                                     </svg>
                                 </button>
                             </div>
-                            <div class="c-start-screen__ico">
-                                <svg class="c-ico c-ico--2xl c-ico--light" viewBox="0 0 24 24">
-                                    <!-- ico name: chevron-down-->
-                                    <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-start-screen__bottom">
-                        <!-- begin banner-app--><a class="c-banner-app" href="#"><span class="c-banner-app__text">Enjoy Astro on the go with the mobile app available for all iOS and Android devices</span><span class="c-banner-app__icons"><img class="c-image" src="static/img/general/apple-icon.svg" alt="App Store" width="40" height="40"/><span>&</span><img class="c-image" src="static/img/general/android-icon.svg" alt="Google Play" width="40" height="40"/></span></a>
-                        <!-- end banner-app-->
-                        <div class="c-separator-line"></div>
-                        <!-- begin stats-->
-                        <div class="c-stats">
-                            <div class="c-stats__item">
-                                <img class="c-image c-stats__img" src="static/img/general/bullseye-arrow-xs.png" alt="" width="33" height="33" />
-                                <div class="c-stats__content">
-                                    <p class="c-stats__label">Rated by real users</p>
-                                    <p class="c-stats__value">93.4% Accuracy</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end stats-->
-                    </div>
-                </div>
-            </div>
-            <div class="w-page__content">
-                <div class="c-common-box">
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--lg">
-                            <!-- begin radial-section-->
-                            <div class="c-radial-section">
-                                <h2 class="c-radial-section__title">Your Goals, Our Expertise: The Simple Path to Soulmates and Fulfillment</h2>
-                                <div class="c-radial-section__content">
-                                    <img class="c-image" src="static/img/general/logo-box-shimmer.png" alt="Astro" />
-                                    <ul class="c-radial-section__list">
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-1.png" alt="" />
-                                            <p class="c-radial-section__item-text">Become happy</p>
+                            <ul class="c-drawer__menu">
+                                <li class="c-drawer__item"><a class="c-drawer__link" href="#">About</a>
+                                </li>
+                                <li class="c-drawer__item">
+                                    <button class="c-drawer__link js-drawer-element" type="button">Features</button>
+                                    <ul class="c-drawer__submenu">
+                                        <li class="c-drawer__item"><a class="c-drawer__link" href="#">Horoscope</a>
                                         </li>
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-2.png" alt="" />
-                                            <p class="c-radial-section__item-text">Find your soulmate</p>
+                                        <li class="c-drawer__item"><a class="c-drawer__link" href="#">Compatibility Test</a>
                                         </li>
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-3.png" alt="" />
-                                            <p class="c-radial-section__item-text">Return your ex</p>
-                                        </li>
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-4.png" alt="" />
-                                            <p class="c-radial-section__item-text">Recover relationships</p>
-                                        </li>
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-5.png" alt="" />
-                                            <p class="c-radial-section__item-text">Find yourself</p>
+                                        <li class="c-drawer__item"><a class="c-drawer__link" href="#">Birth chart</a>
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                            <!-- end radial-section-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--xl-slim">
-                            <!-- begin big-description-->
-                            <div class="c-big-description">
-                                <img class="c-image c-big-description__logo" src="static/img/general/creation.png" alt="Creation" />
-                                <h2 class="c-big-description__title">Your Path to Self-Discovery and Growth</h2>
-                                <p class="c-big-description__text">Understanding yourself is the key to living a more balanced, fulfilled life. Through self-awareness, you learn to recognize your emotions, patterns, and true motivations — helping you make better decisions and build stronger
-                                    connections. Personal growth isn’t about changing who you are, but about understanding yourself deeply and using that insight to live with more confidence, purpose, and harmony.</p>
-                            </div>
-                            <!-- end big-description-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--lg">
-                            <!-- begin row-list-->
-                            <div class="c-row-list">
-                                <h2 class="c-row-list__title">Key Features of Self-Understanding</h2>
-                                <ul class="c-row-list__list">
-                                    <li class="c-row-list__item">
-                                        <img class="c-image" src="static/img/general/hand-heart.png" alt="Hand-heart" />
-                                        <div class="c-row-list__item-description">
-                                            <h3 class="c-row-list__item-title">The Purpose of Self-Awareness</h3>
-                                            <p class="c-row-list__item-text">Understanding yourself is the fundamental key to achieving a balanced and fulfilled life. This process is about gaining self-awareness, which serves as the essential starting point for personal improvement and
-                                                better living.</p>
-                                        </div>
-                                    </li>
-                                    <li class="c-row-list__item">
-                                        <img class="c-image" src="static/img/general/account-moon.png" alt="Account-moon" />
-                                        <div class="c-row-list__item-description">
-                                            <h3 class="c-row-list__item-title">Better Decisions and Connections</h3>
-                                            <p class="c-row-list__item-text">The direct benefits of this self-insight are twofold: it helps you make better decisions and allows you to build stronger connections with others. Recognizing your motivations leads to choices aligned with your
-                                                true self, and understanding your emotional patterns enhances your relationships.</p>
-                                        </div>
-                                    </li>
-                                    <li class="c-row-list__item">
-                                        <img class="c-image" src="static/img/general/sun.png" alt="Sun" />
-                                        <div class="c-row-list__item-description">
-                                            <h3 class="c-row-list__item-title">Recognizing Inner Patterns</h3>
-                                            <p class="c-row-list__item-text">Self-awareness is achieved by learning to recognize your emotions, patterns, and true motivations. This deep, introspective analysis provides the clarity needed to understand why you think, feel, and act the
-                                                way you do.</p>
-                                        </div>
-                                    </li>
-                                    <li class="c-row-list__item">
-                                        <img class="c-image" src="static/img/general/self-awareness.png" alt="Self-awareness" />
-                                        <div class="c-row-list__item-description">
-                                            <h3 class="c-row-list__item-title">Insight and Purpose</h3>
-                                            <p class="c-row-list__item-text">Personal growth is not about changing who you are, but rather about deeply understanding yourself (insight). This understanding is then leveraged to enable you to live with greater confidence, purpose, and harmony—the
-                                                ultimate aims of self-awareness.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- end row-list-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <!-- begin media-promo-->
-                        <div class="c-media-promo">
-                            <div class="c-media-promo__inner">
-                                <h2 class="c-media-promo__title">How Astro Makes Your Life Better</h2>
-                                <p class="c-media-promo__subtitle">Understanding yourself is the foundation of meaningful growth. With this clarity, you’re able to make decisions with confidence, live with greater purpose, and create more harmony within yourself.</p>
-                                <div class="c-media-promo__videos">
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#play-video">
-                                        <img class="c-image" src="static/img/content/preview-1.png" alt="" width="280" height="157" />
-                                    </button>
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#play-video">
-                                        <img class="c-image" src="static/img/content/preview-2.png" alt="" width="280" height="157" />
-                                    </button>
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#play-video">
-                                        <img class="c-image" src="static/img/content/preview-3.png" alt="" width="280" height="157" />
-                                    </button>
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#play-video">
-                                        <img class="c-image" src="static/img/content/preview-4.png" alt="" width="280" height="157" />
-                                    </button>
-                                </div>
-                                <p class="c-media-promo__caption">The videos demonstrate illustrate how Astro helps you grow and gain clarity</p>
+                                </li>
+                                <li class="c-drawer__item"><a class="c-drawer__link" href="#">FAQ</a>
+                                </li>
+                                <li class="c-drawer__item"><a class="c-drawer__link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                            <div class="c-drawer__action">
+                                <a class="c-drawer__link" href="#">
+                                    <svg class="c-ico c-ico--lg" viewBox="0 0 24 24">
+                                        <!-- ico name: account-circle-->
+                                        <path fill="currentColor" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path>
+                                    </svg>Sign In / Your Account</a>
                             </div>
                         </div>
-                        <!-- end media-promo-->
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--xl-slim">
-                            <!-- begin reviews-->
-                            <div class="c-reviews w-gap-xl">
-                                <h2 class="c-reviews__title">Users love Us</h2>
-                                <p class="c-reviews__text">Become a member of Astro community</p>
-                                <div class="c-reviews__list">
-                                    <!-- begin review-item-->
-                                    <div class="c-review-item">
-                                        <p class="c-review-item__text">Astro helped me focus on self-growth. I started noticing patterns in my behavior and emotions, and it became easier to stay balanced and mindful. It’s like having a small daily reminder to stay true to myself.</p>
-                                        <div class="c-review-item__author">Emily R</div>
-                                        <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
-                                        <!-- end stars-->
-                                    </div>
-                                    <!-- end review-item-->
-                                    <!-- begin review-item-->
-                                    <div class="c-review-item">
-                                        <p class="c-review-item__text">The daily guidance gave me so much clarity during a stressful time. It felt like it truly understood what I was going through and helped me sort out my emotions and take calm, confident steps forward.</p>
-                                        <div class="c-review-item__author">Marcus L</div>
-                                        <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
-                                        <!-- end stars-->
-                                    </div>
-                                    <!-- end review-item-->
-                                    <!-- begin review-item-->
-                                    <div class="c-review-item">
-                                        <p class="c-review-item__text">I’ve never realized how much my focus and motivation shift throughout the week until I started using this app. Now I plan my tasks based on my energy patterns — it’s really improved my productivity!</p>
-                                        <div class="c-review-item__author">Hannah M</div>
-                                        <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
-                                        <!-- end stars-->
-                                    </div>
-                                    <!-- end review-item-->
-                                    <!-- begin review-item-->
-                                    <div class="c-review-item">
-                                        <p class="c-review-item__text">The Love compatibility section is amazing! It helped me understand my relationship better and gave me insight into how my partner and I complement each other. Super detailed and helpful.</p>
-                                        <div class="c-review-item__author">Jonathan T</div>
-                                        <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
-                                        <!-- end stars-->
-                                    </div>
-                                    <!-- end review-item-->
-                                    <!-- begin review-item-->
-                                    <div class="c-review-item">
-                                        <p class="c-review-item__text">I use the Energy of the Day feature every morning. It tracks my emotional, physical, and social energy levels, and I swear it helps me stay balanced. I’ve never seen anything like it!</p>
-                                        <div class="c-review-item__author">Sofia V</div>
-                                        <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
-                                        <!-- end stars-->
-                                    </div>
-                                    <!-- end review-item-->
-                                </div>
-                            </div>
-                            <!-- end reviews-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--xl-slim">
-                            <!-- begin big-download-->
-                            <div class="c-big-download">
-                                <img class="c-image c-big-download__logo" src="static/img/general/logo-box.png" alt="Astro" />
-                                <div class="c-big-download__content">
-                                    <h2 class="c-big-download__title">Start today</h2>
-                                    <p class="c-big-download__text">1M+ downloads on Google Play and a growing community on the App Store — Astro helps you reflect, grow, and find clarity.</p>
-                                    <!-- begin widget-->
-                                    <div class="c-widget">
-                                        <a class="c-widget__ios" href="#">
-                                            <img src="static/img/general/ios-widget.svg" alt="App Store" />
-                                        </a>
-                                        <a class="c-widget__android" href="#">
-                                            <img src="static/img/general/android-widget.png" alt="Google Play" />
-                                        </a>
-                                    </div>
-                                    <!-- end widget-->
-                                </div>
-                            </div>
-                            <!-- end big-download-->
-                        </div>
-                    </section>
-                    <!-- end section-->
+                    </nav>
+                    <!-- end drawer-->
                 </div>
+            </header>
+            <!-- end header-->
+            <!-- ---------------  Content part page ----------------->
+            <div class="w-page__content">
+                <main class="w-main">
+                    <div class="w-centered">
+                        <div class="w-gap-sm-md">
+                            <a class="c-icon-link u-ml-8-neg" href="#">
+                                <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
+                                    <!-- ico name: chevron-left-->
+                                    <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                                </svg>Your account
+                            </a>
+                        </div>
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg">
+                            <h2 class="c-h3">IMPORTANT INFORMATION</h2>
+                            <p>
+                                In order to use the Service, we may ask you to enter your gender, date of birth, place of birth, and time of birth. We also automatically collect language settings, IP address, time zone, type and model of a device, device settings, operating system,
+                                Internet Service provider, mobile carrier, hardware ID, Facebook ID, and other unique identifiers (such as IDFA and GAID) from your device. We need this data to provide the Service, analyze how our customers use the Service,
+                                and serve advertising.
+                            </p>
+                            <p>
+                                To improve the Service and serve advertising, we may share this data with third parties. Such parties include Meta, Google, Apple, Firebase. As a result of sharing this data with third parties we (1) analyze different interactions (e.g. how often users
+                                make subscriptions,); (2) serve advertising (and show them only to a particular group of users, for example, to subscribers).
+                            </p>
+                            <p>
+                                Please read our Privacy Policy below to know more about what we do with data
+                                <a href="#section3">(Section 3)</a>, what data privacy rights are available to you <a href="#section5">(Section 5)</a>
+                                and who will be the data controller <a href="#section1">(Section 1)</a>. If any questions remain unanswered, you can contact us via email <a href="#">support@appastro.co</a>
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin heading-->
+                        <div class="c-heading">
+                            <h1 class="c-h1">Privacy policy</h1>
+                        </div>
+                        <!-- end heading-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg">
+                            <p>
+                                This Privacy Policy explains what personal data is collected when you use our mobile applications, websites and services provided through them (together “App” or “the Service”) and how these personal data will be used and shared.
+                            </p>
+                            <p>
+                                BY USING THE SERVICE, YOU PROMISE US THAT (I) YOU HAVE READ, UNDERSTAND AND AGREE TO THIS PRIVACY POLICY, AND (II) YOU ARE OVER 16 YEARS OF AGE (OR HAVE HAD YOUR PARENT OR GUARDIAN READ AND AGREE TO THIS PRIVACY POLICY FOR YOU). If you do not agree, or
+                                are unable to make this promise, you must not use the Service. In such case, you must (a) delete your account using the functionality found in “Settings” in the App, or contact us and request deletion of your data; (b)
+                                cancel any subscriptions using the functionality provided by Apple (if you are using iOS) or Google (if you are using Android), any other app stores that may be available from time to time, or by us if you purchased it
+                                directly from our websites; and (c) delete the App from your devices.
+                            </p>
+                            <p>
+                                “GDPR” means the General Data Protection Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data.
+                            </p>
+                            <p>“EEA” includes all current member states of the European Union and the European Economic Area.</p>
+                            <p>“Process”, in respect of personal data, includes to collect, store, and disclose to others.</p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg">
+                            <h2 class="c-h3">TABLE OF CONTENTS</h2>
+                            <!-- begin list-->
+                            <ol class="c-list c-list--ordered">
+                                <li><a href="#section1">PERSONAL DATA CONTROLLER</a>
+                                </li>
+                                <li><a href="#section2">CATEGORIES OF PERSONAL DATA WE COLLECT</a>
+                                </li>
+                                <li><a href="#section3">PURPOSES AND LEGAL BASES FOR PROCESSING YOUR PERSONAL DATA</a>
+                                </li>
+                                <li><a href="#section4">WITH WHOM WE SHARE YOUR PERSONAL DATA</a>
+                                </li>
+                                <li><a href="#section5">HOW YOU CAN EXERCISE YOUR RIGHTS</a>
+                                </li>
+                                <li><a href="#section6">AGE LIMITATION</a>
+                                </li>
+                                <li><a href="#section7">INTERNATIONAL DATA TRANSFERS</a>
+                                </li>
+                                <li><a href="#section8">CHANGES TO THIS PRIVACY POLICY</a>
+                                </li>
+                                <li><a href="#section9">FOR CALIFORNIA RESIDENTS</a>
+                                </li>
+                                <li><a href="#section10">FOR VIRGINIA RESIDENTS</a>
+                                </li>
+                                <li><a href="#section11">DATA RETENTION</a>
+                                </li>
+                                <li><a href="#section12">HOW “DO NOT TRACK” REQUESTS ARE HANDLED</a>
+                                </li>
+                                <li><a href="#section13">CONTACT US</a>
+                                </li>
+                            </ol>
+                            <!-- end list-->
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section1">
+                            <h2 class="c-h3">1. PERSONAL DATA CONTROLLER</h2>
+                            <p>Talentin LTD (with registered office at 66 Vitosha Blvd., floor 4, Triaditsa district, Sofia, 1463, Bulgaria) will be the controller of your personal data.</p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section2">
+                            <h2 class="c-h3">2. CATEGORIES OF PERSONAL DATA WE COLLECT</h2>
+                            <p>We collect the following data about you;</p>
+                            <!-- begin list-->
+                            <ol class="c-list c-list--gap-lg c-list--ordered w-gap-md">
+                                <li>Data you directly provide to us (for example, date of birth).
+                                </li>
+                                <li>Data we receive about you from third parties (for example, when you sign in via Google).
+                                </li>
+                                <li>We also collect data automatically when you use the Service (for example, your IP address).
+                                </li>
+                            </ol>
+                            <!-- end list-->
+                            <!-- begin container-toggle-->
+                            <div class="c-container-toggle u-hidden w-gap-md" data-toggle-item="toggle-item-1">
+                                <p><b>2.1. Data you directly provide to us</b>
+                                </p>
+                                <p>
+                                    <b>Identifiers:</b> This may include your name, phone number, email address. You provide us with this information when you register for the Service, purchase the Service, subscribe to our newsletters, or contact us by
+                                    any other means.
+                                </p>
+                                <p>
+                                    <b>Onboarding and product data:</b> You provide us with onboarding information and quiz answers when you register for the Service and/or go through the onboarding process and/or use the Service. This may include gender,
+                                    date of birth, place of birth, time of birth, and answers to quiz questions.
+                                </p>
+                                <p>
+                                    <b>Communications data:</b> When you interact with our Support Team, we process the text and/or contents of your conversations. This data includes any information you may share during these conversations such as your
+                                    inquiries, feedback, questions, goals, photographs, or any other details you may discuss.
+                                </p>
+                                <p>
+                                    <b>Payment data:</b> When you make payments through the Service, you need to provide financial account data, such as your credit card number, to our third-party service providers that serve us as data and payments processors.
+                                    We do not collect or store, or have access to full credit card number data, though we may receive some limited information, including credit card-related data (including a secure token reflecting your payment method),
+                                    data about products or services purchased, date, time and amount of the purchase, the type of payment method used, limited digits of your card number.
+                                </p>
+                                <p><b>2.2 Data we receive from third parties</b>
+                                </p>
+                                <p>
+                                    <b>Third-party</b> account ID: When you create an account or login in the App using your third-party account (Google, Apple, Meta), we get personal data from that third party. This data may include your account ID, name,
+                                    profile picture, and verified email address.
+                                </p>
+                                <p>
+                                    <b>Apple Sign-in:</b> When you sign in with Apple to register an account in the App, we get personal data from your Apple ID account. This data may include, in particular, your name and verified email address. You may
+                                    choose to share your real email address or an anonymous one that uses the private email relay service. Apple will show you their detailed privacy information on the sign in with the Apple screen. Find more about sign-in
+                                    with Apple <a href="https://www.apple.com/legal/privacy/data/en/apple-id/">here</a>.
+                                </p>
+                                <p>
+                                    <b>Facebook Sign-In:</b> When you decide to log in using Facebook, we get personal data from your Facebook account. This includes your name and Facebook ID. Unless you opt out on the Facebook Login screen, we will also
+                                    collect your email address. For more information, please refer to the Facebook <a href="https://developers.facebook.com/docs/permissions">Permissions Reference</a> (describes the categories of information, which Facebook
+                                    may share with third parties and the set of requirements) and to the Facebook
+                                    <a href="https://www.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0">Data policy</a>. In addition, Facebook lets you control the choices you made when connecting your Facebook profile to the Website
+                                    on their <a href="https://www.facebook.com/settings?tab=applications">Apps and Websites page</a>.
+                                </p>
+                                <p>
+                                    <b>Google Sign-In:</b> When you decide to log in using Google, we receive personal data from your Google Account: name, email address, and profile picture associated with your Google Account. You can revoke access provided
+                                    to us on the <a href="https://myaccount.google.com/permissions">Apps Permissions page</a>. To know more about how Google processes your data, visit its <a href="https://policies.google.com/privacy">Privacy Policy</a>.
+                                </p>
+                                <p>
+                                    <b>Mobile application marketplace data:</b> When you download Astro’s mobile application from the marketplace, they automatically share with us data regarding your interaction with their platform and marketplace’s webpage
+                                    of our application. This data may include your click time, application’s download start and total time, search keyword ID, and type of your conversion and engagement with the marketplace.
+                                </p>
+                                <p>2.3 Data we collect automatically:</p>
+                                <p>
+                                    <b>Advertising performance data:</b> We collect data about your referring application or URL (the application or place on the Web you were on when you tapped on our advertising). This may include name and type of the
+                                    advertising campaign, name and ID number of the advertising, and advertising click time.
+                                </p>
+                                <p>
+                                    <b>Device and Location data:</b> We collect data from your mobile device. This may include language settings, IP address, time zone, type and model of a device, device settings, operating system, screen resolution, Internet
+                                    Service provider, mobile carrier, hardware ID, and Facebook ID. Also, if your device settings allow us to do so, we collect your location data (city, region, country, postal code, designated market area) when you visit
+                                    our websites or open our mobile application.
+                                </p>
+                                <p>
+                                    <b>Online activity data and Consumption information:</b> We record how you interact with our Service. For example, we log what features and content you interact with, how often you use the Service or the App, how long
+                                    you stay in the Service or the App, what sections you use, and your subscription orders, to what extent you consume in-app purchases, and other. This category of personal data includes <a href="https://developer.apple.com/documentation/appstoreserverapi/consumptionrequest">Consumption Information</a>,
+                                    which may be shared with Apple’s App Store.
+                                </p>
+                                <p>
+                                    <b>Advertising IDs:</b> Depending on the operating system of your device, we collect your Apple Identifier for Advertising (“IDFA”) or Google Advertising ID (“GAID”). You can typically reset these numbers through the
+                                    settings of your device’s operating system; we do not control these settings or the reset process.
+                                </p>
+                                <p>
+                                    <b>Cookies and similar tracking technologies:</b> We employ technologies (cookies, SDKs, etc.) to process your data to enhance your user experience, optimize ads, and analyze traffic. For example, we use Meta Pixel and
+                                    Google tracking cookies to collect data about your actions while using the Service, including which pages you visit, the time you spend on each page, and the actions you take. This data is used to measure the effectiveness
+                                    of our advertising campaigns and to personalize the content and advertising we show to customers. Unless the applicable laws permit otherwise, we activate these technologies upon your consent when you interact with
+                                    the Service, visit our websites, use our apps, or enable certain features of the Service. Disabling these technologies may affect the functionality of certain features, although the Service will remain usable. Furthermore,
+                                    we and our partners utilize targeting technologies to tailor advertising, potentially displaying them to you at relevant moments. When enabled, your interactions with the Service or the App could result in seeing our
+                                    advertising on social media platforms, assisting us in measuring advertising campaign effectiveness. Check our <a href="#">Cookie Policy</a> for more information.
+                                </p>
+                            </div>
+                            <!-- end container-toggle-->
+                            <!-- begin btn-toggler-->
+                            <button class="c-btn-toggler is-hidden" data-text="See more" data-active-text="See less" data-toggle="item" data-target="toggle-item-1"></button>
+                            <!-- end btn-toggler-->
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section3">
+                            <h2 class="c-h3">3. PURPOSES AND LEGAL BASES FOR PROCESSING YOUR PERSONAL DATA</h2>
+                            <p>
+                                We collect and use your data primarily to provide and improve our services, as well as to enhance their overall quality. Furthermore, we aim to attract new customers to our Service. Below is a detailed explanation of the legal bases for and purposes of
+                                processing your personal data.
+                            </p>
+                            <!-- begin table-->
+                            <table class="c-table">
+                                <thead>
+                                    <tr>
+                                        <th>Purpose of processing</th>
+                                        <th>Category of personal data</th>
+                                        <th>Lawful basis</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><b>To provide Service (e.g., provide content for you) and administer your account</b>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>All categories (including the Onboarding and product data, e.g., quiz answers)</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Performance of a contract with you</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To research, analyze, and enhance performance of the Service</b>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>All categories</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>
+                                                Legitimate interest (to improve the Service so that we understand users’ preferences and are able to provide a better user experience, make the use of the Service easier and more enjoyable, or introduce new features and offers)
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To ensure quality control and safety of the Service</b>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Identifiers</li>
+                                                <li>Onboarding and product data</li>
+                                                <li>Communications data</li>
+                                                <li>Device data</li>
+                                                <li>Online activity data</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Performance of contract</p>
+                                            <p>
+                                                Legitimate interest (to resolve issues and disputes with customers; to respond to crash error system reports; to ensure that individuals responsible for providing the Service deliver the necessary quality of work)
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To provide customer support</b>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>All categories</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Performance of a contract with you</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To process payments, refunds, and chargebacks</b>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Identifiers</li>
+                                                <li>Payments data</li>
+                                                <li>Online activity data and Consumption information</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Performance of a contract with you (if we fulfil contractual terms)</p>
+                                            <p>Legal obligation (if we take action as required by the law)</p>
+                                            <p>Your consent</p>
+                                            <p>
+                                                Legitimate interest (protecting our business from fraudulent claims, making informed and efficient decisions regarding refund requests)
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To enforce Terms and Conditions of Use, prevent and combat fraud, violations of law and misbehavior, and ensure informational security of the Service</b>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>All categories</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Legal obligation (if we take action as required by the law)</p>
+                                            <p>
+                                                Legitimate interest (to enforce our legal rights, policies, rules, prevent and address fraud, violations of law, misbehaviour or unauthorized use of the Service, and ensure compliance with our Terms and Conditions of Use. This helps provide a secure and
+                                                reliable Service for all users)
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To send communications about the Service (by emails, SMS, push)</b>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>All categories</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Performance of a contract with you</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To send marketing communications</b>
+                                            <br>
+                                            <br>(As a result, you will receive information about our products, such as, for example, special offers or new features, products available on the Service, and reminders to make purchases not completed before. We
+                                            may show you advertisements on our Service, and send you emails, push notifications, and SMS for marketing purposes Note: Each marketing email or SMS includes an unsubscribe option)
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Identifiers</li>
+                                                <li>Onboarding and product data (including quiz answers)</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Your consent</p>
+                                            <p>
+                                                Legitimate interest (in jurisdictions where consent is not required: to encourage you to use Service, for example, to notify you; to promote the Service, for example, if you didn’t complete the purchase before, we keep your data for a limited period of
+                                                3 months to send reminder emails inviting you to purchase).
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To serve personalized advertising</b>
+                                            <br>
+                                            <br>(for example, if you have installed our Service, you might see ads of our production your Facebook feed)</td>
+                                        <td>
+                                            <ul>
+                                                <li>Identifiers</li>
+                                                <li>Onboarding and product data</li>
+                                                <li>Payment data</li>
+                                                <li>Mobile application marketplace data</li>
+                                                <li>Device and Location data</li>
+                                                <li>Advertising IDs</li>
+                                                <li>Cookies and tracking technologies</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Your consent</p>
+                                            <p>
+                                                Legitimate interest (in jurisdictions where consent is not required, to promote the Service in a measured and reasonably targeted way, showing you content that's more likely to be relevant to your interests rather than generic advertising)
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To analyze performance of advertising (measuring impression accuracy, ensuring proper ad placement and quality, confirming compliance with industry standards)</b>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Onboarding and product data</li>
+                                                <li>Payment data</li>
+                                                <li>Advertising performance data</li>
+                                                <li>Device and Location data</li>
+                                                <li>Online activity data and Consumption information</li>
+                                                <li>Advertising IDs</li>
+                                                <li>Cookies and tracking technologies</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Your consent</p>
+                                            <p>
+                                                Legitimate interest (in jurisdictions where consent is not required, to promote the Service in a measured and appropriate way and to ensure the accuracy and quality of our advertising campaigns and complying with industry standards. This helps us measure
+                                                effectiveness and maintain transparent business practices)
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>To comply with legal obligations</b>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>All categories</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <p>Legal obligation</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- end table-->
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section4">
+                            <h2 class="c-h3">4. WITH WHOM WE SHARE YOUR PERSONAL DATA</h2>
+                            <p>
+                                We share information with third parties that help us operate, provide, improve, integrate, customize, support, and market our Service. We may share some sets of personal data, in particular, for purposes and with parties indicated in
+                                <a
+                                href="#section3">Section 3</a>of this Policy. We strive to conclude specific data processing agreements with all such parties to establish the rules for processing of your data specifically on our behalf and limited to it.
+                            </p>
+                            <p>The types of third parties we share information with include the following:</p>
+                            <p>
+                                <b><u>Third-party providers.</u></b> We share personal data with third parties that we hire to provide services or perform business functions on our behalf, based on our instructions. We process your personal information
+                                using the following types of service providers (and in certain cases, their subprocessors):
+                            </p>
+                            <!-- begin list-->
+                            <ol class="c-list" type="a">
+                                <li>Cloud storage: we use Amazon Web Service to host personal data and enable our Service to operate.</li>
+                                <li>Monitoring of the Service: we use Firebase Performance Monitoring and Firebase Crash Reporting to monitor infrastructure and performance of the Service, identify and resolve errors and crashes in our Service across different
+                                    platforms.</li>
+                                <li>Data analytics:
+                                    <p>
+                                        - We use Meta Pixel, TikTok Pixel, and Google Analytics to analyze how you use the Service and measure the effectiveness of some advertising.
+                                    </p>
+                                </li>
+                                <li>Gateway service and payment processing: we use various payment processing and payment gateway providers that help us connect with different banks and payment systems around the world. Due to the large number of payment
+                                    processing providers we work with, we cannot list them all here.</li>
+                                <li>Email verification and login: we use Debounce.io to validate, check and verify email addresses of users. We also use Google, Meta, and Apple APIs to enable social sign-in features.</li>
+                                <li>Functionality of the Service: we use OpenAI solutions to generate readings and reports for you. Please note that we send only de-identified data to OpenAI.</li>
+                                <li>Communications:
+                                    <p>- We use Firebase and Apple Push Notification to send Service messages and notifications to you.
+                                        <br>- We use OpenAI to customize push notifications based on the analysis of de-identified content of limited recent interactions with customers.</p>
+                                </li>
+                                <li>Security: We use Cloudflare as a content delivery network provider to improve the security and performance of our websites and protect them from malicious attacks.</li>
+                                <li>Marketing and advertising:
+                                    <p>- We use Meta Ads Manager and MetaMeta Custom Audience, TikTok Ads Manager and Pinterest Ads Manager to choose audiences that will see our advertising and deliver advertising Meta’s, TikTok’s, and Pinterest’s platforms.
+                                        <br>- We use Google Ads and Bing Ads to deliver advertising to users in Google and Bing browsers.
+                                        <br>- From time to time, we may use third-party ad networks, ad agencies, and direct publishers that provide us with advertising solutions for displaying our advertising on various websites and apps.</p>
+                                </li>
+                            </ol>
+                            <!-- end list-->
+                            <p>
+                                <b>Law enforcement agencies and other public authorities.</b> We may use and disclose personal data to enforce our Terms and Conditions of Use, to protect our rights, privacy, safety, or property, and/or that of our affiliates,
+                                you or others, and to respond to requests from courts, law enforcement agencies, regulatory agencies, and other public and government authorities, or in other cases provided for by law.
+                            </p>
+                            <p>
+                                <b>Third parties as part of a merger or acquisition.</b> As we develop our business, we may buy or sell assets or business offerings. Customers’ information is generally one of the transferred business assets in these types
+                                of transactions. We may also share such information with any affiliated entity (e.g. parent company or subsidiary) and may transfer such information in the course of a corporate transaction, such as the sale of our business,
+                                a divestiture, merger, consolidation, or asset sale, or in the unlikely event of bankruptcy.
+                            </p>
+                            <p>
+                                <b>Affiliates.</b> We may share your personal information with our partner organizations that are part of our corporate group - these are companies that are owned by, own, or are jointly-owned with us. These partner organizations
+                                will use the information in ways that align with this Policy, ensuring that your privacy is respected and protected across all our affiliated services.
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section5">
+                            <h2 class="c-h3">5. HOW YOU CAN EXERCISE YOUR RIGHTS</h2>
+                            <p>To be in control of your personal data, you have the following rights:</p>
+                            <p>
+                                <b>Accessing / reviewing / updating / correcting</b> your personal data.You may review, edit, or change the personal data that you had previously provided in the App in the settings section of the App.
+                            </p>
+                            <p>You may also request a copy of your personal data collected during your use of the App via <a href="#">support@appastro.co</a>.</p>
+                            <p><b>Deleting your personal data.</b> You can request erasure of your personal data by sending us a request via support@appastro.co.</p>
+                            <p>
+                                When you request deletion of your personal data, we will use reasonable efforts to honor your request. In some cases we may be legally required to keep some of the data for a certain time as necessary to comply with our legal obligations, resolve disputes,
+                                and enforce our agreements; in such event, we will fulfill your request after we have complied with our obligations.
+                            </p>
+                            <p>
+                                <b>Objecting to or restricting the use of your personal data.</b> You can ask us to stop using all or some of your personal data or limit our use thereof by sending a request via <a href="#">support@appastro.co</a>.
+                            </p>
+                            <p><b><u>Additional information for EEA-based users</u></b>
+                            </p>
+                            <p>If you are based in the EEA, you have the following rights in addition to the above:</p>
+                            <p>
+                                <b>The right to lodge a complaint with supervisory authority.</b> We would love you to contact us directly, so we could address your concerns. Nevertheless, you have the right to lodge a complaint with a competent data protection
+                                supervisory authority, in particular in the EU Member State where you reside, work or where the alleged infringement has taken place. You can find a list of the EU national data protection authorities at: <a href="https://www.edpb.europa.eu/about-edpb/about-edpb/members_en">https://www.edpb.europa.eu/about-edpb/about-edpb/members_en</a>.
+                            </p>
+                            <p>
+                                <b>The right to data portability.</b> If you wish to receive your personal data in a machine-readable format, you can send a respective request via <a href="#">support@appastro.co</a>.
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section6">
+                            <h2 class="c-h3">6. AGE LIMITATION</h2>
+                            <p>
+                                We do not knowingly process personal data from persons under 16 years of age. If you learn that anyone younger than 16 has provided us with personal data, please contact us via <a href="#">support@appastro.co</a>.
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section7">
+                            <h2 class="c-h3">7. INTERNATIONAL DATA TRANSFERS</h2>
+                            <p>
+                                We may transfer personal data to countries other than the country in which the data was originally collected in order to provide the Service set forth in the <a href="#">Terms and Conditions of Use</a> and for purposes indicated
+                                in this Privacy Policy. If these countries do not have the same data protection laws as the country in which you initially provided the information, we deploy special safeguards.
+                            </p>
+                            <p>
+                                In particular, if we transfer personal data originating from the EEA to countries with adequate level of data protection, we rely on the adequacy decision of the European Commission for this country (details available
+                                <a
+                                href="https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/model-contracts-transfer-personal-data-third-countries_en">here</a>); for example, we transfer personal data to the USA based on the EU-U.S Data Privacy Framework program. If we transfer personal data originating from the EEA to countries without adequate level of data protection,
+                                    we rely on the Standard Contractual Clauses approved by the European Commission (details available <a href="https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/adequacy-protection-personal-data-non-eu-countries_en">here</a>).
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section8">
+                            <h2 class="c-h3">8. CHANGES TO THIS PRIVACY POLICY</h2>
+                            <p>
+                                We may modify this Privacy Policy from time to time. If we decide to make material changes to this Privacy Policy, you will be notified through our Service or by other available means and will have an opportunity to review the revised Privacy Policy.
+                                By continuing to access or use the Service after those changes become effective, you agree to be bound by the revised Privacy Policy.
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section9">
+                            <h2 class="c-h3">9. FOR CALIFORNIA RESIDENTS</h2>
+                            <p>
+                                California’s Shine the Light law gives California residents the right to ask companies once a year what personal information they share with third parties for those third parties' direct marketing purposes. Learn more about what is considered to be
+                                <a
+                                href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.81.5">personal information under the statute</a>.
+                            </p>
+                            <p>
+                                To obtain this information from us, please contact us via <a href="#">support@appastro.co</a>
+                                and indicate that this is a “Request for California Privacy Information”. If you are a California resident, we will provide the requested information to you at your email address in response.
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section10">
+                            <h2 class="c-h3">10. FOR VIRGINIA RESIDENTS</h2>
+                            <p>
+                                This section supplements our Privacy Policy and only applies if you reside in the Commonwealth of Virginia. Where applicable, it describes how we use and process your personal data and explains your particular rights under Virginia Consumer Data Privacy
+                                Act (VCDPA).
+                            </p>
+                            <p class="u-ml-24"><b>A. Disclosures about the use of your personal data</b>
+                            </p>
+                            <p>
+                                We may collect and use certain information about you, some of which may be personal data (such as your email address, date of birth, name, height, weight, or other information which may be reasonably linked to you), in order to operate the Service and
+                                to maximize your experience.
+                            </p>
+                            <p>
+                                If you would like more information about the categories of your personal data we collect or the purposes for which we collect them, please read <a href="#section2">Section 2</a> and <a href="#section3">Section 3</a>. To learn
+                                more about sharing your personal data with our business partners and other third parties, please read <a href="#section4">Section 4</a>.
+                            </p>
+                            <p class="u-ml-24"><b>B. Data Rights</b>
+                            </p>
+                            <p>
+                                <a href="#section52">Section 5</a> of our Privacy Policy describes the data rights we offer to all users and how to execute these rights. This includes the right to access, review, correct, update your data, obtain a portable
+                                copy of your data, or delete data related to your stored preferences and your use of the Service. Before completing your request, we may require some information sufficient to authenticate your identity.
+                            </p>
+                            <p>Additionally, VCDPA provides Virginia residents with these data rights:</p>
+                            <ul>
+                                <li>
+                                    <b><u>Opt out of the Processing of your Personal Data for Targeted Advertising</u></b>. In order to exercise your choice as a Virginia resident, please contact us via <a href="#">support@appastro.co</a>. Please note
+                                    that we do not process personal data for purposes of profiling in furtherance of decisions that produce legal or similarly significant effects concerning the consumer.
+                                </li>
+                                <li>
+                                    <b><u>Confirm whether your Personal Data is being Processed</u></b>. You may confirm whether your personal data is being processed by contacting us via <a href="#">support@appastro.co</a>.
+                                </li>
+                                <li>
+                                    <b><u>Appeal a Case with regard to your request</u></b>. In the case where we declined to take action on your data rights request or have rejected your request, you may contact us via <a href="#">support@appastro.co</a> to
+                                    initiate an appeal of this decision. Please use the subject line “Appeal of Refusal to Take Action on Privacy Request” and provide the relevant information in the email. Once we receive your appeal, we will notify you
+                                    in writing within 60 days of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions.
+                                </li>
+                            </ul>
+                            <p>
+                                If your appeal is denied, you may contact the Office of the Virginia Attorney General via the contact details available at <a href="http://www.virginia.gov/agencies/office-of-the-attorney-general/#vagov">www.virginia.gov/agencies/office-of-the-attorney-general/#vagov</a>.
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section11">
+                            <h2 class="c-h3">11. DATA RETENTION</h2>
+                            <p>
+                                We will store your personal data for as long as it is reasonably necessary for achieving the purposes set forth in this Privacy Policy and Terms and Conditions of Use (including providing the Service to you), which includes (but is not limited to) the
+                                period during which you have an account with the App. We will also retain and use your personal data as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements. For example, under certain
+                                accounting and tax laws we are required to store Payment Data for long periods of time to comply with laws we are subject to. Therefore, even if you submit a data deletion request, a small portion of the data that relates
+                                to our compliance obligations will be stored even after the request is satisfied.
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section12">
+                            <h2 class="c-h3">12. HOW “DO NOT TRACK” REQUESTS ARE HANDLED</h2>
+                            <p>
+                                Except as otherwise stipulated in this Privacy Policy, this App does not support “Do Not Track” requests. To determine whether any of the third-party Service it uses honor the “Do Not Track” requests, please read their privacy policies.
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg" id="section13">
+                            <h2 class="c-h3">13. CONTACT US</h2>
+                            <p>
+                                You may contact us at any time for details regarding this Privacy Policy and its previous versions. For any questions concerning your account or your personal data please contact us via <a href="#">support@appastro.co</a>.
+                            </p>
+                        </div>
+                        <!-- end content-box-->
+                        <!-- begin content-box-->
+                        <div class="c-content-box w-gap-lg">
+                            <p>Effective as of: December 1, 2025</p>
+                        </div>
+                        <!-- end content-box-->
+                    </div>
+                </main>
             </div>
             <!-- ---------------  Bottom part page ----------------->
             <!-- begin footer-->
@@ -361,31 +706,17 @@
             <!-- end footer-->
         </div>
         <!-- --------------- Outside part page ----------------->
-        <!-- begin modal-common-->
-        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash" id="play-video">
-            <div class="c-modal-common__dialog modal-dialog">
-                <button class="c-icon-button c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
-                    <svg class="c-ico c-ico--xl c-ico--light" viewBox="0 0 24 24">
-                        <!-- ico name: close-->
-                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                    </svg>
-                </button>
-                <div class="c-modal-common__content">
-                    <!-- begin video-->
-                    <div class="c-video js-media-element">
-                        <iframe src="https://www.youtube.com/embed/pWGndUXbyrU" allowfullscreen="allowfullscreen"></iframe>
-                    </div>
-                    <!-- end video-->
-                </div>
-            </div>
-        </div>
-        <!-- end modal-common-->
         <!-- Including js files-->
 
 
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                  toggle.initialize();
+              });
+        </script>
     </body>
 
 </html>

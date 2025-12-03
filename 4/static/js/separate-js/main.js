@@ -5,14 +5,13 @@ $(document).ready(function () {
 
     $(document).on('hidden.bs.modal', '.js-modal-locker', function () {
         locker.unlock()
-        mediaController.initialize($(this));
+
+        if (mediaController.initialized) {
+            mediaController.initialize($(this));
+        }
     });
 
     drawer.initialize();
-
-    $('.js-toggle').on('click', function () {
-        $(this).parent().toggleClass('is-show');
-    });
 });
 
 var locker = (function ($) {
@@ -46,23 +45,33 @@ var drawer = (function ($) {
         drawer: '.js-drawer',
         toggler: '.js-drawer-toggler',
         stateClass: 'is-open',
+        element: '.js-drawer-element',
+        elementShowClass: 'is-show'
     };
 
     var initialize = function () {
         var toggler = $(settings.toggler),
             drawer = $(settings.drawer),
-            stateClass = settings.stateClass;
+            element = $(settings.element),
+            stateClass = settings.stateClass,
+            elementShowClass = settings.elementShowClass;
 
         toggler.on('click', function () {
+
             if (drawer.hasClass(stateClass)) {
                 drawer.removeClass(stateClass);
+
+                element.parent().removeClass(elementShowClass);
 
                 locker.unlock();
             } else {
                 drawer.addClass(stateClass);
-
                 locker.lock();
             }
+        });
+
+        element.on('click', function () {
+            $(this).parent().toggleClass(elementShowClass);
         });
     };
 
@@ -73,10 +82,15 @@ var drawer = (function ($) {
 
 var mediaController = (function ($) {
     var settings = {
-        selector: '.js-media-element'
+        selector: '.js-media-controller'
     };
 
+    var initialized = false;
+
     var initialize = function ($container) {
+
+        initialized = true;
+
         var $parent = $container.find(settings.selector);
 
         $parent.each(function () {
@@ -94,7 +108,38 @@ var mediaController = (function ($) {
     };
 
     return {
-        initialize: initialize
+        initialize: initialize,
+        initialized: function () { return initialized; }
+    };
+})(jQuery);
+
+var toggle = (function ($) {
+    var defaults = {
+        itemSelector: '[data-toggle-item]',
+        handlerSelector: '[data-toggle="item"]',
+        hiddenClass: 'u-hidden',
+        stateHandler: 'is-hidden'
     };
 
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {});
+
+        $(document).on('click', settings.handlerSelector, function () {
+            var dataTarget = $(this).data('target'),
+                handler = $(settings.handlerSelector + '[data-target="' + dataTarget + '"]'),
+                toggleItem = $('[data-toggle-item="' + dataTarget + '"]');
+
+            // Item is toggled
+            toggleItem.toggleClass(settings.hiddenClass);
+
+            // Handler is toggled
+            handler.toggleClass(settings.stateHandler);
+
+            return false;
+        });
+    };
+
+    return {
+        initialize: initialize
+    };
 })(jQuery);
