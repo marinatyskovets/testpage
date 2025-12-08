@@ -112,8 +112,6 @@ var youtubePlayer = (function ($) {
         node: 'span',
         playerSelector: '.js-player',
         modalSelector: '.js-player-container',
-        initPlayers: false,
-        initPlayersModal: false,
         width: null,
         height: null
     };
@@ -121,35 +119,44 @@ var youtubePlayer = (function ($) {
     function initialize(params) {
         var settings = $.extend({}, defaults, params || {});
 
-        function initPlayers(root) {
-            var scope = root || document;
+        function initPlayer(wrap, isModal) {
+            if (wrap.player) return;
 
-            scope.querySelectorAll(settings.playerSelector).forEach(function (wrap) {
-                if (wrap.player) return;
-
-                wrap.player = new YT.Player(wrap.querySelector(settings.node), {
-                    videoId: wrap.dataset.video,
-                    width: settings.width,
-                    height: settings.height
-                });
+            wrap.player = new YT.Player(wrap.querySelector(settings.node), {
+                videoId: wrap.dataset.video,
+                width: settings.width,
+                height: settings.height,
+                playerVars: {
+                    playsinline: 1,
+                    autoplay: isModal ? 1 : 0,
+                    mute: 1
+                },
+                events: {
+                    onReady: function(e) {
+                        e.target.unMute();
+                    }
+                }
             });
         }
 
-        function initPlayersModal() {
-            $(document).on('shown.bs.modal', settings.modalSelector, function () {
-                initPlayers(this);
-            });
+        document.querySelectorAll(settings.playerSelector + ':not(' + settings.modalSelector + ' ' + settings.playerSelector + ')')
+            .forEach(wrap => initPlayer(wrap, false));
 
-            $(document).on('hidden.bs.modal', settings.modalSelector, function () {
-                $(this).find(settings.playerSelector).each(function () {
-                    this.player?.stopVideo();
-                });
-            });
-        }
-
-        if (settings.initPlayers) initPlayers();
-        if (settings.initPlayersModal) initPlayersModal();
+        $(document).on('shown.bs.modal', settings.modalSelector, function () {
+            this.querySelectorAll(settings.playerSelector).forEach(wrap =>
+                initPlayer(wrap, true)
+            );
+        }).on('hidden.bs.modal', settings.modalSelector, function () {
+            this.querySelectorAll(settings.playerSelector).forEach(wrap =>
+                wrap.player?.stopVideo()
+            );
+        });
     }
 
-    return { initialize };
+    return {
+        initialize: initialize
+    };
 })(jQuery);
+
+
+
