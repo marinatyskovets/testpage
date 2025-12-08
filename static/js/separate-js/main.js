@@ -5,10 +5,6 @@ $(document).ready(function () {
 
     $(document).on('hidden.bs.modal', '.js-modal-locker', function () {
         locker.unlock()
-
-        if (mediaController.initialized) {
-            mediaController.initialize($(this));
-        }
     });
 
     drawer.initialize();
@@ -80,39 +76,6 @@ var drawer = (function ($) {
     };
 })(jQuery);
 
-var mediaController = (function ($) {
-    var settings = {
-        selector: '.js-media-controller'
-    };
-
-    var initialized = false;
-
-    var initialize = function ($container) {
-
-        initialized = true;
-
-        var $parent = $container.find(settings.selector);
-
-        $parent.each(function () {
-            var $iframe = $(this).find('iframe');
-
-            if (!$iframe.length) return;
-
-            var src = $iframe.attr('src');
-
-            if (!src) return;
-
-            $iframe.attr('src', '');
-            $iframe.attr('src', src);
-        });
-    };
-
-    return {
-        initialize: initialize,
-        initialized: function () { return initialized; }
-    };
-})(jQuery);
-
 var toggle = (function ($) {
     var defaults = {
         itemSelector: '[data-toggle-item]',
@@ -142,4 +105,51 @@ var toggle = (function ($) {
     return {
         initialize: initialize
     };
+})(jQuery);
+
+var youtubePlayer = (function ($) {
+    var defaults = {
+        node: 'span',
+        playerSelector: '.js-player',
+        modalSelector: '.js-player-container',
+        initPlayers: false,
+        initPlayersModal: false,
+        width: null,
+        height: null
+    };
+
+    function initialize(params) {
+        var settings = $.extend({}, defaults, params || {});
+
+        function initPlayers(root) {
+            var scope = root || document;
+
+            scope.querySelectorAll(settings.playerSelector).forEach(function (wrap) {
+                if (wrap.player) return;
+
+                wrap.player = new YT.Player(wrap.querySelector(settings.node), {
+                    videoId: wrap.dataset.video,
+                    width: settings.width,
+                    height: settings.height
+                });
+            });
+        }
+
+        function initPlayersModal() {
+            $(document).on('shown.bs.modal', settings.modalSelector, function () {
+                initPlayers(this);
+            });
+
+            $(document).on('hidden.bs.modal', settings.modalSelector, function () {
+                $(this).find(settings.playerSelector).each(function () {
+                    this.player?.stopVideo();
+                });
+            });
+        }
+
+        if (settings.initPlayers) initPlayers();
+        if (settings.initPlayersModal) initPlayersModal();
+    }
+
+    return { initialize };
 })(jQuery);

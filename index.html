@@ -239,16 +239,16 @@
                                 <h2 class="c-media-promo__title">How Astro Makes Your Life Better</h2>
                                 <p class="c-media-promo__text">Understanding yourself is the foundation of meaningful growth. With this clarity, you’re able to make decisions with confidence, live with greater purpose, and create more harmony within yourself.</p>
                                 <div class="c-media-promo__videos">
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#play-video">
+                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#video-1">
                                         <img class="c-image" src="static/img/content/preview-1.png" alt="" width="280" height="157" />
                                     </button>
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#play-video">
+                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#video-2">
                                         <img class="c-image" src="static/img/content/preview-2.png" alt="" width="280" height="157" />
                                     </button>
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#play-video">
+                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#video-3">
                                         <img class="c-image" src="static/img/content/preview-3.png" alt="" width="280" height="157" />
                                     </button>
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#play-video">
+                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#video-4">
                                         <img class="c-image" src="static/img/content/preview-4.png" alt="" width="280" height="157" />
                                     </button>
                                 </div>
@@ -271,7 +271,7 @@
                                         <p class="c-review-item__text">Astro helped me focus on self-growth. I started noticing patterns in my behavior and emotions, and it became easier to stay balanced and mindful. It’s like having a small daily reminder to stay true to myself.</p>
                                         <div class="c-review-item__author">Emily R</div>
                                         <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
+                                        <div class="c-stars" data-rating="5"></div>
                                         <!-- end stars-->
                                     </div>
                                     <!-- end review-item-->
@@ -280,7 +280,7 @@
                                         <p class="c-review-item__text">The daily guidance gave me so much clarity during a stressful time. It felt like it truly understood what I was going through and helped me sort out my emotions and take calm, confident steps forward.</p>
                                         <div class="c-review-item__author">Marcus L</div>
                                         <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
+                                        <div class="c-stars" data-rating="5"></div>
                                         <!-- end stars-->
                                     </div>
                                     <!-- end review-item-->
@@ -289,7 +289,7 @@
                                         <p class="c-review-item__text">I’ve never realized how much my focus and motivation shift throughout the week until I started using this app. Now I plan my tasks based on my energy patterns — it’s really improved my productivity!</p>
                                         <div class="c-review-item__author">Hannah M</div>
                                         <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
+                                        <div class="c-stars" data-rating="5"></div>
                                         <!-- end stars-->
                                     </div>
                                     <!-- end review-item-->
@@ -298,7 +298,7 @@
                                         <p class="c-review-item__text">The Love compatibility section is amazing! It helped me understand my relationship better and gave me insight into how my partner and I complement each other. Super detailed and helpful.</p>
                                         <div class="c-review-item__author">Jonathan T</div>
                                         <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
+                                        <div class="c-stars" data-rating="5"></div>
                                         <!-- end stars-->
                                     </div>
                                     <!-- end review-item-->
@@ -307,7 +307,7 @@
                                         <p class="c-review-item__text">I use the Energy of the Day feature every morning. It tracks my emotional, physical, and social energy levels, and I swear it helps me stay balanced. I’ve never seen anything like it!</p>
                                         <div class="c-review-item__author">Sofia V</div>
                                         <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
+                                        <div class="c-stars" data-rating="5"></div>
                                         <!-- end stars-->
                                     </div>
                                     <!-- end review-item-->
@@ -373,7 +373,7 @@
         </div>
         <!-- --------------- Outside part page ----------------->
         <!-- begin modal-common-->
-        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash" id="play-video">
+        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash js-player-container" id="video-1">
             <div class="c-modal-common__dialog modal-dialog">
                 <button class="c-icon-button c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
                     <svg class="c-ico c-ico--xl c-ico--light" viewBox="0 0 24 24">
@@ -383,8 +383,61 @@
                 </button>
                 <div class="c-modal-common__content">
                     <!-- begin video-->
-                    <div class="c-video js-media-controller">
-                        <iframe src="https://www.youtube.com/embed/pWGndUXbyrU" allowfullscreen="allowfullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <div class="c-video js-player" data-video="1JqFannSZz8"><span></span>
+                    </div>
+                    <!-- end video-->
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash js-player-container" id="video-2">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--xl c-ico--light" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <!-- begin video-->
+                    <div class="c-video js-player" data-video="pWGndUXbyrU"><span></span>
+                    </div>
+                    <!-- end video-->
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash js-player-container" id="video-3">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--xl c-ico--light" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <!-- begin video-->
+                    <div class="c-video js-player" data-video="Zw_ivBM2tX8"><span></span>
+                    </div>
+                    <!-- end video-->
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash js-player-container" id="video-4">
+            <div class="c-modal-common__dialog modal-dialog">
+                <button class="c-icon-button c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
+                    <svg class="c-ico c-ico--xl c-ico--light" viewBox="0 0 24 24">
+                        <!-- ico name: close-->
+                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                    </svg>
+                </button>
+                <div class="c-modal-common__content">
+                    <!-- begin video-->
+                    <div class="c-video js-player" data-video="aALhzfmsNNE"><span></span>
                     </div>
                     <!-- end video-->
                 </div>
@@ -396,7 +449,17 @@
 
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/separate-js/iframe_api.js"></script>
         <script src="static/js/separate-js/main.js"></script>
+        <script>
+            window.onYouTubeIframeAPIReady = function () {
+                  youtubePlayer.initialize({
+                      initPlayersModal: true,
+                      width: '800',
+                      height: '450'
+                  });
+              };
+        </script>
     </body>
 
 </html>
