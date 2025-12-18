@@ -18,443 +18,311 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
-    <body class="light">
-        <!-- ------------------------------ TEMPLATE START SCREEN -------------------------------->
-        <div class="w-page">
-            <!-- ---------------  Content part page ----------------->
-            <div class="w-page__start-screen">
-                <!-- ---------------  Top part page ----------------->
-                <!-- begin header-->
-                <header class="c-header">
-                    <div class="c-header__inner">
-                        <!-- begin logo-->
-                        <a class="c-logo" href="#">
-                            <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
-                        </a>
-                        <!-- end logo-->
-                        <button class="c-icon-button js-drawer-toggler c-header__toggle-nav" type="button" aria-label="Open">
-                            <svg class="c-ico c-ico--2xl" viewBox="0 0 24 24">
-                                <!-- ico name: menu-->
-                                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
-                            </svg>
-                        </button>
-                        <!-- begin drawer-->
-                        <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
-                            <div class="c-drawer__dialog">
-                                <div class="c-drawer__head">
-                                    <div class="c-drawer__title">Menu</div>
-                                    <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
-                                        <svg class="c-ico c-ico--3xl" viewBox="0 0 24 24">
-                                            <!-- ico name: close-->
-                                            <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                                        </svg>
+    <body>
+        <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
+        <div class="w-root">
+            <div class="w-page">
+                <!-- ---------------  Content part page ----------------->
+                <div class="w-page__content">
+                    <!-- begin container-->
+                    <main class="c-container c-container--center">
+                        <div class="c-container__top">
+                            <div class="c-container__inner">
+                                <!-- begin count-->
+                                <div class="c-count">
+                                    <h3 class="c-count__title">Discount expires in</h3>
+                                    <div class="c-count__timer js-countdown"><span>00</span><span>:</span><span>00</span>
+                                    </div>
+                                    <div class="c-count__labels"><span>min</span><span>sec</span>
+                                    </div>
+                                </div>
+                                <!-- end count-->
+                                <button class="c-btn c-btn--sm c-btn--pulse" type="button">Get my reading
+                                </button>
+                            </div>
+                        </div>
+                        <div class="w-centered">
+                            <div class="row row--justify-center row--row-gap-sm w-gap-md">
+                                <!-- begin data-card-->
+                                <div class="c-data-card c-data-card--horizontal">
+                                    <img class="c-image" src="static/img/general/taurus.png" alt="Taurus" width="144" height="144" />
+                                    <div class="c-data-card__content">
+                                        <div class="c-data-card__item">
+                                            <p class="c-data-card__label">Zodiac Sign</p>
+                                            <p class="c-data-card__value">Taurus</p>
+                                        </div>
+                                        <div class="c-data-card__item">
+                                            <p class="c-data-card__label">Gender</p>
+                                            <p class="c-data-card__value">Males</p>
+                                        </div>
+                                        <div class="c-data-card__item">
+                                            <p class="c-data-card__label">Date of birth</p>
+                                            <p class="c-data-card__value">Jan 22 1989</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end data-card-->
+                            </div>
+                            <div class="row row--justify-center row--row-gap-sm w-gap-md">
+                                <!-- begin data-card-->
+                                <div class="c-data-card">
+                                    <h3 class="c-data-card__title">You</h3>
+                                    <img class="c-image" src="static/img/general/taurus.png" alt="Taurus" width="144" height="144" />
+                                    <div class="c-data-card__content">
+                                        <div class="c-data-card__item">
+                                            <p class="c-data-card__label">Zodiac Sign</p>
+                                            <p class="c-data-card__value">Taurus</p>
+                                        </div>
+                                        <div class="c-data-card__item">
+                                            <p class="c-data-card__label">Gender</p>
+                                            <p class="c-data-card__value">Males</p>
+                                        </div>
+                                        <div class="c-data-card__item">
+                                            <p class="c-data-card__label">Date of birth</p>
+                                            <p class="c-data-card__value">Jan 22 1989</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end data-card-->
+                                <!-- begin data-card-->
+                                <div class="c-data-card">
+                                    <h3 class="c-data-card__title">Partner</h3>
+                                    <img class="c-image" src="static/img/general/cancer.png" alt="Cancer" width="144" height="144" />
+                                    <div class="c-data-card__content">
+                                        <div class="c-data-card__item">
+                                            <p class="c-data-card__label">Zodiac Sign</p>
+                                            <p class="c-data-card__value">Cancer</p>
+                                        </div>
+                                        <div class="c-data-card__item">
+                                            <p class="c-data-card__label">Gender</p>
+                                            <p class="c-data-card__value">Females</p>
+                                        </div>
+                                        <div class="c-data-card__item">
+                                            <p class="c-data-card__label">Date of birth</p>
+                                            <p class="c-data-card__value">Jan 16 1990</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end data-card-->
+                            </div>
+                            <!-- begin divider-->
+                            <div class="c-divider w-gap-sm">
+                            </div>
+                            <!-- end divider-->
+                            <div class="w-gap-4xl w-column-gap-sm">
+                                <h2 class="c-h5">Our professional astrologers will guide you in understanding your compatibility and the special qualities of your relationship</h2>
+                                <!-- begin offer-card-->
+                                <div class="c-offer-card">
+                                    <div class="c-offer-card__top">Special offer</div>
+                                    <div class="c-offer-card__content">
+                                        <h3 class="c-offer-card__title">Personalized reading for <span class="u-text-info u-text-bold">$1</span></h3>
+                                        <div class="c-offer-card__section">
+                                            <div class="c-offer-card__item">
+                                                <p class="c-offer-card__item-title u-text-sm">Total today:</p>
+                                                <div class="c-offer-card__price">
+                                                    <div class="c-offer-card__text">$1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-offer-card__section">
+                                            <div class="c-offer-card__item">
+                                                <p class="c-offer-card__item-title">Your cost per month <span class="u-text-regular">after trial:</span>
+                                                </p>
+                                                <div class="c-offer-card__price">
+                                                    <div class="c-offer-card__subtext">$55</div>
+                                                    <div class="c-offer-card__text">$19</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end offer-card-->
+                                <div class="row row--justify-center row--align-center row--row-gap-xs">
+                                    <svg class="c-ico c-ico--lg c-ico--success u-mt-2-neg" viewBox="0 0 24 24">
+                                        <!-- ico name: shield-lock-->
+                                        <path fill="currentColor" d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.1 14.8,9.5V11C15.4,11 16,11.6 16,12.3V15.8C16,16.4 15.4,17 14.7,17H9.2C8.6,17 8,16.4 8,15.7V12.2C8,11.6 8.6,11 9.2,11V9.5C9.2,8.1 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,9.5V11H13.5V9.5C13.5,8.7 12.8,8.2 12,8.2Z"></path>
+                                    </svg>
+                                    <p class="c-h6 u-mt-0">Guaranteed security payments</p>
+                                </div>
+                                <button class="c-btn c-btn--pulse" type="button">Get my reading
+                                </button>
+                                <!-- begin help-msg-->
+                                <p class="c-help-msg">You are enrolling in a monthly subscription to Astro service. By continuing you agree that if you don't cancel prior to the end of the 7-day trial for the $1 you will automatically be charged $19 every 30 days until you
+                                    cancel in settings. The charge will appear on your bill as appastro.com. Learn more about cancellation and refund policy in the <a href="#" class="c-link c-link--help c-link--underline">Subscription policy</a>.</p>
+                                <!-- end help-msg-->
+                            </div>
+                            <!-- begin feature-card-->
+                            <div class="c-feature-card w-gap-4xl">
+                                <div class="c-feature-card__content">
+                                    <h2 class="c-feature-card__title">Your reading</h2>
+                                    <div class="row row--nowrap row--justify-center row--align-center row--row-gap-xl w-gap-md">
+                                        <img class="c-image" src="static/img/general/logo-vertical.svg" alt="Logo" width="84" height="112" />
+                                        <img class="c-image" src="static/img/general/taurus.png" alt="Taurus" width="120" height="120" />
+                                    </div>
+                                    <h3 class="c-feature-card__subtitle">Content</h3>
+                                    <!-- begin list-->
+                                    <ol class="c-list c-feature-card__list">
+                                        <li class="c-list__item">
+                                            <div class="c-list__text">Compatibility with your partner across different areas of life.</div>
+                                        </li>
+                                        <li class="c-list__item">
+                                            <div class="c-list__text">A deep analysis of your relationship based on a unique astrological system.</div>
+                                        </li>
+                                        <li class="c-list__item">
+                                            <div class="c-list__text">A love horoscope designed specifically for your couple.</div>
+                                        </li>
+                                        <li class="c-list__item">
+                                            <div class="c-list__text">Planetary influences that shape the balance in your relationship.</div>
+                                        </li>
+                                    </ol>
+                                    <!-- end list-->
+                                </div>
+                                <div class="c-feature-card__bottom">
+                                    <h3 class="c-feature-card__subtitle">To read the full report, you need to get access</h3>
+                                    <button class="c-btn c-btn--pulse" type="button">Get my reading
                                     </button>
                                 </div>
-                                <ul class="c-drawer__menu">
-                                    <li class="c-drawer__item"><a class="c-drawer__link" href="#">About</a>
-                                    </li>
-                                    <li class="c-drawer__item">
-                                        <button class="c-drawer__link js-drawer-element" type="button">Features</button>
-                                        <ul class="c-drawer__submenu">
-                                            <li class="c-drawer__item"><a class="c-drawer__link" href="#">Horoscope</a>
-                                            </li>
-                                            <li class="c-drawer__item"><a class="c-drawer__link" href="#">Compatibility Test</a>
-                                            </li>
-                                            <li class="c-drawer__item"><a class="c-drawer__link" href="#">Birth chart</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="c-drawer__item"><a class="c-drawer__link" href="#">FAQ</a>
-                                    </li>
-                                    <li class="c-drawer__item"><a class="c-drawer__link" href="#">Contact</a>
-                                    </li>
-                                </ul>
-                                <div class="c-drawer__action">
-                                    <a class="c-drawer__link" href="#">
-                                        <svg class="c-ico c-ico--lg" viewBox="0 0 24 24">
-                                            <!-- ico name: account-circle-->
-                                            <path fill="currentColor" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path>
-                                        </svg>Sign In / Your Account</a>
-                                </div>
                             </div>
-                        </nav>
-                        <!-- end drawer-->
-                    </div>
-                </header>
-                <!-- end header-->
-                <!-- begin start-screen-->
-                <div class="c-start-screen">
-                    <div class="w-centered w-centered--xl">
-                        <img class="c-image c-start-screen__logo" src="static/img/general/logo-box.png" alt="Astro" />
-                        <h1 class="c-start-screen__title">Astro: Mind &amp; Soul Insights</h1>
-                        <p class="c-start-screen__text">Astro is your daily guide to self-awareness and clarity. Discover insights about yourself, your emotions, and your relationships.</p>
-                        <div class="c-start-screen__action">
-                            <button class="c-btn" type="button">Explore Your Relationship
-                                <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
-                                    <!-- ico name: arrow-right-->
-                                    <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="c-start-screen__ico">
-                            <svg class="c-ico c-ico--2xl c-ico--light" viewBox="0 0 24 24">
-                                <!-- ico name: chevron-down-->
-                                <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <!-- end start-screen-->
-                <!-- begin banner-app-->
-                <div class="c-banner-app">
-                    <div class="c-banner-app__content">
-                        <div class="c-banner-app__text">Enjoy Astro on the go with the mobile app available for all iOS and Android devices</div>
-                        <div class="c-banner-app__icons">
-                            <a class="c-banner-app__link" href="#">
-                                <img class="c-image" src="static/img/general/apple-icon.svg" alt="App Store" width="40" height="40" />
-                            </a>
-                            <div>&</div>
-                            <a class="c-banner-app__link" href="#">
-                                <img class="c-image" src="static/img/general/android-icon.svg" alt="Google Play" width="40" height="40" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="c-separator-line"></div>
-                    <!-- begin stats-->
-                    <div class="c-stats">
-                        <div class="c-stats__item">
-                            <img class="c-image c-stats__img" src="static/img/general/bullseye-arrow-xs.png" alt="" width="33" height="33" />
-                            <div class="c-stats__content">
-                                <p class="c-stats__label">Rated by real users</p>
-                                <p class="c-stats__value">93.4% Accuracy</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end stats-->
-                </div>
-                <!-- end banner-app-->
-            </div>
-            <div class="w-page__content">
-                <div class="c-common-box">
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--lg">
-                            <!-- begin radial-section-->
-                            <div class="c-radial-section">
-                                <h2 class="c-radial-section__title">Your Goals, Our Expertise: The Simple Path to Soulmates and Fulfillment</h2>
-                                <div class="c-radial-section__content">
-                                    <img class="c-image" src="static/img/general/logo-box-shimmer.png" alt="Astro" />
-                                    <ul class="c-radial-section__list">
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-1.png" alt="" />
-                                            <p class="c-radial-section__item-text">Become happy</p>
-                                        </li>
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-2.png" alt="" />
-                                            <p class="c-radial-section__item-text">Find your soulmate</p>
-                                        </li>
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-3.png" alt="" />
-                                            <p class="c-radial-section__item-text">Return your ex</p>
-                                        </li>
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-4.png" alt="" />
-                                            <p class="c-radial-section__item-text">Recover relationships</p>
-                                        </li>
-                                        <li class="c-radial-section__item">
-                                            <img class="c-image" src="static/img/general/ava-5.png" alt="" />
-                                            <p class="c-radial-section__item-text">Find yourself</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- end radial-section-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--xl-slim">
-                            <!-- begin big-description-->
-                            <div class="c-big-description">
-                                <img class="c-image c-big-description__logo" src="static/img/general/creation.png" alt="Creation" />
-                                <h2 class="c-big-description__title">Your Path to Self-Discovery and Growth</h2>
-                                <p class="c-big-description__text">Understanding yourself is the key to living a more balanced, fulfilled life. Through self-awareness, you learn to recognize your emotions, patterns, and true motivations — helping you make better decisions and build stronger
-                                    connections. Personal growth isn’t about changing who you are, but about understanding yourself deeply and using that insight to live with more confidence, purpose, and harmony.</p>
-                            </div>
-                            <!-- end big-description-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--lg">
-                            <!-- begin row-list-->
-                            <div class="c-row-list">
-                                <h2 class="c-row-list__title">Key Features of Self-Understanding</h2>
-                                <ul class="c-row-list__list">
-                                    <li class="c-row-list__item">
-                                        <img class="c-image" src="static/img/general/hand-heart.png" alt="Hand-heart" />
-                                        <div class="c-row-list__description">
-                                            <h3 class="c-row-list__subtitle">The Purpose of Self-Awareness</h3>
-                                            <p class="c-row-list__text">Understanding yourself is the fundamental key to achieving a balanced and fulfilled life. This process is about gaining self-awareness, which serves as the essential starting point for personal improvement and
-                                                better living.</p>
-                                        </div>
-                                    </li>
-                                    <li class="c-row-list__item">
-                                        <img class="c-image" src="static/img/general/account-moon.png" alt="Account-moon" />
-                                        <div class="c-row-list__description">
-                                            <h3 class="c-row-list__subtitle">Better Decisions and Connections</h3>
-                                            <p class="c-row-list__text">The direct benefits of this self-insight are twofold: it helps you make better decisions and allows you to build stronger connections with others. Recognizing your motivations leads to choices aligned with your
-                                                true self, and understanding your emotional patterns enhances your relationships.</p>
-                                        </div>
-                                    </li>
-                                    <li class="c-row-list__item">
-                                        <img class="c-image" src="static/img/general/sun.png" alt="Sun" />
-                                        <div class="c-row-list__description">
-                                            <h3 class="c-row-list__subtitle">Recognizing Inner Patterns</h3>
-                                            <p class="c-row-list__text">Self-awareness is achieved by learning to recognize your emotions, patterns, and true motivations. This deep, introspective analysis provides the clarity needed to understand why you think, feel, and act the
-                                                way you do.</p>
-                                        </div>
-                                    </li>
-                                    <li class="c-row-list__item">
-                                        <img class="c-image" src="static/img/general/self-awareness.png" alt="Self-awareness" />
-                                        <div class="c-row-list__description">
-                                            <h3 class="c-row-list__subtitle">Insight and Purpose</h3>
-                                            <p class="c-row-list__text">Personal growth is not about changing who you are, but rather about deeply understanding yourself (insight). This understanding is then leveraged to enable you to live with greater confidence, purpose, and harmony—the
-                                                ultimate aims of self-awareness.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- end row-list-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <!-- begin media-promo-->
-                        <div class="c-media-promo">
-                            <div class="c-media-promo__inner">
-                                <h2 class="c-media-promo__title">How Astro Makes Your Life Better</h2>
-                                <p class="c-media-promo__text">Understanding yourself is the foundation of meaningful growth. With this clarity, you’re able to make decisions with confidence, live with greater purpose, and create more harmony within yourself.</p>
-                                <div class="c-media-promo__videos">
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#video-1">
-                                        <img class="c-image" src="static/img/content/preview-1.png" alt="" width="280" height="157" />
-                                    </button>
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#video-2">
-                                        <img class="c-image" src="static/img/content/preview-2.png" alt="" width="280" height="157" />
-                                    </button>
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#video-3">
-                                        <img class="c-image" src="static/img/content/preview-3.png" alt="" width="280" height="157" />
-                                    </button>
-                                    <button class="c-media-promo__preview" type="button" data-bs-toggle="modal" data-bs-target="#video-4">
-                                        <img class="c-image" src="static/img/content/preview-4.png" alt="" width="280" height="157" />
-                                    </button>
-                                </div>
-                                <p class="c-media-promo__caption">The videos demonstrate illustrate how Astro helps you grow and gain clarity</p>
-                            </div>
-                        </div>
-                        <!-- end media-promo-->
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--xl-slim">
+                            <!-- end feature-card-->
                             <!-- begin reviews-->
-                            <div class="c-reviews">
-                                <h2 class="c-reviews__title">Users love Us</h2>
-                                <p class="c-reviews__text">Become a member of Astro community</p>
+                            <div class="c-reviews w-gap-4xl">
+                                <h2 class="c-reviews__title">Users love us</h2>
                                 <div class="c-reviews__list">
                                     <!-- begin review-item-->
                                     <div class="c-review-item">
-                                        <p class="c-review-item__text">Astro helped me focus on self-growth. I started noticing patterns in my behavior and emotions, and it became easier to stay balanced and mindful. It’s like having a small daily reminder to stay true to myself.</p>
-                                        <div class="c-review-item__author">Emily R</div>
+                                        <p class="c-review-item__text">I’m honestly amazed! Astro helped me understand my relationship on a much deeper level. I gained real clarity about what was really happening between us.</p>
+                                        <div class="c-review-item__author">Emily</div>
                                         <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5"></div>
+                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
                                         <!-- end stars-->
                                     </div>
                                     <!-- end review-item-->
                                     <!-- begin review-item-->
                                     <div class="c-review-item">
-                                        <p class="c-review-item__text">The daily guidance gave me so much clarity during a stressful time. It felt like it truly understood what I was going through and helped me sort out my emotions and take calm, confident steps forward.</p>
-                                        <div class="c-review-item__author">Marcus L</div>
+                                        <p class="c-review-item__text">Honestly, I didn’t expect much, but this was amazing. It helped me see why things weren’t working and how to fix them. Totally worth it.</p>
+                                        <div class="c-review-item__author">Brian</div>
                                         <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5"></div>
+                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
                                         <!-- end stars-->
                                     </div>
                                     <!-- end review-item-->
                                     <!-- begin review-item-->
                                     <div class="c-review-item">
-                                        <p class="c-review-item__text">I’ve never realized how much my focus and motivation shift throughout the week until I started using this app. Now I plan my tasks based on my energy patterns — it’s really improved my productivity!</p>
-                                        <div class="c-review-item__author">Hannah M</div>
+                                        <p class="c-review-item__text">Astro helped me see things I couldn’t before, made me realize what I truly want in love and gave me hope that change is possible and that I actually deserve something real and lasting.</p>
+                                        <div class="c-review-item__author">Olivia</div>
                                         <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5"></div>
-                                        <!-- end stars-->
-                                    </div>
-                                    <!-- end review-item-->
-                                    <!-- begin review-item-->
-                                    <div class="c-review-item">
-                                        <p class="c-review-item__text">The Love compatibility section is amazing! It helped me understand my relationship better and gave me insight into how my partner and I complement each other. Super detailed and helpful.</p>
-                                        <div class="c-review-item__author">Jonathan T</div>
-                                        <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5"></div>
-                                        <!-- end stars-->
-                                    </div>
-                                    <!-- end review-item-->
-                                    <!-- begin review-item-->
-                                    <div class="c-review-item">
-                                        <p class="c-review-item__text">I use the Energy of the Day feature every morning. It tracks my emotional, physical, and social energy levels, and I swear it helps me stay balanced. I’ve never seen anything like it!</p>
-                                        <div class="c-review-item__author">Sofia V</div>
-                                        <!-- begin stars-->
-                                        <div class="c-stars" data-rating="5"></div>
+                                        <div class="c-stars" data-rating="5" aria-label="Rating"></div>
                                         <!-- end stars-->
                                     </div>
                                     <!-- end review-item-->
                                 </div>
                             </div>
                             <!-- end reviews-->
-                        </div>
-                    </section>
-                    <!-- end section-->
-                    <!-- begin section-->
-                    <section class="c-section">
-                        <div class="w-centered w-centered--xl-slim">
-                            <!-- begin big-download-->
-                            <div class="c-big-download">
-                                <img class="c-image c-big-download__logo" src="static/img/general/logo-box.png" alt="Astro" />
-                                <div class="c-big-download__content">
-                                    <h2 class="c-big-download__title">Start today</h2>
-                                    <p class="c-big-download__text">1M+ downloads on Google Play and a growing community on the App Store — Astro helps you reflect, grow, and find clarity.</p>
-                                    <!-- begin widget-->
-                                    <div class="c-widget">
-                                        <a class="c-widget__ios" href="#">
-                                            <img src="static/img/general/ios-widget.svg" alt="App Store" />
-                                        </a>
-                                        <a class="c-widget__android" href="#">
-                                            <img src="static/img/general/android-widget.png" alt="Google Play" />
-                                        </a>
-                                    </div>
-                                    <!-- end widget-->
-                                </div>
+                            <div class="w-gap-4xl w-column-gap-md">
+                                <!-- begin title-->
+                                <h2 class="c-title">What you get</h2>
+                                <!-- end title-->
+                                <!-- begin list-->
+                                <ul class="c-list c-list--icon-check">
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">Compatibility analysis</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">Insights into love, partnership, and money</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">Key relationship insights</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">A better understanding of yourself and your partner</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">Daily love guidance</div>
+                                    </li>
+                                </ul>
+                                <!-- end list-->
                             </div>
-                            <!-- end big-download-->
+                            <div class="w-gap-4xl w-column-gap-md">
+                                <!-- begin title-->
+                                <h2 class="c-title">People often ask</h2>
+                                <!-- end title-->
+                                <!-- begin list-->
+                                <ul class="c-list c-list--gap-lg c-list--icon-help">
+                                    <li class="c-list__item">
+                                        <div class="c-list__title">How accurate are the astrology readings on this platform?</div>
+                                        <div class="c-list__text">Each reading is based on real astrological data — your birth details, planetary positions, and expert interpretation. Astrology reveals patterns that resonate on a personal level, helping you understand yourself
+                                            and your relationships. Many users find their readings accurate.</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__title">Can I get a compatibility reading for relationships?</div>
+                                        <div class="c-list__text">Yes! Our compatibility readings analyze the astrological connection between two people to reveal how you align in love, communication, trust, and shared values. You’ll receive a detailed look at the dynamics of
+                                            your relationship.</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__title">Are the astrology readings on this platform confidential and private?</div>
+                                        <div class="c-list__text">All readings on our platform are strictly confidential. We value your privacy and ensure all personal data and readings are securely protected and never shared with third parties without permission.</div>
+                                    </li>
+                                </ul>
+                                <!-- end list-->
+                            </div>
+                            <div class="w-gap-4xl w-column-gap-sm">
+                                <!-- begin offer-card-->
+                                <div class="c-offer-card">
+                                    <div class="c-offer-card__top">Special offer</div>
+                                    <div class="c-offer-card__content">
+                                        <h3 class="c-offer-card__title">Personalized reading for <span class="u-text-info u-text-bold">$1</span></h3>
+                                        <div class="c-offer-card__section">
+                                            <div class="c-offer-card__item">
+                                                <p class="c-offer-card__item-title u-text-sm">Total today:</p>
+                                                <div class="c-offer-card__price">
+                                                    <div class="c-offer-card__text">$1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-offer-card__section">
+                                            <div class="c-offer-card__item">
+                                                <p class="c-offer-card__item-title">Your cost per month <span class="u-text-regular">after trial:</span>
+                                                </p>
+                                                <div class="c-offer-card__price">
+                                                    <div class="c-offer-card__subtext">$55</div>
+                                                    <div class="c-offer-card__text">$19</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end offer-card-->
+                                <div class="row row--justify-center row--align-center row--row-gap-xs">
+                                    <svg class="c-ico c-ico--lg c-ico--success u-mt-2-neg" viewBox="0 0 24 24">
+                                        <!-- ico name: shield-lock-->
+                                        <path fill="currentColor" d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.1 14.8,9.5V11C15.4,11 16,11.6 16,12.3V15.8C16,16.4 15.4,17 14.7,17H9.2C8.6,17 8,16.4 8,15.7V12.2C8,11.6 8.6,11 9.2,11V9.5C9.2,8.1 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,9.5V11H13.5V9.5C13.5,8.7 12.8,8.2 12,8.2Z"></path>
+                                    </svg>
+                                    <p class="c-h6 u-mt-0">Guaranteed security payments</p>
+                                </div>
+                                <button class="c-btn c-btn--pulse" type="button">Get my reading
+                                </button>
+                                <!-- begin help-msg-->
+                                <p class="c-help-msg">You are enrolling in a monthly subscription to Astro service. By continuing you agree that if you don't cancel prior to the end of the 7-day trial for the $1 you will automatically be charged $19 every 30 days until you
+                                    cancel in settings. The charge will appear on your bill as appastro.com. Learn more about cancellation and refund policy in the <a href="#" class="c-link c-link--help c-link--underline">Subscription policy</a>.</p>
+                                <!-- end help-msg-->
+                            </div>
                         </div>
-                    </section>
-                    <!-- end section-->
+                    </main>
+                    <!-- end container-->
                 </div>
             </div>
-            <!-- ---------------  Bottom part page ----------------->
-            <!-- begin footer-->
-            <footer class="c-footer">
-                <div class="c-footer__section">
-                    <ul class="c-footer__list">
-                        <li class="c-footer__item"><a class="c-footer__link" href="#">Privacy policy</a>
-                        </li>
-                        <li class="c-footer__item"><a class="c-footer__link" href="#">Terms of use</a>
-                        </li>
-                        <li class="c-footer__item"><a class="c-footer__link" href="#">Payment terms</a>
-                        </li>
-                        <li class="c-footer__item"><a class="c-footer__link" href="#">Money Back Policy</a>
-                        </li>
-                        <li class="c-footer__item"><a class="c-footer__link" href="#">Pricing</a>
-                        </li>
-                        <li class="c-footer__item"><a class="c-footer__link" href="#">Consent settings</a>
-                        </li>
-                    </ul>
-                    <div class="c-footer__address">Talentin LTD, Sofia, 1463, Triaditsa district, 66 Vitosha Blvd., floor 4, Bulgaria</div>
-                    <div class="c-footer__text">All content is for entertainment and general informational purposes only. It does not constitute professional advice</div>
-                </div>
-                <div class="c-footer__section">
-                    <div class="c-footer__copyright">© appastro.co</div>
-                </div>
-            </footer>
-            <!-- end footer-->
         </div>
         <!-- --------------- Outside part page ----------------->
-        <!-- begin modal-common-->
-        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash js-player-container" id="video-1">
-            <div class="c-modal-common__dialog modal-dialog">
-                <button class="c-icon-button c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
-                    <svg class="c-ico c-ico--xl c-ico--light" viewBox="0 0 24 24">
-                        <!-- ico name: close-->
-                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                    </svg>
-                </button>
-                <div class="c-modal-common__content">
-                    <!-- begin video-->
-                    <div class="c-video js-player" data-video="1JqFannSZz8"><span></span>
-                    </div>
-                    <!-- end video-->
-                </div>
-            </div>
-        </div>
-        <!-- end modal-common-->
-        <!-- begin modal-common-->
-        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash js-player-container" id="video-2">
-            <div class="c-modal-common__dialog modal-dialog">
-                <button class="c-icon-button c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
-                    <svg class="c-ico c-ico--xl c-ico--light" viewBox="0 0 24 24">
-                        <!-- ico name: close-->
-                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                    </svg>
-                </button>
-                <div class="c-modal-common__content">
-                    <!-- begin video-->
-                    <div class="c-video js-player" data-video="pWGndUXbyrU"><span></span>
-                    </div>
-                    <!-- end video-->
-                </div>
-            </div>
-        </div>
-        <!-- end modal-common-->
-        <!-- begin modal-common-->
-        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash js-player-container" id="video-3">
-            <div class="c-modal-common__dialog modal-dialog">
-                <button class="c-icon-button c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
-                    <svg class="c-ico c-ico--xl c-ico--light" viewBox="0 0 24 24">
-                        <!-- ico name: close-->
-                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                    </svg>
-                </button>
-                <div class="c-modal-common__content">
-                    <!-- begin video-->
-                    <div class="c-video js-player" data-video="Zw_ivBM2tX8"><span></span>
-                    </div>
-                    <!-- end video-->
-                </div>
-            </div>
-        </div>
-        <!-- end modal-common-->
-        <!-- begin modal-common-->
-        <div class="c-modal-common modal fade js-modal-locker c-modal-common--splash js-player-container" id="video-4">
-            <div class="c-modal-common__dialog modal-dialog">
-                <button class="c-icon-button c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
-                    <svg class="c-ico c-ico--xl c-ico--light" viewBox="0 0 24 24">
-                        <!-- ico name: close-->
-                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                    </svg>
-                </button>
-                <div class="c-modal-common__content">
-                    <!-- begin video-->
-                    <div class="c-video js-player" data-video="aALhzfmsNNE"><span></span>
-                    </div>
-                    <!-- end video-->
-                </div>
-            </div>
-        </div>
-        <!-- end modal-common-->
         <!-- Including js files-->
 
 
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
-        <script src="static/js/separate-js/iframe_api.js"></script>
         <script src="static/js/separate-js/main.js"></script>
         <script>
-            window.onYouTubeIframeAPIReady = function () {
-                  youtubePlayer.initialize({width: '800', height: '450'});
-              };
+            $(document).ready(function () {
+                  countDownTimer.initialize();
+              });
         </script>
     </body>
 

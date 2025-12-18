@@ -4,7 +4,7 @@ $(document).ready(function () {
     });
 
     $(document).on('hidden.bs.modal', '.js-modal-locker', function () {
-        locker.unlock()
+        locker.unlock();
     });
 
     drawer.initialize();
@@ -41,33 +41,23 @@ var drawer = (function ($) {
         drawer: '.js-drawer',
         toggler: '.js-drawer-toggler',
         stateClass: 'is-open',
-        element: '.js-drawer-element',
-        elementShowClass: 'is-show'
     };
 
     var initialize = function () {
         var toggler = $(settings.toggler),
             drawer = $(settings.drawer),
-            element = $(settings.element),
-            stateClass = settings.stateClass,
-            elementShowClass = settings.elementShowClass;
+            stateClass = settings.stateClass;
 
         toggler.on('click', function () {
-
             if (drawer.hasClass(stateClass)) {
                 drawer.removeClass(stateClass);
-
-                element.parent().removeClass(elementShowClass);
 
                 locker.unlock();
             } else {
                 drawer.addClass(stateClass);
+
                 locker.lock();
             }
-        });
-
-        element.on('click', function () {
-            $(this).parent().toggleClass(elementShowClass);
         });
     };
 
@@ -76,87 +66,55 @@ var drawer = (function ($) {
     };
 })(jQuery);
 
-var toggle = (function ($) {
+var countDownTimer = (function () {
     var defaults = {
-        itemSelector: '[data-toggle-item]',
-        handlerSelector: '[data-toggle="item"]',
-        hiddenClass: 'u-hidden',
-        stateHandler: 'is-hidden'
+        timer: '.js-countdown',
+        hours: 0,
+        minutes: 10,
+        seconds: 0,
+        updateInterval: 1000
+    };
+
+    var timer = (hours, minutes, seconds) => {
+        let timeStr = '';
+        if (hours > 0) timeStr += `<span>${hours}</span><span>:</span>`;
+        timeStr += `<span>${minutes}</span><span>:</span><span>${seconds}</span>`;
+        return timeStr;
     };
 
     var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {});
+        var now = new Date(),
+            settings = $.extend({}, defaults, params || {}),
+            element = $(settings.timer),
+            // считаем общее количество миллисекунд
+            totalMs = ((settings.hours * 60 * 60) + (settings.minutes * 60) + settings.seconds) * 1000,
+            deadlineTime = new Date(now.getTime() + totalMs);
 
-        $(document).on('click', settings.handlerSelector, function () {
-            var dataTarget = $(this).data('target'),
-                handler = $(settings.handlerSelector + '[data-target="' + dataTarget + '"]'),
-                toggleItem = $('[data-toggle-item="' + dataTarget + '"]');
+        var intervalId = setInterval(function () {
+            let now = new Date().getTime();
+            let time = deadlineTime - now;
 
-            // Item is toggled
-            toggleItem.toggleClass(settings.hiddenClass);
+            if (time <= 0) {
+                clearInterval(intervalId);
+                element.html(timer('00', '00', '00'));
+                return;
+            }
 
-            // Handler is toggled
-            handler.toggleClass(settings.stateHandler);
+            let hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((time % (1000 * 60)) / 1000);
 
-            return false;
-        });
+            if (hours < 10) hours = '0' + hours;
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+
+            element.html(timer(hours, minutes, seconds));
+
+        }, settings.updateInterval);
     };
 
     return {
         initialize: initialize
     };
-})(jQuery);
-
-var youtubePlayer = (function ($) {
-    var defaults = {
-        node: 'span',
-        playerSelector: '.js-player',
-        modalSelector: '.js-player-container',
-        width: null,
-        height: null
-    };
-
-    function initialize(params) {
-        var settings = $.extend({}, defaults, params || {});
-
-        function initPlayer(wrap, isModal) {
-            if (wrap.player) return;
-
-            wrap.player = new YT.Player(wrap.querySelector(settings.node), {
-                videoId: wrap.dataset.video,
-                width: settings.width,
-                height: settings.height,
-                playerVars: {
-                    playsinline: 1,
-                    autoplay: isModal ? 1 : 0,
-                    mute: 1
-                },
-                events: {
-                    onReady: function(e) {
-                        e.target.unMute();
-                    }
-                }
-            });
-        }
-
-        document.querySelectorAll(settings.playerSelector + ':not(' + settings.modalSelector + ' ' + settings.playerSelector + ')')
-            .forEach(wrap => initPlayer(wrap, false));
-
-        $(document).on('shown.bs.modal', settings.modalSelector, function () {
-            this.querySelectorAll(settings.playerSelector).forEach(wrap =>
-                initPlayer(wrap, true)
-            );
-        }).on('hidden.bs.modal', settings.modalSelector, function () {
-            this.querySelectorAll(settings.playerSelector).forEach(wrap =>
-                wrap.player?.stopVideo()
-            );
-        });
-    }
-
-    return {
-        initialize: initialize
-    };
-})(jQuery);
-
-
+})();
 
