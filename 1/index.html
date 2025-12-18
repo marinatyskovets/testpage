@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Astro</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=block" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
+        <div class="w-root">
+            <div class="w-page">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin header-->
+                <header class="c-header">
+                    <div class="c-header__inner">
+                        <!-- begin logo-->
+                        <a class="c-logo" href="#">
+                            <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
+                        </a>
+                        <!-- end logo-->
+                        <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
+                            <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
+                                <!-- ico name: menu-->
+                                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+                <!-- end header-->
+                <!-- ---------------  Content part page ----------------->
+                <div class="w-page__content">
+                    <!-- begin container-->
+                    <main class="c-container c-container--center">
+                        <div class="w-centered">
+                            <!-- begin title-->
+                            <h1 class="c-title w-gap-md">Choose a Trial Price</h1>
+                            <!-- end title-->
+                            <div class="w-gap-lg">
+                                <h2 class="c-h5">Your Satisfaction Matters To Us</h2>
+                                <p class="u-mt-0 u-text-sm">We’ve helped millions of people find clarity, and we want to help you, too.</p>
+                            </div>
+                            <div class="w-gap-lg">
+                                <h2 class="c-h5">Your Savings, Our Priority</h2>
+                                <p class="u-mt-0 u-text-sm">While the actual cost is $13,67*, we encourage you to select an amount you find comfortable for you.</p>
+                            </div>
+                            <!-- begin options-section-->
+                            <div class="c-options-section w-gap-lg">
+                                <div class="row row--gap-xs row--by-4">
+                                    <!-- begin choice-->
+                                    <label class="c-choice">
+                                        <input type="radio" name="price" /><span class="c-choice__label">$1</span>
+                                    </label>
+                                    <!-- end choice-->
+                                    <!-- begin choice-->
+                                    <label class="c-choice">
+                                        <input type="radio" name="price" /><span class="c-choice__label">$5</span>
+                                    </label>
+                                    <!-- end choice-->
+                                    <!-- begin choice-->
+                                    <label class="c-choice">
+                                        <input type="radio" name="price" /><span class="c-choice__label">$9</span>
+                                    </label>
+                                    <!-- end choice-->
+                                    <!-- begin choice-->
+                                    <label class="c-choice">
+                                        <input type="radio" name="price" checked="checked" /><span class="c-choice__label">$13,67</span>
+                                    </label>
+                                    <!-- end choice-->
+                                </div>
+                                <div class="c-options-section__note">
+                                    <p class="c-options-section__text">This option will help us support those who need to select the lowest trial prices!</p>
+                                    <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
+                                        <!-- ico name: arrow-up-right-->
+                                        <path fill="currentColor" d="M21.5 9.5L20.09 10.92L17 7.83V13.5C17 17.09 14.09 20 10.5 20H4V18H10.5C13 18 15 16 15 13.5V7.83L11.91 10.91L10.5 9.5L16 4L21.5 9.5Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- end options-section-->
+                            <div class="w-gap-lg">
+                                <button class="c-btn" type="button">Continue
+                                </button>
+                                <button class="c-btn is-disabled" type="button">Continue
+                                </button>
+                            </div>
+                        </div>
+                    </main>
+                    <!-- end container-->
+                </div>
+            </div>
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- begin drawer-->
+        <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+            <div class="c-drawer__dialog">
+                <div class="c-drawer__head">
+                    <div class="c-drawer__title">Menu</div>
+                    <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
+                        <svg class="c-ico c-ico--xl c-ico--accent" viewBox="0 0 24 24">
+                            <!-- ico name: close-->
+                            <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="c-drawer__menu">
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Privacy policy</a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Terms & conditions</a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Payment terms</a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Subscription terms</a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Money back policy</a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">FAQ</a>
+                    </li>
+                    <li class="c-drawer__item">
+                        <a class="c-drawer__link" href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end drawer-->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+    </body>
+
+</html>
