@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Astro</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=block" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
+        <div class="w-page">
+            <!-- ---------------  Top part page ----------------->
+            <!-- begin header-->
+            <header class="c-header">
+                <div class="c-header__inner">
+                    <!-- begin logo-->
+                    <a class="c-logo" href="#">
+                        <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
+                    </a>
+                    <!-- end logo-->
+                    <button class="c-icon-button js-drawer-toggler c-header__toggle-nav" type="button" aria-label="Open">
+                        <svg class="c-ico c-ico--2xl" viewBox="0 0 24 24">
+                            <!-- ico name: menu-->
+                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                        </svg>
+                    </button>
+                    <!-- begin drawer-->
+                    <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+                        <div class="c-drawer__dialog">
+                            <div class="c-drawer__head">
+                                <div class="c-drawer__title">Menu</div>
+                                <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
+                                    <svg class="c-ico c-ico--3xl" viewBox="0 0 24 24">
+                                        <!-- ico name: close-->
+                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <ul class="c-drawer__menu">
+                                <li class="c-drawer__item"><a class="c-drawer__link" href="#">About</a>
+                                </li>
+                                <li class="c-drawer__item">
+                                    <button class="c-drawer__link js-drawer-element" type="button">Features</button>
+                                    <ul class="c-drawer__submenu">
+                                        <li class="c-drawer__item"><a class="c-drawer__link" href="#">Horoscope</a>
+                                        </li>
+                                        <li class="c-drawer__item"><a class="c-drawer__link" href="#">Compatibility Test</a>
+                                        </li>
+                                        <li class="c-drawer__item"><a class="c-drawer__link" href="#">Birth chart</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="c-drawer__item"><a class="c-drawer__link" href="#">FAQ</a>
+                                </li>
+                                <li class="c-drawer__item"><a class="c-drawer__link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                            <div class="c-drawer__action">
+                                <a class="c-drawer__link" href="#">
+                                    <svg class="c-ico c-ico--lg" viewBox="0 0 24 24">
+                                        <!-- ico name: account-circle-->
+                                        <path fill="currentColor" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path>
+                                    </svg>Sign In / Your Account</a>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- end drawer-->
+                </div>
+            </header>
+            <!-- end header-->
+            <!-- ---------------  Content part page ----------------->
+            <div class="w-page__content">
+                <div class="c-start-screen">
+                    <div class="w-centered u-text-center">
+                        <img class="c-image w-gap-md-lg" src="static/img/general/party-popper-lg.png" alt="" width="176" height="176" />
+                        <div class="w-column-gap-sm w-gap-md-lg">
+                            <h1 class="c-h2 u-text-normal">Free week unlocked!</h1>
+                            <p class="u-mt-0">You’ve kept your premium access. Enjoy Astro for the next week with no charge.</p>
+                        </div>
+                        <div class="row row--justify-center row--gap-sm">
+                            <button class="c-btn" type="button">Home Page
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------  Bottom part page ----------------->
+            <!-- begin footer-->
+            <footer class="c-footer">
+                <div class="c-footer__section">
+                    <ul class="c-footer__list">
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Privacy policy</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Terms of use</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Payment terms</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Money Back Policy</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Pricing</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Consent settings</a>
+                        </li>
+                    </ul>
+                    <div class="c-footer__address">Talentin LTD, Sofia, 1463, Triaditsa district, 66 Vitosha Blvd., floor 4, Bulgaria</div>
+                    <div class="c-footer__text">All content is for entertainment and general informational purposes only. It does not constitute professional advice</div>
+                </div>
+                <div class="c-footer__section">
+                    <div class="c-footer__copyright">© appastro.co</div>
+                </div>
+            </footer>
+            <!-- end footer-->
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+    </body>
+
+</html>
