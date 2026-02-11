@@ -41,8 +41,6 @@ $(document).ready(function () {
         });
     })(jQuery);
 
-    collapseContentHeight.initialize();
-
     if (document.getElementById('header')) {
         floatingHeader.initialize({id: 'header'});
     }
@@ -311,39 +309,60 @@ var collapseContentHeight = (function ($) {
         collapsedCssClass: 'collapsed'
     };
 
+    var syncState = function (settings) {
+        $(settings.container).each(function () {
+            var $container = $(this);
+            var totalHeight = 0;
+            var maxHeight = $container.data('max-height');
+            var $trigger = $('[data-toggle="collapse-content-height"]', $container);
+
+            $container.children().filter(':visible').each(function () {
+                totalHeight += $(this).outerHeight(true);
+            });
+
+            if (totalHeight > maxHeight) {
+                if ($container.data('manual-open')) return;
+
+                $container
+                    .css('maxHeight', maxHeight)
+                    .addClass(settings.collapsedCssClass)
+                    .addClass(settings.initializedCssClass);
+            } else {
+                $container
+                    .removeClass(settings.collapsedCssClass)
+                    .removeData('manual-open');
+            }
+
+            $trigger.off('click').on('click', function () {
+                $container.toggleClass(settings.collapsedCssClass);
+                $container.data('manual-open', !$container.hasClass(settings.collapsedCssClass));
+            });
+        });
+    };
+
     var initialize = function (params) {
         var settings = $.extend({}, defaults, params || {});
 
         $(window).on('resize', function () {
-            $(settings.container).each(function () {
-                var $container = $(this);
-                var totalHeight = 0;
-                var maxHeight = $container.data('max-height');
-                var $trigger = $('[data-toggle="collapse-content-height"]', $container);
-
-                $container.children().filter(':visible').each(function() {
-                    totalHeight += $(this).outerHeight(true);
-                });
-
-                if (totalHeight > maxHeight) {
-                    $container.css('maxHeight', maxHeight).addClass(settings.collapsedCssClass);
-                } else {
-                    $container.removeClass(settings.collapsedCssClass);
-                }
-
-                $trigger.on('click', function () {
-                    $container.toggleClass(settings.collapsedCssClass);
-                });
-            });
+            syncState(settings);
         });
 
-        $(window).trigger('resize');
+        var observer = new ResizeObserver(function () {
+            syncState(settings);
+        });
+
+        document.querySelectorAll(settings.container).forEach(function (el) {
+            observer.observe(el);
+        });
+
+        syncState(settings);
     };
 
     return {
         initialize: initialize
     };
 })(jQuery);
+
 
 
 var floatingHeader = (function ($) {
