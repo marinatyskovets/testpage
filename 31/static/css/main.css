@@ -2544,7 +2544,7 @@ button.swiper-pagination-bullet {
 .c-swiper .swiper-button-next::after,
 .c-swiper .swiper-button-prev::after {
   content: "";
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -192px;
   width: 16px;
   height: 16px;
@@ -3026,7 +3026,7 @@ a.c-btn:not(:disabled):hover, a.c-btn:not(:disabled):focus, a.c-btn:not(.is-disa
 .c-color-circle--dots::after {
   content: "";
   display: inline-block;
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -60px;
   width: 24px;
   height: 24px;
@@ -3822,7 +3822,7 @@ select.form-control option {
 .form-group--toggle label:not(.control-label) input[type=checkbox] + span::after, .form-group--toggle-checkbox-view label:not(.control-label) input[type=checkbox] + span::after, .form-group--toggle-active-effect label:not(.control-label) input[type=checkbox] + span::after {
   left: 0;
   top: 0;
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -32px;
   width: 24px;
   height: 24px;
@@ -3834,7 +3834,7 @@ select.form-control option {
 .form-group--toggle label:not(.control-label) input[type=radio] + span::after, .form-group--toggle-checkbox-view label:not(.control-label) input[type=radio] + span::after, .form-group--toggle-active-effect label:not(.control-label) input[type=radio] + span::after {
   left: 6px;
   top: 6px;
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -212px;
   width: 12px;
   height: 12px;
@@ -3877,7 +3877,7 @@ select.form-control option {
 .form-group--toggle-checkbox-view label:not(.control-label) input[type=radio] + span::after {
   left: 0;
   top: 0;
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -32px;
   width: 24px;
   height: 24px;
@@ -4350,6 +4350,13 @@ button.c-link:disabled:hover, .c-resume-template button.c-resume-template-title_
   margin-bottom: 0;
 }
 
+.c-logo {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  cursor: pointer;
+}
+
 .c-loader {
   position: relative;
   display: inline-block;
@@ -4386,13 +4393,6 @@ button.c-link:disabled:hover, .c-resume-template button.c-resume-template-title_
   height: 16px;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
-}
-
-.c-logo {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 0;
-  cursor: pointer;
 }
 
 .c-message-box {
@@ -4536,6 +4536,10 @@ button.c-link:disabled:hover, .c-resume-template button.c-resume-template-title_
 .c-modal-common--splash .c-modal-common__content {
   padding: 0;
   background-color: transparent;
+}
+.c-modal-common--splash .c-modal-common__close {
+  top: -8px;
+  right: -8px;
 }
 .c-modal-common--content-center .c-modal-common__content {
   -webkit-box-pack: center;
@@ -4982,7 +4986,7 @@ button.c-link:disabled:hover, .c-resume-template button.c-resume-template-title_
   content: "";
   top: 9px;
   right: 9px;
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -168px;
   width: 20px;
   height: 20px;
@@ -5859,28 +5863,28 @@ button.c-link:disabled:hover, .c-resume-template button.c-resume-template-title_
   display: block;
 }
 .c-social-ico--fb::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -88px;
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
 }
 .c-social-ico--google::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -142px;
   width: 23px;
   height: 22px;
   background-repeat: no-repeat;
 }
 .c-social-ico--dropbox::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -4px;
   width: 25px;
   height: 24px;
   background-repeat: no-repeat;
 }
 .c-social-ico--google-drive::before {
-  background-image: url("../img/svg-sprite/sprite.svg?v=umalagg");
+  background-image: url("../img/svg-sprite/sprite.svg?v=uah76lr");
   background-position: -4px -116px;
   width: 24px;
   height: 22px;
@@ -6212,7 +6216,7 @@ button.c-link:disabled:hover, .c-resume-template button.c-resume-template-title_
 .c-toggle-title__ico, .c-toggle-title__ico-active {
   left: 0;
 }
-.c-toggle-title .c-toggle-title__ico-active {
+.c-toggle-title__ico-active {
   display: none;
 }
 
@@ -6635,10 +6639,23 @@ button.c-link:disabled:hover, .c-resume-template button.c-resume-template-title_
 }
 
 .c-vertical-scrollbar {
-  height: 418px;
+  height: 358px;
 }
 .c-vertical-scrollbar__inner {
   height: inherit;
   overflow-x: hidden;
   overflow-y: auto;
+}
+.c-vertical-scrollbar--mh418 {
+  height: 418px;
+}
+.c-vertical-scrollbar--box {
+  background: #ffffff;
+}
+.c-vertical-scrollbar--box .c-vertical-scrollbar__inner {
+  padding: 24px;
+}
+.c-vertical-scrollbar--invert {
+  margin-left: -24px;
+  margin-right: -24px;
 }
