@@ -27,79 +27,65 @@
                 <header class="c-header">
                     <div class="c-header__top">
                         <div class="c-header__cell">
-                            <!-- begin logo-->
-                            <a class="c-logo" href="#">
-                                <img src="static/img/general/effectivecoverletter-logo.svg" alt="Site logo" width="160" height="13">
-                            </a>
-                            <!-- end logo-->
+                            <button class="c-icon-button c-icon-button--lg" type="button" aria-label="Click on back button">
+                                <svg class="c-ico c-ico--xl c-ico--primary" viewBox="0 0 24 24">
+                                    <!-- ico name: arrow-left-->
+                                    <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="c-header__cell">
+                            <div class="c-header__title">Education</div>
+                        </div>
+                        <div class="c-header__cell">
+                            <button class="c-icon-button c-icon-button--lg" type="button" aria-label="Zoom" data-bs-toggle="modal" data-bs-target="#resume-preview">
+                                <svg class="c-ico c-ico--xl c-ico--primary" viewBox="0 0 24 24">
+                                    <!-- ico name: magnify-plus-outline-->
+                                    <path fill="currentColor" d="M15.5,14L20.5,19L19,20.5L14,15.5V14.71L13.73,14.43C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.43,13.73L14.71,14H15.5M9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14M12,10H10V12H9V10H7V9H9V7H10V9H12V10Z"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </header>
                 <!-- end header-->
+                <!-- begin progress-bar-->
+                <div class="c-progress-bar">
+                    <div class="c-progress-bar__line" style="width: 26%"></div>
+                </div>
+                <!-- end progress-bar-->
             </div>
             <div class="w-page__content">
                 <!-- ---------------  Main part page ----------------->
                 <main class="w-main">
                     <div class="w-main__content">
                         <!-- ---------------  Main content part page ----------------->
-                        <div class="w-gap-6xl">
-                            <div class="w-gap-md c-column-gap-sm u-text-center">
-                                <div class="c-h3">How long have you been working?</div>
-                                <div class="c-h4 u-text-normal">Based on your level of experience, we'll find the best templates for you</div>
-                                <div class="u-text-help u-text-sm">Include internships, unpaid work and volunteering</div>
-                            </div>
-                            <div class="w-gap-md c-column-gap-sm">
-                                <button class="c-option-btn is-active" type="button">No Experience
-                                </button>
-                                <button class="c-option-btn" type="button">Less Than 3 Years
-                                </button>
-                                <button class="c-option-btn" type="button">3-5 Years
-                                </button>
-                                <button class="c-option-btn" type="button">5-10 Years
-                                </button>
-                                <button class="c-option-btn" type="button">10+ Years
-                                </button>
-                            </div>
+                        <div class="w-gap-md c-column-gap-sm u-text-center">
+                            <div class="c-h2">Which option best reflects your education level?</div>
+                            <div class="c-h4 u-text-normal">Choose the most suitable option, and we'll help you format your education section.</div>
                         </div>
-                        <div class="w-gap-6xl">
-                            <div class="w-gap-md c-column-gap-sm u-text-center">
-                                <div class="c-h3">Are you a student?</div>
-                            </div>
-                            <div class="w-gap-md c-column-gap-sm">
-                                <button class="c-option-btn is-active" type="button">Yes
-                                </button>
-                                <button class="c-option-btn" type="button">No
-                                </button>
-                            </div>
+                        <div class="w-gap-md c-column-gap-sm">
+                            <button class="c-option-btn" type="button">Certificate or Diploma
+                            </button>
+                            <button class="c-option-btn" type="button">Apprenticeship or Internship Training
+                            </button>
+                            <button class="c-option-btn" type="button">Completed Coursework
+                            </button>
+                            <button class="c-option-btn" type="button">Associates
+                            </button>
+                            <button class="c-option-btn" type="button">Bachelors or Honours
+                            </button>
+                            <button class="c-option-btn" type="button">Masters
+                            </button>
+                            <button class="c-option-btn" type="button">Doctorate or Ph.D
+                            </button>
                         </div>
-                        <div class="w-gap-6xl">
-                            <div class="w-gap-md c-column-gap-sm u-text-center">
-                                <div class="c-h3">Choose the option that best reflects your level of education</div>
-                                <div class="c-h4 u-text-normal">Knowing your education background allows us to navigate you through the relevant sections of your resume.</div>
-                            </div>
-                            <div class="w-gap-md c-column-gap-sm">
-                                <button class="c-option-btn" type="button">Post-Secondary Certificate or High School diploma
-                                </button>
-                                <button class="c-option-btn" type="button">Technical or Vocational
-                                </button>
-                                <button class="c-option-btn is-active" type="button">Related Courses
-                                </button>
-                                <button class="c-option-btn" type="button">Certificates or Diplomas
-                                </button>
-                                <button class="c-option-btn" type="button">Associates
-                                </button>
-                                <button class="c-option-btn" type="button">Bechelors
-                                </button>
-                                <button class="c-option-btn" type="button">Masters or Specialized
-                                </button>
-                                <button class="c-option-btn" type="button">Doctoral or J.D.
-                                </button>
-                            </div>
-                            <div class="c-row c-row--justify-center w-gap-md">
-                                <button class="c-btn c-btn--ghost" type="button">Prefer not to answer
-                                </button>
-                            </div>
+                        <div class="c-row c-row--justify-center w-gap-md">
+                            <button class="c-btn c-btn--ghost" type="button">Prefer not to answer
+                            </button>
                         </div>
+                    </div>
+                    <div class="w-main__bottom">
+                        <!-- ---------------  Main bottom part page ----------------->
                     </div>
                 </main>
             </div>

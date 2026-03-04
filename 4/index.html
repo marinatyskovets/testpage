@@ -59,98 +59,161 @@
                 <main class="w-main">
                     <div class="w-main__content">
                         <!-- ---------------  Main content part page ----------------->
-                        <div class="c-row c-row--nowrap c-row--justify-between c-row--align-top c-row--gap-xs w-gap-md">
-                            <div class="c-h2">Showcase your education</div>
-                            <button class="c-btn c-btn--2xs c-btn--accent u-text-sm" type="button" data-bs-toggle="modal" data-bs-target="#tips-education-content-coursework">
-                                <svg class="c-ico c-ico--md c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
-                                    <!-- ico name: lightbulb-outline-->
-                                    <path fill="currentColor" d="M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z"></path>
-                                </svg>Tips
-                            </button>
+                        <div class="w-gap-sm">
+                            <div class="c-row c-row--nowrap c-row--justify-between c-row--align-top c-row--gap-xs w-gap-xs">
+                                <div class="c-h2">Tell us about your education</div>
+                                <button class="c-btn c-btn--2xs c-btn--accent u-text-sm" type="button" data-bs-toggle="modal" data-bs-target="#tips-education-content">
+                                    <svg class="c-ico c-ico--md c-ico--inherit c-btn__ico-left" viewBox="0 0 24 24">
+                                        <!-- ico name: lightbulb-outline-->
+                                        <path fill="currentColor" d="M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z"></path>
+                                    </svg>Tips
+                                </button>
+                            </div>
+                            <div class="c-h4 u-text-normal u-mt-0 w-gap-sm">We’ll start there and work backward.</div><b class="u-text-help u-text-sm">* Indicates a required field</b>
                         </div>
-                        <div class="w-gap-sm c-column-gap-xxs">
-                            <div class="c-h4">Education Description:</div>
-                            <!-- begin content-helper-->
-                            <button class="c-content-helper" type="button" data-bs-toggle="modal" data-bs-target="#examples-from-experts"><span class="c-content-helper__label">
-                    <svg class="c-ico c-ico--lg c-ico--info" viewBox="0 0 24 24"><!-- ico name: plus-circle-->
-                      <path fill="currentColor" d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
-                    </svg> Examples from experts</span><span class="c-content-helper__counter">3/15</span>
-                            </button>
-                            <!-- end content-helper-->
-                        </div>
-                        <!-- begin text-editor-->
-                        <div class="c-text-editor w-gap-sm">
-                            <div class="c-text-editor__content">
-                                <div class="c-text-editor__textarea w-gap-sm">
-                                    <ul>
-                                        <li>
-                                            <span style="color: #0B0DE6;">[Scholarship Name]</span>,
-                                            <span style="color: #0B0DE6;">[Year Awarded]</span>
-                                            from <span style="color: #0B0DE6;">[Awarding Body]</span>
-                                        </li>
-                                        <li>
-                                            Member of <span style="color: #0B0DE6;">[Club Name]</span>,
-                                            <span style="color: #0B0DE6;">[Year]</span>
-                                            to <span style="color: #0B0DE6;">[Year]</span>
-                                        </li>
-                                        <li>
-                                            <span style="color: #0B0DE6;">[Position]</span>,
-                                            <span style="color: #0B0DE6;">[Program or Club]</span>,
-                                            <span style="color: #0B0DE6;">[Year]</span>
-                                            to <span style="color: #0B0DE6;">[Year]</span>
-                                        </li>
-                                        <li>
-                                            <span style="color: #0B0DE6;">[Activity Name]</span>,
-                                            <span style="color: #0B0DE6;">[Year]</span>
-                                            to <span style="color: #0B0DE6;">[Year]</span>
-                                        </li>
-                                    </ul>
+                        <form class="w-gap-sm c-column-gap-md">
+                            <input type="hidden">
+                            <!-- begin form-group-->
+                            <div class="form-group">
+                                <!-- begin control-label-->
+                                <label class="control-label" for="school-name">School Name *</label>
+                                <!-- end control-label-->
+                                <!-- begin form-control-->
+                                <input class="form-control" type="text" id="school-name" placeholder="e.g. Stanford University"></input>
+                                <!-- end form-control-->
+                                <div class="help-block"></div>
+                            </div>
+                            <!-- end form-group-->
+                            <!-- begin form-group-->
+                            <div class="form-group">
+                                <!-- begin control-label-->
+                                <label class="control-label" for="school-location">School Location *</label>
+                                <!-- end control-label-->
+                                <!-- begin form-control-->
+                                <input class="form-control" type="text" id="school-location" placeholder="e.g. Stanford, USA"></input>
+                                <!-- end form-control-->
+                                <div class="help-block"></div>
+                            </div>
+                            <!-- end form-group-->
+                            <!-- begin form-group-->
+                            <div class="form-group form-group--selection js-form-select">
+                                <!-- begin control-label-->
+                                <label class="control-label" for="degree">Degree</label>
+                                <!-- end control-label-->
+                                <div class="form-group__container">
+                                    <div class="form-group__placeholder">Select</div>
+                                    <!-- begin form-control-->
+                                    <select class="form-control js-select" id="degree" required="required">
+                                        <option value="">Select</option>
+                                        <option value="1">Item</option>
+                                        <option value="2">Item</option>
+                                        <option value="3">Item</option>
+                                        <option value="4">Item</option>
+                                    </select>
+                                    <!-- end form-control-->
+                                </div>
+                                <div class="help-block"></div>
+                            </div>
+                            <!-- end form-group-->
+                            <!-- begin form-group-->
+                            <div class="form-group">
+                                <!-- begin control-label-->
+                                <label class="control-label" for="field-study">Field Of Study</label>
+                                <!-- end control-label-->
+                                <!-- begin form-control-->
+                                <input class="form-control" type="text" id="field-study" placeholder="e.g. Art Education"></input>
+                                <!-- end form-control-->
+                                <div class="help-block"></div>
+                            </div>
+                            <!-- end form-group-->
+                            <div>
+                                <div class="c-h4 w-gap-xs">Graduation Date (or expected graduation date)</div>
+                                <div class="c-row c-row--nowrap c-row--row-gap-md c-row--by-2">
+                                    <!-- begin form-group-->
+                                    <div class="form-group form-group--selection js-form-select">
+                                        <div class="form-group__container">
+                                            <div class="form-group__placeholder">Month</div>
+                                            <!-- begin form-control-->
+                                            <select class="form-control js-select" required="required">
+                                                <option value="">Select</option>
+                                                <option value="1">January</option>
+                                                <option value="2">February</option>
+                                                <option value="3">March</option>
+                                                <option value="4">April</option>
+                                                <option value="5">May</option>
+                                                <option value="6">June</option>
+                                                <option value="7">July</option>
+                                                <option value="8">August</option>
+                                                <option value="9">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                            <!-- end form-control-->
+                                        </div>
+                                        <div class="help-block"></div>
+                                    </div>
+                                    <!-- end form-group-->
+                                    <!-- begin form-group-->
+                                    <div class="form-group form-group--selection js-form-select">
+                                        <div class="form-group__container">
+                                            <div class="form-group__placeholder">Year</div>
+                                            <!-- begin form-control-->
+                                            <select class="form-control js-select" required="required">
+                                                <option value="">Select</option>
+                                                <option value="1">2024</option>
+                                                <option value="2">2023</option>
+                                                <option value="3">2022</option>
+                                                <option value="4">2021</option>
+                                                <option value="5">2020</option>
+                                                <option value="6">2019</option>
+                                                <option value="7">2018</option>
+                                                <option value="8">2017</option>
+                                                <option value="9">2016</option>
+                                                <option value="10">2015</option>
+                                                <option value="11">2014</option>
+                                                <option value="12">2013</option>
+                                            </select>
+                                            <!-- end form-control-->
+                                        </div>
+                                        <!-- begin tooltip-->
+                                        <div class="c-tooltip c-tooltip--sm c-tooltip--space-sm c-tooltip--secondary c-tooltip--arrow-top-right">
+                                            <div class="c-row c-row--nowrap c-row--justify-between c-row--row-gap-xs w-gap-sm">
+                                                <div class="c-h4">Tip</div>
+                                                <button class="c-icon-button c-icon-button--secondary c-tooltip__close" type="button" aria-label="Close">
+                                                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
+                                                        <!-- ico name: close-->
+                                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="w-gap-sm">If your degree is over 10 years old, consider removing the graduation year</div>
+                                        </div>
+                                        <!-- end tooltip-->
+                                        <div class="help-block"></div>
+                                    </div>
+                                    <!-- end form-group-->
                                 </div>
                             </div>
-                            <div class="c-text-editor__toolbar">
-                                <div class="c-text-editor__cell">
-                                    <button class="c-btn c-text-editor__btn" type="button">
-                                        <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
-                                            <!-- ico name: format-bold-->
-                                            <path fill="currentColor" d="M13.5,15.5H10V12.5H13.5A1.5,1.5 0 0,1 15,14A1.5,1.5 0 0,1 13.5,15.5M10,6.5H13A1.5,1.5 0 0,1 14.5,8A1.5,1.5 0 0,1 13,9.5H10M15.6,10.79C16.57,10.11 17.25,9 17.25,8C17.25,5.74 15.5,4 13.25,4H7V18H14.04C16.14,18 17.75,16.3 17.75,14.21C17.75,12.69 16.89,11.39 15.6,10.79Z"></path>
-                                        </svg>
-                                    </button>
-                                    <button class="c-btn c-text-editor__btn" type="button">
-                                        <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
-                                            <!-- ico name: format-italic-->
-                                            <path fill="currentColor" d="M10,4V7H12.21L8.79,15H6V18H14V15H11.79L15.21,7H18V4H10Z"></path>
-                                        </svg>
-                                    </button>
-                                    <button class="c-btn c-text-editor__btn" type="button">
-                                        <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
-                                            <!-- ico name: format-underline-->
-                                            <path fill="currentColor" d="M5,21H19V19H5V21M12,17A6,6 0 0,0 18,11V3H15.5V11A3.5,3.5 0 0,1 12,14.5A3.5,3.5 0 0,1 8.5,11V3H6V11A6,6 0 0,0 12,17Z"></path>
-                                        </svg>
-                                    </button>
-                                    <button class="c-btn c-text-editor__btn" type="button">
-                                        <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
-                                            <!-- ico name: format-list-bulleted-->
-                                            <path fill="currentColor" d="M7,5H21V7H7V5M7,13V11H21V13H7M4,4.5A1.5,1.5 0 0,1 5.5,6A1.5,1.5 0 0,1 4,7.5A1.5,1.5 0 0,1 2.5,6A1.5,1.5 0 0,1 4,4.5M4,10.5A1.5,1.5 0 0,1 5.5,12A1.5,1.5 0 0,1 4,13.5A1.5,1.5 0 0,1 2.5,12A1.5,1.5 0 0,1 4,10.5M7,19V17H21V19H7M4,16.5A1.5,1.5 0 0,1 5.5,18A1.5,1.5 0 0,1 4,19.5A1.5,1.5 0 0,1 2.5,18A1.5,1.5 0 0,1 4,16.5Z"></path>
-                                        </svg>
-                                    </button>
+                            <div class="c-column-gap-xs">
+                                <!-- begin option-large-card-->
+                                <a class="c-option-large-card c-option-large-card--xs" href="#"><span class="c-option-large-card__icon">
+                      <svg class="c-ico c-ico--sm c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: plus-circle-->
+                        <path fill="currentColor" d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
+                      </svg></span><span class="c-option-large-card__content"><span class="c-option-large-card__text">Add any other coursework you'd like to highlight and are proud of</span></span></a>
+                                <!-- end option-large-card-->
+                                <!-- begin message-box-->
+                                <div class="c-message-box c-message-box--arrow">
+                                    <div class="c-row c-row--nowrap c-row--gap-xs">
+                                        <svg class="c-ico c-ico--sm c-ico--inherit u-mt-4" viewBox="0 0 24 24">
+                                            <!-- ico name: information-->
+                                            <path fill="currentColor" d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
+                                        </svg>Don't forget to mention any relevant professional development for the role you're targeting
+                                    </div>
                                 </div>
-                                <div class="c-text-editor__cell">
-                                    <button class="c-btn c-text-editor__btn" type="button">
-                                        <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
-                                            <!-- ico name: restore-->
-                                            <path fill="currentColor" d="M13,3A9,9 0 0,0 4,12H1L4.89,15.89L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3Z"></path>
-                                        </svg>
-                                    </button>
-                                    <button class="c-btn c-text-editor__btn" type="button">
-                                        <svg class="c-ico c-ico--md c-ico--inherit" viewBox="0 0 24 24">
-                                            <!-- ico name: reload-->
-                                            <path fill="currentColor" d="M2 12C2 16.97 6.03 21 11 21C13.39 21 15.68 20.06 17.4 18.4L15.9 16.9C14.63 18.25 12.86 19 11 19C4.76 19 1.64 11.46 6.05 7.05C10.46 2.64 18 5.77 18 12H15L19 16H19.1L23 12H20C20 7.03 15.97 3 11 3C6.03 3 2 7.03 2 12Z"></path>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <!-- end message-box-->
                             </div>
-                        </div>
-                        <!-- end text-editor-->
+                        </form>
                     </div>
                     <div class="w-main__bottom">
                         <!-- ---------------  Main bottom part page ----------------->
@@ -188,7 +251,7 @@
         </div>
         <!-- --------------- Outside part page ----------------->
         <!-- begin modal-common-->
-        <div class="c-modal-common modal fade js-modal-locker" id="tips-education-content-coursework">
+        <div class="c-modal-common modal fade js-modal-locker" id="tips-education-content">
             <div class="c-modal-common__dialog modal-dialog">
                 <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
                     <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
@@ -197,242 +260,22 @@
                     </svg>
                 </button>
                 <div class="c-modal-common__content">
-                    <div class="c-h3 w-gap-md c-modal-common__title">Education section samples</div>
-                    <!-- begin separate-section-->
-                    <div class="c-separate-section c-separate-section--sm c-separate-section--reverse">
-                        <div class="w-gap-md">
-                            <div class="c-h4 u-mb-0">AAA College</div>
-                            <p class="u-m-0">September 2024</p>
-                            <!-- begin list-->
-                            <ul class="c-list c-list--gap-0">
-                                <li>B.A. in English, departmental honors
-                                </li>
-                                <li>Level 1 certification in Strategic Communication
-                                </li>
-                            </ul>
-                            <!-- end list-->
-                        </div>
+                    <div class="w-gap-lg c-column-gap-sm">
+                        <div class="c-h3 c-modal-common__title">Expert Insights</div>
+                        <p class="u-mt-0">Some people still face age discrimination at work. If your degree is older than ten years, you might want to remove the date.</p>
+                        <!-- begin list-->
+                        <ul class="c-list">
+                            <li>List the schools you've been to and the diplomas or degrees you earned, starting from the last one.
+                            </li>
+                            <li>If you didn’t attend college, list high school only.
+                            </li>
+                            <li>You don't have to list coursework, but it can help if you lack work experience.
+                            </li>
+                            <li>Certifications and training programs should be included in a separate section.
+                            </li>
+                        </ul>
+                        <!-- end list-->
                     </div>
-                    <!-- end separate-section-->
-                    <!-- begin separate-section-->
-                    <div class="c-separate-section c-separate-section--sm c-separate-section--reverse">
-                        <div class="w-gap-md">
-                            <h3 class="c-h4 u-mb-0">Education</h3>
-                            <p class="u-m-0">AAA College</p>
-                            <!-- begin list-->
-                            <ul class="c-list c-list--gap-0">
-                                <li>B.A. in English, departmental honors
-                                </li>
-                            </ul>
-                            <!-- end list-->
-                        </div>
-                        <div class="w-gap-md">
-                            <h3 class="c-h4 u-mb-0">Honors and Awards</h3>
-                            <!-- begin list-->
-                            <ul class="c-list c-list--gap-0">
-                                <li>Graduated summa cum laude
-                                </li>
-                                <li>Recipient of the ABC Award for excellence in journalism
-                                </li>
-                            </ul>
-                            <!-- end list-->
-                        </div>
-                        <div class="w-gap-md">
-                            <h3 class="c-h4 u-mb-0">Certifications</h3>
-                            <!-- begin list-->
-                            <ul class="c-list c-list--gap-0">
-                                <li>Strategic Communication, Level 1
-                                </li>
-                            </ul>
-                            <!-- end list-->
-                        </div>
-                    </div>
-                    <!-- end separate-section-->
-                </div>
-            </div>
-        </div>
-        <!-- end modal-common-->
-        <!-- begin modal-common-->
-        <div class="c-modal-common c-modal-common--sm-long c-modal-common--fullscreen modal fade js-modal-locker" id="examples-from-experts">
-            <div class="c-modal-common__dialog modal-dialog">
-                <button class="c-icon-button c-icon-button--secondary c-modal-common__close" type="button" aria-label="Close" data-bs-dismiss="modal">
-                    <svg class="c-ico c-ico--lg c-ico--inherit" viewBox="0 0 24 24">
-                        <!-- ico name: close-->
-                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                    </svg>
-                </button>
-                <div class="c-modal-common__content">
-                    <div class="c-column-gap-md">
-                        <div class="c-h3 c-modal-common__title">Examples from experts</div>
-                        <div class="u-ml-16-neg u-mr-16-neg">
-                            <!-- begin title-collapse-->
-                            <div class="c-title-collapse c-title-collapse--compact">
-                                <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item-0">
-                                    <svg class="c-ico c-ico--lg c-ico--inherit c-title-collapse__toggle-icon" viewBox="0 0 24 24">
-                                        <!-- ico name: chevron-down-->
-                                        <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
-                                    </svg>Educational Achievements
-                                </button>
-                                <div class="c-title-collapse__dialog collapse" id="item-0">
-                                    <div class="c-title-collapse__inner">
-                                        <p class="w-gap-xs u-text-sm">Include a scholarship or award if you’ve received any.</p>
-                                        <!-- begin list-card-->
-                                        <ul class="c-list-card c-list-card--flex">
-                                            <li class="c-list-card__item"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: plus-->
-                              <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Awards
-                                                </div>
-                                            </li>
-                                            <li class="c-list-card__item is-active"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: check-->
-                              <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Scholarships
-                                                </div>
-                                            </li>
-                                            <li class="c-list-card__item"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: plus-->
-                              <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Athletic or Competitive Scholarship
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <!-- end list-card-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end title-collapse-->
-                            <!-- begin title-collapse-->
-                            <div class="c-title-collapse c-title-collapse--compact">
-                                <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item-1">
-                                    <svg class="c-ico c-ico--lg c-ico--inherit c-title-collapse__toggle-icon" viewBox="0 0 24 24">
-                                        <!-- ico name: chevron-down-->
-                                        <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
-                                    </svg>Awards, Grants and Scholarships
-                                </button>
-                                <div class="c-title-collapse__dialog collapse" id="item-1">
-                                    <div class="c-title-collapse__inner">
-                                        <p class="w-gap-xs u-text-sm">Include a scholarship or award if you’ve received any.</p>
-                                        <!-- begin list-card-->
-                                        <ul class="c-list-card c-list-card--flex">
-                                            <li class="c-list-card__item"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: plus-->
-                              <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Awards
-                                                </div>
-                                            </li>
-                                            <li class="c-list-card__item is-active"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: check-->
-                              <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Scholarships
-                                                </div>
-                                            </li>
-                                            <li class="c-list-card__item"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: plus-->
-                              <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Athletic or Competitive Scholarship
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <!-- end list-card-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end title-collapse-->
-                            <!-- begin title-collapse-->
-                            <div class="c-title-collapse c-title-collapse--compact">
-                                <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item-2">
-                                    <svg class="c-ico c-ico--lg c-ico--inherit c-title-collapse__toggle-icon" viewBox="0 0 24 24">
-                                        <!-- ico name: chevron-down-->
-                                        <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
-                                    </svg>Completed Coursework
-                                </button>
-                                <div class="c-title-collapse__dialog collapse" id="item-2">
-                                    <div class="c-title-collapse__inner">
-                                        <p class="w-gap-xs u-text-sm">Include a scholarship or award if you’ve received any.</p>
-                                        <!-- begin list-card-->
-                                        <ul class="c-list-card c-list-card--flex">
-                                            <li class="c-list-card__item"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: plus-->
-                              <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Awards
-                                                </div>
-                                            </li>
-                                            <li class="c-list-card__item is-active"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: check-->
-                              <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Scholarships
-                                                </div>
-                                            </li>
-                                            <li class="c-list-card__item"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: plus-->
-                              <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Athletic or Competitive Scholarship
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <!-- end list-card-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end title-collapse-->
-                            <!-- begin title-collapse-->
-                            <div class="c-title-collapse c-title-collapse--compact">
-                                <button class="c-title-collapse__toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item-3">
-                                    <svg class="c-ico c-ico--lg c-ico--inherit c-title-collapse__toggle-icon" viewBox="0 0 24 24">
-                                        <!-- ico name: chevron-down-->
-                                        <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
-                                    </svg>Educational Achievements
-                                </button>
-                                <div class="c-title-collapse__dialog collapse" id="item-3">
-                                    <div class="c-title-collapse__inner">
-                                        <p class="w-gap-xs u-text-sm">Include a scholarship or award if you’ve received any.</p>
-                                        <!-- begin list-card-->
-                                        <ul class="c-list-card c-list-card--flex">
-                                            <li class="c-list-card__item"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: plus-->
-                              <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Awards
-                                                </div>
-                                            </li>
-                                            <li class="c-list-card__item is-active"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: check-->
-                              <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Scholarships
-                                                </div>
-                                            </li>
-                                            <li class="c-list-card__item"><span class="c-list-card__btn">
-                            <svg class="c-ico c-ico--xl c-ico--inherit" viewBox="0 0 24 24"><!-- ico name: plus-->
-                              <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
-                            </svg></span>
-                                                <div class="c-list-card__content">Athletic or Competitive Scholarship
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <!-- end list-card-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end title-collapse-->
-                        </div>
-                    </div>
-                    <!-- begin bottom-panel-->
-                    <div class="c-bottom-panel">
-                        <button class="c-btn c-btn--secondary" type="button" data-bs-dismiss="modal">Close
-                        </button>
-                    </div>
-                    <!-- end bottom-panel-->
                 </div>
             </div>
         </div>
@@ -446,6 +289,13 @@
         <script src="static/js/separate-js/toggleFocusInput.js"></script>
         <script src="static/js/separate-js/swiper-bundle.min.js"></script>
         <script src="static/js/separate-js/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                  $('.js-select').on('change', function () {
+                      $(this).parents('.js-form-select').toggleClass('is-selected', !!$(this).val());
+                  });
+              });
+        </script>
     </body>
 
 </html>
