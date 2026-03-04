@@ -1,14 +1,11 @@
 $(document).ready(function () {
-    $(document).on('show.bs.modal', '.js-modal-locker', function (event) {
+    $(document).on('show.bs.modal', '.js-modal-locker', function () {
         locker.lock();
     });
-    $(document).on('hidden.bs.modal', '.js-modal-locker', function (event) {
+
+    $(document).on('hidden.bs.modal', '.js-modal-locker', function () {
         locker.unlock();
     });
-
-    toggle.initialize();
-
-    drawer.initialize();
 
     // Example autocomplete
     var jobs = [
@@ -17,166 +14,50 @@ $(document).ready(function () {
         {value: 'Дизайнер', data: 'designer'}
     ];
 
-    $('#autocomplete').autocomplete({
-        lookup: jobs,
-        onSelect: function (suggestion) {
-            console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
-        }
-    });
+    var fieldIds = ['#autocomplete'];
 
-    $('.js-form-focus').toggleFocusInput();
+    for (var i= 0; i < fieldIds.length; i++) {
 
-    $('.js-once-touch-field').on('focus', function () {
-        $(this).parents('.js-once-touch-form').addClass('is-active');
-    });
+        var element = $(fieldIds[i]);
 
-    (function ($) {
-        var $collapse = $('.js-toggle-collapse-parent');
-
-        $collapse.on('show.bs.collapse', function () {
-            $(this).parent().addClass('is-open');
+        element.autocomplete({
+            lookup: jobs,
+            width: 'flex',
+            appendTo: element.parent(),
+            onSelect: function (suggestion) {
+                console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
+            }
         });
-        $collapse.on('hide.bs.collapse', function () {
-            $(this).parent().removeClass('is-open');
-        });
-    })(jQuery);
-
-    if (document.getElementById('header')) {
-        floatingHeader.initialize({id: 'header'});
     }
 
-    // For dropdowns (Clicks inside do not close the dropdown)
-    $(document).on(
-        'click.bs.dropdown.data-api',
-        '.js-keep-inside-clicks-open',
-        function (e) {
-            e.stopPropagation();
-        }
-    );
-
-    $('.js-scroll-tab-into-view').on('shown.bs.tab', function () {
-        var element = $($(this).data('target'))[0];
-        element.scrollIntoView({behavior: "smooth"});
-    });
-
-    $('.js-tab-has-tooltip').on('shown.bs.tab', function () {
-        var element = $($(this).data('target'))[0];
-        var id = $(element).attr('id');
-        var tab = $("[data-target='#" + id + "']").parent();
-        tab.find('.js-tab-tooltip').addClass('u-hidden');
-    });
-
-    $('.js-toggle-btn').on('click', function () {
-        var container = $('.js-toggle-container');
-
-        if (container.hasClass('is-open')) {
-            container.removeClass('is-open');
-        } else {
-            container.addClass('is-open');
-        }
-    });
-
-    $('.js-input-show-modal').on('change', function() {
-        if ($(this).is(':not(:checked')) {
-            $($(this).attr('data-target')).modal('show');
-        }
-    });
-
-    $('.js-change-input-group').on('change', function() {
-        var container = $(this).parents('.js-input-group');
-        var inputs = container.find('input[type=checkbox]');
-        inputs.prop('checked', $(this).prop('checked'));
-
-        if (container.find('input[type=checkbox]:checked.js-change-input').length === 0) {
-            container.find('.js-change-input').prop({
-                disabled: true
-            });
-        } else {
-            container.find('.js-change-input').prop({
-                disabled: false
-            });
-        }
-    });
-
-    $('.js-change-input').on('change', function() {
-        var checked = $(this).prop('checked');
-        var container = $(this).parents('.js-input-group');
-
-        if ($(this).is(':checked')) {
-            container.find('.js-change-input-group').prop({
-                indeterminate: true,
-                checked: container.find('.js-change-input-group').prop('checked', false)
-            });
-        } else {
-            if (container.find('input[type=checkbox]:checked.js-change-input').length === 0) {
-                container.find('input[type=checkbox]').prop({
-                    indeterminate: false,
-                    checked: checked
-                });
-                container.find('.js-change-input').prop({
-                    disabled: true
-                });
-            }
-        }
-    });
-
-    handleHorizontalScroll.init();
+    footerPushDown.initialize();
 });
 
-
-var handleHorizontalScroll = (function($) {
-    var defaults = {
-        container: '.js-scroll-container',
-        scroll: '.js-scroll',
-        button: '.js-scroll-control',
-        offset: 10,
-        scrollSpeed: 200,
+var locker = (function ($) {
+    var settings = {
+        element: 'html',
+        lockedClass: 'no-scroll'
     };
 
-    function init(params) {
-        var settings = $.extend({}, defaults, params || {});
-        var $containers = $(settings.container);
+    var lock = function () {
+        var padding = window.innerWidth - document.documentElement.clientWidth;
 
-        $containers.each(function () {
-            var $container = $(this);
-            var $scroll = $container.find(settings.scroll);
-            var $button = $container.find(settings.button);
-            var scrollWidth = getScrollWidth();
+        $(settings.element)
+            .addClass(settings.lockedClass)
+            .css('paddingRight', padding);
+    };
 
-            checkVisibilityButton();
-
-            $(window).on('resize', function() {
-                scrollWidth = getScrollWidth();
-                checkVisibilityButton();
-            });
-
-            $scroll.on('scroll', function() {
-                checkVisibilityButton();
-            });
-
-            $button.on('click', function () {
-                $scroll.animate({scrollLeft: scrollWidth}, settings.scrollSpeed);
-            });
-
-            function getScrollWidth() {
-                return $scroll[0].scrollWidth;
-            }
-
-            function checkVisibilityButton() {
-                if ($scroll.scrollLeft() + $scroll.outerWidth(true) + settings.offset >= scrollWidth) {
-                    $button.hide();
-                } else {
-                    $button.show();
-                }
-            }
-        })
-    }
+    var unlock = function () {
+        $(settings.element)
+            .removeClass(settings.lockedClass)
+            .css('paddingRight', 0);
+    };
 
     return {
-        init: init
+        lock: lock,
+        unlock: unlock
     };
 })(jQuery);
-
 
 var toggle = (function ($) {
     var defaults = {
@@ -209,89 +90,75 @@ var toggle = (function ($) {
     };
 })(jQuery);
 
-
-var drawer = (function ($) {
+var footerPushDown = (function ($) {
     var settings = {
-        drawer: '.js-drawer',
-        toggler: '.js-drawer-toggler',
-        stateClass: 'is-open',
+        page: '.w-page',
+        bottom: '.w-page__bottom',
+        sticky: '.w-main__bottom'
     };
 
     var initialize = function () {
-        var toggler = $(settings.toggler),
-            drawer = $(settings.drawer),
+        var page = $(settings.page),
+            bottom = $(settings.bottom),
+            sticky = $(settings.sticky);
+
+        if (!page.length || !bottom.length) return;
+
+        var apply = function () {
+            var footerHeight = bottom.outerHeight();
+            var viewportHeight = $(window).height();
+
+            var stickyMarginBottom = 0;
+
+            if (sticky.length) {
+                stickyMarginBottom = parseFloat(sticky.css('margin-bottom')) || 0;
+            }
+
+            page.css('min-height', viewportHeight + footerHeight + stickyMarginBottom);
+        };
+
+        $(window).on('load resize', apply);
+        apply();
+    };
+
+    return {
+        initialize: initialize
+    };
+})(jQuery);
+
+var tooltipVisibilityManager = (function ($) {
+    var defaults = {
+        container: '.js-tooltip',
+        opener: '.js-tooltip-toggle',
+        closer: '.js-tooltip-close',
+        stateClass: 'is-open'
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {}),
+            container = $(settings.container),
             stateClass = settings.stateClass;
 
-        toggler.on('click', function () {
-            if (drawer.hasClass(stateClass)) {
-                drawer.removeClass(stateClass);
+        $(settings.opener).on('click', function (e) {
+            e.stopPropagation();
+            $(e.currentTarget).closest(settings.container).toggleClass(stateClass);
+        });
 
-                locker.unlock();
-            } else {
-                drawer.addClass(stateClass);
+        $(settings.closer).on('click', function (e) {
+            e.stopPropagation();
 
-                locker.lock();
+            var tooltip = $(this).closest(settings.container);
+
+            if (tooltip.hasClass(stateClass)) {
+                tooltip.removeClass(stateClass);
             }
         });
-    };
 
-    return {
-        initialize: initialize,
-    };
-})(jQuery);
+        $(document).on('click', function (e) {
+            var target = $(e.target);
 
-
-var locker = (function ($) {
-    var settings = {
-        element: 'html',
-        lockedClass: 'no-scroll'
-    };
-
-    var lock = function () {
-        $(settings.element)
-            .addClass(settings.lockedClass);
-    };
-
-    var unlock = function () {
-        $(settings.element)
-            .removeClass(settings.lockedClass);
-    };
-
-    return {
-        lock: lock,
-        unlock: unlock
-    };
-})(jQuery);
-
-
-var scrollToTop = (function ($) {
-    var defaults = {
-        speed: 500,
-        classList: 'gui-btn-up material-icons',
-    };
-
-    var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {});
-        var height = $(window).height();
-
-        var $button = $('<button/>', {
-            type: 'button',
-            class: settings.classList
-        });
-
-        $button.on('click', function () {
-            $('body, html').animate({
-                scrollTop: 0
-            }, settings.speed);
-        });
-
-        var $appended = $button.appendTo('body').hide();
-
-        $(window).scroll(function(){
-            if ($(this).scrollTop() > height) {
-                $appended.fadeIn();
-            } else {
-                $appended.fadeOut();
+            if (container.hasClass(stateClass) && !container.is(target) && container.has(target).length === 0) {
+                container.removeClass(stateClass);
             }
         });
     };
@@ -301,61 +168,63 @@ var scrollToTop = (function ($) {
     };
 })(jQuery);
 
-
-var collapseContentHeight = (function ($) {
+var lazyLoader = (function () {
     var defaults = {
-        container: '.js-collapse-content-height',
-        initializedCssClass: 'initialized',
-        collapsedCssClass: 'collapsed'
-    };
-
-    var syncState = function (settings) {
-        $(settings.container).each(function () {
-            var $container = $(this);
-            var totalHeight = 0;
-            var maxHeight = $container.data('max-height');
-            var $trigger = $('[data-toggle="collapse-content-height"]', $container);
-
-            $container.children().filter(':visible').each(function () {
-                totalHeight += $(this).outerHeight(true);
-            });
-
-            if (totalHeight > maxHeight) {
-                if ($container.data('manual-open')) return;
-
-                $container
-                    .css('maxHeight', maxHeight)
-                    .addClass(settings.collapsedCssClass)
-                    .addClass(settings.initializedCssClass);
-            } else {
-                $container
-                    .removeClass(settings.collapsedCssClass)
-                    .removeData('manual-open');
-            }
-
-            $trigger.off('click').on('click', function () {
-                $container.toggleClass(settings.collapsedCssClass);
-                $container.data('manual-open', !$container.hasClass(settings.collapsedCssClass));
-            });
-        });
+        rootMargin: '300px 0px',
     };
 
     var initialize = function (params) {
         var settings = $.extend({}, defaults, params || {});
 
-        $(window).on('resize', function () {
-            syncState(settings);
-        });
+        if ('loading' in HTMLImageElement.prototype) {
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            var script = document.createElement('script');
+            script.src = '/static/js/separate-js/lozad.min.js';
+            script.onload = () => lozad('.lozad', {rootMargin: settings.rootMargin}).observe();
 
-        var observer = new ResizeObserver(function () {
-            syncState(settings);
-        });
+            document.body.appendChild(script);
+        }
+    };
 
-        document.querySelectorAll(settings.container).forEach(function (el) {
-            observer.observe(el);
-        });
+    return {
+        initialize: initialize
+    };
+})();
 
-        syncState(settings);
+var scaleControl = (function ($) {
+    var defaults = {
+        container: '.js-scale-container',
+        child: '.js-scale-element'
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {}),
+            container = $(settings.container),
+            parent = container.parent(),
+            child =$(settings.child);
+
+        $(window).on('load resize', function () {
+            var parentWidth = parent.innerWidth();
+            var parentPaddingLeft = parseFloat(parent.css('padding-left'));
+            var parentPaddingRight = parseFloat(parent.css('padding-right'));
+            var parentEffectiveWidth = parentWidth - parentPaddingLeft - parentPaddingRight;
+            var currentWidth = child.outerWidth(true);
+            var scale = parentEffectiveWidth / currentWidth;
+
+            child.css({
+                'transform': `scale(${scale}, ${scale})`
+            });
+
+            var originalHeight = child.outerHeight();
+            var scaledHeight = originalHeight * scale;
+
+            container.css({
+                'height': `${scaledHeight}px`
+            });
+        });
     };
 
     return {
@@ -363,49 +232,51 @@ var collapseContentHeight = (function ($) {
     };
 })(jQuery);
 
-
-
-var floatingHeader = (function ($) {
+var dropdownManager = (function ($) {
     var defaults = {
-        topCssClass: 'sticky-top',
-        floatingCssClass: 'floating'
+        container: '.js-dropdown-container',
+        opener: '.js-dropdown-container-open',
+        closer: '.js-dropdown-container-close',
+        dropdownParent: '.js-dropdown',
+        dropdownToggle: '[data-bs-toggle="dropdown"]',
+        stateClass: 'is-open'
     };
 
     var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {});
-        var previousScroll = 0;
-        var $header = $('#' + settings.id);
-        var $child = $header.find('>:first-child');
+        var settings = $.extend({}, defaults, params || {}),
+            container = $(settings.container),
+            stateClass = settings.stateClass;
 
-        $(window).on('scroll', function () {
-            var currentScroll = $(this).scrollTop();
-            var fullHeight = 0;
+        $(settings.opener).on('click', function (event) {
+            event.stopPropagation();
 
-            $header.children().filter(':visible').each(function () {
-                fullHeight += $(this).outerHeight(true);
-            });
+            if (!container.hasClass(stateClass)) {
+                container.addClass(stateClass);
+            }
+        });
 
-            $header.css('height', fullHeight);
+        $(settings.closer).on('click', function (event) {
+            event.stopPropagation();
 
-            if ($(window).scrollTop() > $header.offset().top) {
-                $child
-                    .addClass(settings.topCssClass);
+            if (container.hasClass(stateClass)) {
+                container.removeClass(stateClass);
 
-                if (currentScroll > previousScroll) {
-                    $child.removeClass(settings.floatingCssClass);
-                } else {
-                    $child.addClass(settings.floatingCssClass);
+                var dropdownToggle = $(settings.opener).closest(settings.dropdownParent).find(settings.dropdownToggle);
+
+                if (dropdownToggle.length > 0 && dropdownToggle.attr('aria-expanded') === 'true') {
+                    dropdownToggle
+                        .removeClass('show')
+                        .attr('aria-expanded', 'false')
+                        .next().removeClass('show');
                 }
-            } else {
-                $child
-                    .removeClass(settings.topCssClass)
-                    .removeClass(settings.floatingCssClass);
             }
-
-            previousScroll = currentScroll;
         });
 
-        $(window).trigger('scroll');
+        $(document).on('click', function (event) {
+            if (container.hasClass(stateClass) && !container.is(event.target) && container.has(event.target).length === 0) {
+                container.removeClass(stateClass);
+            }
+        });
     };
 
     return {
@@ -414,40 +285,3 @@ var floatingHeader = (function ($) {
 })(jQuery);
 
 
-var bottomPanel = (function ($) {
-    var defaults = {
-        visibleCssClass: 'is-visible',
-        timeOut: 1000,
-    };
-
-    var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {});
-        var previousScroll = 0;
-        var $panel = $('#' + settings.id);
-        var timer;
-
-        $(window).on('scroll', function () {
-            var currentScroll = $(this).scrollTop();
-
-            if (currentScroll > previousScroll) {
-                $panel.removeClass(settings.visibleCssClass);
-            } else {
-                $panel.addClass(settings.visibleCssClass);
-            }
-
-            if (timer) clearTimeout(timer);
-
-            timer = setTimeout(function () {
-                $panel.addClass(settings.visibleCssClass);
-            }, settings.timeOut);
-
-            previousScroll = currentScroll;
-        });
-
-        $(window).trigger('scroll');
-    };
-
-    return {
-        initialize: initialize
-    };
-})(jQuery);

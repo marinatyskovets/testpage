@@ -1,11 +1,11 @@
 (function ($) {
-
     var defaults = {
         parentInput: '.js-form-focus',
         common: '.js-field-focus',
         input: 'input.js-field-focus',
         select: 'select.js-field-focus',
-        classFocus: 'is-focus',
+        textarea: 'textarea.js-field-focus',
+        classFocus: 'is-focus'
     };
 
     var methods = {
@@ -13,7 +13,8 @@
             var settings = $.extend({}, defaults, options || {}),
                 $common = $(this).find(settings.common),
                 $input = $(this).find(settings.input),
-                $select = $(this).find(settings.select);
+                $select = $(this).find(settings.select),
+                $textarea = $(this).find(settings.textarea);
 
             $input.on('focus', function () {
                 $(this).parents(settings.parentInput).addClass(settings.classFocus);
@@ -34,6 +35,18 @@
                     $this.parents(settings.parentInput).removeClass(settings.classFocus);
                 } else {
                     $this.parents(settings.parentInput).addClass(settings.classFocus);
+                }
+            });
+
+            $textarea.on('focus', function () {
+                $(this).parents(settings.parentInput).addClass(settings.classFocus);
+            });
+
+            $textarea.on('blur', function () {
+                var $this = $(this);
+
+                if (!$this.val()) {
+                    $this.parents(settings.parentInput).removeClass(settings.classFocus);
                 }
             });
 
@@ -60,3 +73,5 @@
     };
 
 })(jQuery);
+
+
