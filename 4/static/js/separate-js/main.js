@@ -7,30 +7,7 @@ $(document).ready(function () {
         locker.unlock();
     });
 
-    // Example autocomplete
-    var jobs = [
-        {value: 'Программист', data: 'programmer'},
-        {value: 'Продавец', data: 'prodavec'},
-        {value: 'Дизайнер', data: 'designer'}
-    ];
-
-    var fieldIds = ['#autocomplete'];
-
-    for (var i= 0; i < fieldIds.length; i++) {
-
-        var element = $(fieldIds[i]);
-
-        element.autocomplete({
-            lookup: jobs,
-            width: 'flex',
-            appendTo: element.parent(),
-            onSelect: function (suggestion) {
-                console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
-            }
-        });
-    }
-
-    footerPushDown.initialize();
+    drawer.initialize();
 });
 
 var locker = (function ($) {
@@ -59,134 +36,81 @@ var locker = (function ($) {
     };
 })(jQuery);
 
-var toggle = (function ($) {
-    var defaults = {
-        itemSelector: '[data-toggle-item]',
-        handlerSelector: '[data-toggle="item"]',
-        hiddenClass: 'u-hidden',
-        stateHandler: 'is-hidden'
-    };
-
-    var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {});
-
-        $(document).on('click', settings.handlerSelector, function () {
-            var dataTarget = $(this).data('target'),
-                handler = $(settings.handlerSelector + '[data-target="' + dataTarget + '"]'),
-                toggleItem = $('[data-toggle-item="' + dataTarget + '"]');
-
-            // Item is toggled
-            toggleItem.toggleClass(settings.hiddenClass);
-
-            // Handler is toggled
-            handler.toggleClass(settings.stateHandler);
-
-            return false;
-        });
-    };
-
-    return {
-        initialize: initialize
-    };
-})(jQuery);
-
-var footerPushDown = (function ($) {
+var drawer = (function ($) {
     var settings = {
-        page: '.w-page',
-        bottom: '.w-page__bottom',
-        sticky: '.w-main__bottom'
+        drawer: '.js-drawer',
+        toggler: '.js-drawer-toggler',
+        stateClass: 'is-open',
     };
 
     var initialize = function () {
-        var page = $(settings.page),
-            bottom = $(settings.bottom),
-            sticky = $(settings.sticky);
-
-        if (!page.length || !bottom.length) return;
-
-        var apply = function () {
-            var footerHeight = bottom.outerHeight();
-            var viewportHeight = $(window).height();
-
-            var stickyMarginBottom = 0;
-
-            if (sticky.length) {
-                stickyMarginBottom = parseFloat(sticky.css('margin-bottom')) || 0;
-            }
-
-            page.css('min-height', viewportHeight + footerHeight + stickyMarginBottom);
-        };
-
-        $(window).on('load resize', apply);
-        apply();
-    };
-
-    return {
-        initialize: initialize
-    };
-})(jQuery);
-
-var tooltipVisibilityManager = (function ($) {
-    var defaults = {
-        container: '.js-tooltip',
-        opener: '.js-tooltip-toggle',
-        closer: '.js-tooltip-close',
-        stateClass: 'is-open'
-    };
-
-    var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {}),
-            container = $(settings.container),
+        var toggler = $(settings.toggler),
+            drawer = $(settings.drawer),
             stateClass = settings.stateClass;
 
-        $(settings.opener).on('click', function (e) {
-            e.stopPropagation();
-            $(e.currentTarget).closest(settings.container).toggleClass(stateClass);
-        });
+        toggler.on('click', function () {
+            if (drawer.hasClass(stateClass)) {
+                drawer.removeClass(stateClass);
 
-        $(settings.closer).on('click', function (e) {
-            e.stopPropagation();
+                locker.unlock();
+            } else {
+                drawer.addClass(stateClass);
 
-            var tooltip = $(this).closest(settings.container);
-
-            if (tooltip.hasClass(stateClass)) {
-                tooltip.removeClass(stateClass);
-            }
-        });
-
-        $(document).on('click', function (e) {
-            var target = $(e.target);
-
-            if (container.hasClass(stateClass) && !container.is(target) && container.has(target).length === 0) {
-                container.removeClass(stateClass);
+                locker.lock();
             }
         });
     };
 
     return {
-        initialize: initialize
+        initialize: initialize,
     };
 })(jQuery);
 
-var lazyLoader = (function () {
+var countDownTimer = (function () {
     var defaults = {
-        rootMargin: '300px 0px',
+        timer: '.js-countdown',
+        hours: 0,
+        minutes: 10,
+        seconds: 0,
+        updateInterval: 1000
+    };
+
+    var timer = (hours, minutes, seconds) => {
+        let timeStr = '';
+        if (hours > 0) timeStr += `<span>${hours}</span><span>:</span>`;
+        timeStr += `<span>${minutes}</span><span>:</span><span>${seconds}</span>`;
+        return timeStr;
     };
 
     var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {});
+        var now = new Date(),
+            settings = $.extend({}, defaults, params || {}),
+            element = $(settings.timer),
+            // считаем общее количество миллисекунд
+            totalMs = ((settings.hours * 60 * 60) + (settings.minutes * 60) + settings.seconds) * 1000,
+            deadlineTime = new Date(now.getTime() + totalMs);
 
-        if ('loading' in HTMLImageElement.prototype) {
-            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                img.src = img.dataset.src;
-            });
-        } else {
-            var script = document.createElement('script');
-            script.src = '/static/js/separate-js/lozad.min.js';
-            script.onload = () => lozad('.lozad', {rootMargin: settings.rootMargin}).observe();
+        var intervalId = setInterval(function () {
+            let now = new Date().getTime();
+            let time = deadlineTime - now;
 
-            document.body.appendChild(script);
-        }
+            if (time <= 0) {
+                clearInterval(intervalId);
+                element.html(timer('00', '00', '00'));
+                return;
+            }
+
+            let hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((time % (1000 * 60)) / 1000);
+
+            if (hours < 10) hours = '0' + hours;
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+
+            element.html(timer(hours, minutes, seconds));
+
+        }, settings.updateInterval);
     };
 
     return {
@@ -194,94 +118,159 @@ var lazyLoader = (function () {
     };
 })();
 
-var scaleControl = (function ($) {
+var slider = (function () {
     var defaults = {
-        container: '.js-scale-container',
-        child: '.js-scale-element'
+        slider: '.js-slider',
+        slide: '.js-slider-slide',
+        dot: '.js-slider-dot',
+        activeClass: 'is-active',
+        delay: 3000
+    };
+
+    var setActiveSlide = function (slides, dots, index, activeClass) {
+        slides.removeClass(activeClass);
+        dots.removeClass(activeClass);
+
+        slides.eq(index).addClass(activeClass);
+        dots.eq(index).addClass(activeClass);
     };
 
     var initialize = function (params) {
         var settings = $.extend({}, defaults, params || {}),
-            container = $(settings.container),
-            parent = container.parent(),
-            child =$(settings.child);
+            sliders = $(settings.slider);
 
-        $(window).on('load resize', function () {
-            var parentWidth = parent.innerWidth();
-            var parentPaddingLeft = parseFloat(parent.css('padding-left'));
-            var parentPaddingRight = parseFloat(parent.css('padding-right'));
-            var parentEffectiveWidth = parentWidth - parentPaddingLeft - parentPaddingRight;
-            var currentWidth = child.outerWidth(true);
-            var scale = parentEffectiveWidth / currentWidth;
+        sliders.each(function () {
+            var slider = $(this),
+                slides = slider.find(settings.slide),
+                dots = slider.find(settings.dot),
+                activeIndex = Number(slider.data('initial')) || 0,
+                delay = Number(slider.data('delay')) || settings.delay,
+                intervalId = null;
 
-            child.css({
-                'transform': `scale(${scale}, ${scale})`
-            });
+            var startAutoplay = function () {
+                stopAutoplay();
 
-            var originalHeight = child.outerHeight();
-            var scaledHeight = originalHeight * scale;
+                intervalId = setInterval(function () {
+                    activeIndex = (activeIndex + 1) % slides.length;
+                    setActiveSlide(slides, dots, activeIndex, settings.activeClass);
+                }, delay);
+            };
 
-            container.css({
-                'height': `${scaledHeight}px`
-            });
-        });
-    };
-
-    return {
-        initialize: initialize
-    };
-})(jQuery);
-
-var dropdownManager = (function ($) {
-    var defaults = {
-        container: '.js-dropdown-container',
-        opener: '.js-dropdown-container-open',
-        closer: '.js-dropdown-container-close',
-        dropdownParent: '.js-dropdown',
-        dropdownToggle: '[data-bs-toggle="dropdown"]',
-        stateClass: 'is-open'
-    };
-
-    var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {}),
-            container = $(settings.container),
-            stateClass = settings.stateClass;
-
-        $(settings.opener).on('click', function (event) {
-            event.stopPropagation();
-
-            if (!container.hasClass(stateClass)) {
-                container.addClass(stateClass);
-            }
-        });
-
-        $(settings.closer).on('click', function (event) {
-            event.stopPropagation();
-
-            if (container.hasClass(stateClass)) {
-                container.removeClass(stateClass);
-
-                var dropdownToggle = $(settings.opener).closest(settings.dropdownParent).find(settings.dropdownToggle);
-
-                if (dropdownToggle.length > 0 && dropdownToggle.attr('aria-expanded') === 'true') {
-                    dropdownToggle
-                        .removeClass('show')
-                        .attr('aria-expanded', 'false')
-                        .next().removeClass('show');
+            var stopAutoplay = function () {
+                if (intervalId) {
+                    clearInterval(intervalId);
+                    intervalId = null;
                 }
-            }
-        });
+            };
 
-        $(document).on('click', function (event) {
-            if (container.hasClass(stateClass) && !container.is(event.target) && container.has(event.target).length === 0) {
-                container.removeClass(stateClass);
-            }
+            dots.on('click', function () {
+                activeIndex = $(this).index();
+                setActiveSlide(slides, dots, activeIndex, settings.activeClass);
+                startAutoplay();
+            });
+
+            setActiveSlide(slides, dots, activeIndex, settings.activeClass);
+            startAutoplay();
         });
     };
 
     return {
         initialize: initialize
     };
-})(jQuery);
+})();
 
 
+var textClamp = (function () {
+    var defaults = {
+        container: '.js-text-clamp',
+        content: '.js-text-clamp-content',
+        btn: '.js-text-clamp-btn',
+        expandedClass: 'is-expanded',
+        hiddenClass: 'u-hidden',
+        lines: 5
+    };
+
+    var truncate = function (textElement, btn, fullText, maxHeight) {
+        textElement.innerHTML = '';
+        var textNode = document.createTextNode('');
+        textElement.appendChild(textNode);
+        textElement.appendChild(btn);
+
+        var lo = 0, hi = fullText.length;
+        while (lo < hi - 1) {
+            var mid = Math.floor((lo + hi) / 2);
+            textNode.textContent = fullText.slice(0, mid) + '... ';
+            if (textElement.scrollHeight <= maxHeight + 2) lo = mid;
+            else hi = mid;
+        }
+        textNode.textContent = fullText.slice(0, lo) + '... ';
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {});
+
+        $(settings.container).each(function () {
+            var container = $(this),
+                textElement = container.find(settings.content)[0],
+                btn = container.find(settings.btn)[0];
+
+            if (!textElement || !btn) return;
+
+            var fullText = textElement.textContent.trim(),
+                lineHeight = parseFloat(getComputedStyle(textElement).lineHeight),
+                maxHeight = lineHeight * settings.lines,
+                expanded = false;
+
+            if (textElement.scrollHeight <= maxHeight + 2) {
+                $(btn).addClass(settings.hiddenClass);
+                return;
+            }
+
+            truncate(textElement, btn, fullText, maxHeight);
+
+            $(btn).on('click', function () {
+                expanded = !expanded;
+                container.toggleClass(settings.expandedClass, expanded);
+                textElement.innerHTML = '';
+                textElement.appendChild(document.createTextNode(expanded ? fullText + ' ' : ''));
+                if (!expanded) truncate(textElement, btn, fullText, maxHeight);
+                else textElement.appendChild(btn);
+            });
+        });
+    };
+
+    return {
+        initialize: initialize
+    };
+})();
+
+var stickyActivate = (function () {
+    var defaults = {
+        trigger: '.js-sticky-trigger',
+        panel: '.js-sticky',
+        hiddenClass: 'u-hidden'
+    };
+
+    var check = function (trigger, panel, hiddenClass) {
+        var rect = trigger[0].getBoundingClientRect();
+        panel.toggleClass(hiddenClass, rect.bottom > window.innerHeight);
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {}),
+            trigger = $(settings.trigger),
+            panel = $(settings.panel);
+
+        if (!trigger.length || !panel.length) return;
+
+        $(window).on('scroll', function () {
+            check(trigger, panel, settings.hiddenClass);
+        });
+
+        check(trigger, panel, settings.hiddenClass);
+    };
+
+    return {
+        initialize: initialize
+    };
+})();
