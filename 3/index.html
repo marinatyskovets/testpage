@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Astro</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=block" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
+        <div class="w-root">
+            <div class="w-page">
+                <!-- ---------------  Content part page ----------------->
+                <div class="w-page__content">
+                    <!-- begin container-->
+                    <main class="c-container c-container--center">
+                        <div class="c-container__top">
+                            <div class="c-container__inner">
+                                <div class="c-container__cell">
+                                    <!-- begin count-->
+                                    <div class="c-count">
+                                        <h3 class="c-count__title">Offer expires in</h3>
+                                        <div class="c-count__timer js-countdown"><span>09</span><span>:</span><span>27</span>
+                                        </div>
+                                        <div class="c-count__labels"><span>min</span><span>sec</span>
+                                        </div>
+                                    </div>
+                                    <!-- end count-->
+                                </div>
+                                <div class="c-container__cell">
+                                    <button class="c-btn c-btn--sm-slim c-btn--ping" type="button">Get my reading
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-centered">
+                            <!-- begin discount-banner-->
+                            <div class="c-discount-banner w-gap-md">
+                                <div class="c-discount-banner__image">
+                                    <img class="c-image" src="static/img/general/party-popper-md.png" alt="" width="64" height="64" />
+                                </div>
+                                <div class="c-discount-banner__content">
+                                    <!-- begin info-label-->
+                                    <div class="c-info-label c-discount-banner__label">Previous discount: 60%
+                                    </div>
+                                    <!-- end info-label-->
+                                    <div class="c-discount-banner__text">Get your personal plan with up to <span class="c-discount-banner__discount">66%</span> discount
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end discount-banner-->
+                            <div class="row row--nowrap row--gap-xs w-gap-3xl">
+                                <!-- begin media-card-->
+                                <div class="c-media-card">
+                                    <div class="c-media-card__head">
+                                        <div class="c-media-card__img">
+                                            <img class="c-image" src="static/img/general/girl-unhappy-md.png" alt="Girl-unhappy" />
+                                        </div>
+                                        <h3 class="c-media-card__title">Now</h3>
+                                    </div>
+                                    <div class="c-media-card__content">
+                                        <!-- begin list-->
+                                        <ul class="c-list c-list--icon-cancel">
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Your match</div>
+                                                <div class="c-list__text">Undefined</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Core Traits</div>
+                                                <div class="c-list__text">Vague</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Warning signs</div>
+                                                <div class="c-list__text">Missed</div>
+                                            </li>
+                                        </ul>
+                                        <!-- end list-->
+                                    </div>
+                                </div>
+                                <!-- end media-card-->
+                                <!-- begin media-card-->
+                                <div class="c-media-card c-media-card--highlight">
+                                    <div class="c-media-card__head">
+                                        <div class="c-media-card__img">
+                                            <img class="c-image" src="static/img/general/girl-happy-md.png" alt="Girl-happy" />
+                                        </div>
+                                        <h3 class="c-media-card__title">After Reading</h3>
+                                    </div>
+                                    <div class="c-media-card__content">
+                                        <!-- begin list-->
+                                        <ul class="c-list c-list--icon-check-success">
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Your match</div>
+                                                <div class="c-list__text">Defined</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Core Traits</div>
+                                                <div class="c-list__text">Mapped out</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Warning signs</div>
+                                                <div class="c-list__text">Spotted</div>
+                                            </li>
+                                        </ul>
+                                        <!-- end list-->
+                                    </div>
+                                </div>
+                                <!-- end media-card-->
+                            </div>
+                            <div class="row row--nowrap row--gap-xs w-gap-3xl">
+                                <!-- begin media-card-->
+                                <div class="c-media-card">
+                                    <div class="c-media-card__head">
+                                        <div class="c-media-card__img">
+                                            <img class="c-image" src="static/img/general/boy-unhappy-md.png" alt="Boy-unhappy" />
+                                        </div>
+                                        <h3 class="c-media-card__title">Now</h3>
+                                    </div>
+                                    <div class="c-media-card__content">
+                                        <!-- begin list-->
+                                        <ul class="c-list c-list--icon-cancel">
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Your match</div>
+                                                <div class="c-list__text">Undefined</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Core Traits</div>
+                                                <div class="c-list__text">Vague</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Warning signs</div>
+                                                <div class="c-list__text">Missed</div>
+                                            </li>
+                                        </ul>
+                                        <!-- end list-->
+                                    </div>
+                                </div>
+                                <!-- end media-card-->
+                                <!-- begin media-card-->
+                                <div class="c-media-card c-media-card--highlight">
+                                    <div class="c-media-card__head">
+                                        <div class="c-media-card__img">
+                                            <img class="c-image" src="static/img/general/boy-happy-md.png" alt="Boy-happy" />
+                                        </div>
+                                        <h3 class="c-media-card__title">After Reading</h3>
+                                    </div>
+                                    <div class="c-media-card__content">
+                                        <!-- begin list-->
+                                        <ul class="c-list c-list--icon-check-success">
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Your match</div>
+                                                <div class="c-list__text">Defined</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Core Traits</div>
+                                                <div class="c-list__text">Mapped out</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__title">Warning signs</div>
+                                                <div class="c-list__text">Spotted</div>
+                                            </li>
+                                        </ul>
+                                        <!-- end list-->
+                                    </div>
+                                </div>
+                                <!-- end media-card-->
+                            </div>
+                            <div class="w-gap-3xl">
+                                <h2 class="c-h2 u-text-medium u-mt-0 w-gap-md">Your personalized reading is ready!</h2>
+                                <!-- begin discount-card-->
+                                <div class="c-discount-card w-gap-md">
+                                    <div class="c-discount-card__head">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--tag"></span>
+                                        <!-- end image-sprite-->
+                                        <h3 class="c-discount-card__title">One-Time Welcome Price</h3>
+                                    </div>
+                                    <div class="c-discount-card__content">
+                                        <div class="c-discount-card__field">
+                                            <div class="c-discount-card__discount">50% off</div>
+                                        </div>
+                                        <!-- begin count-->
+                                        <div class="c-count c-discount-card__count">
+                                            <h3 class="c-count__title"></h3>
+                                            <div class="c-count__timer js-countdown"><span>09</span><span>:</span><span>27</span>
+                                            </div>
+                                            <div class="c-count__labels"><span>min</span><span>sec</span>
+                                            </div>
+                                        </div>
+                                        <!-- end count-->
+                                    </div>
+                                </div>
+                                <!-- end discount-card-->
+                                <!-- begin discount-card-->
+                                <div class="c-discount-card w-gap-md">
+                                    <div class="c-discount-card__head">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--tag"></span>
+                                        <!-- end image-sprite-->
+                                        <h3 class="c-discount-card__title">Your promo code applied</h3>
+                                    </div>
+                                    <div class="c-discount-card__content">
+                                        <div class="c-discount-card__field">
+                                            <svg class="c-ico c-ico--lg" viewBox="0 0 24 24">
+                                                <!-- ico name: check-bold-->
+                                                <path fill="currentColor" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                            <div class="c-discount-card__code">Gemini+Pisces_June2026
+                                            </div>
+                                        </div>
+                                        <!-- begin count-->
+                                        <div class="c-count c-discount-card__count">
+                                            <h3 class="c-count__title"></h3>
+                                            <div class="c-count__timer js-countdown"><span>09</span><span>:</span><span>27</span>
+                                            </div>
+                                            <div class="c-count__labels"><span>min</span><span>sec</span>
+                                            </div>
+                                        </div>
+                                        <!-- end count-->
+                                    </div>
+                                </div>
+                                <!-- end discount-card-->
+                                <div class="row row--nowrap row--gap-xs w-gap-md">
+                                    <!-- begin result-card-->
+                                    <div class="c-result-card">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--alert"></span>
+                                        <!-- end image-sprite-->
+                                        <div class="c-result-card__content">
+                                            <p class="c-result-card__label">Main difficulty</p>
+                                            <p class="c-result-card__value">Stuck patterns</p>
+                                        </div>
+                                    </div>
+                                    <!-- end result-card-->
+                                    <!-- begin result-card-->
+                                    <div class="c-result-card">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--goal"></span>
+                                        <!-- end image-sprite-->
+                                        <div class="c-result-card__content">
+                                            <p class="c-result-card__label">Goal</p>
+                                            <p class="c-result-card__value">Compatibility</p>
+                                        </div>
+                                    </div>
+                                    <!-- end result-card-->
+                                </div>
+                                <!-- begin plan-list-->
+                                <div class="c-plan-list w-gap-md">
+                                    <!-- begin plan-card-->
+                                    <label class="c-plan-card">
+                                        <input type="radio" name="price-0" /><span class="c-plan-card__inner"><span class="c-plan-card__content"><span class="c-plan-card__info"><span class="c-plan-card__title">7-day trial</span><span class="c-plan-card__total"><span class="c-plan-card__total-old">$12.99</span>
+                                        $6.49
+                                        </span>
+                                        </span><span class="c-plan-card__pricing"><span class="c-plan-card__price-old">$1.86</span><span class="c-plan-card__price"><span class="c-plan-card__currency">$</span><span class="c-plan-card__price-main">0</span>
+                                        <span
+                                        class="c-plan-card__price-side"><span class="c-plan-card__price-cents">93</span><span class="c-plan-card__period">/per day</span></span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                    </label>
+                                    <!-- end plan-card-->
+                                    <!-- begin plan-card-->
+                                    <label class="c-plan-card">
+                                        <input type="radio" name="price-0" checked="checked" /><span class="c-plan-card__inner"><span class="c-plan-card__badge">
+                            <svg class="c-ico c-ico--sm" viewBox="0 0 24 24"><!-- ico name: star-->
+                              <path fill="currentColor" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path>
+                            </svg>Most popular</span><span class="c-plan-card__content"><span class="c-plan-card__info"><span class="c-plan-card__title">4-Week Access</span><span class="c-plan-card__total"><span class="c-plan-card__total-old">$39.99</span>
+                                        $19.99
+                                        </span>
+                                        </span><span class="c-plan-card__pricing"><span class="c-plan-card__price-old">$1.43</span><span class="c-plan-card__price"><span class="c-plan-card__currency">$</span><span class="c-plan-card__price-main">0</span>
+                                        <span
+                                        class="c-plan-card__price-side"><span class="c-plan-card__price-cents">71</span><span class="c-plan-card__period">/per day</span></span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                    </label>
+                                    <!-- end plan-card-->
+                                    <!-- begin plan-card-->
+                                    <label class="c-plan-card">
+                                        <input type="radio" name="price-0" /><span class="c-plan-card__inner"><span class="c-plan-card__content"><span class="c-plan-card__info"><span class="c-plan-card__title">12-Week Access</span><span class="c-plan-card__total"><span class="c-plan-card__total-old">$79.99</span>
+                                        $39.99
+                                        </span>
+                                        </span><span class="c-plan-card__pricing"><span class="c-plan-card__price-old">$0.95</span><span class="c-plan-card__price"><span class="c-plan-card__currency">$</span><span class="c-plan-card__price-main">0</span>
+                                        <span
+                                        class="c-plan-card__price-side"><span class="c-plan-card__price-cents">48</span><span class="c-plan-card__period">/per day</span></span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                    </label>
+                                    <!-- end plan-card-->
+                                </div>
+                                <!-- end plan-list-->
+                                <div class="w-column-gap-sm">
+                                    <button class="c-btn c-btn--ping u-text-upper" type="button">Get my reading
+                                    </button>
+                                    <!-- begin help-msg-->
+                                    <p class="c-help-msg u-text-left">By clicking "GET MY READING", you agree to automatic subscription renewal. First 4 weeks are $19.99, then $39.99 every 4 weeks. Cancel via the app or email: <a href="#" class="c-link c-link--underline c-link--help">support@appastro.co</a>.
+                                        See Subscription Policy for details.</p>
+                                    <!-- end help-msg-->
+                                    <!-- begin secure-payment-->
+                                    <div class="c-secure-payment">
+                                        <h3 class="c-secure-payment__title">
+                          <svg class="c-ico c-ico--lg c-ico--success" viewBox="0 0 24 24"><!-- ico name: shield-lock-->
+                            <path fill="currentColor" d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.1 14.8,9.5V11C15.4,11 16,11.6 16,12.3V15.8C16,16.4 15.4,17 14.7,17H9.2C8.6,17 8,16.4 8,15.7V12.2C8,11.6 8.6,11 9.2,11V9.5C9.2,8.1 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,9.5V11H13.5V9.5C13.5,8.7 12.8,8.2 12,8.2Z"></path>
+                          </svg>Pay Safe &amp; Secure
+                      </h3>
+                                        <div class="c-secure-payment__logos">
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--pay-pal"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--apple-pay"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--google-pay"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--visa"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--master-card"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--maestro"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--stripe"></span>
+                                            <!-- end payment-logo-->
+                                        </div>
+                                    </div>
+                                    <!-- end secure-payment-->
+                                </div>
+                            </div>
+                            <div class="w-gap-3xl w-column-gap-md">
+                                <h2 class="c-h1 u-text-medium u-mt-0 w-gap-md">Our goals</h2>
+                                <!-- begin list-->
+                                <ul class="c-list c-list--gap-md c-list--icon-check-success">
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">You found out if you really match</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">You understood the hidden patterns of your bond</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">You explored their core traits and know how to connect</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">You uncovered the true nature of your bond</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">See every sign coming your way</div>
+                                    </li>
+                                    <li class="c-list__item">
+                                        <div class="c-list__text">You get daily love guidance and feel sure each day</div>
+                                    </li>
+                                </ul>
+                                <!-- end list-->
+                            </div>
+                            <!-- begin promo-banner-->
+                            <div class="c-promo-banner w-gap-3xl">
+                                <div class="c-promo-banner__top">
+                                    <img class="c-image" src="static/img/general/wheat.png" alt="Wheat" width="32" height="47" />
+                                    <div class="c-promo-banner__top-content">
+                                        <div class="c-promo-banner__logos">
+                                            <img class="c-image" src="static/img/general/apple.png" alt="Apple icon" width="18" height="22" /><span class="c-promo-banner__separator">&</span>
+                                            <img class="c-image" src="static/img/general/android.png" alt="Android icon" width="29" height="15" />
+                                        </div>
+                                        <div class="c-promo-banner__count">1 MILLION +</div>
+                                    </div>
+                                    <img class="c-image c-image--reverse" src="static/img/general/wheat.png" alt="Wheat" width="32" height="47" />
+                                </div>
+                                <p class="c-promo-banner__text">Astro: <strong>Trusted by people</strong> worldwide</p>
+                            </div>
+                            <!-- end promo-banner-->
+                            <div class="w-gap-3xl">
+                                <div class="w-gap-sm u-text-center">
+                                    <img class="c-image" src="static/img/general/heart-hands.png" alt="Heart-hands" width="50" height="50" />
+                                </div>
+                                <h2 class="c-h1 u-text-medium u-mt-0 w-gap-md">People often ask</h2>
+                                <!-- begin faq-list-->
+                                <div class="c-faq-list">
+                                    <!-- begin faq-collapse-->
+                                    <div class="c-faq-collapse">
+                                        <button class="c-faq-collapse__trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-0">1. How accurate are the astrology readings on this platform?
+                                        </button>
+                                        <div class="c-faq-collapse__dialog collapse" id="faq-0">
+                                            <div class="c-faq-collapse__content">
+                                                <p>Each reading is based on real astrological data — your birth details, planetary positions, and expert interpretation. Astrology reveals patterns that resonate on a personal level, helping you understand
+                                                    yourself and your relationships. Many users find their readings accurate.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end faq-collapse-->
+                                    <!-- begin faq-collapse-->
+                                    <div class="c-faq-collapse">
+                                        <button class="c-faq-collapse__trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1">2. Can I get a compatibility reading for relationships?
+                                        </button>
+                                        <div class="c-faq-collapse__dialog collapse" id="faq-1">
+                                            <div class="c-faq-collapse__content">
+                                                <p>Yes! Our compatibility readings analyze the astrological connection between two people to reveal how you align in love, communication, trust, and shared values. You’ll receive a detailed look at the dynamics
+                                                    of your relationship.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end faq-collapse-->
+                                    <!-- begin faq-collapse-->
+                                    <div class="c-faq-collapse">
+                                        <button class="c-faq-collapse__trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2">3. Are readings on this platform confidential and private?
+                                        </button>
+                                        <div class="c-faq-collapse__dialog collapse" id="faq-2">
+                                            <div class="c-faq-collapse__content">
+                                                <p>All readings on our platform are strictly confidential. We value your privacy and ensure all personal data and readings are securely protected and never shared with third parties without permission.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end faq-collapse-->
+                                    <!-- begin faq-collapse-->
+                                    <div class="c-faq-collapse">
+                                        <button class="c-faq-collapse__trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3">4. What if I've tried readings before and they didn't work?
+                                        </button>
+                                        <div class="c-faq-collapse__dialog collapse" id="faq-3">
+                                            <div class="c-faq-collapse__content">
+                                                <p>Based on your full natal chart — the exact positions of the Sun, Moon, and planets at the moment of your birth. Instead of broad sun-sign predictions, we interpret the unique combination of your placements,
+                                                    giving you insights that actually reflect who you are astrologically.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end faq-collapse-->
+                                </div>
+                                <!-- end faq-list-->
+                            </div>
+                            <div class="w-gap-3xl">
+                                <div class="w-gap-sm u-text-center">
+                                    <img class="c-image" src="static/img/general/hearts.png" alt="Hearts" width="50" height="50" />
+                                </div>
+                                <h2 class="c-h1 u-text-medium u-mt-0 w-gap-sm">Users love our reading</h2>
+                                <p class="u-text-accent u-mt-0 w-gap-md">Here's what people are saying about Astro</p>
+                                <!-- begin review-list-->
+                                <ul class="c-review-list w-gap-md">
+                                    <li class="c-review-list__item">
+                                        <!-- begin review-card-->
+                                        <div class="c-review-card">
+                                            <div class="c-review-card__media">
+                                                <img class="c-image" src="static/img/general/ava-2.png" alt="User" width="100" height="138" />
+                                            </div>
+                                            <div class="c-review-card__content">
+                                                <p class="c-review-card__text">I’m honestly amazed! Astro helped me understand my relationship on a much deeper level. I gained real clarity about what was really happening between us.</p>
+                                                <div class="c-review-card__footer">
+                                                    <div class="c-review-card__rating">
+                                                        <!-- begin stars-->
+                                                        <div class="c-stars" data-rating="5"></div>
+                                                        <!-- end stars-->
+                                                    </div>
+                                                    <div class="c-review-card__author">Emily Young</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end review-card-->
+                                    </li>
+                                    <li class="c-review-list__item">
+                                        <!-- begin review-card-->
+                                        <div class="c-review-card">
+                                            <div class="c-review-card__media">
+                                                <img class="c-image" src="static/img/general/ava-3.png" alt="User" width="100" height="138" />
+                                            </div>
+                                            <div class="c-review-card__content">
+                                                <p class="c-review-card__text">Astro helped me see things I couldn’t before, made me realize what I truly want in love and gave me hope that change is possible and that I actually deserve something real and lasting.</p>
+                                                <div class="c-review-card__footer">
+                                                    <div class="c-review-card__rating">
+                                                        <!-- begin stars-->
+                                                        <div class="c-stars" data-rating="5"></div>
+                                                        <!-- end stars-->
+                                                    </div>
+                                                    <div class="c-review-card__author">Sebastian</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end review-card-->
+                                    </li>
+                                    <li class="c-review-list__item">
+                                        <!-- begin review-card-->
+                                        <div class="c-review-card">
+                                            <div class="c-review-card__media">
+                                                <img class="c-image" src="static/img/general/ava-4.png" alt="User" width="100" height="138" />
+                                            </div>
+                                            <div class="c-review-card__content">
+                                                <p class="c-review-card__text">Honestly, I didn’t expect much, but this was amazing. It helped me see why things weren’t working and how to fix them. Totally worth it.</p>
+                                                <div class="c-review-card__footer">
+                                                    <div class="c-review-card__rating">
+                                                        <!-- begin stars-->
+                                                        <div class="c-stars" data-rating="5"></div>
+                                                        <!-- end stars-->
+                                                    </div>
+                                                    <div class="c-review-card__author">Anna Harris</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end review-card-->
+                                    </li>
+                                </ul>
+                                <!-- end review-list-->
+                                <!-- begin help-msg-->
+                                <p class="c-help-msg">Images, names and age are generated for user privacy purposes</p>
+                                <!-- end help-msg-->
+                            </div>
+                            <div class="w-gap-3xl">
+                                <h2 class="c-h2 u-text-medium u-mt-0 w-gap-md">Your personalized reading is ready!</h2>
+                                <!-- begin discount-card-->
+                                <div class="c-discount-card w-gap-md">
+                                    <div class="c-discount-card__head">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--tag"></span>
+                                        <!-- end image-sprite-->
+                                        <h3 class="c-discount-card__title">One-Time Welcome Price</h3>
+                                    </div>
+                                    <div class="c-discount-card__content">
+                                        <div class="c-discount-card__field">
+                                            <div class="c-discount-card__discount">50% off</div>
+                                        </div>
+                                        <!-- begin count-->
+                                        <div class="c-count c-discount-card__count">
+                                            <h3 class="c-count__title"></h3>
+                                            <div class="c-count__timer js-countdown"><span>09</span><span>:</span><span>27</span>
+                                            </div>
+                                            <div class="c-count__labels"><span>min</span><span>sec</span>
+                                            </div>
+                                        </div>
+                                        <!-- end count-->
+                                    </div>
+                                </div>
+                                <!-- end discount-card-->
+                                <!-- begin discount-card-->
+                                <div class="c-discount-card w-gap-md">
+                                    <div class="c-discount-card__head">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--tag"></span>
+                                        <!-- end image-sprite-->
+                                        <h3 class="c-discount-card__title">Your promo code applied</h3>
+                                    </div>
+                                    <div class="c-discount-card__content">
+                                        <div class="c-discount-card__field">
+                                            <svg class="c-ico c-ico--lg" viewBox="0 0 24 24">
+                                                <!-- ico name: check-bold-->
+                                                <path fill="currentColor" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                            <div class="c-discount-card__code">Gemini+Pisces_June2026
+                                            </div>
+                                        </div>
+                                        <!-- begin count-->
+                                        <div class="c-count c-discount-card__count">
+                                            <h3 class="c-count__title"></h3>
+                                            <div class="c-count__timer js-countdown"><span>09</span><span>:</span><span>27</span>
+                                            </div>
+                                            <div class="c-count__labels"><span>min</span><span>sec</span>
+                                            </div>
+                                        </div>
+                                        <!-- end count-->
+                                    </div>
+                                </div>
+                                <!-- end discount-card-->
+                                <div class="row row--nowrap row--gap-xs w-gap-md">
+                                    <!-- begin result-card-->
+                                    <div class="c-result-card">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--alert"></span>
+                                        <!-- end image-sprite-->
+                                        <div class="c-result-card__content">
+                                            <p class="c-result-card__label">Main difficulty</p>
+                                            <p class="c-result-card__value">Stuck patterns</p>
+                                        </div>
+                                    </div>
+                                    <!-- end result-card-->
+                                    <!-- begin result-card-->
+                                    <div class="c-result-card">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--goal"></span>
+                                        <!-- end image-sprite-->
+                                        <div class="c-result-card__content">
+                                            <p class="c-result-card__label">Goal</p>
+                                            <p class="c-result-card__value">Compatibility</p>
+                                        </div>
+                                    </div>
+                                    <!-- end result-card-->
+                                </div>
+                                <!-- begin plan-list-->
+                                <div class="c-plan-list w-gap-md">
+                                    <!-- begin plan-card-->
+                                    <label class="c-plan-card">
+                                        <input type="radio" name="price-1" /><span class="c-plan-card__inner"><span class="c-plan-card__content"><span class="c-plan-card__info"><span class="c-plan-card__title">7-day trial</span><span class="c-plan-card__total"><span class="c-plan-card__total-old">$12.99</span>
+                                        $6.49
+                                        </span>
+                                        </span><span class="c-plan-card__pricing"><span class="c-plan-card__price-old">$1.86</span><span class="c-plan-card__price"><span class="c-plan-card__currency">$</span><span class="c-plan-card__price-main">0</span>
+                                        <span
+                                        class="c-plan-card__price-side"><span class="c-plan-card__price-cents">93</span><span class="c-plan-card__period">/per day</span></span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                    </label>
+                                    <!-- end plan-card-->
+                                    <!-- begin plan-card-->
+                                    <label class="c-plan-card">
+                                        <input type="radio" name="price-1" checked="checked" /><span class="c-plan-card__inner"><span class="c-plan-card__badge">
+                            <svg class="c-ico c-ico--sm" viewBox="0 0 24 24"><!-- ico name: star-->
+                              <path fill="currentColor" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path>
+                            </svg>Most popular</span><span class="c-plan-card__content"><span class="c-plan-card__info"><span class="c-plan-card__title">4-Week Access</span><span class="c-plan-card__total"><span class="c-plan-card__total-old">$39.99</span>
+                                        $19.99
+                                        </span>
+                                        </span><span class="c-plan-card__pricing"><span class="c-plan-card__price-old">$1.43</span><span class="c-plan-card__price"><span class="c-plan-card__currency">$</span><span class="c-plan-card__price-main">0</span>
+                                        <span
+                                        class="c-plan-card__price-side"><span class="c-plan-card__price-cents">71</span><span class="c-plan-card__period">/per day</span></span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                    </label>
+                                    <!-- end plan-card-->
+                                    <!-- begin plan-card-->
+                                    <label class="c-plan-card">
+                                        <input type="radio" name="price-1" /><span class="c-plan-card__inner"><span class="c-plan-card__content"><span class="c-plan-card__info"><span class="c-plan-card__title">12-Week Access</span><span class="c-plan-card__total"><span class="c-plan-card__total-old">$79.99</span>
+                                        $39.99
+                                        </span>
+                                        </span><span class="c-plan-card__pricing"><span class="c-plan-card__price-old">$0.95</span><span class="c-plan-card__price"><span class="c-plan-card__currency">$</span><span class="c-plan-card__price-main">0</span>
+                                        <span
+                                        class="c-plan-card__price-side"><span class="c-plan-card__price-cents">48</span><span class="c-plan-card__period">/per day</span></span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                            </span>
+                                    </label>
+                                    <!-- end plan-card-->
+                                </div>
+                                <!-- end plan-list-->
+                                <div class="w-column-gap-sm">
+                                    <button class="c-btn c-btn--ping u-text-upper" type="button">Get my reading
+                                    </button>
+                                    <!-- begin help-msg-->
+                                    <p class="c-help-msg u-text-left">By clicking "GET MY READING", you agree to automatic subscription renewal. First 4 weeks are $19.99, then $39.99 every 4 weeks. Cancel via the app or email: <a href="#" class="c-link c-link--underline c-link--help">support@appastro.co</a>.
+                                        See Subscription Policy for details.</p>
+                                    <!-- end help-msg-->
+                                    <!-- begin secure-payment-->
+                                    <div class="c-secure-payment">
+                                        <h3 class="c-secure-payment__title">
+                          <svg class="c-ico c-ico--lg c-ico--success" viewBox="0 0 24 24"><!-- ico name: shield-lock-->
+                            <path fill="currentColor" d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.1 14.8,9.5V11C15.4,11 16,11.6 16,12.3V15.8C16,16.4 15.4,17 14.7,17H9.2C8.6,17 8,16.4 8,15.7V12.2C8,11.6 8.6,11 9.2,11V9.5C9.2,8.1 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,9.5V11H13.5V9.5C13.5,8.7 12.8,8.2 12,8.2Z"></path>
+                          </svg>Pay Safe &amp; Secure
+                      </h3>
+                                        <div class="c-secure-payment__logos">
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--pay-pal"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--apple-pay"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--google-pay"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--visa"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--master-card"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--maestro"></span>
+                                            <!-- end payment-logo-->
+                                            <!-- begin payment-logo--><span class="c-payment-logo c-payment-logo--stripe"></span>
+                                            <!-- end payment-logo-->
+                                        </div>
+                                    </div>
+                                    <!-- end secure-payment-->
+                                </div>
+                            </div>
+                            <!-- begin benefit-card-->
+                            <div class="c-benefit-card w-gap-3xl">
+                                <div class="c-benefit-card__title">
+                                    <svg class="c-ico c-ico--3xl c-ico--success" viewBox="0 0 24 24">
+                                        <!-- ico name: shield-check-->
+                                        <path fill="currentColor" d="M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1Z"></path>
+                                    </svg>
+                                    <h3 class="c-benefit-card__text">30-day money-back guarantee</h3>
+                                </div>
+                                <p class="c-benefit-card__description">Our reading is backed by a money-back guarantee. If you reach out within 30 days of purchase, we'll give you a full refund.</p><a class="c-benefit-card__link" href="#">Learn more
+                      <svg class="c-ico c-ico--xl" viewBox="0 0 24 24"><!-- ico name: chevron-right-->
+                        <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                      </svg></a>
+                            </div>
+                            <!-- end benefit-card-->
+                            <!-- begin help-msg-->
+                            <p class="c-help-msg">Talentin LTD, Sofia, 1463, Triaditsa district, 66 Vitosha Blvd., floor 4, Bulgaria.</p>
+                            <!-- end help-msg-->
+                        </div>
+                    </main>
+                    <!-- end container-->
+                </div>
+            </div>
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                  countDownTimer.initialize();
+              });
+        </script>
+    </body>
+
+</html>
