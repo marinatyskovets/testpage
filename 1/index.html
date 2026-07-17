@@ -18,199 +18,123 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
-    <body class="c-dark-cold-theme">
-        <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
-        <div class="w-root">
-            <div class="w-page w-page--dark-cold">
-                <!-- ---------------  Top part page ----------------->
-                <!-- begin header-->
-                <header class="c-header c-header--xs">
-                    <div class="c-header__inner">
-                        <!-- begin logo-->
-                        <a class="c-logo" href="#">
-                            <img src="static/img/general/logo-icon.svg" alt="Astro" width="48" height="48">
-                        </a>
-                        <!-- end logo-->
-                        <!-- begin status-indicator-->
-                        <div class="c-status-indicator">
-                            <div class="c-status-indicator__dot"></div>
-                            <div class="c-status-indicator__text">reserved</div>
-                        </div>
-                        <!-- end status-indicator-->
-                    </div>
-                </header>
-                <!-- end header-->
-                <!-- ---------------  Content part page ----------------->
-                <div class="w-page__content">
-                    <!-- begin container-->
-                    <main class="c-container">
-                        <div class="w-centered w-centered--md-slim">
-                            <div class="w-gap-2xl w-column-gap-xs">
-                                <!-- begin title-->
-                                <h1 class="c-title">Your compatibility plan</h1>
-                                <!-- end title-->
-                                <!-- begin status-badge-->
-                                <div class="c-status-badge">
-                                    <svg class="c-ico c-ico--md c-status-badge__ico" viewBox="0 0 24 24">
-                                        <!-- ico name: check-decagram-->
-                                        <path fill="currentColor" d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"></path>
+    <body>
+        <!-- ------------------------------ TEMPLATE CABINET -------------------------------->
+        <div class="w-page">
+            <!-- ---------------  Top part page ----------------->
+            <!-- begin header-->
+            <header class="c-header">
+                <div class="c-header__inner">
+                    <!-- begin logo-->
+                    <a class="c-logo" href="#">
+                        <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
+                    </a>
+                    <!-- end logo-->
+                    <button class="c-icon-button js-drawer-toggler c-header__toggle-nav" type="button" aria-label="Open">
+                        <svg class="c-ico c-ico--2xl" viewBox="0 0 24 24">
+                            <!-- ico name: menu-->
+                            <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                        </svg>
+                    </button>
+                    <!-- begin drawer-->
+                    <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+                        <div class="c-drawer__dialog">
+                            <div class="c-drawer__head">
+                                <div class="c-drawer__title">Menu</div>
+                                <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
+                                    <svg class="c-ico c-ico--3xl" viewBox="0 0 24 24">
+                                        <!-- ico name: close-->
+                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
                                     </svg>
-                                    <div class="c-status-badge__text">Reserved for you</div>
-                                </div>
-                                <!-- end status-badge-->
-                                <p class="u-mt-0">Read today's snapshot — yours free.
-                                    <br>Your full plan is held in our system as
-                                    <!-- begin ticket--><span class="c-ticket">#0043289</span>
-                                    <!-- end ticket-->
-                                </p>
+                                </button>
                             </div>
-                            <!-- begin snippet-card-->
-                            <div class="c-snippet-card w-gap-2xl">
-                                <!-- begin badge-->
-                                <div class="c-badge">FREE READING
-                                </div>
-                                <!-- end badge-->
-                                <div class="c-snippet-card__title">Compatibility match</div>
-                                <div class="c-snippet-card__subtitle">
-                                    <svg class="c-ico c-ico--xl" viewBox="0 0 24 24">
-                                        <!-- ico name: set-center-->
-                                        <path fill="currentColor" d="M9,5A7,7 0 0,0 2,12A7,7 0 0,0 9,19C10.04,19 11.06,18.76 12,18.32C12.94,18.76 13.96,19 15,19A7,7 0 0,0 22,12A7,7 0 0,0 15,5C13.96,5 12.94,5.24 12,5.68C11.06,5.24 10.04,5 9,5M9,7C9.34,7 9.67,7.03 10,7.1C8.72,8.41 8,10.17 8,12C8,13.83 8.72,15.59 10,16.89C9.67,16.96 9.34,17 9,17A5,5 0 0,1 4,12A5,5 0 0,1 9,7M15,7A5,5 0 0,1 20,12A5,5 0 0,1 15,17C14.66,17 14.33,16.97 14,16.9C15.28,15.59 16,13.83 16,12C16,10.17 15.28,8.41 14,7.11C14.33,7.04 14.66,7 15,7Z"></path>
-                                    </svg>
-                                    <p>A delicate weave of contrasts.</p>
-                                </div>
-                                <div class="c-snippet-card__content">
-                                    <div class="c-snippet-card__dialog collapse" id="item-0">
-                                        <div class="c-snippet-card__inner">
-                                            <p>The relationship between Leo and Taurus blends Fire and Earth, creating a dynamic where passion meets stability. Scorpio is vibrant, creative, and thrives on recognition, while Capricorn values consistency,
-                                                patience, and material comfort. Together, they form a pairing that together, they form a pairing.</p>
-                                            <p>Relationship between Leo and Taurus blends Fire and Earth, creating a dynamic where passion meets stability.</p>
-                                            <p>Scorpio is vibrant, creative, and thrives on recognition, while Capricorn values consistency, patience, and material comfort. Together, they form a pairing that together, they form a pairing.</p>
-                                            <p>The relationship between Leo and Taurus blends Fire and Earth, creating a dynamic where passion meets stability. Scorpio is vibrant, creative, and thrives on recognition, while Capricorn values consistency,
-                                                patience, and material comfort. Together, they form a pairing that together, they form a pairing.</p>
-                                        </div>
-                                    </div>
-                                    <button class="c-snippet-card__btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item-0" data-text="Read more" data-active-text="Close" aria-expanded="false">
-                                        <svg class="c-ico c-ico--lg" viewBox="0 0 24 24">
-                                            <!-- ico name: chevron-down-->
-                                            <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="c-snippet-card__note">
-                                    <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--gift"></span>
-                                    <!-- end image-sprite-->
-                                    <p>The reading is yours — even if you don't activate the rest.</p>
-                                </div>
+                            <ul class="c-drawer__menu">
+                                <li class="c-drawer__item"><a class="c-drawer__link" href="#">About</a>
+                                </li>
+                                <li class="c-drawer__item">
+                                    <button class="c-drawer__link js-drawer-element" type="button">Features</button>
+                                    <ul class="c-drawer__submenu">
+                                        <li class="c-drawer__item"><a class="c-drawer__link" href="#">Horoscope</a>
+                                        </li>
+                                        <li class="c-drawer__item"><a class="c-drawer__link" href="#">Compatibility Test</a>
+                                        </li>
+                                        <li class="c-drawer__item"><a class="c-drawer__link" href="#">Birth chart</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="c-drawer__item"><a class="c-drawer__link" href="#">FAQ</a>
+                                </li>
+                                <li class="c-drawer__item"><a class="c-drawer__link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                            <div class="c-drawer__action">
+                                <a class="c-drawer__link" href="#">
+                                    <svg class="c-ico c-ico--lg" viewBox="0 0 24 24">
+                                        <!-- ico name: account-circle-->
+                                        <path fill="currentColor" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path>
+                                    </svg>Sign In / Your Account</a>
                             </div>
-                            <!-- end snippet-card-->
-                            <!-- begin overview-card-->
-                            <div class="c-overview-card w-gap-md">
-                                <!-- begin badge-->
-                                <div class="c-badge">Your full plan · <span class="c-badge__highlight">reserved</span>
-                                </div>
-                                <!-- end badge-->
-                                <!-- begin stamp-->
-                                <div class="c-stamp">
-                                    <div class="c-stamp__outer">
-                                        <div class="c-stamp__inner">
-                                            <div class="c-stamp__text">RESERVED</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end stamp-->
-                                <div class="c-overview-card__head">
-                                    <div class="c-overview-card__title">COMPATIBILITY PLAN</div>
-                                    <!-- begin ticket--><span class="c-ticket">#0043289</span>
-                                    <!-- end ticket-->
-                                </div>
-                                <div class="c-overview-card__row">
-                                    <div class="c-overview-card__person">
-                                        <div class="c-overview-card__avatar">
-                                            <img class="c-image" src="static/img/general/capricorn-xs.png" alt="Capricorn" width="48" height="48" />
-                                        </div>
-                                        <div class="c-overview-card__info">
-                                            <div class="c-overview-card__name">You</div>
-                                            <div class="c-overview-card__meta">Capricorn · January 5, 1986 · Brooklyn, New York, United States</div>
-                                        </div>
-                                    </div>
-                                    <div class="c-overview-card__divider">
-                                        <svg class="c-ico c-ico--sm" viewBox="0 0 24 24">
-                                            <!-- ico name: heart-->
-                                            <path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="c-overview-card__person">
-                                        <div class="c-overview-card__avatar">
-                                            <img class="c-image" src="static/img/general/scorpio-xs.png" alt="Scorpio" width="48" height="48" />
-                                        </div>
-                                        <div class="c-overview-card__info">
-                                            <div class="c-overview-card__name">Partner</div>
-                                            <div class="c-overview-card__meta">Scorpio · Nov 5, 1988 · New, Owen County, Kentucky, United States</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c-overview-card__cells">
-                                    <div class="c-overview-card__item"><span class="c-overview-card__label">Bond profile</span><span class="c-overview-card__value">Capricorn + Scorpio</span>
-                                    </div>
-                                    <div class="c-overview-card__item"><span class="c-overview-card__label">Match score</span><span class="c-overview-card__value c-overview-card__value--highlight">87%</span>
-                                    </div>
-                                    <div class="c-overview-card__item"><span class="c-overview-card__label">Reserved</span><span class="c-overview-card__value">Until activated</span>
-                                    </div>
-                                </div>
-                                <div class="c-features">
-                                    <div class="c-features__title">PLAN TO DECODE YOUR BOND</div>
-                                    <div class="c-features__item">
-                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--check-yellow"></span>
-                                        <!-- end image-sprite-->
-                                        <div class="c-features__content">
-                                            <div class="c-features__subtitle">Dive into your compatibility reading</div>
-                                            <ul class="c-features__list">
-                                                <li>Discover your relationship's strengths and blind spots</li>
-                                                <li>See how planets shape your bond</li>
-                                                <li>Explore your love, sex, and communication dynamics</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="c-features__item">
-                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--check-yellow"></span>
-                                        <!-- end image-sprite-->
-                                        <div class="c-features__content">
-                                            <div class="c-features__subtitle">Read your personalized daily love horoscope for couples</div>
-                                            <ul class="c-features__list">
-                                                <li>Know your partner's mood every day</li>
-                                                <li>Spot the best moments for important talks</li>
-                                                <li>Notice recurring patterns in your bond</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="c-features__item">
-                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--check-yellow"></span>
-                                        <!-- end image-sprite-->
-                                        <div class="c-features__content">
-                                            <div class="c-features__subtitle">Gain clarity in your relationship</div>
-                                            <ul class="c-features__list">
-                                                <li>Know what your relationship is built on</li>
-                                                <li>Understand why conflicts arise</li>
-                                                <li>See where your relationship is heading</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end overview-card-->
-                            <button class="c-btn c-btn--ping u-text-upper w-gap-sm" type="button">Continue to my plan
-                            </button>
-                            <!-- begin offer-rating-->
-                            <div class="c-offer-rating"><span class="c-offer-rating__score">
-                    <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--star"></span>
-                                <!-- end image-sprite-->4.8</span><span class="c-offer-rating__label">1M+ plans activated</span>
-                            </div>
-                            <!-- end offer-rating-->
                         </div>
-                    </main>
-                    <!-- end container-->
+                    </nav>
+                    <!-- end drawer-->
                 </div>
+            </header>
+            <!-- end header-->
+            <!-- ---------------  Content part page ----------------->
+            <div class="w-page__content">
+                <main class="w-main">
+                    <div class="w-centered w-column-gap-sm u-text-center">
+                        <img class="c-image" src="static/img/general/yeyhand-md.png" alt="Yeyhand" width="160" height="160" />
+                        <!-- begin adaptive-box-->
+                        <div class="c-adaptive-box">
+                            <h1 class="c-adaptive-box__title"><span class="c-adaptive-box__title-narrow">You have a new chat message</span><span class="c-adaptive-box__title-wide">Continue in Astro</span></h1>
+                            <div class="c-adaptive-box__container">
+                                <p class="c-adaptive-box__text"><span class="c-adaptive-box__text-narrow">To get your message, please follow the instructions:</span><span class="c-adaptive-box__text-wide">Scan the QR code with your phone to open the app:</span>
+                                </p>
+                                <!-- begin list-numbered-->
+                                <ul class="c-list-numbered">
+                                    <li class="c-list-numbered__item">Download the Astro app</li>
+                                    <li class="c-list-numbered__item">You’ll be signed in automatically and taken straight to your chat</li>
+                                </ul>
+                                <div class="c-adaptive-box__img">
+                                    <img class="c-image" src="static/img/content/qr-code.png" alt="Qr-code" width="320" height="320" />
+                                </div>
+                            </div>
+                            <div class="c-adaptive-box__action">
+                                <button class="c-btn" type="button">Go to AppStore
+                                </button>
+                            </div>
+                        </div>
+                        <!-- end adaptive-box-->
+                    </div>
+                </main>
             </div>
+            <!-- ---------------  Bottom part page ----------------->
+            <!-- begin footer-->
+            <footer class="c-footer">
+                <div class="c-footer__section">
+                    <ul class="c-footer__list">
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Privacy policy</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Terms of use</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Payment terms</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Money Back Policy</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Pricing</a>
+                        </li>
+                        <li class="c-footer__item"><a class="c-footer__link" href="#">Consent settings</a>
+                        </li>
+                    </ul>
+                    <div class="c-footer__address">Talentin LTD, Sofia, 1463, Triaditsa district, 66 Vitosha Blvd., floor 4, Bulgaria</div>
+                    <div class="c-footer__text">All content is for entertainment and general informational purposes only. It does not constitute professional advice</div>
+                </div>
+                <div class="c-footer__section">
+                    <div class="c-footer__copyright">© appastro.co</div>
+                </div>
+            </footer>
+            <!-- end footer-->
         </div>
         <!-- --------------- Outside part page ----------------->
         <!-- Including js files-->
