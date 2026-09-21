@@ -18,10 +18,10 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
-    <body>
+    <body class="c-dark-theme">
         <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
         <div class="w-root">
-            <div class="w-page">
+            <div class="w-page w-page--dark">
                 <!-- ---------------  Top part page ----------------->
                 <!-- begin header-->
                 <header class="c-header">
@@ -47,54 +47,72 @@
                 </header>
                 <!-- end header-->
                 <!-- ---------------  Content part page ----------------->
-                <section class="w-page__top-bar">
-                    <div class="w-centered">
-                        <!-- begin stepper-->
-                        <div class="c-stepper">
-                            <h3 class="c-stepper__title">Your details</h3>
-                            <div class="c-stepper__container">
-                                <div class="c-stepper__step is-active">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%"></div>
-                                    </div>
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__track">
-                                        <div class="c-stepper__fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                                <div class="c-stepper__step">
-                                    <div class="c-stepper__dot"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end stepper-->
-                    </div>
-                </section>
                 <div class="w-page__content">
                     <!-- begin container-->
-                    <main class="c-container c-container--vert-center">
-                        <div class="w-centered">
-                            <!-- begin title-->
-                            <h1 class="c-title w-gap-md">Person’s place of birth</h1>
-                            <!-- end title-->
-                            <!-- begin form-control-->
-                            <input class="form-control w-gap-md" type="text" id="persons-birth-place" placeholder="e.g. New York, NY"></input>
-                            <!-- end form-control-->
-                            <div class="w-column-gap-sm u-text-center">
-                                <button class="c-btn w-gap-sm" type="button">Continue
-                                </button>
-                                <button class="c-link c-link--accent-cold u-text-extra-light" type="button">Skip</button>
+                    <main class="c-container c-container--md-long c-container--content-sm c-container--stretched-center">
+                        <div class="c-container__content">
+                            <div class="w-centered w-centered--md-slim">
+                                <!-- begin title-->
+                                <h1 class="c-title w-gap-sm">More clarity in your life with Astro</h1>
+                                <!-- end title-->
+                                <!-- begin overlap-cards-->
+                                <div class="c-overlap-cards c-overlap-cards--compact">
+                                    <div class="c-overlap-cards__card">
+                                        <div class="c-overlap-cards__media">
+                                            <img class="c-image" src="static/img/general/girl-unhappy-2.png" alt="Without Astro" width="142" height="135" />
+                                        </div>
+                                        <h3 class="c-overlap-cards__title">Without Astro</h3>
+                                        <!-- begin list-->
+                                        <ul class="c-list c-list--icon-cancel">
+                                            <li class="c-list__item">
+                                                <div class="c-list__text">Lost in mixed signals</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__text">Same problems, no answers</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__text">Confusion in communication</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__text">Struggles in relationships</div>
+                                            </li>
+                                        </ul>
+                                        <!-- end list-->
+                                    </div>
+                                    <div class="c-overlap-cards__card c-overlap-cards__card--highlight">
+                                        <div class="c-overlap-cards__media">
+                                            <img class="c-image" src="static/img/general/girl-happy-2.png" alt="With Astro" width="186" height="178" />
+                                        </div>
+                                        <h3 class="c-overlap-cards__title">With Astro</h3>
+                                        <!-- begin list-->
+                                        <ul class="c-list c-list--icon-check">
+                                            <li class="c-list__item">
+                                                <div class="c-list__text">Clear on what matters</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__text">Understanding the pattern</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__text">Effective communication</div>
+                                            </li>
+                                            <li class="c-list__item">
+                                                <div class="c-list__text">Harmonious love life</div>
+                                            </li>
+                                        </ul>
+                                        <!-- end list-->
+                                    </div>
+                                </div>
+                                <!-- end overlap-cards-->
                             </div>
                         </div>
+                        <!-- begin sticky-panel-->
+                        <div class="c-sticky-panel c-sticky-panel--transparent">
+                            <div class="w-centered">
+                                <button class="c-btn" type="button">Continue
+                                </button>
+                            </div>
+                        </div>
+                        <!-- end sticky-panel-->
                     </main>
                     <!-- end container-->
                 </div>
