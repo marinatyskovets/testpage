@@ -70,7 +70,7 @@ var countDownTimer = (function () {
     var defaults = {
         timer: '.js-countdown',
         hours: 0,
-        minutes: 10,
+        minutes: 1,
         seconds: 0,
         updateInterval: 1000
     };

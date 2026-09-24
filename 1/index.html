@@ -18,151 +18,375 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
-    <body class="c-dark-theme">
+    <body>
         <!-- ------------------------------ TEMPLATE DEFAULT -------------------------------->
         <div class="w-root">
-            <div class="w-page w-page--dark">
-                <!-- ---------------  Top part page ----------------->
-                <!-- begin header-->
-                <header class="c-header">
-                    <div class="c-header__inner">
-                        <button class="c-icon-button c-header__back" type="button" aria-label="Back">
-                            <svg class="c-ico c-ico--3xl c-ico--accent" viewBox="0 0 24 24">
-                                <!-- ico name: chevron-left-->
-                                <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
-                            </svg>
-                        </button>
-                        <!-- begin logo-->
-                        <a class="c-logo" href="#">
-                            <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
-                        </a>
-                        <!-- end logo-->
-                        <button class="c-icon-button c-header__toggle-nav js-drawer-toggler" type="button" aria-label="Open">
-                            <svg class="c-ico c-ico--2xl c-ico--accent" viewBox="0 0 24 24">
-                                <!-- ico name: menu-->
-                                <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </header>
-                <!-- end header-->
+            <div class="w-page">
                 <!-- ---------------  Content part page ----------------->
                 <div class="w-page__content">
                     <!-- begin container-->
-                    <main class="c-container c-container--md-long c-container--content-sm c-container--stretched-center">
-                        <div class="c-container__content">
-                            <div class="w-centered w-centered--md-slim">
-                                <!-- begin title-->
-                                <h1 class="c-title w-gap-sm">More clarity in your life with Astro</h1>
-                                <!-- end title-->
-                                <!-- begin overlap-cards-->
-                                <div class="c-overlap-cards c-overlap-cards--compact">
-                                    <div class="c-overlap-cards__card">
-                                        <div class="c-overlap-cards__media">
-                                            <img class="c-image" src="static/img/general/girl-unhappy-2.png" alt="Without Astro" width="142" height="135" />
+                    <main class="c-container c-container--compact-top">
+                        <div class="c-container__top">
+                            <div class="c-container__inner">
+                                <div class="c-container__cell">
+                                    <!-- begin count-->
+                                    <div class="c-count c-count--horizontal">
+                                        <p class="c-count__message js-countdown-message"><span>Your Taurus × Cancer reading is held for</span><span>Your <span class="u-text-semi-bold">Taurus × Cancer</span> reading is no longer held and will be deleted soon</span>
+                                        </p>
+                                        <div class="c-count__timer js-countdown"><span>09</span><span>:</span><span>27</span>
                                         </div>
-                                        <h3 class="c-overlap-cards__title">Without Astro</h3>
-                                        <!-- begin list-->
-                                        <ul class="c-list c-list--icon-cancel">
-                                            <li class="c-list__item">
-                                                <div class="c-list__text">Lost in mixed signals</div>
-                                            </li>
-                                            <li class="c-list__item">
-                                                <div class="c-list__text">Same problems, no answers</div>
-                                            </li>
-                                            <li class="c-list__item">
-                                                <div class="c-list__text">Confusion in communication</div>
-                                            </li>
-                                            <li class="c-list__item">
-                                                <div class="c-list__text">Struggles in relationships</div>
-                                            </li>
-                                        </ul>
-                                        <!-- end list-->
                                     </div>
-                                    <div class="c-overlap-cards__card c-overlap-cards__card--highlight">
-                                        <div class="c-overlap-cards__media">
-                                            <img class="c-image" src="static/img/general/girl-happy-2.png" alt="With Astro" width="186" height="178" />
+                                    <!-- end count-->
+                                </div>
+                                <div class="c-container__cell">
+                                    <button class="c-btn c-btn--sm-narrow c-btn--pulse u-text-sm" type="button">See my reading
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-centered w-centered--md-slim w-gap-xl">
+                            <div class="row row--justify-end w-gap-xs">
+                                <!-- begin profile-label--><span class="c-profile-label">
+                    <!-- begin avatar--><span class="c-avatar">u</span>
+                                <!-- end avatar--><span class="c-profile-label__text">usernameemailaddress@gmail.com</span></span>
+                                <!-- end profile-label-->
+                            </div>
+                            <div class="row row--nowrap row--justify-between row--align-center w-gap-sm">
+                                <!-- begin logo-->
+                                <a class="c-logo" href="#">
+                                    <img src="static/img/general/logo.svg" alt="Astro" width="91" height="31">
+                                </a>
+                                <!-- end logo-->
+                                <!-- begin decorated-badge-->
+                                <div class="c-decorated-badge c-decorated-badge--sm">
+                                    <img class="c-image" src="static/img/general/wheat-xxs.svg" alt="" width="32" height="26" />
+                                    <div class="c-decorated-badge__content">
+                                        <svg class="c-ico c-ico--sm c-ico--warning" viewBox="0 0 24 24">
+                                            <!-- ico name: star-->
+                                            <path fill="currentColor" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path>
+                                        </svg><span class="c-decorated-badge__value">4.6</span>
+                                    </div>
+                                    <img class="c-image c-image--flip" src="static/img/general/wheat-xxs.svg" alt="" width="32" height="26" />
+                                </div>
+                                <!-- end decorated-badge-->
+                            </div>
+                            <!-- begin title-->
+                            <h1 class="c-title c-title--md c-title--semi-bold w-gap-sm">Your real compatibility is ready</h1>
+                            <!-- end title-->
+                            <p class="w-gap-md u-mt-0 u-lh-sm">Taurus × Cancer, read from both birth charts, <span class="u-text-secondary-deep">not just your signs.</span>
+                            </p>
+                            <!-- begin media-list-->
+                            <ul class="c-media-list w-gap-lg">
+                                <li class="c-media-list__item">
+                                    <!-- begin avatar-pair-->
+                                    <div class="c-avatar-pair c-avatar-pair--xs c-avatar-pair--content-start">
+                                        <div class="c-avatar-pair__item">
+                                            <img class="c-image" src="static/img/general/taurus-xxs.png" alt="Taurus" width="36" height="36" />
                                         </div>
-                                        <h3 class="c-overlap-cards__title">With Astro</h3>
-                                        <!-- begin list-->
-                                        <ul class="c-list c-list--icon-check">
-                                            <li class="c-list__item">
-                                                <div class="c-list__text">Clear on what matters</div>
-                                            </li>
-                                            <li class="c-list__item">
-                                                <div class="c-list__text">Understanding the pattern</div>
-                                            </li>
-                                            <li class="c-list__item">
-                                                <div class="c-list__text">Effective communication</div>
-                                            </li>
-                                            <li class="c-list__item">
-                                                <div class="c-list__text">Harmonious love life</div>
-                                            </li>
-                                        </ul>
-                                        <!-- end list-->
+                                        <div class="c-avatar-pair__separator">+</div>
+                                        <div class="c-avatar-pair__item">
+                                            <img class="c-image" src="static/img/general/cancer-xxs.png" alt="Cancer" width="36" height="36" />
+                                        </div>
+                                    </div>
+                                    <!-- end avatar-pair-->
+                                    <h3 class="c-media-list__title">Your score and what's behind it</h3>
+                                    <p class="c-media-list__text">8 areas, scored from both charts. Love, trust, attraction, pace and more.</p>
+                                </li>
+                                <li class="c-media-list__item">
+                                    <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--chat"></span>
+                                    <!-- end image-sprite-->
+                                    <h3 class="c-media-list__title">Ask about the two of you</h3>
+                                    <p class="c-media-list__text">AI psychic chat. &quot;Will this last?&quot;, &quot;Why do we fight?&quot;</p>
+                                </li>
+                            </ul>
+                            <!-- end media-list-->
+                            <div class="w-gap-xl w-column-gap-sm">
+                                <!-- begin offer-card-->
+                                <div class="c-offer-card c-offer-card--compressed w-gap-sm">
+                                    <div class="c-offer-card__top">FULL READING TODAY — DECIDE IN 7 DAYS</div>
+                                    <div class="c-offer-card__content">
+                                        <h3 class="c-offer-card__title">Your full Taurus × Cancer reading</h3>
+                                        <div class="c-offer-card__section">
+                                            <div class="c-offer-card__item">
+                                                <p class="c-offer-card__item-title">Today:</p>
+                                                <div class="c-offer-card__price">
+                                                    <div class="c-offer-card__text">$2.99</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-offer-card__section">
+                                            <div class="c-offer-card__item">
+                                                <p class="c-offer-card__item-title">Included for 7 days: Astro Premium</p>
+                                            </div>
+                                            <div class="c-offer-card__description">
+                                                <p>✔ Daily forecast for the two of you</p>
+                                                <p>✔ Check anyone else: an ex, a crush, a friend</p>
+                                                <p>✔ Unlimited AI psychic chat <span class="u-text-secondary-cold">· 3 min free without Premium</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="c-offer-card__section">
+                                            <div class="c-offer-card__item">
+                                                <p class="c-offer-card__item-title">After 7 days, per month</span>
+                                                </p>
+                                                <div class="c-offer-card__price">
+                                                    <div class="c-offer-card__text">$19</div>
+                                                </div>
+                                            </div>
+                                            <div class="c-offer-card__help-text">7 days is enough to know if it's worth it. Cancel anytime.</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- end overlap-cards-->
+                                <!-- end offer-card-->
+                                <div class="w-column-gap-xs">
+                                    <button class="c-btn c-btn--pulse" type="button">See my full reading — $2.99
+                                    </button>
+                                    <!-- begin help-msg-->
+                                    <p class="c-help-msg u-text-regular">Then $19/month. Cancel anytime.</p>
+                                    <!-- end help-msg-->
+                                </div>
+                                <!-- begin help-msg-->
+                                <p class="c-help-msg u-text-left">You are enrolling in a monthly subscription to Astro service. By continuing you agree that if you don't cancel prior to the end of the 7-day trial for the $2.99 you will automatically be charged $19 every 30 days until
+                                    you cancel in settings. The charge will appear on your bill as appastro.com. Learn more about cancellation and refund policy in the <a href="#" class="c-link c-link--help c-link--underline">Subscription policy</a>.</p>
+                                <!-- end help-msg-->
                             </div>
-                        </div>
-                        <!-- begin sticky-panel-->
-                        <div class="c-sticky-panel c-sticky-panel--transparent">
-                            <div class="w-centered">
-                                <button class="c-btn" type="button">Continue
+                            <div class="w-gap-xl">
+                                <!-- begin info-card-->
+                                <div class="c-info-card c-info-card--sm c-info-card--accent c-info-card--blurred">
+                                    <h3 class="c-info-card__title">Your score</h3>
+                                    <p class="c-info-card__value">78%</p>
+                                    <!-- begin progress-line-->
+                                    <div class="c-progress-line c-progress-line--md c-progress-line--warning">
+                                        <div class="c-progress-line__fill" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <!-- end progress-line-->
+                                    <p class="c-info-card__text">A delicate weave of contrasts.</p>
+                                    <div class="row row--nowrap row--row-gap-md row--by-3">
+                                        <div class="c-info-card__area">
+                                            <p class="c-info-card__name">Love</p>
+                                            <!-- begin progress-line-->
+                                            <div class="c-progress-line c-progress-line--success">
+                                                <div class="c-progress-line__fill" role="progressbar" style="width: 54%" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <!-- end progress-line-->
+                                        </div>
+                                        <div class="c-info-card__area">
+                                            <p class="c-info-card__name">Sex</p>
+                                            <!-- begin progress-line-->
+                                            <div class="c-progress-line c-progress-line--danger">
+                                                <div class="c-progress-line__fill" role="progressbar" style="width: 43%" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <!-- end progress-line-->
+                                        </div>
+                                        <div class="c-info-card__area">
+                                            <p class="c-info-card__name">Family</p>
+                                            <!-- begin progress-line-->
+                                            <div class="c-progress-line c-progress-line--warning">
+                                                <div class="c-progress-line__fill" role="progressbar" style="width: 63%" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <!-- end progress-line-->
+                                        </div>
+                                    </div>
+                                    <ul class="c-info-card__list">
+                                        <li class="c-info-card__item">
+                                            <img class="c-image" src="static/img/general/plus-circle.png" alt="" width="14" height="14" /><span class="c-info-card__item-text">Mars rules Aries, Venus rules Taurus. Aries brings...</span>
+                                        </li>
+                                        <li class="c-info-card__item">
+                                            <img class="c-image" src="static/img/general/minus-circle.png" alt="" width="14" height="14" /><span class="c-info-card__item-text">Aries' impatience can clash with Taurus' need for...</span>
+                                        </li>
+                                    </ul>
+                                    <svg class="c-ico c-info-card__lock" viewBox="0 0 24 24">
+                                        <!-- ico name: lock-->
+                                        <path fill="currentColor" d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"></path>
+                                    </svg>
+                                </div>
+                                <!-- end info-card-->
+                                <button class="c-btn c-btn--pulse" type="button">See my full reading — $2.99
                                 </button>
                             </div>
+                            <div class="w-gap-xl w-column-gap-sm">
+                                <!-- begin title-group-->
+                                <div class="c-title-group">
+                                    <h2 class="c-title-group__title">Rated 4.6 by our users</h2>
+                                    <p class="c-title-group__text">Real reviews from people who checked a couple like yours.</p>
+                                </div>
+                                <!-- end title-group-->
+                                <div class="w-column-gap-md">
+                                    <!-- begin testimonial-->
+                                    <div class="c-testimonial">
+                                        <div class="c-testimonial__head">
+                                            <img class="c-image c-testimonial__avatar" src="static/img/general/ava-2.png" alt="Danielle R" width="56" height="56" />
+                                            <div class="c-testimonial__meta">
+                                                <p class="c-testimonial__author">Danielle R</p>
+                                                <img class="c-image" src="static/img/general/stars-3.svg" alt="5 out of 5 stars" width="90" height="18" />
+                                            </div>
+                                        </div>
+                                        <p class="c-testimonial__text">It gave me so much clarity about my current relationship and helped me understand what we need to work on. For the first time in a while, I feel hopeful about us.</p>
+                                    </div>
+                                    <!-- end testimonial-->
+                                    <!-- begin testimonial-->
+                                    <div class="c-testimonial">
+                                        <div class="c-testimonial__head">
+                                            <img class="c-image c-testimonial__avatar" src="static/img/general/ava-3.png" alt="Brandon P" width="56" height="56" />
+                                            <div class="c-testimonial__meta">
+                                                <p class="c-testimonial__author">Brandon P</p>
+                                                <img class="c-image" src="static/img/general/stars-3.svg" alt="5 out of 5 stars" width="90" height="18" />
+                                            </div>
+                                        </div>
+                                        <p class="c-testimonial__text">The reading helped me understand why we kept having the same arguments in our marriage. It explained our communication differences in a way that finally made sense.</p>
+                                    </div>
+                                    <!-- end testimonial-->
+                                    <!-- begin testimonial-->
+                                    <div class="c-testimonial">
+                                        <div class="c-testimonial__head">
+                                            <img class="c-image c-testimonial__avatar" src="static/img/general/ava-4.png" alt="Michelle K" width="56" height="56" />
+                                            <div class="c-testimonial__meta">
+                                                <p class="c-testimonial__author">Michelle K</p>
+                                                <img class="c-image" src="static/img/general/stars-3.svg" alt="5 out of 5 stars" width="90" height="18" />
+                                            </div>
+                                        </div>
+                                        <p class="c-testimonial__text">I started with our compatibility reading, but what keeps me using Astro is the daily love horoscope and astrology chat. The horoscope helps me understand my partner’s mood and what kind of day we might have together.
+                                            I also love getting personalized guidance and being able to ask questions whenever I need more clarity.</p>
+                                    </div>
+                                    <!-- end testimonial-->
+                                </div>
+                                <!-- begin help-msg-->
+                                <p class="c-help-msg u-text-left">Real reviews. Names changed and photos AI-generated for privacy.</p>
+                                <!-- end help-msg-->
+                            </div>
                         </div>
-                        <!-- end sticky-panel-->
+                        <!-- begin section-->
+                        <section class="c-section c-section--accent w-gap-xl">
+                            <div class="w-centered w-centered--md-slim">
+                                <!-- begin title-group-->
+                                <div class="c-title-group w-gap-sm">
+                                    <h2 class="c-title-group__title">Your plan includes</h2>
+                                    <p class="c-title-group__text">Your full compatibility reading today, plus everything in Astro Premium.</p>
+                                </div>
+                                <!-- end title-group-->
+                                <!-- begin decorated-list-->
+                                <ul class="c-decorated-list c-decorated-list--compact">
+                                    <li class="c-decorated-list__item">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--hearts"></span>
+                                        <!-- end image-sprite-->
+                                        <div class="c-decorated-list__content">
+                                            <p class="c-decorated-list__title">Full compatibility reading</p>
+                                            <p class="c-decorated-list__subtitle">8 areas: love, sex, family, friendship, money and more.</p>
+                                        </div>
+                                    </li>
+                                    <li class="c-decorated-list__item">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--calendar"></span>
+                                        <!-- end image-sprite-->
+                                        <div class="c-decorated-list__content">
+                                            <p class="c-decorated-list__title">Daily forecast for the two of you</p>
+                                            <p class="c-decorated-list__subtitle">Communication, attraction, timing. Fresh every day.</p>
+                                        </div>
+                                    </li>
+                                    <li class="c-decorated-list__item">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--account"></span>
+                                        <!-- end image-sprite-->
+                                        <div class="c-decorated-list__content">
+                                            <p class="c-decorated-list__title">Check anyone else</p>
+                                            <p class="c-decorated-list__subtitle">An ex, a crush, a friend. As many as you want.</p>
+                                        </div>
+                                    </li>
+                                    <li class="c-decorated-list__item">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--chat"></span>
+                                        <!-- end image-sprite-->
+                                        <div class="c-decorated-list__content">
+                                            <p class="c-decorated-list__title">Unlimited AI psychic chat</p>
+                                            <p class="c-decorated-list__subtitle">Ask about the two of you, in private.</p>
+                                        </div>
+                                    </li>
+                                    <li class="c-decorated-list__item">
+                                        <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--conscious"></span>
+                                        <!-- end image-sprite-->
+                                        <div class="c-decorated-list__content">
+                                            <p class="c-decorated-list__title">Your personal birth chart</p>
+                                            <p class="c-decorated-list__subtitle">A deeper look at who you are, and how you love.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- end decorated-list-->
+                            </div>
+                        </section>
+                        <!-- end section-->
+                        <div class="w-centered w-centered--md-slim w-gap-xl">
+                            <!-- begin title-group-->
+                            <div class="c-title-group w-gap-sm">
+                                <h2 class="c-title-group__title">Still deciding?</h2>
+                                <p class="c-title-group__text">What people ask most before getting their reading.</p>
+                            </div>
+                            <!-- end title-group-->
+                            <!-- begin list-->
+                            <ul class="c-list c-list--sm c-list--gap-md-normal c-list--icon-help w-gap-md">
+                                <li class="c-list__item">
+                                    <div class="c-list__title">What happens after I pay?</div>
+                                    <div class="c-list__text">You'll get a link to the Astro app. Sign in with the same email, and your full reading will be waiting for you.</div>
+                                </li>
+                                <li class="c-list__item">
+                                    <div class="c-list__title">What will I be charged?</div>
+                                    <div class="c-list__text">$1 today for your full reading and a 7-day trial of Astro Premium. After the trial, it's $19 every 30 days until you cancel.</div>
+                                </li>
+                                <li class="c-list__item">
+                                    <div class="c-list__title">Can I cancel?</div>
+                                    <div class="c-list__text">Yes, anytime in your account settings. To avoid the $19 charge, cancel before your trial ends. Payments are non-refundable, except where required by law.</div>
+                                </li>
+                                <li class="c-list__item">
+                                    <div class="c-list__title">How accurate is my reading?</div>
+                                    <div class="c-list__text">It's based on your birth details, planetary positions, and expert interpretation. Many users find it accurate. Think of it as guidance, not a guarantee.</div>
+                                </li>
+                                <li class="c-list__item">
+                                    <div class="c-list__title">Is my data private?</div>
+                                    <div class="c-list__text">Yes. Your data and readings are confidential and never shared with third parties without your permission.</div>
+                                </li>
+                            </ul>
+                            <!-- end list-->
+                            <div class="w-column-gap-xs">
+                                <button class="c-btn c-btn--pulse" type="button">See my full reading — $2.99
+                                </button>
+                                <!-- begin help-msg-->
+                                <p class="c-help-msg u-text-regular">Then $19/month. Cancel anytime.</p>
+                                <!-- end help-msg-->
+                            </div>
+                        </div>
                     </main>
                     <!-- end container-->
                 </div>
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
-        <!-- begin drawer-->
-        <nav class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
-            <div class="c-drawer__dialog">
-                <div class="c-drawer__head">
-                    <div class="c-drawer__title">Menu</div>
-                    <button class="c-icon-button c-drawer__close js-drawer-toggler" type="button" aria-label="Close">
-                        <svg class="c-ico c-ico--xl c-ico--accent" viewBox="0 0 24 24">
-                            <!-- ico name: close-->
-                            <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <ul class="c-drawer__menu">
-                    <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Privacy policy</a>
-                    </li>
-                    <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Terms & conditions</a>
-                    </li>
-                    <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Payment terms</a>
-                    </li>
-                    <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Subscription terms</a>
-                    </li>
-                    <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Money back policy</a>
-                    </li>
-                    <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">FAQ</a>
-                    </li>
-                    <li class="c-drawer__item">
-                        <a class="c-drawer__link" href="#">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- end drawer-->
         <!-- Including js files-->
 
 
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                  countDownTimer.initialize();
+              
+                  // Demo only: switches the count to the expired message when the countdown ends.
+                  // In React this is the isExpired state and conditional rendering.
+                  var timer = $('.js-countdown'),
+                      messages = $('.js-countdown-message').children();
+              
+                  // Without the timer (isExpired) only the expired message is shown.
+                  if (!timer.length) return messages.first().hide();
+              
+                  messages.last().hide();
+              
+                  var observer = new MutationObserver(function () {
+                      if (timer.text() !== '00:00') return;
+              
+                      observer.disconnect();
+                      messages.last().show();
+                      messages.first().add(timer).hide();
+                  });
+              
+                  observer.observe(timer[0], {childList: true});
+              });
+        </script>
     </body>
 
 </html>
