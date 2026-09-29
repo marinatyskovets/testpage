@@ -31,10 +31,23 @@
                                 <div class="c-container__cell">
                                     <!-- begin count-->
                                     <div class="c-count c-count--horizontal">
-                                        <p class="c-count__message js-countdown-message"><span>Your Taurus × Cancer reading is held for</span><span>Your <span class="u-text-semi-bold">Taurus × Cancer</span> reading is no longer held and will be deleted soon</span>
-                                        </p>
+                                        <p class="c-count__message">Your Taurus × Cancer reading held for</p>
                                         <div class="c-count__timer js-countdown"><span>09</span><span>:</span><span>27</span>
                                         </div>
+                                    </div>
+                                    <!-- end count-->
+                                </div>
+                                <div class="c-container__cell">
+                                    <button class="c-btn c-btn--sm-narrow c-btn--pulse u-text-sm" type="button">See my reading
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- State without the countdown: shown after the timer has ended.-->
+                            <div class="c-container__inner">
+                                <div class="c-container__cell">
+                                    <!-- begin count-->
+                                    <div class="c-count c-count--horizontal">
+                                        <p class="c-count__message">Your <span class="u-text-semi-bold">Taurus × Cancer</span> reading is no longer held and will be deleted soon</p>
                                     </div>
                                     <!-- end count-->
                                 </div>
@@ -89,13 +102,13 @@
                                         </div>
                                     </div>
                                     <!-- end avatar-pair-->
-                                    <h3 class="c-media-list__title">Your score and what's behind it</h3>
+                                    <h2 class="c-media-list__title">Your score and what's behind it</h2>
                                     <p class="c-media-list__text">8 areas, scored from both charts. Love, trust, attraction, pace and more.</p>
                                 </li>
                                 <li class="c-media-list__item">
                                     <!-- begin image-sprite--><span class="c-image-sprite c-image-sprite--chat"></span>
                                     <!-- end image-sprite-->
-                                    <h3 class="c-media-list__title">Ask about the two of you</h3>
+                                    <h2 class="c-media-list__title">Ask about the two of you</h2>
                                     <p class="c-media-list__text">AI psychic chat. &quot;Will this last?&quot;, &quot;Why do we fight?&quot;</p>
                                 </li>
                             </ul>
@@ -105,7 +118,7 @@
                                 <div class="c-offer-card c-offer-card--compressed w-gap-sm">
                                     <div class="c-offer-card__top">FULL READING TODAY — DECIDE IN 7 DAYS</div>
                                     <div class="c-offer-card__content">
-                                        <h3 class="c-offer-card__title">Your full Taurus × Cancer reading</h3>
+                                        <h2 class="c-offer-card__title">Your full Taurus × Cancer reading</h2>
                                         <div class="c-offer-card__section">
                                             <div class="c-offer-card__item">
                                                 <p class="c-offer-card__item-title">Today:</p>
@@ -127,8 +140,7 @@
                                         </div>
                                         <div class="c-offer-card__section">
                                             <div class="c-offer-card__item">
-                                                <p class="c-offer-card__item-title">After 7 days, per month</span>
-                                                </p>
+                                                <p class="c-offer-card__item-title">After 7 days, per month</p>
                                                 <div class="c-offer-card__price">
                                                     <div class="c-offer-card__text">$19</div>
                                                 </div>
@@ -142,7 +154,7 @@
                                     <button class="c-btn c-btn--pulse" type="button">See my full reading — $2.99
                                     </button>
                                     <!-- begin help-msg-->
-                                    <p class="c-help-msg u-text-regular">Then $19/month. Cancel anytime.</p>
+                                    <p class="c-help-msg">Then $19/month. Cancel anytime.</p>
                                     <!-- end help-msg-->
                                 </div>
                                 <!-- begin help-msg-->
@@ -365,26 +377,6 @@
         <script>
             $(document).ready(function () {
                   countDownTimer.initialize();
-              
-                  // Demo only: switches the count to the expired message when the countdown ends.
-                  // In React this is the isExpired state and conditional rendering.
-                  var timer = $('.js-countdown'),
-                      messages = $('.js-countdown-message').children();
-              
-                  // Without the timer (isExpired) only the expired message is shown.
-                  if (!timer.length) return messages.first().hide();
-              
-                  messages.last().hide();
-              
-                  var observer = new MutationObserver(function () {
-                      if (timer.text() !== '00:00') return;
-              
-                      observer.disconnect();
-                      messages.last().show();
-                      messages.first().add(timer).hide();
-                  });
-              
-                  observer.observe(timer[0], {childList: true});
               });
         </script>
     </body>
