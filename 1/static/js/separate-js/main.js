@@ -66,254 +66,155 @@ var drawer = (function ($) {
     };
 })(jQuery);
 
-var countDownTimer = (function () {
-    var defaults = {
-        timer: '.js-countdown',
-        hours: 0,
-        minutes: 10,
-        seconds: 0,
-        updateInterval: 1000
-    };
 
-    var timer = (hours, minutes, seconds) => {
-        let timeStr = '';
-        if (hours > 0) timeStr += `<span>${hours}</span><span>:</span>`;
-        timeStr += `<span>${minutes}</span><span>:</span><span>${seconds}</span>`;
-        return timeStr;
-    };
-
-    var initialize = function (params) {
-        var now = new Date(),
-            settings = $.extend({}, defaults, params || {}),
-            element = $(settings.timer),
-            // считаем общее количество миллисекунд
-            totalMs = ((settings.hours * 60 * 60) + (settings.minutes * 60) + settings.seconds) * 1000,
-            deadlineTime = new Date(now.getTime() + totalMs);
-
-        var intervalId = setInterval(function () {
-            let now = new Date().getTime();
-            let time = deadlineTime - now;
-
-            if (time <= 0) {
-                clearInterval(intervalId);
-                element.html(timer('00', '00', '00'));
-                return;
-            }
-
-            let hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((time % (1000 * 60)) / 1000);
-
-            if (hours < 10) hours = '0' + hours;
-            if (minutes < 10) minutes = '0' + minutes;
-            if (seconds < 10) seconds = '0' + seconds;
-
-            element.html(timer(hours, minutes, seconds));
-
-        }, settings.updateInterval);
-    };
-
-    return {
-        initialize: initialize
-    };
-})();
-
-var slider = (function () {
+var slider = (function ($) {
     var defaults = {
         slider: '.js-slider',
-        dot: '.js-slider-dot',
-        activeClass: 'is-active',
-        delay: 3000,
-        swipeThreshold: 50
-    };
-
-    var setActiveSlide = function (slides, dots, index, activeClass) {
-        slides.removeClass(activeClass);
-        dots.removeClass(activeClass);
-
-        slides.eq(index).addClass(activeClass);
-        dots.eq(index).addClass(activeClass);
-    };
-
-    var initialize = function (params) {
-        var settings = $.extend({}, defaults, params || {}),
-            sliders = $(settings.slider);
-
-        sliders.each(function () {
-            var slider = $(this),
-                slides = slider.children().first().children(),
-                dots = slider.find(settings.dot),
-                activeIndex = Number(slider.data('initial')) || 0,
-                delay = Number(slider.data('delay')) || settings.delay,
-                intervalId = null,
-                startX = null;
-
-            var startAutoplay = function () {
-                stopAutoplay();
-
-                intervalId = setInterval(function () {
-                    activeIndex = (activeIndex + 1) % slides.length;
-                    setActiveSlide(slides, dots, activeIndex, settings.activeClass);
-                }, delay);
-            };
-
-            var stopAutoplay = function () {
-                if (intervalId) {
-                    clearInterval(intervalId);
-                    intervalId = null;
-                }
-            };
-
-            var onDragStart = function (x) {
-                startX = x;
-            };
-
-            var onDragEnd = function (x) {
-                if (startX === null) return;
-
-                var diff = startX - x;
-
-                if (Math.abs(diff) >= settings.swipeThreshold) {
-                    if (diff > 0) {
-                        activeIndex = (activeIndex + 1) % slides.length;
-                    } else {
-                        activeIndex = (activeIndex - 1 + slides.length) % slides.length;
-                    }
-                    setActiveSlide(slides, dots, activeIndex, settings.activeClass);
-                    startAutoplay();
-                }
-
-                startX = null;
-            };
-
-            slider.on('mousedown', function (e) {
-                onDragStart(e.clientX);
-            });
-
-            slider.on('mouseup', function (e) {
-                onDragEnd(e.clientX);
-            });
-
-            slider.on('mouseleave', function () {
-                startX = null;
-            });
-
-            slider.on('touchstart', function (e) {
-                onDragStart(e.originalEvent.touches[0].clientX);
-            });
-
-            slider.on('touchend', function (e) {
-                onDragEnd(e.originalEvent.changedTouches[0].clientX);
-            });
-
-            dots.on('click', function () {
-                activeIndex = $(this).index();
-                setActiveSlide(slides, dots, activeIndex, settings.activeClass);
-                startAutoplay();
-            });
-
-            setActiveSlide(slides, dots, activeIndex, settings.activeClass);
-            startAutoplay();
-        });
-    };
-
-    return {
-        initialize: initialize
-    };
-})();
-
-
-var textClamp = (function () {
-    var defaults = {
-        container: '.js-text-clamp',
-        content: '.js-text-clamp-content',
-        btn: '.js-text-clamp-btn',
-        expandedClass: 'is-expanded',
-        hiddenClass: 'u-hidden',
-        lines: 5
-    };
-
-    var truncate = function (textElement, btn, fullText, maxHeight) {
-        textElement.innerHTML = '';
-        var textNode = document.createTextNode('');
-        textElement.appendChild(textNode);
-        textElement.appendChild(btn);
-
-        var lo = 0, hi = fullText.length;
-        while (lo < hi - 1) {
-            var mid = Math.floor((lo + hi) / 2);
-            textNode.textContent = fullText.slice(0, mid) + '... ';
-            if (textElement.scrollHeight <= maxHeight + 2) lo = mid;
-            else hi = mid;
-        }
-        textNode.textContent = fullText.slice(0, lo) + '... ';
+        track: '.js-slider-track',
+        prev: '.js-slider-prev',
+        next: '.js-slider-next',
+        hiddenClass: 'is-hidden'
     };
 
     var initialize = function (params) {
         var settings = $.extend({}, defaults, params || {});
 
-        $(settings.container).each(function () {
-            var container = $(this),
-                textElement = container.find(settings.content)[0],
-                btn = container.find(settings.btn)[0];
+        $(settings.slider).each(function () {
+            var slider = $(this),
+                track = slider.find(settings.track),
+                prev = slider.find(settings.prev),
+                next = slider.find(settings.next),
+                lastIndex = track.children().length - 1,
+                index = 0;
 
-            if (!textElement || !btn) return;
+            // Each slide is 100% of the track width, so the offset is the index in whole slides
+            var update = function () {
+                track.css('transform', 'translateX(-' + index * 100 + '%)');
+                prev.toggleClass(settings.hiddenClass, index === 0);
+                next.toggleClass(settings.hiddenClass, index >= lastIndex);
+            };
 
-            var fullText = textElement.textContent.trim(),
-                lineHeight = parseFloat(getComputedStyle(textElement).lineHeight),
-                maxHeight = lineHeight * settings.lines,
-                expanded = false;
-
-            if (textElement.scrollHeight <= maxHeight + 2) {
-                $(btn).addClass(settings.hiddenClass);
-                return;
-            }
-
-            truncate(textElement, btn, fullText, maxHeight);
-
-            $(btn).on('click', function () {
-                expanded = !expanded;
-                container.toggleClass(settings.expandedClass, expanded);
-                textElement.innerHTML = '';
-                textElement.appendChild(document.createTextNode(expanded ? fullText + ' ' : ''));
-                if (!expanded) truncate(textElement, btn, fullText, maxHeight);
-                else textElement.appendChild(btn);
+            prev.on('click', function () {
+                index = Math.max(index - 1, 0);
+                update();
             });
+
+            next.on('click', function () {
+                index = Math.min(index + 1, lastIndex);
+                update();
+            });
+
+            update();
         });
     };
 
     return {
         initialize: initialize
     };
-})();
+})(jQuery);
 
-var stickyActivate = (function () {
+var contentAnimated = (function ($) {
     var defaults = {
-        trigger: '.js-sticky-trigger',
-        panel: '.js-sticky',
-        hiddenClass: 'u-hidden'
+        root: '.js-content-animated',
+        container: '.js-content-animated-container',
+        items: [],
+        interval: 3000
     };
 
-    var check = function (trigger, panel, hiddenClass) {
-        var rect = trigger[0].getBoundingClientRect();
-        panel.toggleClass(hiddenClass, rect.bottom > window.innerHeight);
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {});
+
+        $(settings.root).each(function () {
+            var root = $(this),
+                items = settings.items,
+                index = 0;
+
+            if (items.length < 2) {
+                return;
+            }
+
+            setInterval(function () {
+                var container = root.find(settings.container);
+
+                index = (index + 1) % items.length;
+
+                container.replaceWith(container.clone().html(items[index]));
+            }, settings.interval);
+        });
+    };
+
+    return {
+        initialize: initialize
+    };
+})(jQuery);
+
+var stickyPanel = (function ($) {
+    var defaults = {
+        panel: '.js-sticky-panel'
     };
 
     var initialize = function (params) {
         var settings = $.extend({}, defaults, params || {}),
-            trigger = $(settings.trigger),
-            panel = $(settings.panel);
+            panels = $(settings.panel);
 
-        if (!trigger.length || !panel.length) return;
+        if (panels.length < 2) {
+            return;
+        }
 
-        $(window).on('scroll', function () {
-            check(trigger, panel, settings.hiddenClass);
+        var update = function () {
+            var offset = 0;
+
+            panels.each(function () {
+                $(this).css('top', offset);
+                offset += this.offsetHeight;
+            });
+        };
+
+        var observer = new ResizeObserver(update);
+
+        panels.each(function () {
+            observer.observe(this);
         });
-
-        check(trigger, panel, settings.hiddenClass);
     };
 
     return {
         initialize: initialize
     };
-})();
+})(jQuery);
+
+var countdown = (function ($) {
+    var defaults = {
+        countdown: '.js-countdown'
+    };
+
+    var pad = function (value) {
+        return (value < 10 ? '0' : '') + value;
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {});
+
+        $(settings.countdown).each(function () {
+            var countdown = $(this),
+                parts = countdown.text().split(':'),
+                seconds = parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+
+            if (!(seconds > 0)) {
+                return;
+            }
+
+            var timer = setInterval(function () {
+                seconds -= 1;
+                countdown.text(pad(Math.floor(seconds / 60)) + ':' + pad(seconds % 60));
+
+                if (seconds === 0) {
+                    clearInterval(timer);
+                }
+            }, 1000);
+        });
+    };
+
+    return {
+        initialize: initialize
+    };
+})(jQuery);
