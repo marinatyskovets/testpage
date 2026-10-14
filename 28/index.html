@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Astro</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=block" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body style="padding: 20px; background: #F5F5F5">
+        <div class="row row--gap-sm">
+            <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#spiritual">spiritual person
+            </button>
+            <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#psychic-artistry">psychic artistry
+            </button>
+            <button class="c-btn" type="button" data-bs-toggle="modal" data-bs-target="#warning">warning
+            </button>
+        </div>
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="spiritual">
+            <div class="c-modal-common__dialog modal-dialog">
+                <div class="c-modal-common__content">
+                    <div class="w-column-gap-sm">
+                        <!-- begin emoji-->
+                        <span class="c-emoji c-emoji--lg">✨</span>
+                        <!-- end emoji-->
+                        <p class="u-text-xl u-mt-0">Do you consider yourself a spiritual person?</p>
+                        <div class="row row--nowrap row--gap-2xs row--by-2">
+                            <button class="c-btn" type="button" data-bs-dismiss="modal">No
+                            </button>
+                            <button class="c-btn" type="button">Yes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker" id="psychic-artistry">
+            <div class="c-modal-common__dialog modal-dialog">
+                <div class="c-modal-common__content">
+                    <div class="w-column-gap-sm">
+                        <!-- begin emoji-->
+                        <span class="c-emoji c-emoji--lg">✨</span>
+                        <!-- end emoji-->
+                        <p class="u-text-xl u-mt-0">Are you familiar with the concept of Psychic Artistry?</p>
+                        <div class="row row--nowrap row--gap-2xs row--by-2">
+                            <button class="c-btn" type="button" data-bs-dismiss="modal">No
+                            </button>
+                            <button class="c-btn" type="button">Yes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common modal fade js-modal-locker c-modal-common--bottom-adaptive" id="warning">
+            <div class="c-modal-common__dialog modal-dialog">
+                <div class="c-modal-common__content">
+                    <div class="w-column-gap-sm">
+                        <!-- begin title-->
+                        <h2 class="c-title u-text-upper u-text-warning">Warning</h2>
+                        <!-- end title-->
+                        <p class="u-mt-0">We have noticed something shocking while searching for your Soulmate. Prepare for surprising results!</p>
+                        <!-- begin note-->
+                        <div class="c-note">
+                            <svg class="c-ico c-ico--xl c-ico--success" viewBox="0 0 24 24">
+                                <!-- ico name: shield-check-outline-->
+                                <path fill="currentColor" d="M21,11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1L21,5V11M12,21C15.75,20 19,15.54 19,11.22V6.3L12,3.18L5,6.3V11.22C5,15.54 8.25,20 12,21M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9"></path>
+                            </svg>
+                            <p class="c-note__text">We don’t share any personal information</p>
+                        </div>
+                        <!-- end note-->
+                        <button class="c-btn" type="button">I Understand
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
+        <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+    </body>
+
+</html>
