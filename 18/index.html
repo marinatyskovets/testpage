@@ -23,7 +23,7 @@
         <div class="w-root">
             <div class="w-page">
                 <!-- begin sticky-panel-->
-                <div class="c-sticky-panel js-sticky-panel">
+                <div class="c-sticky-panel js-sticky-panel c-sticky-panel--xs c-sticky-panel--accent">
                     <!-- begin content-animated-->
                     <div class="c-content-animated js-content-animated">
                         <div class="c-content-animated__container js-content-animated-container"><strong>Noah</strong> just saw
@@ -57,7 +57,7 @@
                 </header>
                 <!-- end header-->
                 <!-- begin sticky-panel-->
-                <div class="c-sticky-panel js-sticky-panel c-sticky-panel--light">
+                <div class="c-sticky-panel js-sticky-panel c-sticky-panel--sm c-sticky-panel--light">
                     <div class="u-text-center u-text-sm">
                         Your
                         <strong class="u-text-highlight">Sketch</strong> offer: 44,99 ₴! Ends in
@@ -205,7 +205,7 @@
                                     </div>
                                 </div>
                                 <!-- end price-card-->
-                                <button class="c-btn" type="button">Pay Now
+                                <button class="c-btn js-reveal-after-trigger" type="button">Pay Now
                                 </button>
                             </div>
                         </section>
@@ -438,50 +438,56 @@
                     </main>
                     <!-- end container-->
                 </div>
-                <div class="w-page__bottom">
-                    <!-- ---------------  Bottom part page ----------------->
-                    <!-- begin footer-->
-                    <footer class="c-footer">
-                        <div class="c-footer__section">
-                            <div class="c-footer__inner">
-                                <!-- begin logo-->
-                                <a class="c-logo" href="#">
-                                    <img src="static/img/general/logo.svg" alt="Astro" width="90" height="20">
-                                </a>
-                                <!-- end logo-->
-                                <nav class="c-footer__nav">
-                                    <ul class="c-footer__menu">
-                                        <li>
-                                            <a class="c-link c-link--secondary" href="#">Terms of Use</a>
-                                        </li>
-                                        <li>
-                                            <a class="c-link c-link--secondary" href="#">Privacy Policy</a>
-                                        </li>
-                                        <li>
-                                            <a class="c-link c-link--secondary" href="#">Payment Terms</a>
-                                        </li>
-                                        <li>
-                                            <a class="c-link c-link--secondary" href="#">Money Back Policy</a>
-                                        </li>
-                                        <li>
-                                            <a class="c-link c-link--secondary" href="#">Contact Us</a>
-                                        </li>
-                                        <li>
-                                            <a class="c-link c-link--secondary" href="#">FAQ</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
+                <!-- ---------------  Bottom part page ----------------->
+                <!-- begin footer-->
+                <footer class="c-footer">
+                    <div class="c-footer__section">
+                        <div class="c-footer__inner">
+                            <!-- begin logo-->
+                            <a class="c-logo" href="#">
+                                <img src="static/img/general/logo.svg" alt="Astro" width="90" height="20">
+                            </a>
+                            <!-- end logo-->
+                            <nav class="c-footer__nav">
+                                <ul class="c-footer__menu">
+                                    <li>
+                                        <a class="c-link c-link--secondary" href="#">Terms of Use</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-link c-link--secondary" href="#">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-link c-link--secondary" href="#">Payment Terms</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-link c-link--secondary" href="#">Money Back Policy</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-link c-link--secondary" href="#">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="c-link c-link--secondary" href="#">FAQ</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                        <div class="c-footer__section">
-                            <div class="c-footer__inner">
-                                <p class="c-footer__note">Astrological readings are for entertainment purposes only and should not be used as a substitute for professional advice!</p>
-                                <p class="c-footer__note">Copyright © 2024-2026 AppAstro. All rights reserved. All trademarks referenced herein are the properties of their respective owners.</p>
-                            </div>
+                    </div>
+                    <div class="c-footer__section">
+                        <div class="c-footer__inner">
+                            <p class="c-footer__note">Astrological readings are for entertainment purposes only and should not be used as a substitute for professional advice!</p>
+                            <p class="c-footer__note">Copyright © 2024-2026 AppAstro. All rights reserved. All trademarks referenced herein are the properties of their respective owners.</p>
                         </div>
-                    </footer>
-                    <!-- end footer-->
+                    </div>
+                </footer>
+                <!-- end footer-->
+                <!-- begin sticky-panel-->
+                <div class="c-sticky-panel c-sticky-panel--bottom js-reveal-after u-hidden">
+                    <div class="w-centered">
+                        <button class="c-btn" type="button">Get My Soulmate Sketch
+                        </button>
+                    </div>
                 </div>
+                <!-- end sticky-panel-->
             </div>
         </div>
         <!-- --------------- Outside part page ----------------->
@@ -533,6 +539,7 @@
             $(document).ready(function () {
                   slider.initialize();
                   stickyPanel.initialize();
+                  revealAfter.initialize();
                   countdown.initialize();
                   contentAnimated.initialize({
                       items: [

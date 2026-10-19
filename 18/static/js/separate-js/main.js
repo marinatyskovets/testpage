@@ -182,6 +182,38 @@ var stickyPanel = (function ($) {
     };
 })(jQuery);
 
+var revealAfter = (function ($) {
+    var defaults = {
+        element: '.js-reveal-after',
+        trigger: '.js-reveal-after-trigger',
+        hiddenClass: 'u-hidden'
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {}),
+            element = $(settings.element),
+            trigger = document.querySelector(settings.trigger);
+
+        if (!element.length || !trigger) {
+            return;
+        }
+
+        // Елемент показується лише коли тригер повністю вище viewport,
+        // а не коли він ще нижче (на початку сторінки).
+        var observer = new IntersectionObserver(function (entries) {
+            var entry = entries[0];
+
+            element.toggleClass(settings.hiddenClass, entry.isIntersecting || entry.boundingClientRect.top > 0);
+        });
+
+        observer.observe(trigger);
+    };
+
+    return {
+        initialize: initialize
+    };
+})(jQuery);
+
 var countdown = (function ($) {
     var defaults = {
         countdown: '.js-countdown'
