@@ -73,7 +73,9 @@ var slider = (function ($) {
         track: '.js-slider-track',
         prev: '.js-slider-prev',
         next: '.js-slider-next',
-        hiddenClass: 'is-hidden'
+        hiddenClass: 'is-hidden',
+        // Autoplay interval in ms; 0 turns autoplay off
+        autoplay: 0
     };
 
     var initialize = function (params) {
@@ -84,27 +86,77 @@ var slider = (function ($) {
                 track = slider.find(settings.track),
                 prev = slider.find(settings.prev),
                 next = slider.find(settings.next),
-                lastIndex = track.children().length - 1,
-                index = 0;
+                slides = track.children(),
+                step = 0,
+                lastIndex = 0,
+                index = 0,
+                timer = null;
 
-            // Each slide is 100% of the track width, so the offset is the index in whole slides
+            if (!slides.length) {
+                return;
+            }
+
+            // Several slides can be in view (desktop), so the step and the last index
+            // depend on the current layout and are measured again on resize
+            var measure = function () {
+                step = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : slides[0].offsetWidth;
+
+                var visible = Math.max(Math.round(track.parent().width() / step), 1);
+
+                lastIndex = Math.max(slides.length - visible, 0);
+                index = Math.min(index, lastIndex);
+            };
+
             var update = function () {
-                track.css('transform', 'translateX(-' + index * 100 + '%)');
+                track.css('transform', 'translateX(-' + index * step + 'px)');
                 prev.toggleClass(settings.hiddenClass, index === 0);
                 next.toggleClass(settings.hiddenClass, index >= lastIndex);
             };
 
+            var stop = function () {
+                clearInterval(timer);
+                timer = null;
+            };
+
+            // After the last slide autoplay starts over from the first one
+            var play = function () {
+                if (!settings.autoplay || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    return;
+                }
+
+                stop();
+                timer = setInterval(function () {
+                    index = index >= lastIndex ? 0 : index + 1;
+                    update();
+                }, settings.autoplay);
+            };
+
+            // Manual navigation restarts the countdown, so the slide does not change right after a click
             prev.on('click', function () {
                 index = Math.max(index - 1, 0);
                 update();
+                play();
             });
 
             next.on('click', function () {
                 index = Math.min(index + 1, lastIndex);
                 update();
+                play();
             });
 
+            // Paused while the user reads a slide or uses the buttons from the keyboard
+            slider
+                .on('mouseenter focusin', stop)
+                .on('mouseleave focusout', play);
+
+            $(window).on('resize', function () {
+                measure();
+                update();
+            });
+
+            measure();
             update();
+            play();
         });
     };
 
@@ -175,6 +227,41 @@ var stickyPanel = (function ($) {
         panels.each(function () {
             observer.observe(this);
         });
+    };
+
+    return {
+        initialize: initialize
+    };
+})(jQuery);
+
+var revealAfter = (function ($) {
+    var defaults = {
+        element: '.js-reveal-after',
+        trigger: '.js-reveal-after-trigger',
+        hiddenClass: 'u-hidden'
+    };
+
+    var initialize = function (params) {
+        var settings = $.extend({}, defaults, params || {}),
+            element = $(settings.element),
+            trigger = document.querySelector(settings.trigger);
+
+        if (!element.length || !trigger) {
+            return;
+        }
+
+        // rootMargin стискає зону спостереження до лінії по нижньому краю viewport.
+        // Елемент показується, коли кінець тригера піднявся над цією лінією (блок дочитано),
+        // і прихований, поки тригер перетинає лінію або ще нижче неї (на початку сторінки).
+        var observer = new IntersectionObserver(function (entries) {
+            var entry = entries[0];
+
+            element.toggleClass(settings.hiddenClass, entry.isIntersecting || entry.boundingClientRect.top > entry.rootBounds.top);
+        }, {
+            rootMargin: '-100% 0px 0px 0px'
+        });
+
+        observer.observe(trigger);
     };
 
     return {

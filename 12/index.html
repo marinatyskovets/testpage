@@ -51,7 +51,12 @@
                         <div class="w-centered w-column-gap-md">
                             <!-- begin rounded-box-->
                             <div class="c-rounded-box">
-                                <img class="c-image" src="static/img/general/bullseye-arrow.png" alt="Bullseye arrow" width="120" height="120" />
+                                <!-- begin anim-target-->
+                                <div class="c-anim-target">
+                                    <img class="is-on" src="static/img/general/target-empty.webp" alt="" width="532" height="532" data-frame="empty" />
+                                    <img src="static/img/general/target-hit.webp" alt="" width="532" height="532" data-frame="hit" />
+                                </div>
+                                <!-- end anim-target-->
                             </div>
                             <!-- end rounded-box-->
                             <div class="w-column-gap-xs u-text-center">
@@ -113,6 +118,10 @@
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/main.js"></script>
+        <script src="static/js/separate-js/animations.js"></script>
+        <script>
+            animTarget.initialize();
+        </script>
     </body>
 
 </html>

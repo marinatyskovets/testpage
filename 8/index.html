@@ -51,9 +51,33 @@
                         <div class="w-centered w-column-gap-md">
                             <!-- begin rounded-box-->
                             <div class="c-rounded-box c-rounded-box--xl">
-                                <!-- begin emoji-->
-                                <span class="c-emoji c-emoji--xl">🧠</span>
-                                <!-- end emoji-->
+                                <!-- begin anim-brain-->
+                                <div class="c-anim-brain">
+                                    <div class="c-anim-brain__scale">
+                                        <img src="static/img/general/brain.webp" alt="" width="444" height="444" />
+                                        <img class="c-anim-brain__active" src="static/img/general/brain-active.webp" alt="" width="444" height="444" />
+                                    </div>
+                                </div>
+                                <!-- end anim-brain-->
+                            </div>
+                            <!-- end rounded-box-->
+                            <!-- begin rounded-box-->
+                            <div class="c-rounded-box c-rounded-box--xl">
+                                <!-- begin anim-heart-->
+                                <div class="c-anim-heart c-anim-heart--pisces">
+                                    <img src="static/img/general/heart-pisces.webp" alt="" width="444" height="444" />
+                                </div>
+                                <!-- end anim-heart-->
+                            </div>
+                            <!-- end rounded-box-->
+                            <!-- begin rounded-box-->
+                            <div class="c-rounded-box c-rounded-box--xl">
+                                <!-- begin anim-scales-->
+                                <div class="c-anim-scales">
+                                    <img class="is-on" src="static/img/general/scales-left.webp" alt="" width="444" height="444" data-frame="left" />
+                                    <img src="static/img/general/scales-right.webp" alt="" width="444" height="444" data-frame="right" />
+                                </div>
+                                <!-- end anim-scales-->
                             </div>
                             <!-- end rounded-box-->
                             <div class="w-column-gap-xs u-text-center">
@@ -119,6 +143,12 @@
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/main.js"></script>
+        <script src="static/js/separate-js/animations.js"></script>
+        <script>
+            animBrain.initialize();
+              animHeart.initialize();
+              animScales.initialize();
+        </script>
     </body>
 
 </html>

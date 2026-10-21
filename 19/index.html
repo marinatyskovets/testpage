@@ -51,7 +51,11 @@
                         <div class="w-centered w-column-gap-md">
                             <!-- begin rounded-box-->
                             <div class="c-rounded-box">
-                                <img class="c-image" src="static/img/general/hand-heart.png" alt="Heart in hands" width="120" height="120" />
+                                <!-- begin anim-heart-->
+                                <div class="c-anim-heart">
+                                    <img src="static/img/general/heart-hug.webp" alt="" width="444" height="444" />
+                                </div>
+                                <!-- end anim-heart-->
                             </div>
                             <!-- end rounded-box-->
                             <div class="w-column-gap-xs u-text-center">
@@ -113,6 +117,10 @@
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/main.js"></script>
+        <script src="static/js/separate-js/animations.js"></script>
+        <script>
+            animHeart.initialize();
+        </script>
     </body>
 
 </html>

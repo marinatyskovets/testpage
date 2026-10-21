@@ -32,9 +32,13 @@
             <div class="c-modal-common__dialog modal-dialog">
                 <div class="c-modal-common__content">
                     <div class="w-column-gap-sm">
-                        <!-- begin emoji-->
-                        <span class="c-emoji c-emoji--lg">✨</span>
-                        <!-- end emoji-->
+                        <!-- begin anim-eye-->
+                        <div class="c-anim-eye">
+                            <div class="c-anim-eye__scale">
+                                <img src="static/img/general/eye.webp" alt="" width="444" height="444">
+                            </div>
+                        </div>
+                        <!-- end anim-eye-->
                         <p class="u-text-xl u-mt-0">Do you consider yourself a spiritual person?</p>
                         <div class="row row--nowrap row--gap-2xs row--by-2">
                             <button class="c-btn" type="button" data-bs-dismiss="modal">No
@@ -52,9 +56,14 @@
             <div class="c-modal-common__dialog modal-dialog">
                 <div class="c-modal-common__content">
                     <div class="w-column-gap-sm">
-                        <!-- begin emoji-->
-                        <span class="c-emoji c-emoji--lg">✨</span>
-                        <!-- end emoji-->
+                        <!-- begin anim-orb-->
+                        <div class="c-anim-orb">
+                            <div class="c-anim-orb__scale">
+                                <img src="static/img/general/orb.webp" alt="" width="444" height="444">
+                                <div class="c-anim-orb__sheen"></div>
+                            </div>
+                        </div>
+                        <!-- end anim-orb-->
                         <p class="u-text-xl u-mt-0">Are you familiar with the concept of Psychic Artistry?</p>
                         <div class="row row--nowrap row--gap-2xs row--by-2">
                             <button class="c-btn" type="button" data-bs-dismiss="modal">No
@@ -98,6 +107,10 @@
         <script src="static/js/separate-js/jquery-3.7.1.min.js"></script>
         <script src="static/js/separate-js/bootstrap.bundle.min.js"></script>
         <script src="static/js/separate-js/main.js"></script>
+        <script src="static/js/separate-js/animations.js"></script>
+        <script>
+            animEye.initialize();
+        </script>
     </body>
 
 </html>
