@@ -19,62 +19,6 @@ var animationUtils = (function () {
 })();
 
 
-var animHeart = (function () {
-    var TILT_MIN = 5,
-        TILT_MAX = 7;
-
-    var initialize = function () {
-        if (animationUtils.isReducedMotion()) {
-            return;
-        }
-
-        document.querySelectorAll('.c-anim-heart').forEach(function (heart) {
-            var sign = 1;
-
-            var nextTilt = function () {
-                sign = animationUtils.nextSign(sign, 0.7);
-                heart.style.setProperty('--tilt', (sign * animationUtils.random(TILT_MIN, TILT_MAX)).toFixed(2) + 'deg');
-            };
-
-            heart.querySelector('img').addEventListener('animationiteration', nextTilt);
-            nextTilt();
-        });
-    };
-
-    return {
-        initialize: initialize
-    };
-})();
-
-
-var animEye = (function () {
-    var TILT_MIN = 7,
-        TILT_MAX = 11;
-
-    var initialize = function () {
-        if (animationUtils.isReducedMotion()) {
-            return;
-        }
-
-        document.querySelectorAll('.c-anim-eye').forEach(function (eye) {
-            var sign = 1;
-
-            var nextTilt = function () {
-                sign = animationUtils.nextSign(sign, 0.75);
-                eye.style.setProperty('--tilt', (sign * animationUtils.random(TILT_MIN, TILT_MAX)).toFixed(2) + 'deg');
-            };
-
-            eye.querySelector('.c-anim-eye__scale').addEventListener('animationiteration', nextTilt);
-            nextTilt();
-        });
-    };
-
-    return {
-        initialize: initialize
-    };
-})();
-
-
 var animBrain = (function () {
     var SPEED = 0.8,
         TILT_MIN = 2,
@@ -132,89 +76,6 @@ var animBrain = (function () {
             scale.addEventListener('animationiteration', nextTilt);
             nextTilt();
             setTimeout(fire, 600);
-        });
-    };
-
-    return {
-        initialize: initialize
-    };
-})();
-
-
-var animScales = (function () {
-    var START_DELAY = 900,
-        HOLD_MIN = 1400,
-        HOLD_MAX = 2000,
-        BREATH_SCALE = '1.09',
-        BREATH_DURATION = 420;
-
-    var initialize = function () {
-        if (animationUtils.isReducedMotion()) {
-            return;
-        }
-
-        document.querySelectorAll('.c-anim-scales').forEach(function (root) {
-            var frames = root.querySelectorAll('[data-frame]'),
-                index = 0;
-
-            var step = function () {
-                index = (index + 1) % frames.length;
-
-                frames.forEach(function (frame, frameIndex) {
-                    frame.classList.toggle('is-on', frameIndex === index);
-                });
-
-                root.style.setProperty('--scale', BREATH_SCALE);
-                setTimeout(function () {
-                    root.style.setProperty('--scale', '1');
-                }, BREATH_DURATION);
-
-                setTimeout(step, animationUtils.random(HOLD_MIN, HOLD_MAX));
-            };
-
-            setTimeout(step, START_DELAY);
-        });
-    };
-
-    return {
-        initialize: initialize
-    };
-})();
-
-
-var animTarget = (function () {
-    var WAIT_BEFORE_HIT = 1400,
-        HOLD_AFTER_HIT = 2200,
-        RESET_FADE = 250;
-
-    var initialize = function () {
-        if (animationUtils.isReducedMotion()) {
-            return;
-        }
-
-        document.querySelectorAll('.c-anim-target').forEach(function (root) {
-            var empty = root.querySelector('[data-frame="empty"]'),
-                hit = root.querySelector('[data-frame="hit"]');
-
-            var shoot = function () {
-                root.classList.remove('is-resetting');
-                hit.classList.add('is-on');
-                empty.classList.remove('is-on');
-
-                root.classList.remove('is-hit');
-                void root.offsetWidth;
-                root.classList.add('is-hit');
-
-                setTimeout(function () {
-                    empty.classList.add('is-on');
-                    root.classList.add('is-resetting');
-                    hit.classList.remove('is-on');
-
-                    setTimeout(shoot, RESET_FADE + WAIT_BEFORE_HIT);
-                }, HOLD_AFTER_HIT);
-            };
-
-            setTimeout(shoot, WAIT_BEFORE_HIT);
         });
     };
 
@@ -373,10 +234,10 @@ var animConfetti = (function () {
     var COUNT = 110,
         COLORS = ['#6d3df5', '#9b7bff', '#3b82f6', '#9ec3ff', '#f5b400', '#f59e0b', '#c4b5fd'],
         DURATION = 2000,
-        SPEED = 7,
+        SPEED = 9.5,
         GRAVITY = 0.03,
         DRAG = 0.955,
-        OVERFLOW = 170,
+        OVERFLOW = 220,
         INTERVAL_MIN = 2500,
         INTERVAL_MAX = 4000,
         MAX_PIXEL_RATIO = 2;
@@ -396,13 +257,11 @@ var animConfetti = (function () {
             var ratio = Math.min(window.devicePixelRatio || 1, MAX_PIXEL_RATIO),
                 rect = target.getBoundingClientRect(),
                 viewportWidth = document.documentElement.clientWidth,
-                // Horizontally the canvas stops at the viewport edges, so it never causes a horizontal scroll
                 overflowLeft = Math.min(OVERFLOW, Math.max(0, rect.left)),
                 overflowRight = Math.min(OVERFLOW, Math.max(0, viewportWidth - rect.right));
 
             canvas.style.left = -overflowLeft + 'px';
             canvas.style.width = rect.width + overflowLeft + overflowRight + 'px';
-            // The canvas can be asymmetric now, so the burst point is the target's center, not the canvas's
             originX = overflowLeft + rect.width / 2;
 
             width = canvas.clientWidth;
