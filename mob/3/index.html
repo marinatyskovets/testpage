@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>JI2 Mobile</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <div class="w-page">
+            <div class="w-page__top">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin main-header-->
+                <header class="c-main-header">
+                    <div class="c-main-header__top">
+                        <div class="c-main-header__cell">
+                            <a class="c-main-header__logo" href="#">
+                                <img src="static/img/general/index-logo.svg" width="86" height="25" alt="Site logo">
+                            </a>
+                        </div>
+                        <div class="c-main-header__cell">
+                            <button class="c-ico-button js-drawer-toggler" type="button"><i class="material-icons c-ico c-ico--md" data-ico="menu"></i>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+                <!-- end main-header-->
+            </div>
+            <div class="w-page__content">
+                <!-- ---------------  Main part page ----------------->
+                <div class="c-common-container c-common-container--horizontal-free">
+                    <div class="u-ml-20 u-mr-20 w-gap-lg">
+                        <!-- begin link-back-->
+                        <a class="c-link-back c-link-back--default" href="#">
+                            <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit" viewBox="0 0 24 24">
+                                <!-- ico name: chevron-left-->
+                                <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                            </svg>Settings
+                        </a>
+                        <!-- end link-back-->
+                        <h1 class="c-h1 u-text-bold">Mailing settings</h1>
+                    </div>
+                    <div class="c-settings-alert u-ml-20 u-mr-20">
+                        <div class="w-gap-md">
+                            <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--light c-settings-alert__ico" viewBox="0 0 24 24">
+                                <!-- ico name: alert-octagon-->
+                                <path fill="currentColor" d="M13 13H11V7H13M11 15H13V17H11M15.73 3H8.27L3 8.27V15.73L8.27 21H15.73L21 15.73V8.27L15.73 3Z"></path>
+                            </svg>
+                        </div>
+                        <div class="w-gap-md">
+                            <div class="w-gap-xs u-text-bold u-text-lg">You have stopped receiving emails from us</div>
+                        </div>
+                        <div class="w-gap-md">
+                            <button class="c-btn c-btn--default c-btn--md u-text-bold" type="submit">Renew the subscription now</button>
+                        </div>
+                    </div>
+                    <div class="c-settings-alert u-ml-20 u-mr-20">
+                        <div class="w-gap-md">
+                            <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--light c-settings-alert__ico" viewBox="0 0 24 24">
+                                <!-- ico name: alert-octagon-->
+                                <path fill="currentColor" d="M13 13H11V7H13M11 15H13V17H11M15.73 3H8.27L3 8.27V15.73L8.27 21H15.73L21 15.73V8.27L15.73 3Z"></path>
+                            </svg>
+                        </div>
+                        <div class="w-gap-md">
+                            <div class="w-gap-xs u-text-bold u-text-lg">You have paused receiving emails from us</div>
+                            <div class="w-gap-xs u-text-lg">The renewal will happen in: <span class="u-text-bold">120 days</span>
+                            </div>
+                        </div>
+                        <div class="w-gap-md">
+                            <button class="c-btn c-btn--default c-btn--md u-text-bold" type="submit">Renew the subscription now</button>
+                        </div>
+                    </div>
+                    <div class="c-edit-group w-gap-lg">
+                        <a class="c-edit" href="#">
+                            <svg class="c-ico-svg c-ico-svg--lg c-ico-svg--primary c-edit__arrow" viewBox="0 0 24 24">
+                                <!-- ico name: chevron-right-->
+                                <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                            </svg><span class="c-edit__title">Job and company alerts</span><span class="c-edit__item">Emails about new jobs matching your job searches.</span>
+                        </a>
+                    </div>
+                    <div class="c-edit-group w-gap-lg js-input-group">
+                        <div class="c-edit">
+                            <label class="c-switch c-switch--md"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal js-change-input-group" type="checkbox" data-target="#pause-notifications" checked="checked"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <div class="c-edit__title">Recommended jobs</div>
+                            <div class="c-edit__item">Emails with new jobs from companies you follow</div>
+                        </div>
+                        <div class="c-edit">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal js-change-input" type="checkbox" data-target="#pause-notifications" checked="checked"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <div class="c-edit__title">Job feed recommendations</div>
+                            <div class="c-edit__item u-text-primary">Daily
+                                <button class="c-link c-edit__btn" type="button" data-toggle="modal" data-target="#alert-settings">
+                                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24">
+                                        <!-- ico name: pencil-->
+                                        <path fill="currentColor" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"></path>
+                                    </svg>Edit
+                                </button>
+                            </div>
+                            <div class="c-edit__item">Emails with new jobs recommended to you based on your activity on the Jobsora</div>
+                        </div>
+                        <div class="c-edit">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal js-change-input" type="checkbox" data-target="#pause-notifications" checked="checked"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <div class="c-edit__title">Similar jobs recommendations</div>
+                            <div class="c-edit__item u-text-primary">Once
+                                <button class="c-link c-edit__btn" type="button" data-toggle="modal" data-target="#alert-settings-2">
+                                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24">
+                                        <!-- ico name: pencil-->
+                                        <path fill="currentColor" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"></path>
+                                    </svg>Edit
+                                </button>
+                            </div>
+                            <div class="c-edit__item">Emails with jobs similar to the one you viewed</div>
+                        </div>
+                    </div>
+                    <div class="c-edit-group w-gap-lg js-input-group">
+                        <div class="c-edit">
+                            <label class="c-switch c-switch--md"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal js-change-input-group" type="checkbox" data-target="#pause-notifications" checked="checked"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <div class="c-edit__title">Onboarding emails</div>
+                            <div class="c-edit__item">Emails for new users showing the features of Jobsora</div>
+                        </div>
+                    </div>
+                    <div class="c-edit-group w-gap-lg js-input-group">
+                        <div class="c-edit">
+                            <label class="c-switch c-switch--md"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal js-change-input-group" type="checkbox" data-target="#pause-notifications" checked="checked"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <div class="c-edit__title">Example</div>
+                            <div class="c-edit__item">Emails with new jobs from your subscriptions</div>
+                        </div>
+                        <div class="c-edit">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal js-change-input" type="checkbox" data-target="#pause-notifications"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <div class="c-edit__title">Web Designer in Manchester</div>
+                            <div class="c-edit__item">
+                                <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24">
+                                    <!-- ico name: stop-circle-outline-->
+                                    <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4M9,9V15H15V9"></path>
+                                </svg><b>Stopped</b>
+                                <button class="c-link c-edit__btn" type="button" data-toggle="modal" data-target="#alert-delete">
+                                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24">
+                                        <!-- ico name: trash-can-outline-->
+                                        <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"></path>
+                                    </svg>Delete this alert
+                                </button>
+                            </div>
+                        </div>
+                        <div class="c-edit">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal js-change-input" type="checkbox" data-target="#pause-notifications"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <div class="c-edit__title">Blue Bird Rocking Design</div>
+                            <div class="c-edit__item">
+                                <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24">
+                                    <!-- ico name: pause-circle-outline-->
+                                    <path fill="currentColor" d="M13,16V8H15V16H13M9,16V8H11V16H9M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"></path>
+                                </svg><b>Paused</b>
+                                <button class="c-link c-edit__btn" type="button">
+                                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24">
+                                        <!-- ico name: trash-can-outline-->
+                                        <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"></path>
+                                    </svg>Delete this alert
+                                </button>
+                            </div>
+                        </div>
+                        <div class="c-edit">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal js-change-input" type="checkbox" data-target="#pause-notifications" checked="checked"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <div class="c-edit__title">Skilled Product Designer in Chesterfield</div>
+                            <div class="c-edit__item u-text-primary">Daily
+                                <button class="c-link c-edit__btn" type="button" data-toggle="modal" data-target="#alert-settings">
+                                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24">
+                                        <!-- ico name: pencil-->
+                                        <path fill="currentColor" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"></path>
+                                    </svg>Edit
+                                </button>
+                            </div>
+                        </div>
+                        <div class="c-edit">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal js-change-input" type="checkbox" data-target="#pause-notifications" disabled="disabled"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <div class="c-edit__title">Animation Designer in Manchester</div>
+                            <div class="c-edit__item">
+                                <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24">
+                                    <!-- ico name: pause-circle-outline-->
+                                    <path fill="currentColor" d="M13,16V8H15V16H13M9,16V8H11V16H9M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"></path>
+                                </svg><b>Paused</b>
+                                <button class="c-link c-edit__btn" type="button">
+                                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24">
+                                        <!-- ico name: trash-can-outline-->
+                                        <path fill="currentColor" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"></path>
+                                    </svg>Delete this alert
+                                </button>
+                            </div>
+                            <div class="c-edit__item">The renewal will happen in: 30 days</div>
+                        </div>
+                    </div>
+                    <div class="w-gap-md u-ml-20 u-mr-20">
+                        <a href="#">
+                            <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit u-mt-3-neg u-mr-6" viewBox="0 0 24 24">
+                                <!-- ico name: cancel-->
+                                <path fill="currentColor" d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22 2 17.5 2 12 6.5 2 12 2M12 4C10.1 4 8.4 4.6 7.1 5.7L18.3 16.9C19.3 15.5 20 13.8 20 12C20 7.6 16.4 4 12 4M16.9 18.3L5.7 7.1C4.6 8.4 4 10.1 4 12C4 16.4 7.6 20 12 20C13.9 20 15.6 19.4 16.9 18.3Z"></path>
+                            </svg>Unsubscribe from all alerts</a>
+                    </div>
+                    <div class="w-gap-md u-ml-20 u-mr-20">Jobsora may still send you emails for confirmations, application statuses, and other messages relevant to your interaction with Jobsora</div>
+                </div>
+            </div>
+            <div class="w-page__bottom">
+                <!-- ---------------  Bottom part page ----------------->
+                <!-- begin main-footer-->
+                <footer class="c-main-footer">
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-jobseekers">Jobseekers<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-jobseekers">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Upload your CV</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Search Jobs by Location</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Popular jobs</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Popular companies</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-employers">Employers<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-employers">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Post a job</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-partners">Partners<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-partners">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Partnership</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Press</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-jobsora">Jobsora<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-jobsora">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">About Us</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Careers</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Blog</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Jobsora in other countries</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Terms of Use</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-contact-information">Contact Information<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-contact-information">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <div class="c-main-footer__social"><a class="c-link c-link--social-fb" href="#">Facebook</a><a class="c-link c-link--social-lin" href="#">LinkedIn</a>
+                    </div>
+                    <div class="c-main-footer__copyright">© Copyright 2023, JSE Global Solutions LLC</div>
+                </footer>
+                <!-- end main-footer-->
+            </div>
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- begin drawer-->
+        <div class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+            <div class="c-drawer__dialog">
+                <div class="c-drawer__section c-drawer__head">
+                    <div class="c-drawer__title">Меню сайта</div>
+                    <button class="c-ico-button c-ico-button--primary c-drawer__close js-drawer-toggler" type="button"><i class="material-icons c-ico c-ico--md" data-ico="close"></i>
+                    </button>
+                </div>
+                <!-- begin box-confirm-->
+                <div class="c-box-confirm">
+                    <button class="c-ico-button c-ico-button--primary c-box-confirm__btn" type="button"><i class="material-icons c-ico c-ico--xs" data-ico="settings"></i>
+                    </button>
+                    <div class="c-box-confirm__text">youremail@gmail.com</div>
+                    <div class="c-box-confirm__message"><i class="material-icons c-ico c-ico--xs" data-ico="warning"></i>Email не подтвержден
+                    </div><a class="c-btn c-btn--block c-btn--sm u-text-upper u-text-bold" href="#">Подтвердить</a>
+                </div>
+                <!-- end box-confirm-->
+                <div class="c-drawer__section">
+                    <!-- begin menu-list-->
+                    <ul class="c-menu-list">
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="business_center"></i><a class="c-menu-list__link" href="#">Все вакансии</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="search"></i><a class="c-menu-list__link" href="#">Новый поиск</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="calendar_today"></i><a class="c-menu-list__link" href="#">Мероприятия</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="book"></i><a class="c-menu-list__link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                    <!-- end menu-list-->
+                </div>
+                <div class="c-drawer__section">
+                    <!-- begin menu-list-->
+                    <ul class="c-menu-list">
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="bookmark"></i><a class="c-menu-list__link" href="#">Bookmarks</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="email"></i><a class="c-menu-list__link" href="#">Мои подписки</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="star"></i><a class="c-menu-list__link" href="#">Избранные</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="update"></i><a class="c-menu-list__link" href="#">Просмотренные вакансии</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="email"></i><a class="c-menu-list__link" href="#">Рассылки и уведомления</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="assignment_ind"></i><a class="c-menu-list__link" href="#">Мои резюме</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="person_add"></i><a class="c-menu-list__link" href="#">Добавить резюме</a>
+                        </li>
+                    </ul>
+                    <!-- end menu-list-->
+                </div>
+                <div class="c-drawer__section">
+                    <!-- begin menu-list-->
+                    <ul class="c-menu-list">
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="exit_to_app"></i><a class="c-menu-list__link" href="#">Войти</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary c-ico--rotate-y" data-ico="exit_to_app"></i><a class="c-menu-list__link" href="#">Выйти</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="settings"></i><a class="c-menu-list__link" href="#">Настройки</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="language"></i><a class="c-menu-list__link" href="#">Українською</a>
+                        </li>
+                    </ul>
+                    <!-- end menu-list-->
+                </div>
+                <div class="c-drawer__section">
+                    <div class="u-ml-25 u-mr-25"><a class="grid-common grid-common--nowrap grid-common--between grid-common--middle" href="#"><span class="grid-common__col-common">Соискателю</span><span class="grid-common__col"><i class="material-icons c-ico c-ico--xs u-ml-7 u-mt-2-neg" data-ico="arrow_forward"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end drawer-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker c-modal-common--size-md" id="pause-notifications">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--xs" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-common__title w-gap-sm">
+                        <div class="c-h2 u-lh-primary">You can pause receiving job alerts for <b>Web Designer in Manchester</b> for the selected period:</div>
+                    </div>
+                    <div class="w-gap-sm u-ml-20-neg u-mr-20-neg">
+                        <form>
+                            <button class="c-list-group-item" type="submit"><span class="c-list-group-item__text">
+                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24"><!-- ico name: pause-circle-outline-->
+                      <path fill="currentColor" d="M13,16V8H15V16H13M9,16V8H11V16H9M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"></path>
+                    </svg>Pause for 30 days</span>
+                                <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--primary" viewBox="0 0 24 24">
+                                    <!-- ico name: chevron-right-->
+                                    <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                </svg>
+                            </button>
+                            <button class="c-list-group-item" type="submit"><span class="c-list-group-item__text">
+                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24"><!-- ico name: pause-circle-outline-->
+                      <path fill="currentColor" d="M13,16V8H15V16H13M9,16V8H11V16H9M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"></path>
+                    </svg>Pause for 90 days</span>
+                                <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--primary" viewBox="0 0 24 24">
+                                    <!-- ico name: chevron-right-->
+                                    <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                </svg>
+                            </button>
+                            <button class="c-list-group-item" type="submit"><span class="c-list-group-item__text">
+                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24"><!-- ico name: pause-circle-outline-->
+                      <path fill="currentColor" d="M13,16V8H15V16H13M9,16V8H11V16H9M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"></path>
+                    </svg>Pause for 120 days</span>
+                                <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--primary" viewBox="0 0 24 24">
+                                    <!-- ico name: chevron-right-->
+                                    <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                </svg>
+                            </button>
+                        </form>
+                        <form>
+                            <button class="c-list-group-item" type="submit"><span class="c-list-group-item__text">
+                    <svg class="c-ico-svg c-ico-svg--xs c-ico-svg--inherit" viewBox="0 0 24 24"><!-- ico name: stop-circle-outline-->
+                      <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4M9,9V15H15V9"></path>
+                    </svg>Unsubscribe anyway</span>
+                                <svg class="c-ico-svg c-ico-svg--sm c-ico-svg--primary" viewBox="0 0 24 24">
+                                    <!-- ico name: chevron-right-->
+                                    <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker c-modal-common--size-md" id="alert-settings">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--xs" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-common__title w-gap-xl">
+                        <div class="c-h2 u-lh-primary">Web Designer in Manchester settings</div>
+                    </div>
+                    <div class="w-gap-lg">
+                        <div class="u-text-main u-text-bold w-gap-xs">Job alert frequency</div>
+                        <div class="w-gap-xs u-ml-10-neg u-mr-10-neg">
+                            <!-- begin input-list-->
+                            <div class="c-input-list c-input-list--md">
+                                <label class="c-input-list__item">
+                                    <input class="c-input-list__input" type="radio" name="period" checked><i class="c-input-list__ico material-icons" data-ico="radio_button_unchecked" data-ico-checked="radio_button_checked"></i><span class="c-input-list__text"><span>Daily</span></span>
+                                </label>
+                                <label class="c-input-list__item">
+                                    <input class="c-input-list__input" type="radio" name="period"><i class="c-input-list__ico material-icons" data-ico="radio_button_unchecked" data-ico-checked="radio_button_checked"></i><span class="c-input-list__text"><span>Once every 2 days</span></span>
+                                </label>
+                                <label class="c-input-list__item">
+                                    <input class="c-input-list__input" type="radio" name="period"><i class="c-input-list__ico material-icons" data-ico="radio_button_unchecked" data-ico-checked="radio_button_checked"></i><span class="c-input-list__text"><span>Once every 3 days</span></span>
+                                </label>
+                                <label class="c-input-list__item">
+                                    <input class="c-input-list__input" type="radio" name="period"><i class="c-input-list__ico material-icons" data-ico="radio_button_unchecked" data-ico-checked="radio_button_checked"></i><span class="c-input-list__text"><span>Weekly</span></span>
+                                </label>
+                            </div>
+                            <!-- end input-list-->
+                        </div>
+                    </div>
+                    <div class="w-gap-lg">
+                        <button class="c-btn c-btn--md c-btn--block u-text-bold" type="submit">Save</button>
+                    </div>
+                    <div class="w-gap-lg">
+                        <button class="c-btn c-btn--md c-btn--block c-btn--default u-text-bold" type="button" data-dismiss="modal">Cancel</button>
+                    </div>
+                    <div class="w-gap-lg u-text-center">
+                        <button class="c-link u-text-danger u-text-main" type="button">Delete this alert</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker c-modal-common--size-md" id="alert-settings-2">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--xs" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-common__title w-gap-xl">
+                        <div class="c-h2 u-lh-primary">Similar jobs recommendations settings</div>
+                    </div>
+                    <div class="w-gap-lg">
+                        <div class="u-text-main u-text-bold w-gap-xs">Job alert frequency</div>
+                        <div class="w-gap-xs u-ml-10-neg u-mr-10-neg">
+                            <!-- begin input-list-->
+                            <div class="c-input-list c-input-list--md">
+                                <label class="c-input-list__item">
+                                    <input class="c-input-list__input" type="radio" name="period-2"><i class="c-input-list__ico material-icons" data-ico="radio_button_unchecked" data-ico-checked="radio_button_checked"></i><span class="c-input-list__text"><span>Once</span></span>
+                                </label>
+                                <label class="c-input-list__item">
+                                    <input class="c-input-list__input" type="radio" name="period-2" checked><i class="c-input-list__ico material-icons" data-ico="radio_button_unchecked" data-ico-checked="radio_button_checked"></i><span class="c-input-list__text"><span>Every time, after viewing the vacancy</span></span>
+                                </label>
+                            </div>
+                            <!-- end input-list-->
+                        </div>
+                    </div>
+                    <div class="w-gap-lg">
+                        <button class="c-btn c-btn--md c-btn--block u-text-bold" type="submit">Save</button>
+                    </div>
+                    <div class="w-gap-lg">
+                        <button class="c-btn c-btn--md c-btn--block c-btn--default u-text-bold" type="button" data-dismiss="modal">Cancel</button>
+                    </div>
+                    <div class="w-gap-lg u-text-center">
+                        <button class="c-link u-text-danger u-text-main" type="button">Delete this alert</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker c-modal-common--size-md" id="alert-delete">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--xs" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <div class="c-modal-common__title w-gap-xl">
+                        <div class="c-h2 u-lh-primary">Are you sure you want to delete this alert?</div>
+                    </div>
+                    <div class="w-gap-lg">
+                        <button class="c-btn c-btn--md c-btn--block u-text-bold" type="submit">Delete alert</button>
+                    </div>
+                    <div class="w-gap-lg">
+                        <button class="c-btn c-btn--md c-btn--block c-btn--default u-text-bold" type="button" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/separate-js/jquery.touchSwipe.js"></script>
+        <script src="static/js/separate-js/bootstrap.min.js"></script>
+        <script src="static/js/separate-js/jquery.autocomplete.js"></script>
+        <script src="static/js/separate-js/toggleFocusInput.js"></script>
+        <script src="static/js/separate-js/datepicker.min.js"></script>
+        <script src="static/js/separate-js/lazysizes.min.js"></script>
+        <script src="static/js/separate-js/sticky.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+    </body>
+
+</html>
