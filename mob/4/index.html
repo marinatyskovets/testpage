@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>JI2 Mobile</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="theme-color" content="#ffffff">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <div class="w-page">
+            <div class="w-page__top">
+                <!-- ---------------  Top part page ----------------->
+                <!-- begin main-header-->
+                <header class="c-main-header">
+                    <div class="c-main-header__top">
+                        <div class="c-main-header__cell">
+                            <a class="c-main-header__logo" href="#">
+                                <img src="static/img/general/index-logo.svg" width="86" height="25" alt="Site logo">
+                            </a>
+                        </div>
+                        <div class="c-main-header__cell">
+                            <button class="c-ico-button js-drawer-toggler" type="button"><i class="material-icons c-ico c-ico--md" data-ico="menu"></i>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+                <!-- end main-header-->
+            </div>
+            <div class="w-page__content">
+                <!-- ---------------  Main part page ----------------->
+                <div class="c-common-container c-common-container--horizontal-free">
+                    <div class="u-ml-20 u-mr-20 w-gap-lg">
+                        <!-- begin link-back-->
+                        <a class="c-link-back c-link-back--default" href="#">
+                            <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit" viewBox="0 0 24 24">
+                                <!-- ico name: chevron-left-->
+                                <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                            </svg>Email settings
+                        </a>
+                        <!-- end link-back-->
+                        <h1 class="c-h1 u-text-bold">My subscriptions</h1>
+                    </div>
+                    <!-- begin action-message-->
+                    <div class="c-action-message c-main-box c-action-message--danger">
+                        <div class="c-action-message__content">
+                            <!-- begin with-ico-->
+                            <div class="c-with-ico">
+                                <div class="c-with-ico__ico"><i class="material-icons c-ico c-ico--lg c-action-message__ico" data-ico="warning"></i>
+                                </div>
+                                <div class="c-with-ico__content">
+                                    <div><b>Вы приостановили рассылку вакансий</b>
+                                        <div>Возобновление произойдет через: <b>27 дней</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end with-ico-->
+                        </div><a class="c-btn c-btn--default c-btn--block" href="#">Возобновить рассылку сейчас</a>
+                    </div>
+                    <!-- end action-message-->
+                    <div class="c-main-box c-main-box--marked">
+                        <div class="c-h3 u-text-bold u-text-center"><i class="material-icons c-ico c-ico--secondary c-ico--md u-mr-5 u-mt-3-neg" data-ico="info_outline"></i>У вас пока нет подписок
+                        </div>
+                    </div>
+                    <!-- begin edit-item-->
+                    <div class="c-edit-item">
+                        <h2 class="c-edit-item__title">All jobs, London</h2>
+                        <div class="c-edit-item__content">
+                            <p class="c-edit-item__summary">5 mi, Part time, from £15,000</p>
+                            <p class="c-edit-item__status">Paused</p>
+                        </div>
+                        <div class="c-edit-item__actions">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal" type="checkbox" data-target="#subscription-frequency"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <button class="c-ico-button c-ico-button--primary" type="button"><i class="material-icons c-ico c-ico--sm" data-ico="edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- end edit-item-->
+                    <!-- begin edit-item-->
+                    <div class="c-edit-item">
+                        <h2 class="c-edit-item__title">Part time, London</h2>
+                        <div class="c-edit-item__content">
+                            <p class="c-edit-item__summary">5 mi, Part time, from £15,000</p>
+                            <p class="c-edit-item__interval">Daily</p>
+                            <p class="c-edit-item__status">Active</p>
+                        </div>
+                        <div class="c-edit-item__actions">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal" type="checkbox" data-target="#subscription-frequency" checked="checked"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <button class="c-ico-button c-ico-button--primary" type="button"><i class="material-icons c-ico c-ico--sm" data-ico="edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- end edit-item-->
+                    <!-- begin edit-item-->
+                    <div class="c-edit-item">
+                        <h2 class="c-edit-item__title">Driver, London</h2>
+                        <div class="c-edit-item__content">
+                            <p class="c-edit-item__summary">10 mi, Full time</p>
+                            <p class="c-edit-item__interval">Weekly</p>
+                            <p class="c-edit-item__status">Active</p>
+                        </div>
+                        <div class="c-edit-item__actions">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal" type="checkbox" data-target="#subscription-frequency" checked="checked"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <button class="c-ico-button c-ico-button--primary" type="button"><i class="material-icons c-ico c-ico--sm" data-ico="edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- end edit-item-->
+                    <!-- begin edit-item-->
+                    <div class="c-edit-item">
+                        <h2 class="c-edit-item__title">Designer Group, Manchester</h2>
+                        <div class="c-edit-item__content">
+                            <p class="c-edit-item__summary">15 mi, from £20,000</p>
+                            <p class="c-edit-item__interval">Daily</p>
+                            <p class="c-edit-item__status">Active</p>
+                        </div>
+                        <div class="c-edit-item__actions">
+                            <label class="c-switch"><span class="c-switch__btn">
+                  <input class="c-switch__input js-input-show-modal" type="checkbox" data-target="#subscription-frequency" checked="checked"/><span class="c-switch__toggle"></span></span>
+                            </label>
+                            <button class="c-ico-button c-ico-button--primary" type="button"><i class="material-icons c-ico c-ico--sm" data-ico="edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- end edit-item-->
+                    <!-- begin plain-box-->
+                    <div class="c-plain-box"><b class="c-plain-box__label">New job alert?</b>  <a class="c-link" href="#">Start a search.</a>
+                    </div>
+                    <!-- end plain-box-->
+                </div>
+            </div>
+            <div class="w-page__bottom">
+                <!-- ---------------  Bottom part page ----------------->
+                <!-- begin main-footer-->
+                <footer class="c-main-footer">
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-jobseekers">Jobseekers<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-jobseekers">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Upload your CV</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Search Jobs by Location</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Popular jobs</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Popular companies</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-employers">Employers<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-employers">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Post a job</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-partners">Partners<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-partners">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Partnership</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Press</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-jobsora">Jobsora<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-jobsora">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">About Us</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Careers</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Blog</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Jobsora in other countries</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Terms of Use</a>
+                                </li>
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <!-- begin title-collapse-->
+                    <div class="c-title-collapse">
+                        <button class="c-title-collapse__title" data-toggle="collapse" data-target="#title-collapse-contact-information">Contact Information<i class="material-icons c-ico c-ico--primary c-ico--md" data-ico="keyboard_arrow_down"></i>
+                        </button>
+                        <div class="c-title-collapse__collapse collapse" id="title-collapse-contact-information">
+                            <ul class="c-simple-list">
+                                <li class="c-simple-list__item"><a class="c-simple-list__link" href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end title-collapse-->
+                    <div class="c-main-footer__social"><a class="c-link c-link--social-fb" href="#">Facebook</a><a class="c-link c-link--social-lin" href="#">LinkedIn</a>
+                    </div>
+                    <div class="c-main-footer__copyright">© Copyright 2023, JSE Global Solutions LLC</div>
+                </footer>
+                <!-- end main-footer-->
+            </div>
+        </div>
+        <!-- --------------- Outside part page ----------------->
+        <!-- begin drawer-->
+        <div class="c-drawer js-drawer"><span class="c-drawer__backdrop js-drawer-toggler"></span>
+            <div class="c-drawer__dialog">
+                <div class="c-drawer__section c-drawer__head">
+                    <div class="c-drawer__title">Меню сайта</div>
+                    <button class="c-ico-button c-ico-button--primary c-drawer__close js-drawer-toggler" type="button"><i class="material-icons c-ico c-ico--md" data-ico="close"></i>
+                    </button>
+                </div>
+                <!-- begin box-confirm-->
+                <div class="c-box-confirm">
+                    <button class="c-ico-button c-ico-button--primary c-box-confirm__btn" type="button"><i class="material-icons c-ico c-ico--xs" data-ico="settings"></i>
+                    </button>
+                    <div class="c-box-confirm__text">youremail@gmail.com</div>
+                    <div class="c-box-confirm__message"><i class="material-icons c-ico c-ico--xs" data-ico="warning"></i>Email не подтвержден
+                    </div><a class="c-btn c-btn--block c-btn--sm u-text-upper u-text-bold" href="#">Подтвердить</a>
+                </div>
+                <!-- end box-confirm-->
+                <div class="c-drawer__section">
+                    <!-- begin menu-list-->
+                    <ul class="c-menu-list">
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="business_center"></i><a class="c-menu-list__link" href="#">Все вакансии</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="search"></i><a class="c-menu-list__link" href="#">Новый поиск</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="calendar_today"></i><a class="c-menu-list__link" href="#">Мероприятия</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="book"></i><a class="c-menu-list__link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                    <!-- end menu-list-->
+                </div>
+                <div class="c-drawer__section">
+                    <!-- begin menu-list-->
+                    <ul class="c-menu-list">
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="bookmark"></i><a class="c-menu-list__link" href="#">Bookmarks</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="email"></i><a class="c-menu-list__link" href="#">Мои подписки</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="star"></i><a class="c-menu-list__link" href="#">Избранные</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="update"></i><a class="c-menu-list__link" href="#">Просмотренные вакансии</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="email"></i><a class="c-menu-list__link" href="#">Рассылки и уведомления</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="assignment_ind"></i><a class="c-menu-list__link" href="#">Мои резюме</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="person_add"></i><a class="c-menu-list__link" href="#">Добавить резюме</a>
+                        </li>
+                    </ul>
+                    <!-- end menu-list-->
+                </div>
+                <div class="c-drawer__section">
+                    <!-- begin menu-list-->
+                    <ul class="c-menu-list">
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="exit_to_app"></i><a class="c-menu-list__link" href="#">Войти</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary c-ico--rotate-y" data-ico="exit_to_app"></i><a class="c-menu-list__link" href="#">Выйти</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="settings"></i><a class="c-menu-list__link" href="#">Настройки</a>
+                        </li>
+                        <li class="c-menu-list__item"><i class="material-icons c-ico c-ico--primary" data-ico="language"></i><a class="c-menu-list__link" href="#">Українською</a>
+                        </li>
+                    </ul>
+                    <!-- end menu-list-->
+                </div>
+                <div class="c-drawer__section">
+                    <div class="u-ml-25 u-mr-25"><a class="grid-common grid-common--nowrap grid-common--between grid-common--middle" href="#"><span class="grid-common__col-common">Соискателю</span><span class="grid-common__col"><i class="material-icons c-ico c-ico--xs u-ml-7 u-mt-2-neg" data-ico="arrow_forward"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end drawer-->
+        <!-- begin modal-flash-->
+        <div class="c-modal-flash fade js-modal-flash" id="modal-flash">
+            <div class="c-modal-flash__dialog">
+                <button class="c-ico-button c-modal-flash__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--sm" data-ico="close"></i>
+                </button>
+                <div class="c-modal-flash__content">
+                    <div class="c-modal-flash__title">Changes saved successfully</div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-flash-->
+        <!-- begin modal-common-->
+        <div class="c-modal-common fade js-modal-locker c-modal-common--size-xs" id="subscription-frequency">
+            <div class="c-modal-common__dialog">
+                <button class="c-ico-button c-modal-common__close" type="button" data-dismiss="modal"><i class="material-icons c-ico c-ico--xs" data-ico="close"></i>
+                </button>
+                <div class="c-modal-common__content">
+                    <p class="u-text-center u-text-18 u-lh-primary u-mt-16 u-ml-16 u-mr-16 u-mb-8"><b>Getting too many emails?</b> You can reduce the frequency instead of unsubscribing:</p>
+                    <div>
+                        <button class="c-list-group-item c-list-group-item--sm js-unsubscribe" type="button"><span class="c-list-group-item__text">Unsubscribe anyway</span>
+                            <svg class="c-ico-svg c-ico-svg--md c-ico-svg--primary" viewBox="0 0 24 24">
+                                <!-- ico name: chevron-right-->
+                                <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                            </svg>
+                        </button>
+                        <button class="c-list-group-item c-list-group-item--sm" type="button" data-dismiss="modal"><span class="c-list-group-item__text">One email per week</span>
+                            <svg class="c-ico-svg c-ico-svg--md c-ico-svg--primary" viewBox="0 0 24 24">
+                                <!-- ico name: chevron-right-->
+                                <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="c-list-group-item c-list-group-item--sm c-list-group-item--primary u-mt-8" type="button" data-dismiss="modal"><span class="c-list-group-item__text">One email every 3 days</span>
+                        <svg class="c-ico-svg c-ico-svg--md c-ico-svg--inherit" viewBox="0 0 24 24">
+                            <!-- ico name: chevron-right-->
+                            <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-common-->
+        <!-- Including js files-->
+
+
+        <script src="static/js/separate-js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/separate-js/jquery.touchSwipe.js"></script>
+        <script src="static/js/separate-js/bootstrap.min.js"></script>
+        <script src="static/js/separate-js/jquery.autocomplete.js"></script>
+        <script src="static/js/separate-js/toggleFocusInput.js"></script>
+        <script src="static/js/separate-js/datepicker.min.js"></script>
+        <script src="static/js/separate-js/lazysizes.min.js"></script>
+        <script src="static/js/separate-js/sticky.js"></script>
+        <script src="static/js/separate-js/main.js"></script>
+        <script>
+            (function () {
+                  var closeTimeOut;
+                  var $modalFlash = $('.js-modal-flash');
+              
+                  $modalFlash.on('show.bs.modal', function () {
+                      closeTimeOut = setTimeout(function () {
+                          $('#modal-flash').modal('hide');
+                      }, 2000);
+                  });
+              
+                  $modalFlash.on('hidden.bs.modal', function () {
+                      clearTimeout(closeTimeOut);
+                  });
+              }());
+              
+              // Лише демонстрація поведінки попапа для верстки, не робоча логіка
+              (function () {
+                  var $frequencyModal = $('#subscription-frequency');
+                  var $activeSwitch = null;
+              
+                  $('.js-input-show-modal[data-target="#subscription-frequency"]').on('change', function () {
+                      if (!this.checked) {
+                          $activeSwitch = $(this);
+                      }
+                  });
+              
+                  $frequencyModal.on('click', '.js-unsubscribe', function () {
+                      $activeSwitch = null;
+                      $frequencyModal.modal('hide');
+                  });
+              
+                  $frequencyModal.on('hidden.bs.modal', function () {
+                      if ($activeSwitch) {
+                          $activeSwitch.prop('checked', true);
+                          $activeSwitch = null;
+                      }
+                  });
+              }());
+        </script>
+    </body>
+
+</html>
